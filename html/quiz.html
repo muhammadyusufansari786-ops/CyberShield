@@ -1,0 +1,270 @@
+﻿<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Test your cybersecurity knowledge with interactive quizzes. Randomized questions, explanations, and progress tracking.">
+  <title>Cybersecurity Quiz – CyberShield</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%230f766e'/%3E%3Ctext x='50%25' y='55%25' dominant-baseline='middle' text-anchor='middle' fill='white' font-size='60' font-weight='bold'%3E%E2%9A%A1%3C/text%3E%3C/svg%3E">
+</head>
+<body>
+  <a href="#main-content" class="visually-hidden focus-visible">Skip to main content</a>
+
+  <header class="header" role="banner">
+    <div class="header-inner">
+      <a href="index.html" class="logo" aria-label="CyberShield Home">
+        <span class="logo-icon" aria-hidden="true">🛡️</span>
+        <span>CyberShield</span>
+      </a>
+      
+      <nav class="nav-desktop" role="navigation" aria-label="Main navigation">
+        <ul class="nav-list">
+          <li><a href="index.html" class="nav-link"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>Home</a></li>
+          <li><a href="password.html" class="nav-link"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>Password</a></li>
+          <li><a href="quiz.html" class="nav-link active" aria-current="page"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>Quiz</a></li>
+          <li><a href="news.html" class="nav-link"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 22h16a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2z"></path><polyline points="8 14 12 10 16 14"></polyline><line x1="12" y1="16" x2="12" y2="22"></line></svg>News</a></li>
+          <li><a href="threats.html" class="nav-link"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path><line x1="12" y1="9" x2="12" y2="13"></line><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>Threats</a></li>
+          <li><a href="emergency.html" class="nav-link"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>Emergency</a></li>
+          <li><a href="toolkit.html" class="nav-link"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path></svg>Toolkit</a></li>
+          <li><a href="tips.html" class="nav-link"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"></path><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"></path></svg>Tips</a></li>
+          <li><a href="simulator.html" class="nav-link"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"></rect><path d="M8 21h8"></path><path d="M12 17v4"></path></svg>Simulator</a></li>
+          <li><a href="glossary.html" class="nav-link"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>Glossary</a></li>
+          <li><a href="resources.html" class="nav-link"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>Resources</a></li>
+          <li><a href="about.html" class="nav-link"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>About</a></li>
+        </ul>
+      </nav>
+      
+      <div class="header-actions">
+        <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode" type="button">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+        </button>
+        <button id="mobile-menu-btn" class="mobile-menu-btn" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-nav-overlay" type="button">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div id="mobile-nav-overlay" class="mobile-nav-overlay" role="dialog" aria-modal="true" aria-label="Navigation menu">
+    <div id="mobile-nav-panel" class="mobile-nav-panel">
+      <div class="mobile-nav-header">
+        <a href="index.html" class="logo" aria-label="CyberShield Home">
+          <span class="logo-icon" aria-hidden="true">🛡️</span>
+          <span>CyberShield</span>
+        </a>
+        <button id="mobile-nav-close" class="mobile-nav-close" aria-label="Close menu" type="button">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+        </button>
+      </div>
+      <ul class="mobile-nav-list">
+        <li><a href="index.html" class="mobile-nav-link"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>Home</a></li>
+        <li><a href="password.html" class="mobile-nav-link"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>Password Checker</a></li>
+        <li><a href="quiz.html" class="mobile-nav-link active" aria-current="page"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>Quiz</a></li>
+        <li><a href="news.html" class="mobile-nav-link"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 22h16a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2z"></path><polyline points="8 14 12 10 16 14"></polyline><line x1="12" y1="16" x2="12" y2="22"></line></svg>News</a></li>
+        <li><a href="threats.html" class="mobile-nav-link"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path><line x1="12" y1="9" x2="12" y2="13"></line><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>Threats</a></li>
+        <li><a href="emergency.html" class="mobile-nav-link"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>Emergency</a></li>
+        <li><a href="toolkit.html" class="mobile-nav-link"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path></svg>Toolkit</a></li>
+        <li><a href="tips.html" class="mobile-nav-link"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"></path><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"></path></svg>Daily Tips</a></li>
+        <li><a href="simulator.html" class="mobile-nav-link"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"></rect><path d="M8 21h8"></path><path d="M12 17v4"></path></svg>Simulator</a></li>
+        <li><a href="glossary.html" class="mobile-nav-link"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>Glossary</a></li>
+        <li><a href="resources.html" class="mobile-nav-link"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>Resources</a></li>
+        <li><a href="about.html" class="mobile-nav-link"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>About</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <main id="main-content" role="main">
+    <section class="section" style="padding-top: 3rem;">
+      <div class="container">
+        <div style="max-width: 800px; margin: 0 auto;">
+          <nav aria-label="Breadcrumb" style="margin-bottom: 1.5rem;">
+            <ol style="display: flex; justify-content: center; gap: 0.5rem; list-style: none; font-size: 0.875rem; color: var(--color-text-muted);">
+              <li><a href="index.html" style="color: var(--color-text-muted);">Home</a></li>
+              <li aria-hidden="true">/</li>
+              <li aria-current="page">Cybersecurity Quiz</li>
+            </ol>
+          </nav>
+          <header style="text-align: center; margin-bottom: 2rem;">
+            <h1>Cybersecurity Knowledge Quiz</h1>
+            <p style="color: var(--color-text-secondary); font-size: 1.125rem; margin-top: 0.75rem;">Test your understanding of key security concepts. Questions are randomized each attempt.</p>
+          </header>
+
+          <!-- Quiz Setup -->
+          <div class="card" id="quiz-setup" style="max-width: 600px; margin: 0 auto;">
+            <div class="card-header">
+              <h2 class="card-title">Quiz Settings</h2>
+            </div>
+            <div class="form-group">
+              <label for="question-count" class="form-label">Number of Questions</label>
+              <select id="question-count" class="form-select">
+                <option value="5">5 Questions (Quick)</option>
+                <option value="10" selected>10 Questions (Standard)</option>
+                <option value="15">15 Questions (Extended)</option>
+                <option value="20">20 Questions (Comprehensive)</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="timer-enabled" class="form-label">
+                <input type="checkbox" id="timer-enabled" class="form-input" style="width: auto; margin-right: 0.5rem; transform: translateY(-2px);"> Enable Timer (30 seconds per question)
+              </label>
+            </div>
+            <div class="form-group">
+              <label for="category-filter" class="form-label">Category Filter</label>
+              <select id="category-filter" class="form-select">
+                <option value="all">All Categories</option>
+                <option value="passwords">Passwords & Authentication</option>
+                <option value="phishing">Phishing & Social Engineering</option>
+                <option value="malware">Malware & Threats</option>
+                <option value="privacy">Privacy & Data Protection</option>
+                <option value="mobile">Mobile Security</option>
+              </select>
+            </div>
+            <button type="button" class="btn btn-primary btn-lg" style="width: 100%;" id="start-quiz-btn">Start Quiz</button>
+          </div>
+
+          <!-- Quiz Active -->
+          <div class="card" id="quiz-active" style="max-width: 800px; margin: 0 auto; display: none;">
+            <div class="quiz-progress" role="status" aria-live="polite">
+              <div class="progress-bar-container">
+                <div class="progress-bar-fill" id="quiz-progress-bar" style="width: 0%;"></div>
+              </div>
+              <span class="progress-text" id="progress-text">Question 1 of 10</span>
+              <div class="quiz-timer" id="quiz-timer" style="display: none;" aria-live="assertive">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                <span id="timer-value">30</span>s
+              </div>
+            </div>
+
+            <div class="quiz-question" id="quiz-question" role="region" aria-label="Question">
+              <h3 id="question-text"></h3>
+              <div class="quiz-options" id="quiz-options" role="radiogroup" aria-label="Answer options"></div>
+            </div>
+
+            <div class="quiz-explanation" id="quiz-explanation" aria-live="polite" role="alert">
+              <h4 style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.75rem;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
+                Explanation
+              </h4>
+              <p id="explanation-text"></p>
+            </div>
+
+            <div class="quiz-actions">
+              <button type="button" class="btn btn-secondary" id="prev-btn" disabled>Previous</button>
+              <button type="button" class="btn btn-primary" id="next-btn" disabled>Next</button>
+            </div>
+          </div>
+
+          <!-- Quiz Results -->
+          <div class="card" id="quiz-results" style="max-width: 800px; margin: 0 auto; display: none;">
+            <div class="quiz-results" role="region" aria-label="Quiz Results">
+              <h2 style="margin-bottom: 1.5rem;">Quiz Complete!</h2>
+              
+              <div class="results-score" id="results-score" role="img" aria-label="Score: 0%">
+                <span class="results-value" id="results-value">0%</span>
+              </div>
+              
+              <h3 class="results-title" id="results-title">Keep Learning!</h3>
+              <p class="results-message" id="results-message"></p>
+              
+              <div class="results-breakdown" role="list" aria-label="Score breakdown">
+                <div class="result-stat" role="listitem">
+                  <div class="result-stat-value text-success" id="correct-count">0</div>
+                  <div class="result-stat-label">Correct</div>
+                </div>
+                <div class="result-stat" role="listitem">
+                  <div class="result-stat-value text-danger" id="incorrect-count">0</div>
+                  <div class="result-stat-label">Incorrect</div>
+                </div>
+                <div class="result-stat" role="listitem">
+                  <div class="result-stat-value text-warning" id="unanswered-count">0</div>
+                  <div class="result-stat-label">Unanswered</div>
+                </div>
+                <div class="result-stat" role="listitem">
+                  <div class="result-stat-value text-info" id="avg-time">0s</div>
+                  <div class="result-stat-label">Avg Time</div>
+                </div>
+              </div>
+              
+              <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 1rem; margin-top: 2rem;">
+                <button type="button" class="btn btn-primary" id="retake-btn">Retake Quiz</button>
+                <button type="button" class="btn btn-secondary" id="review-btn">Review Answers</button>
+                <a href="index.html" class="btn btn-ghost">Back to Home</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Review Mode -->
+          <div class="card" id="quiz-review" style="max-width: 800px; margin: 0 auto; display: none;">
+            <header class="card-header">
+              <h2 class="card-title">Review Answers</h2>
+              <p class="card-subtitle">Click any question to see the explanation</p>
+            </header>
+            <div id="review-list" style="display: flex; flex-direction: column; gap: 1rem;"></div>
+            <div style="display: flex; justify-content: center; gap: 1rem; margin-top: 2rem;">
+              <button type="button" class="btn btn-primary" id="retake-from-review">Retake Quiz</button>
+              <a href="index.html" class="btn btn-ghost">Back to Home</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="footer-logo logo" aria-label="CyberShield Home">
+            <span class="logo-icon" aria-hidden="true">🛡️</span>
+            <span>CyberShield</span>
+          </a>
+          <p class="footer-tagline">Your beginner-friendly cybersecurity awareness platform.</p>
+        </div>
+        <div>
+          <h3 class="footer-title">Learning Modules</h3>
+          <ul class="footer-links">
+            <li><a href="password.html" class="footer-link">Password Checker</a></li>
+            <li><a href="quiz.html" class="footer-link">Cybersecurity Quiz</a></li>
+            <li><a href="threats.html" class="footer-link">Common Threats</a></li>
+            <li><a href="emergency.html" class="footer-link">Emergency Guide</a></li>
+            <li><a href="toolkit.html" class="footer-link">Safety Toolkit</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="footer-title">Tools & Resources</h3>
+          <ul class="footer-links">
+            <li><a href="simulator.html" class="footer-link">Spot the Scam</a></li>
+            <li><a href="tips.html" class="footer-link">Daily Tips</a></li>
+            <li><a href="glossary.html" class="footer-link">Cyber Glossary</a></li>
+            <li><a href="news.html" class="footer-link">Cyber News</a></li>
+            <li><a href="resources.html" class="footer-link">Trusted Sources</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="footer-title">Legal & Privacy</h3>
+          <ul class="footer-links">
+            <li><a href="about.html" class="footer-link">About & Disclaimer</a></li>
+            <li><a href="#" class="footer-link">Privacy Policy</a></li>
+            <li><a href="#" class="footer-link">Terms of Use</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 CyberShield. Educational purposes only. Not a substitute for professional security advice.</p>
+        <div class="footer-legal">
+          <a href="#">Privacy</a>
+          <a href="#">Terms</a>
+          <a href="#">Contact</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+  <script src="../js/quiz.js"></script>
+</body>
+</html>

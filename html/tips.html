@@ -1,0 +1,548 @@
+﻿<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Daily cybersecurity tips to build better security habits. Rotating tips with categories and search.">
+  <title>Daily Security Tips – CyberShield</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%230f766e'/%3E%3Ctext x='50%25' y='55%25' dominant-baseline='middle' text-anchor='middle' fill='white' font-size='60' font-weight='bold'%3E%E2%9A%A1%3C/text%3E%3C/svg%3E">
+</head>
+<body>
+  <a href="#main-content" class="visually-hidden focus-visible">Skip to main content</a>
+
+  <header class="header" role="banner">
+    <div class="header-inner">
+      <a href="index.html" class="logo" aria-label="CyberShield Home">
+        <span class="logo-icon" aria-hidden="true">🛡️</span>
+        <span>CyberShield</span>
+      </a>
+      
+      <nav class="nav-desktop" role="navigation" aria-label="Main navigation">
+        <ul class="nav-list">
+          <li><a href="index.html" class="nav-link"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>Home</a></li>
+          <li><a href="password.html" class="nav-link"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>Password</a></li>
+          <li><a href="quiz.html" class="nav-link"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>Quiz</a></li>
+          <li><a href="news.html" class="nav-link"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 22h16a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2z"></path><polyline points="8 14 12 10 16 14"></polyline><line x1="12" y1="16" x2="12" y2="22"></line></svg>News</a></li>
+          <li><a href="threats.html" class="nav-link"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path><line x1="12" y1="9" x2="12" y2="13"></line><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>Threats</a></li>
+          <li><a href="emergency.html" class="nav-link"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>Emergency</a></li>
+          <li><a href="toolkit.html" class="nav-link"><svg xmlns="http://www.w3.org/2000.svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path></svg>Toolkit</a></li>
+          <li><a href="tips.html" class="nav-link active" aria-current="page"><svg xmlns="http://www.w3.org/2000.svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"></path><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"></path></svg>Tips</a></li>
+          <li><a href="simulator.html" class="nav-link"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"></rect><path d="M8 21h8"></path><path d="M12 17v4"></path></svg>Simulator</a></li>
+          <li><a href="glossary.html" class="nav-link"><svg xmlns="http://www.w3.org/2000.svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>Glossary</a></li>
+          <li><a href="resources.html" class="nav-link"><svg xmlns="http://www.w3.org/2000.svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>Resources</a></li>
+          <li><a href="about.html" class="nav-link"><svg xmlns="http://www.w3.org/2000.svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>About</a></li>
+        </ul>
+      </nav>
+      
+      <div class="header-actions">
+        <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode" type="button">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+        </button>
+        <button id="mobile-menu-btn" class="mobile-menu-btn" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-nav-overlay" type="button">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div id="mobile-nav-overlay" class="mobile-nav-overlay" role="dialog" aria-modal="true" aria-label="Navigation menu">
+    <div id="mobile-nav-panel" class="mobile-nav-panel">
+      <div class="mobile-nav-header">
+        <a href="index.html" class="logo" aria-label="CyberShield Home">
+          <span class="logo-icon" aria-hidden="true">🛡️</span>
+          <span>CyberShield</span>
+        </a>
+        <button id="mobile-nav-close" class="mobile-nav-close" aria-label="Close menu" type="button">
+          <svg xmlns="http://www.w3.org/2000.svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+        </button>
+      </div>
+      <ul class="mobile-nav-list">
+        <li><a href="index.html" class="mobile-nav-link"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>Home</a></li>
+        <li><a href="password.html" class="mobile-nav-link"><svg xmlns="http://www.w3.org/2000.svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>Password Checker</a></li>
+        <li><a href="quiz.html" class="mobile-nav-link"><svg xmlns="http://www.w3.org/2000.svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>Quiz</a></li>
+        <li><a href="news.html" class="mobile-nav-link"><svg xmlns="http://www.w3.org/2000.svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 22h16a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2z"></path><polyline points="8 14 12 10 16 14"></polyline><line x1="12" y1="16" x2="12" y2="22"></line></svg>News</a></li>
+        <li><a href="threats.html" class="mobile-nav-link"><svg xmlns="http://www.w3.org/2000.svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path><line x1="12" y1="9" x2="12" y2="13"></line><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>Threats</a></li>
+        <li><a href="emergency.html" class="mobile-nav-link"><svg xmlns="http://www.w3.org/2000.svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>Emergency</a></li>
+        <li><a href="toolkit.html" class="mobile-nav-link"><svg xmlns="http://www.w3.org/2000.svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path></svg>Toolkit</a></li>
+        <li><a href="tips.html" class="mobile-nav-link active" aria-current="page"><svg xmlns="http://www.w3.org/2000.svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"></path><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"></path></svg>Daily Tips</a></li>
+        <li><a href="simulator.html" class="mobile-nav-link"><svg xmlns="http://www.w3.org/2000.svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"></rect><path d="M8 21h8"></path><path d="M12 17v4"></path></svg>Simulator</a></li>
+        <li><a href="glossary.html" class="mobile-nav-link"><svg xmlns="http://www.w3.org/2000.svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>Glossary</a></li>
+        <li><a href="resources.html" class="mobile-nav-link"><svg xmlns="http://www.w3.org/2000.svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>Resources</a></li>
+        <li><a href="about.html" class="mobile-nav-link"><svg xmlns="http://www.w3.org/2000.svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>About</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <main id="main-content" role="main">
+    <section class="section" style="padding-top: 3rem;">
+      <div class="container">
+        <div style="max-width: 800px; margin: 0 auto;">
+          <nav aria-label="Breadcrumb" style="margin-bottom: 1.5rem;">
+            <ol style="display: flex; justify-content: center; gap: 0.5rem; list-style: none; font-size: 0.875rem; color: var(--color-text-muted);">
+              <li><a href="index.html" style="color: var(--color-text-muted);">Home</a></li>
+              <li aria-hidden="true">/</li>
+              <li aria-current="page">Daily Tips</li>
+            </ol>
+          </nav>
+          <header style="text-align: center; margin-bottom: 2rem;">
+            <h1>Daily Security Tips</h1>
+            <p style="color: var(--color-text-secondary); font-size: 1.125rem; margin-top: 0.75rem;">Build security habits one day at a time. Browse, search, and save your favorites.</p>
+          </header>
+
+          <!-- Today's Tip -->
+          <div class="card" style="margin-bottom: 2rem; background: linear-gradient(135deg, var(--color-primary-bg) 0%, var(--color-info-bg) 100%); border: 1px solid var(--color-primary);">
+            <div style="display: flex; align-items: flex-start; gap: 1rem;">
+              <div style="width: 60px; height: 60px; background: var(--color-primary); color: white; border-radius: var(--radius-md); display: flex; align-items: center; justify-content: center; font-size: 1.5rem; flex-shrink: 0;">💡</div>
+              <div style="flex: 1;">
+                <h3 style="margin-bottom: 0.5rem; color: var(--color-primary);">Today's Tip</h3>
+                <p id="daily-tip-text" style="font-size: 1.125rem; font-weight: 500; color: var(--color-text); margin: 0;">Loading...</p>
+                <p id="daily-tip-date" style="font-size: 0.875rem; color: var(--color-text-muted); margin-top: 0.5rem;"></p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Controls -->
+          <div class="card" style="margin-bottom: 2rem;">
+            <div class="card-header">
+              <h2 class="card-title">Browse All Tips</h2>
+            </div>
+            <div style="display: flex; flex-wrap: wrap; gap: 1rem; align-items: center;">
+              <div class="form-group" style="flex: 1; min-width: 250px; margin: 0;">
+                <label for="tip-search" class="form-label">Search tips</label>
+                <input type="text" id="tip-search" class="form-input" placeholder="Search tips..." aria-label="Search tips">
+              </div>
+              <div class="form-group" style="margin: 0;">
+                <label for="tip-category" class="form-label">Category</label>
+                <select id="tip-category" class="form-select">
+                  <option value="all">All Categories</option>
+                  <option value="passwords">Passwords & Authentication</option>
+                  <option value="phishing">Phishing & Scams</option>
+                  <option value="device">Device Security</option>
+                  <option value="privacy">Privacy</option>
+                  <option value="backup">Backup & Recovery</option>
+                  <option value="mobile">Mobile Security</option>
+                  <option value="wifi">Network & Wi-Fi</option>
+                  <option value="social">Social Engineering</option>
+                </select>
+              </div>
+              <button type="button" class="btn btn-primary" id="random-tip-btn" style="margin-top: 1.5rem;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="17 8 12 3 7 8"></polyline><path d="M21 15a6 6 0 0 1-6 6H3"></path></svg>
+                Random Tip
+              </button>
+            </div>
+          </div>
+
+          <!-- Tips Grid -->
+          <div id="tips-grid" role="list" aria-label="Security tips">
+            <!-- Populated by JavaScript -->
+          </div>
+
+          <!-- Pagination -->
+          <div style="display: flex; justify-content: center; gap: 0.5rem; margin-top: 2rem;" id="pagination">
+            <!-- Populated by JavaScript -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Favorites Section -->
+    <section class="section" style="background: var(--color-bg-elevated);">
+      <div class="container">
+        <div style="max-width: 800px; margin: 0 auto;">
+          <header class="section-header">
+            <h2>Your Saved Tips</h2>
+            <p>Tips you've bookmarked for quick reference</p>
+          </header>
+          <div id="favorites-grid" role="list" aria-label="Favorite tips">
+            <!-- Populated by JavaScript -->
+          </div>
+          <p id="no-favorites" style="text-align: center; color: var(--color-text-muted); display: none;">No saved tips yet. Click the bookmark icon on any tip to save it.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="footer-logo logo" aria-label="CyberShield Home">
+            <span class="logo-icon" aria-hidden="true">🛡️</span>
+            <span>CyberShield</span>
+          </a>
+          <p class="footer-tagline">Your beginner-friendly cybersecurity awareness platform.</p>
+        </div>
+        <div>
+          <h3 class="footer-title">Learning Modules</h3>
+          <ul class="footer-links">
+            <li><a href="password.html" class="footer-link">Password Checker</a></li>
+            <li><a href="quiz.html" class="footer-link">Cybersecurity Quiz</a></li>
+            <li><a href="threats.html" class="footer-link">Common Threats</a></li>
+            <li><a href="emergency.html" class="footer-link">Emergency Guide</a></li>
+            <li><a href="toolkit.html" class="footer-link">Safety Toolkit</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="footer-title">Tools & Resources</h3>
+          <ul class="footer-links">
+            <li><a href="simulator.html" class="footer-link">Spot the Scam</a></li>
+            <li><a href="tips.html" class="footer-link">Daily Tips</a></li>
+            <li><a href="glossary.html" class="footer-link">Cyber Glossary</a></li>
+            <li><a href="news.html" class="footer-link">Cyber News</a></li>
+            <li><a href="resources.html" class="footer-link">Trusted Sources</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="footer-title">Legal & Privacy</h3>
+          <ul class="footer-links">
+            <li><a href="about.html" class="footer-link">About & Disclaimer</a></li>
+            <li><a href="#" class="footer-link">Privacy Policy</a></li>
+            <li><a href="#" class="footer-link">Terms of Use</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 CyberShield. Educational purposes only. Not a substitute for professional security advice.</p>
+        <div class="footer-legal">
+          <a href="#">Privacy</a>
+          <a href="#">Terms</a>
+          <a href="#">Contact</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+  <script>
+    // Tips Data (60 tips)
+    const TIPS_DATA = [
+      { id: 1, category: 'passwords', text: 'Use a unique 12+ character password for every account. A password manager makes this effortless.', icon: '🔐' },
+      { id: 2, category: 'passwords', text: 'Enable MFA on your email FIRST. Email is the master key to resetting all other passwords.', icon: '📧' },
+      { id: 3, category: 'passwords', text: 'Prefer authenticator apps (Authy, Google Authenticator, Bitwarden) over SMS for 2FA. SIM swapping defeats SMS.', icon: '📱' },
+      { id: 4, category: 'passwords', text: 'Use passphrases: 4-5 random words (correct-horse-battery-staple). Easier to remember, high entropy.', icon: '🔤' },
+      { id: 5, category: 'passwords', text: 'Check haveibeenpwned.com quarterly. If your email appears in a breach, change that password immediately.', icon: '🔍' },
+      { id: 6, category: 'phishing', text: 'Hover over links before clicking. The actual destination shows in bottom-left of browser.', icon: '🖱️' },
+      { id: 7, category: 'phishing', text: 'Legitimate companies never ask for passwords/OTPs via email, SMS, or phone calls.', icon: '🚫' },
+      { id: 8, category: 'phishing', text: 'Urgency ("act now or account closes") is a major red flag. Legitimate orgs give reasonable time.', icon: '⏰' },
+      { id: 9, category: 'phishing', text: 'Verify unexpected requests through a KNOWN, TRUSTED channel — not contact info in the suspicious message.', icon: '📞' },
+      { id: 10, category: 'phishing', text: 'QR codes can lead to phishing sites too. Preview the URL before opening after scanning.', icon: '📷' },
+      { id: 11, category: 'device', text: 'Enable automatic updates for OS, browsers, and apps. Patches fix vulnerabilities attackers exploit.', icon: '🔄' },
+      { id: 12, category: 'device', text: 'Use full-disk encryption: BitLocker (Windows), FileVault (Mac), LUKS (Linux). Protects data if device stolen.', icon: '🔒' },
+      { id: 13, category: 'device', text: 'Separate admin account from daily use. Only log in as admin for installations/updates.', icon: '👤' },
+      { id: 14, category: 'device', text: 'Disable unused services: Bluetooth, file sharing, remote desktop, AirDrop (set to Contacts Only).', icon: '📴' },
+      { id: 15, category: 'device', text: 'Set screen lock to activate after 5 minutes. Use 6+ digit PIN or alphanumeric password.', icon: '⏱️' },
+      { id: 16, category: 'privacy', text: 'Use uBlock Origin + Privacy Badger. They block trackers, ads, and fingerprinting scripts.', icon: '🛡️' },
+      { id: 17, category: 'privacy', text: 'Switch to privacy search: DuckDuckGo, Brave Search, or Startpage. No search history profiling.', icon: '🔍' },
+      { id: 18, category: 'privacy', text: 'Review app permissions quarterly. Revoke location/mic/camera for apps that don\'t need them.', icon: '✂️' },
+      { id: 19, category: 'privacy', text: 'Opt out of ad personalization: Google (myactivity.google.com), Meta, Apple, Microsoft, Twitter.', icon: '🎯' },
+      { id: 20, category: 'privacy', text: 'Use email aliases (SimpleLogin, Firefox Relay, AnonAddy) for signups. Protects real email.', icon: '📧' },
+      { id: 21, category: 'backup', text: 'Follow 3-2-1: 3 copies, 2 media types, 1 offsite. Example: local drive + cloud + offline USB.', icon: '💾' },
+      { id: 22, category: 'backup', text: 'Test restores quarterly. A backup you can\'t restore is not a backup.', icon: '🧪' },
+      { id: 23, category: 'backup', text: 'Encrypt backups client-side before cloud upload (Cryptomator, Veracrypt, or E2EE provider).', icon: '🔐' },
+      { id: 24, category: 'backup', text: 'Keep one backup completely offline (air-gapped). Protects against ransomware encrypting network shares.', icon: '🔌' },
+      { id: 25, category: 'backup', text: 'Backup password manager vault (encrypted export) to offline storage. Master key recovery.', icon: '🗝️' },
+      { id: 26, category: 'mobile', text: 'Only install apps from official stores (Play Store, App Store). Sideloaded apps bypass security review.', icon: '🏪' },
+      { id: 27, category: 'mobile', text: 'Set SIM PIN (Settings → Security → SIM lock). Prevents SIM swap if phone stolen.', icon: '📱' },
+      { id: 28, category: 'mobile', text: 'Enable "Find My Device" (Android) / "Find My iPhone" (iOS) NOW. Test it works.', icon: '📍' },
+      { id: 29, category: 'mobile', text: 'Review app permissions after updates. Updates sometimes reset or add new permissions.', icon: '🔄' },
+      { id: 30, category: 'mobile', text: 'Use Google Play Protect / App Store privacy labels. Check "Data Safety" section before install.', icon: '📋' },
+      { id: 31, category: 'wifi', text: 'Never do sensitive tasks (banking, email) on public Wi-Fi without VPN.', icon: '📶' },
+      { id: 32, category: 'wifi', text: 'Home Wi-Fi: WPA3 if supported, else WPA2-AES. Change default admin password. Disable WPS.', icon: '🏠' },
+      { id: 33, category: 'wifi', text: 'Use separate guest network for IoT devices (smart bulbs, cameras, printers).', icon: '🏠' },
+      { id: 34, category: 'wifi', text: 'Router firmware updates monthly. Many vulnerabilities patched silently.', icon: '🔄' },
+      { id: 35, category: 'wifi', text: 'Consider DNS over HTTPS (DoH): Cloudflare 1.1.1.1, NextDNS, or Quad9. Encrypts DNS queries.', icon: '🌐' },
+      { id: 36, category: 'social', text: 'Never share OTPs. "Bank calling to verify" is always a scam. Banks never ask for OTPs.', icon: '🏦' },
+      { id: 37, category: 'social', text: 'Verify identity independently. Call back on official number from website/card — not caller ID.', icon: '☎️' },
+      { id: 38, category: 'social', text: 'Gift card / crypto / wire transfer requests = SCAM. No legitimate org asks for these.', icon: '💳' },
+      { id: 39, category: 'social', text: 'Deepfake audio/video calls exist. Establish secret passphrase with family/colleagues for verification.', icon: '🤖' },
+      { id: 40, category: 'social', text: 'Limit personal info on social media. Birthdate, pet names, schools = password reset answers.', icon: '🔒' },
+      { id: 41, category: 'passwords', text: 'Never reuse passwords. Credential stuffing uses breached combos on hundreds of sites automatically.', icon: '🔁' },
+      { id: 42, category: 'passwords', text: 'Password manager master password: make it a memorable passphrase, store recovery kit offline.', icon: '🗝️' },
+      { id: 43, category: 'phishing', text: 'Check "Reply-To" header. Phishing often shows legitimate "From" but different "Reply-To".', icon: '↩️' },
+      { id: 44, category: 'phishing', text: 'Banking trojans overlay fake login screens. Always check URL bar matches your bank\'s exact domain.', icon: '🏦' },
+      { id: 45, category: 'device', text: 'Use Windows Hello / Touch ID / Face ID. Biometrics + PIN > password alone.', icon: '👆' },
+      { id: 46, category: 'device', text: 'Encrypt external drives (BitLocker To Go, FileVault, Veracrypt). Lost drive = safe data.', icon: '💿' },
+      { id: 47, category: 'privacy', text: 'Freeze credit with all 4 bureaus (CIBIL, Experian, Equifax, CRIF). Free, doesn\'t affect score, prevents identity theft.', icon: '🧊' },
+      { id: 48, category: 'privacy', text: 'Use "Sign in with Apple/Google" with "Hide My Email" / email masking when available.', icon: '🍎' },
+      { id: 49, category: 'backup', text: 'Phone photos: enable Google Photos / iCloud backup. Losing phone shouldn\'t mean losing memories.', icon: '📸' },
+      { id: 50, category: 'backup', text: 'Document your recovery procedure: what to restore, in what order, who to contact. Test it.', icon: '📋' },
+      { id: 51, category: 'mobile', text: 'Disable "Install Unknown Apps" for all sources except when intentionally sideloading.', icon: '🚫' },
+      { id: 52, category: 'mobile', text: 'Lockdown mode (iOS 16+) / Android 14+ security features for high-risk users (journalists, activists).', icon: '🛡️' },
+      { id: 53, category: 'wifi', text: 'IoT devices on guest network. If smart bulb hacked, attacker can\'t reach your laptop.', icon: '💡' },
+      { id: 54, category: 'social', text: 'Tech support scam: "Microsoft/Apple support" calling you = scam. They NEVER call unprompted.', icon: '☎️' },
+      { id: 55, category: 'passwords', text: 'Rotate passwords after any known breach of a service you use. Password manager makes this 1-click.', icon: '🔄' },
+      { id: 56, category: 'phishing', text: 'Smishing (SMS phishing): "Package delivery failed" links. Track via official carrier app/site only.', icon: '📦' },
+      { id: 57, category: 'device', text: 'Power off (not sleep) laptop when traveling. Sleep keeps encryption keys in RAM (cold boot attack risk).', icon: '⏻' },
+      { id: 58, category: 'privacy', text: 'Delete unused accounts. HaveIBeenPwned "Notify me" alerts you when your email appears in new breaches.', icon: '🗑️' },
+      { id: 59, category: 'backup', text: 'Ransomware encrypts network shares too. Offline backup is your only guarantee.', icon: '🔌' },
+      { id: 60, category: 'social', text: 'Report cybercrime: India → cybercrime.gov.in or 1930. US → ic3.gov. UK → actionfraud.police.uk.', icon: '🚨' }
+    ];
+
+    // Tips Controller
+    class TipsController {
+      constructor() {
+        this.tips = [...TIPS_DATA];
+        this.filteredTips = [...this.tips];
+        this.currentPage = 1;
+        this.tipsPerPage = 6;
+        this.currentCategory = 'all';
+        this.searchQuery = '';
+        this.favorites = CyberShield.Utils.storage.get('favorite-tips', []);
+        
+        this.dailyTipText = document.getElementById('daily-tip-text');
+        this.dailyTipDate = document.getElementById('daily-tip-date');
+        this.tipsGrid = document.getElementById('tips-grid');
+        this.favoritesGrid = document.getElementById('favorites-grid');
+        this.noFavorites = document.getElementById('no-favorites');
+        this.pagination = document.getElementById('pagination');
+        this.searchInput = document.getElementById('tip-search');
+        this.categorySelect = document.getElementById('tip-category');
+        this.randomBtn = document.getElementById('random-tip-btn');
+        
+        this.bindEvents();
+        this.initDailyTip();
+        this.render();
+        this.renderFavorites();
+      }
+
+      bindEvents() {
+        this.searchInput.addEventListener('input', CyberShield.Utils.debounce((e) => {
+          this.searchQuery = e.target.value.toLowerCase().trim();
+          this.currentPage = 1;
+          this.filterAndRender();
+        }, 200));
+        
+        this.categorySelect.addEventListener('change', (e) => {
+          this.currentCategory = e.target.value;
+          this.currentPage = 1;
+          this.filterAndRender();
+        });
+        
+        this.randomBtn.addEventListener('click', () => this.showRandomTip());
+      }
+
+      initDailyTip() {
+        // Deterministic daily tip based on date
+        const today = new Date();
+        const dayOfYear = Math.floor((today - new Date(today.getFullYear(), 0, 0)) / 86400000);
+        const tipIndex = dayOfYear % this.tips.length;
+        const tip = this.tips[tipIndex];
+        
+        this.dailyTipText.textContent = tip.text;
+        this.dailyTipDate.textContent = today.toLocaleDateString('en-US', { weekday: 'long', month: 'long', day: 'numeric', year: 'numeric' });
+      }
+
+      showRandomTip() {
+        const randomTip = this.tips[Math.floor(Math.random() * this.tips.length)];
+        this.dailyTipText.textContent = randomTip.text;
+        this.dailyTipDate.textContent = 'Random tip';
+      }
+
+      filterAndRender() {
+        this.filteredTips = this.tips.filter(tip => {
+          const matchesCategory = this.currentCategory === 'all' || tip.category === this.currentCategory;
+          const matchesSearch = this.searchQuery === '' || tip.text.toLowerCase().includes(this.searchQuery);
+          return matchesCategory && matchesSearch;
+        });
+        this.currentPage = 1;
+        this.render();
+      }
+
+      render() {
+        const start = (this.currentPage - 1) * this.tipsPerPage;
+        const end = start + this.tipsPerPage;
+        const pageTips = this.filteredTips.slice(start, end);
+        
+        this.tipsGrid.innerHTML = pageTips.map(tip => this.createTipCard(tip)).join('');
+        this.renderPagination();
+        this.bindTipEvents();
+      }
+
+      createTipCard(tip) {
+        const isFavorite = this.favorites.includes(tip.id);
+        return `
+          <article class="card" role="listitem" style="position: relative;">
+            <button class="favorite-btn ${isFavorite ? 'active' : ''}" 
+                    data-tip-id="${tip.id}" 
+                    aria-label="${isFavorite ? 'Remove from favorites' : 'Add to favorites'}"
+                    aria-pressed="${isFavorite}"
+                    style="position: absolute; top: 1rem; right: 1rem; background: var(--color-bg); border: 1px solid var(--color-border); border-radius: 50%; width: 36px; height: 36px; display: flex; align-items: center; justify-content: center; cursor: pointer; transition: all var(--transition-fast); z-index: 1;">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="${isFavorite ? 'currentColor' : 'none'}" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+            </button>
+            <div style="display: flex; align-items: flex-start; gap: 1rem;">
+              <span style="font-size: 2rem; flex-shrink: 0;">${tip.icon}</span>
+              <div style="flex: 1;">
+                <p style="font-size: 1rem; line-height: 1.7; color: var(--color-text); margin: 0;">${this.escapeHtml(tip.text)}</p>
+                <span class="badge badge-${this.getCategoryBadgeClass(tip.category)}" style="margin-top: 0.75rem;">${this.formatCategory(tip.category)}</span>
+              </div>
+            </div>
+          </article>
+        `;
+      }
+
+      getCategoryBadgeClass(category) {
+        const classes = {
+          'passwords': 'success',
+          'phishing': 'info',
+          'device': 'info',
+          'privacy': 'success',
+          'backup': 'danger',
+          'mobile': 'warning',
+          'wifi': 'info',
+          'social': 'warning'
+        };
+        return classes[category] || 'neutral';
+      }
+
+      formatCategory(category) {
+        return category.charAt(0).toUpperCase() + category.slice(1).replace('-', ' ');
+      }
+
+      bindTipEvents() {
+        this.tipsGrid.querySelectorAll('.favorite-btn').forEach(btn => {
+          btn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            const tipId = parseInt(btn.dataset.tipId);
+            this.toggleFavorite(tipId, btn);
+          });
+        });
+      }
+
+      toggleFavorite(tipId, btn) {
+        const index = this.favorites.indexOf(tipId);
+        if (index === -1) {
+          this.favorites.push(tipId);
+          btn.classList.add('active');
+          btn.setAttribute('aria-pressed', 'true');
+          btn.querySelector('svg').setAttribute('fill', 'currentColor');
+          this.showToast('Added to favorites');
+        } else {
+          this.favorites.splice(index, 1);
+          btn.classList.remove('active');
+          btn.setAttribute('aria-pressed', 'false');
+          btn.querySelector('svg').setAttribute('fill', 'none');
+          this.showToast('Removed from favorites');
+        }
+        CyberShield.Utils.storage.set('favorite-tips', this.favorites);
+        this.renderFavorites();
+      }
+
+      renderFavorites() {
+        if (this.favorites.length === 0) {
+          this.favoritesGrid.style.display = 'none';
+          this.noFavorites.style.display = 'block';
+          return;
+        }
+        
+        this.favoritesGrid.style.display = 'grid';
+        this.noFavorites.style.display = 'none';
+        
+        const favoriteTips = this.tips.filter(tip => this.favorites.includes(tip.id));
+        this.favoritesGrid.innerHTML = favoriteTips.map(tip => `
+          <article class="card" role="listitem" style="position: relative;">
+            <button class="favorite-btn active" 
+                    data-tip-id="${tip.id}" 
+                    aria-label="Remove from favorites"
+                    aria-pressed="true"
+                    style="position: absolute; top: 0.5rem; right: 0.5rem; background: var(--color-danger-bg); color: var(--color-danger); border: none; border-radius: 50%; width: 32px; height: 32px; display: flex; align-items: center; justify-content: center; cursor: pointer;">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+            </button>
+            <div style="display: flex; align-items: flex-start; gap: 1rem;">
+              <span style="font-size: 1.5rem; flex-shrink: 0;">${tip.icon}</span>
+              <div style="flex: 1;">
+                <p style="font-size: 0.9375rem; line-height: 1.6; color: var(--color-text); margin: 0;">${this.escapeHtml(tip.text)}</span>
+                <span class="badge badge-${this.getCategoryBadgeClass(tip.category)}" style="margin-top: 0.5rem; font-size: 0.6875rem;">${this.formatCategory(tip.category)}</span>
+              </div>
+            </div>
+          </article>
+        `).join('');
+
+        // Bind remove events
+        this.favoritesGrid.querySelectorAll('.favorite-btn').forEach(btn => {
+          btn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            const tipId = parseInt(btn.dataset.tipId);
+            this.toggleFavorite(tipId, btn);
+          });
+        });
+      }
+
+      renderPagination() {
+        const totalPages = Math.ceil(this.filteredTips.length / this.tipsPerPage);
+        if (totalPages <= 1) {
+          this.pagination.innerHTML = '';
+          return;
+        }
+        
+        let html = '';
+        if (this.currentPage > 1) {
+          html += `<button class="btn btn-secondary btn-sm" data-page="${this.currentPage - 1}" aria-label="Previous page">← Prev</button>`;
+        }
+        
+        for (let i = 1; i <= totalPages; i++) {
+          if (i === 1 || i === totalPages || (i >= this.currentPage - 1 && i <= this.currentPage + 1)) {
+            html += `<button class="btn ${i === this.currentPage ? 'btn-primary' : 'btn-secondary'} btn-sm" data-page="${i}" ${i === this.currentPage ? 'aria-current="page"' : ''}>${i}</button>`;
+          } else if (i === this.currentPage - 2 || i === this.currentPage + 2) {
+            html += '<span style="padding: 0 0.5rem; color: var(--color-text-muted);">...</span>';
+          }
+        }
+        
+        if (this.currentPage < totalPages) {
+          html += `<button class="btn btn-secondary btn-sm" data-page="${this.currentPage + 1}" aria-label="Next page">Next →</button>`;
+        }
+        
+        this.pagination.innerHTML = html;
+        
+        this.pagination.querySelectorAll('[data-page]').forEach(btn => {
+          btn.addEventListener('click', () => {
+            this.currentPage = parseInt(btn.dataset.page);
+            this.render();
+            window.scrollTo({ top: this.tipsGrid.offsetTop - 100, behavior: 'smooth' });
+          });
+        });
+      }
+
+      showToast(message, type = 'success') {
+        const existing = document.querySelector('.toast');
+        if (existing) existing.remove();
+
+        const toast = document.createElement('div');
+        toast.className = 'toast';
+        toast.style.cssText = `
+          position: fixed;
+          bottom: 2rem;
+          right: 2rem;
+          background: ${type === 'error' ? 'var(--color-danger)' : 'var(--color-primary)'};
+          color: white;
+          padding: 1rem 1.5rem;
+          border-radius: var(--radius-md);
+          box-shadow: var(--shadow-lg);
+          z-index: 1000;
+          animation: slideUp 0.3s ease;
+        `;
+        toast.textContent = message;
+        document.body.appendChild(toast);
+
+        setTimeout(() => {
+          toast.style.animation = 'fadeOut 0.3s ease forwards';
+          setTimeout(() => toast.remove(), 300);
+        }, 2000);
+      }
+
+      escapeHtml(text) {
+        const div = document.createElement('div');
+        div.textContent = text;
+        return div.innerHTML;
+      }
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      new TipsController();
+    });
+  </script>
+</body>
+</html>

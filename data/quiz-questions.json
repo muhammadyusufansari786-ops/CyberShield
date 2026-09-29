@@ -1,0 +1,304 @@
+[
+  {
+    "id": "q1",
+    "category": "passwords",
+    "question": "What is the minimum recommended length for a strong password?",
+    "options": ["8 characters", "10 characters", "12 characters", "16 characters"],
+    "correct": 2,
+    "explanation": "While 8 characters was once standard, modern computing power makes 12+ characters the recommended minimum for strong passwords."
+  },
+  {
+    "id": "q2",
+    "category": "passwords",
+    "question": "Which of these passwords would have the highest entropy?",
+    "options": ["P@ssw0rd123!", "correct-horse-battery-staple", "X7#mK9$pL2", "Tr0ub4dor&3"],
+    "correct": 1,
+    "explanation": "Passphrases like 'correct-horse-battery-staple' (4 random words) have high entropy because of their length (25+ chars) while remaining memorable."
+  },
+  {
+    "id": "q3",
+    "category": "passwords",
+    "question": "What does MFA stand for and why is it important?",
+    "options": [
+      "Multi-Factor Authentication - adds a second verification step beyond passwords",
+      "Master File Access - controls who can access system files",
+      "Memory Forensics Analysis - analyzes RAM for threats",
+      "Managed Firewall Appliance - hardware firewall device"
+    ],
+    "correct": 0,
+    "explanation": "MFA (Multi-Factor Authentication) requires two or more independent categories of credentials: something you know (password), something you have (phone/authenticator), or something you are (biometric)."
+  },
+  {
+    "id": "q4",
+    "category": "passwords",
+    "question": "Why should you use a unique password for every account?",
+    "options": [
+      "It's required by law in most countries",
+      "If one service is breached, your other accounts stay secure",
+      "Password managers only work with unique passwords",
+      "It makes passwords easier to remember"
+    ],
+    "correct": 1,
+    "explanation": "Credential stuffing attacks use username/password pairs from one breach to try logging into other services. Unique passwords prevent a single breach from compromising multiple accounts."
+  },
+  {
+    "id": "q5",
+    "category": "phishing",
+    "question": "You receive an email from 'security@paypal-services.com' saying your account is locked. The link goes to 'paypal-login.verification-services.xyz'. What should you do?",
+    "options": [
+      "Click the link and log in to secure your account",
+      "Reply to the email asking for verification",
+      "Report as phishing and visit paypal.com directly",
+      "Forward to friends to warn them"
+    ],
+    "correct": 2,
+    "explanation": "This is a classic phishing attempt. Legitimate companies use their own domains (paypal.com), not subdomains on unrelated domains."
+  },
+  {
+    "id": "q6",
+    "category": "phishing",
+    "question": "Which is a common sign of a phishing email?",
+    "options": [
+      "Generic greeting, urgent language, suspicious link",
+      "Personalised greeting, calm tone, safe link",
+      "Official sender address, no attachments",
+      "All of the above"
+    ],
+    "correct": 0,
+    "explanation": "Phishing often uses generic greetings, urgency, and links that don't match the claimed sender."
+  },
+  {
+    "id": "q7",
+    "category": "phishing",
+    "question": "You get an SMS: 'Your UPI payment of ₹5,000 is pending. Reply YES to confirm or call 1800-123-4567.' What should you do?",
+    "options": [
+      "Reply YES",
+      "Ignore & block the number",
+      "Call the number provided",
+      "Reply with your bank details"
+    ],
+    "correct": 1,
+    "explanation": "Legitimate services never ask you to reply YES via SMS to confirm a payment. This is smishing."
+  },
+  {
+    "id": "q8",
+    "category": "phishing",
+    "question": "What is 'quishing'?",
+    "options": [
+      "Phishing via QR codes",
+      "Phishing via voice calls",
+      "Phishing via social media",
+      "Phishing via USB drives"
+    ],
+    "correct": 0,
+    "explanation": "Quishing = QR code phishing. Attackers place malicious QR codes in public places that lead to phishing sites when scanned."
+  },
+  {
+    "id": "q9",
+    "category": "malware",
+    "question": "What is the primary difference between a virus and a worm?",
+    "options": [
+      "Viruses are more destructive than worms",
+      "Worms require user interaction to spread; viruses spread automatically",
+      "Viruses require a host file to attach to; worms are standalone and self-replicating",
+      "There is no difference - they are the same thing"
+    ],
+    "correct": 2,
+    "explanation": "Viruses attach to legitimate files/programs and require user execution to spread. Worms are standalone programs that self-replicate and spread automatically."
+  },
+  {
+    "id": "q10",
+    "category": "malware",
+    "question": "Ransomware typically spreads through which vectors? (Most common)",
+    "options": [
+      "Infected USB drives left in parking lots",
+      "Phishing emails with malicious attachments/links and exploit kits",
+      "Bluetooth connections in public places",
+      "QR codes on restaurant menus"
+    ],
+    "correct": 1,
+    "explanation": "The vast majority of ransomware infections start with phishing emails containing malicious attachments or links to exploit kits."
+  },
+  {
+    "id": "q11",
+    "category": "malware",
+    "question": "What should you do immediately if you suspect ransomware?",
+    "options": [
+      "Pay the ransom quickly to get your files back",
+      "Disconnect from network/internet, don't power off, contact IT/security",
+      "Run a full antivirus scan immediately",
+      "Try to decrypt files using online tools"
+    ],
+    "correct": 1,
+    "explanation": "Disconnecting prevents spread to network shares. Don't power off (may lose encryption keys in memory). Never pay ransom."
+  },
+  {
+    "id": "q12",
+    "category": "malware",
+    "question": "What is a 'botnet'?",
+    "options": [
+      "A network of robots controlled by AI",
+      "A network of compromised computers controlled by an attacker",
+      "A type of antivirus software",
+      "A blockchain network"
+    ],
+    "correct": 1,
+    "explanation": "A botnet is a collection of malware-infected devices (bots) controlled remotely by an attacker (botmaster)."
+  },
+  {
+    "id": "q13",
+    "category": "privacy",
+    "question": "What does 'end-to-end encryption' mean?",
+    "options": [
+      "Data is encrypted on your device and only decrypted on the recipient's device",
+      "Data is encrypted while traveling but decrypted on company servers",
+      "Data is encrypted with two different keys",
+      "Data is encrypted at the end of each day"
+    ],
+    "correct": 0,
+    "explanation": "E2EE means only the communicating users can read messages. The service provider cannot access the content."
+  },
+  {
+    "id": "q14",
+    "category": "privacy",
+    "question": "Which is NOT a good privacy practice?",
+    "options": [
+      "Using a privacy-focused browser with tracker blocking",
+      "Granting all app permissions 'just in case'",
+      "Reviewing privacy settings on social media regularly",
+      "Using a VPN on public Wi-Fi"
+    ],
+    "correct": 1,
+    "explanation": "Granting unnecessary permissions exposes your data. Follow the principle of least privilege."
+  },
+  {
+    "id": "q15",
+    "category": "privacy",
+    "question": "What is 'data minimization'?",
+    "options": [
+      "Compressing data to save storage space",
+      "Collecting only the data strictly necessary for a specific purpose",
+      "Deleting data after 30 days automatically",
+      "Encrypting data to minimize exposure"
+    ],
+    "correct": 1,
+    "explanation": "Data minimization is a core privacy principle: only collect, process, and retain the minimum personal data needed."
+  },
+  {
+    "id": "q16",
+    "category": "mobile",
+    "question": "Biggest risk of installing apps from unknown sources (sideloading)?",
+    "options": [
+      "Apps won't update automatically",
+      "Apps may contain malware since they bypass app store review",
+      "Apps will drain battery faster",
+      "Apps won't work on newer Android versions"
+    ],
+    "correct": 1,
+    "explanation": "Official app stores review apps for malware. Sideloaded apps bypass this protection."
+  },
+  {
+    "id": "q17",
+    "category": "mobile",
+    "question": "What is SIM swapping?",
+    "options": [
+      "Switching SIM cards between phones",
+      "Attacker convinces carrier to transfer your number to their SIM",
+      "A malware that clones your SIM card remotely",
+      "A feature that lets you use two numbers on one SIM"
+    ],
+    "correct": 1,
+    "explanation": "SIM swapping is when attackers social-engineer carriers to port your phone number to their SIM, intercepting 2FA codes."
+  },
+  {
+    "id": "q18",
+    "category": "mobile",
+    "question": "Most secure screen lock method?",
+    "options": [
+      "Pattern lock",
+      "4-digit PIN",
+      "6-digit PIN or alphanumeric password",
+      "Face unlock (basic)"
+    ],
+    "correct": 2,
+    "explanation": "6-digit PIN has 1,000,000 combinations vs 10,000 for 4-digit. Alphanumeric passwords are even stronger."
+  },
+  {
+    "id": "q19",
+    "category": "passwords",
+    "question": "What is 'credential stuffing'?",
+    "options": [
+      "Stuffing multiple credentials into a login form at once",
+      "Using stolen username/password pairs from one breach to try other sites",
+      "Hiding credentials in website code",
+      "A password manager feature"
+    ],
+    "correct": 1,
+    "explanation": "Credential stuffing automates login attempts using credentials from data breaches."
+  },
+  {
+    "id": "q20",
+    "category": "phishing",
+    "question": "You get a call from 'Microsoft Support' saying your computer has a virus. They ask for remote access. What do you do?",
+    "options": [
+      "Grant access - Microsoft does proactively monitor computers",
+      "Ask for their employee ID and call back on the official number",
+      "Hang up - Microsoft never makes unsolicited support calls",
+      "Pay the fee they request to fix the 'virus'"
+    ],
+    "correct": 2,
+    "explanation": "This is a tech support scam. Microsoft never makes unsolicited calls about computer viruses."
+  },
+  {
+    "id": "q21",
+    "category": "malware",
+    "question": "What is a 'zero-day' vulnerability?",
+    "options": [
+      "A vulnerability known for zero days",
+      "A vulnerability unknown to the vendor with no patch available",
+      "A vulnerability that affects zero users",
+      "A vulnerability that requires zero clicks to exploit"
+    ],
+    "correct": 1,
+    "explanation": "A zero-day vulnerability is unknown to the vendor, meaning no patch exists."
+  },
+  {
+    "id": "q22",
+    "category": "privacy",
+    "question": "What does a VPN actually protect?",
+    "options": [
+      "Your data from your ISP and network eavesdroppers on public Wi-Fi",
+      "You from all viruses and malware",
+      "Your identity from websites you visit",
+      "Your passwords from keyloggers"
+    ],
+    "correct": 0,
+    "explanation": "A VPN encrypts traffic between your device and the VPN server, protecting from ISP and eavesdroppers."
+  },
+  {
+    "id": "q23",
+    "category": "mobile",
+    "question": "How can you best protect against SIM swapping?",
+    "options": [
+      "Don't share your phone number online",
+      "Set up a PIN/password with your mobile carrier for account changes",
+      "Use SMS-based 2FA everywhere",
+      "Turn off your phone at night"
+    ],
+    "correct": 1,
+    "explanation": "Contact your carrier to set up a port-out PIN. This prevents attackers from social-engineering carrier support."
+  },
+  {
+    "id": "q24",
+    "category": "passwords",
+    "question": "What is the purpose of a 'salt' in password hashing?",
+    "options": [
+      "To make passwords taste better",
+      "To add random data to each password before hashing, preventing rainbow table attacks",
+      "To encrypt the password database",
+      "To slow down the hashing process"
+    ],
+    "correct": 1,
+    "explanation": "A salt is unique random data added to each password before hashing, ensuring identical passwords produce different hashes."
+  }
+]

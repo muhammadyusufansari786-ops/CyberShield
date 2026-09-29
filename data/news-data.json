@@ -1,0 +1,167 @@
+[
+  {
+    "id": "news-1",
+    "title": "New Ransomware Variant \"LockBit 4.0\" Targets Enterprise Networks",
+    "excerpt": "Security researchers have identified a new variant of LockBit ransomware with improved encryption speed and anti-analysis techniques. Organizations urged to patch VPN vulnerabilities immediately.",
+    "category": "ransomware",
+    "source": "The Hacker News",
+    "sourceUrl": "https://thehackernews.com",
+    "date": "2025-09-15",
+    "advice": "Ensure all VPN and remote access solutions are patched. Implement network segmentation and maintain offline backups.",
+    "tags": ["ransomware", "enterprise", "lockbit"]
+  },
+  {
+    "id": "news-2",
+    "title": "Massive Phishing Campaign Impersonates Indian Income Tax Department",
+    "excerpt": "Attackers sending emails claiming tax refunds with malicious PDF attachments containing info-stealer malware. Over 50,000 emails detected in past week.",
+    "category": "phishing",
+    "source": "CERT-In Advisory",
+    "sourceUrl": "https://www.cert-in.org.in",
+    "date": "2025-09-14",
+    "advice": "Verify sender email addresses. Income Tax Dept never sends refund notifications with attachments. Report to reportphishing@cert-in.org.in",
+    "tags": ["phishing", "india", "tax-fraud", "malware"]
+  },
+  {
+    "id": "news-3",
+    "title": "Critical Vulnerability in Popular File Sharing Library (CVE-2025-XXXX)",
+    "excerpt": "A zero-day vulnerability in a widely-used open-source file upload library allows remote code execution. Patches available for all major versions.",
+    "category": "vulnerability",
+    "source": "NVD / MITRE",
+    "sourceUrl": "https://cve.mitre.org",
+    "date": "2025-09-13",
+    "advice": "Update affected libraries immediately. Apply WAF rules if patching delayed. Monitor for unusual file upload activity.",
+    "tags": ["cve", "zero-day", "rce", "supply-chain"]
+  },
+  {
+    "id": "news-4",
+    "title": "QR Code Phishing (Quishing) Surges at Public Charging Stations",
+    "excerpt": "Attackers placing malicious QR codes on EV charging stations and parking meters. Scanning leads to fake payment pages harvesting credentials.",
+    "category": "scam",
+    "source": "BleepingComputer",
+    "sourceUrl": "https://www.bleepingcomputer.com",
+    "date": "2025-09-12",
+    "advice": "Verify QR code authenticity before scanning. Use official apps for payments. Check URL carefully after scanning.",
+    "tags": ["quishing", "qr-code", "payment-fraud", "physical-security"]
+  },
+  {
+    "id": "news-5",
+    "title": "New Android Banking Trojan \"Hook\" Targets 300+ Banking Apps",
+    "excerpt": "Sophisticated malware with real-time screen streaming, keylogging, and automatic transaction capabilities. Distributed via fake app stores.",
+    "category": "malware",
+    "source": "ThreatFabric",
+    "sourceUrl": "https://www.threatfabric.com",
+    "date": "2025-09-11",
+    "advice": "Only install apps from Google Play Store. Enable Play Protect. Review app permissions. Use banking apps' built-in security features.",
+    "tags": ["android", "banking-trojan", "mobile-malware", "financial"]
+  },
+  {
+    "id": "news-6",
+    "title": "Data Breach at Major Indian EdTech Platform Exposes 2M Student Records",
+    "excerpt": "Unsecured database exposed names, emails, phone numbers, and course progress. Company secured database after responsible disclosure.",
+    "category": "breach",
+    "source": "SecurityWeek",
+    "sourceUrl": "https://www.securityweek.com",
+    "date": "2025-09-10",
+    "advice": "Monitor for phishing using exposed data. Enable MFA on all accounts. Consider credit monitoring if financial data exposed.",
+    "tags": ["data-breach", "india", "edtech", "pii"]
+  },
+  {
+    "id": "news-7",
+    "title": "CISA Adds 3 Vulnerabilities to Known Exploited Vulnerabilities Catalog",
+    "excerpt": "Federal agencies ordered to patch within 2 weeks. Vulnerabilities affect Microsoft Exchange, Apache Struts, and Citrix ADC.",
+    "category": "vulnerability",
+    "source": "CISA",
+    "sourceUrl": "https://www.cisa.gov",
+    "date": "2025-09-09",
+    "advice": "Prioritize patching these KEV-listed vulnerabilities. Apply emergency patches if available. Scan networks for indicators of compromise.",
+    "tags": ["cisa", "kev", "exchange", "struts", "citrix"]
+  },
+  {
+    "id": "news-8",
+    "title": "Deepfake Audio Used in ₹2 Crore CEO Fraud at Mumbai Company",
+    "excerpt": "Attackers used AI-generated voice clone of CEO to authorize fraudulent wire transfer. Finance team verified via email which was also compromised.",
+    "category": "scam",
+    "source": "Times of India",
+    "sourceUrl": "https://timesofindia.indiatimes.com",
+    "date": "2025-09-08",
+    "advice": "Implement multi-channel verification for financial transactions. Establish secret passphrases for executive requests. Train finance teams on deepfake risks.",
+    "tags": ["deepfake", "ai-fraud", "ceo-fraud", "india", "wire-transfer"]
+  },
+  {
+    "id": "news-9",
+    "title": "New IoT Botnet \"Condi\" Exploits TP-Link Router Vulnerability",
+    "excerpt": "Botnet recruits routers for DDoS attacks. Vulnerability allows unauthenticated command execution. Over 10,000 devices infected in first week.",
+    "category": "malware",
+    "source": "FortiGuard Labs",
+    "sourceUrl": "https://www.fortiguard.com",
+    "date": "2025-09-07",
+    "advice": "Update router firmware immediately. Disable remote management. Change default credentials. Monitor network traffic for anomalies.",
+    "tags": ["iot", "botnet", "router", "ddos", "tp-link"]
+  },
+  {
+    "id": "news-10",
+    "title": "RBI Issues New Guidelines for Digital Payment Security",
+    "excerpt": "Mandates tokenization for card-on-file, enhanced fraud monitoring, and customer liability protection. Deadline: December 2025.",
+    "category": "india",
+    "source": "Reserve Bank of India",
+    "sourceUrl": "https://www.rbi.org.in",
+    "date": "2025-09-06",
+    "advice": "Businesses: implement tokenization. Consumers: use tokenized cards, enable transaction alerts, report unauthorized transactions within 3 days.",
+    "tags": ["rbi", "regulation", "digital-payments", "tokenization", "india"]
+  },
+  {
+    "id": "news-11",
+    "title": "Supply Chain Attack: Malicious NPM Package Steals Crypto Wallets",
+    "excerpt": "Popular npm package compromised in typosquatting attack. Malicious code exfiltrates private keys and seed phrases to attacker servers.",
+    "category": "malware",
+    "source": "Socket.dev",
+    "sourceUrl": "https://socket.dev",
+    "date": "2025-09-05",
+    "advice": "Audit npm dependencies. Use lockfiles. Enable 2FA on npm accounts. Monitor for suspicious package updates.",
+    "tags": ["supply-chain", "npm", "crypto", "typosquatting", "developers"]
+  },
+  {
+    "id": "news-12",
+    "title": "WhatsApp \"Pink\" Scam Returns with New Social Engineering Tactics",
+    "excerpt": "Messages offering \"WhatsApp Pink\" with exclusive features lead to malware installation. Over 1M users targeted in India.",
+    "category": "scam",
+    "source": "Indian Cyber Crime Coordination Centre",
+    "sourceUrl": "https://cybercrime.gov.in",
+    "date": "2025-09-04",
+    "advice": "Never install apps from links in messages. WhatsApp updates only through official app stores. Report to cybercrime.gov.in.",
+    "tags": ["whatsapp", "scam", "india", "social-engineering", "malware"]
+  },
+  {
+    "id": "news-13",
+    "title": "Zero-Day in MOVEit Transfer Exploited by Cl0p Ransomware Gang",
+    "excerpt": "Mass exploitation of file transfer vulnerability affects hundreds of organizations globally. Data theft confirmed at multiple Fortune 500 companies.",
+    "category": "breach",
+    "source": "Dark Reading",
+    "sourceUrl": "https://www.darkreading.com",
+    "date": "2025-09-03",
+    "advice": "Apply Progress Software patches immediately. Review all file transfer logs. Notify affected parties per regulatory requirements.",
+    "tags": ["moveit", "cl0p", "zero-day", "file-transfer", "supply-chain"]
+  },
+  {
+    "id": "news-14",
+    "title": "New SIM Swap Protection Rules Mandated by TRAI for Indian Telcos",
+    "excerpt": "Telecom Regulatory Authority of India mandates stricter verification for SIM replacement requests. 24-hour cooling period for number porting.",
+    "category": "india",
+    "source": "TRAI",
+    "sourceUrl": "https://www.trai.gov.in",
+    "date": "2025-09-02",
+    "advice": "Set up SIM lock PIN with your carrier. Monitor for unexpected \"SIM swap\" SMS. Use authenticator apps instead of SMS 2FA where possible.",
+    "tags": ["trai", "sim-swap", "regulation", "india", "2fa"]
+  },
+  {
+    "id": "news-15",
+    "title": "AI-Powered Phishing Emails Now Indistinguishable from Legitimate",
+    "excerpt": "Researchers demonstrate GPT-generated phishing emails with perfect grammar, context awareness, and personalized details from OSINT. Detection rates drop to 3%.",
+    "category": "phishing",
+    "source": "Krebs on Security",
+    "sourceUrl": "https://krebsonsecurity.com",
+    "date": "2025-09-01",
+    "advice": "Verify unexpected requests through secondary channels. Implement DMARC/SPF/DKIM. Train employees on AI-generated threats. Use phishing-resistant MFA (FIDO2).",
+    "tags": ["ai", "phishing", "generative-ai", "social-engineering", "research"]
+  }
+]

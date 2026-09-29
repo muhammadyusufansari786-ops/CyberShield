@@ -1,0 +1,210 @@
+[
+  {
+    "id": "res-1",
+    "name": "CERT-In (Indian Computer Emergency Response Team)",
+    "url": "https://www.cert-in.org.in",
+    "category": "government",
+    "description": "India's national agency for responding to cyber security incidents. Issues advisories, vulnerability notes, and incident reporting.",
+    "icon": "🏛️"
+  },
+  {
+    "id": "res-2",
+    "name": "Indian Cyber Crime Coordination Centre (I4C)",
+    "url": "https://cybercrime.gov.in",
+    "category": "government",
+    "description": "Official Government of India portal for reporting cybercrimes. Categories: financial fraud, social media, ransomware, hacking, etc.",
+    "icon": "🚨"
+  },
+  {
+    "id": "res-3",
+    "name": "CISA (Cybersecurity & Infrastructure Security Agency)",
+    "url": "https://www.cisa.gov",
+    "category": "government",
+    "description": "U.S. federal agency with extensive guides, alerts, and resources for individuals and organizations.",
+    "icon": "🛡️"
+  },
+  {
+    "id": "res-4",
+    "name": "NIST (National Institute of Standards and Technology)",
+    "url": "https://www.nist.gov",
+    "category": "standards",
+    "description": "Develops cybersecurity standards and guidelines (NIST CSF, SP 800 series). Gold standard for security frameworks.",
+    "icon": "📐"
+  },
+  {
+    "id": "res-5",
+    "name": "OWASP (Open Web Application Security Project)",
+    "url": "https://owasp.org",
+    "category": "standards",
+    "description": "Nonprofit foundation improving software security. Famous for OWASP Top 10 web application security risks.",
+    "icon": "🌐"
+  },
+  {
+    "id": "res-6",
+    "name": "ISO/IEC 27001",
+    "url": "https://www.iso.org/standard/27001",
+    "category": "standards",
+    "description": "International standard for Information Security Management Systems (ISMS). Certification standard.",
+    "icon": "📋"
+  },
+  {
+    "id": "res-7",
+    "name": "PCI DSS (Payment Card Industry Data Security Standard)",
+    "url": "https://www.pcisecuritystandards.org",
+    "category": "standards",
+    "description": "Security standards for organizations that handle credit card information.",
+    "icon": "💳"
+  },
+  {
+    "id": "res-8",
+    "name": "The Hacker News",
+    "url": "https://thehackernews.com",
+    "category": "news",
+    "description": "Leading cybersecurity news platform covering breaches, vulnerabilities, and threat intelligence.",
+    "icon": "📰"
+  },
+  {
+    "id": "res-9",
+    "name": "Krebs on Security",
+    "url": "https://krebsonsecurity.com",
+    "category": "news",
+    "description": "Investigative security journalism by Brian Krebs. Deep dives into cybercrime operations.",
+    "icon": "🔍"
+  },
+  {
+    "id": "res-10",
+    "name": "BleepingComputer",
+    "url": "https://www.bleepingcomputer.com",
+    "category": "news",
+    "description": "Technical news, tutorials, and support forums for computer security and technology.",
+    "icon": "💻"
+  },
+  {
+    "id": "res-11",
+    "name": "Dark Reading",
+    "url": "https://www.darkreading.com",
+    "category": "news",
+    "description": "Enterprise-focused cybersecurity news, analysis, and research from industry experts.",
+    "icon": "🌙"
+  },
+  {
+    "id": "res-12",
+    "name": "Have I Been Pwned?",
+    "url": "https://haveibeenpwned.com",
+    "category": "tools",
+    "description": "Check if your email/phone has been compromised in known data breaches. By Troy Hunt.",
+    "icon": "🔍"
+  },
+  {
+    "id": "res-13",
+    "name": "No More Ransom",
+    "url": "https://www.nomoreransom.org",
+    "category": "tools",
+    "description": "Free decryption tools for various ransomware variants. Initiative by Europol, Kaspersky, McAfee.",
+    "icon": "🔓"
+  },
+  {
+    "id": "res-14",
+    "name": "VirusTotal",
+    "url": "https://www.virustotal.com",
+    "category": "tools",
+    "description": "Free online service analyzing files/URLs for malware using 70+ antivirus engines.",
+    "icon": "🦠"
+  },
+  {
+    "id": "res-15",
+    "name": "URLhaus",
+    "url": "https://urlhaus.abuse.ch",
+    "category": "tools",
+    "description": "Malware URL exchange platform. Check if a URL is distributing malware.",
+    "icon": "🔗"
+  },
+  {
+    "id": "res-16",
+    "name": "MITRE ATT&CK",
+    "url": "https://attack.mitre.org",
+    "category": "frameworks",
+    "description": "Globally-accessible knowledge base of adversary tactics and techniques based on real-world observations.",
+    "icon": "🗺️"
+  },
+  {
+    "id": "res-17",
+    "name": "NIST Cybersecurity Framework (CSF)",
+    "url": "https://www.nist.gov/cyberframework",
+    "category": "frameworks",
+    "description": "Voluntary framework helping organizations manage and reduce cybersecurity risk.",
+    "icon": "🏗️"
+  },
+  {
+    "id": "res-17b",
+    "name": "CIS Controls",
+    "url": "https://www.cisecurity.org/controls",
+    "category": "frameworks",
+    "description": "Prioritized set of actions to protect organizations from known cyber attack vectors.",
+    "icon": "✅"
+  },
+  {
+    "id": "res-18",
+    "name": "RBI (Reserve Bank of India) Cybersecurity Guidelines",
+    "url": "https://www.rbi.org.in",
+    "category": "government",
+    "description": "Cybersecurity framework for banks and financial institutions in India.",
+    "icon": "🏦"
+  },
+  {
+    "id": "res-19",
+    "name": "TRAI (Telecom Regulatory Authority of India)",
+    "url": "https://www.trai.gov.in",
+    "category": "government",
+    "description": "Regulations for telecom security, SIM swap protection, and consumer protection.",
+    "icon": "📱"
+  },
+  {
+    "id": "res-20",
+    "name": "NCIIPC (National Critical Information Infrastructure Protection Centre)",
+    "url": "https://nciipc.gov.in",
+    "category": "government",
+    "description": "Nodal agency for protecting Critical Information Infrastructure in India.",
+    "icon": "🏭"
+  },
+  {
+    "id": "res-21",
+    "name": "Cyber Swachhta Kendra",
+    "url": "https://www.cyberswachhtakendra.gov.in",
+    "category": "government",
+    "description": "Botnet cleaning and malware analysis center by CERT-In. Free tools for citizens.",
+    "icon": "🧹"
+  },
+  {
+    "id": "res-22",
+    "name": "Google Safety Center",
+    "url": "https://safety.google",
+    "category": "guides",
+    "description": "Google's resources for online safety, privacy controls, and family safety.",
+    "icon": "🔐"
+  },
+  {
+    "id": "res-23",
+    "name": "Microsoft Security",
+    "url": "https://www.microsoft.com/security",
+    "category": "guides",
+    "description": "Microsoft's security resources, best practices, and threat intelligence reports.",
+    "icon": "🪟"
+  },
+  {
+    "id": "res-24",
+    "name": "Stay Safe Online (NCSA)",
+    "url": "https://staysafeonline.org",
+    "category": "guides",
+    "description": "National Cyber Security Alliance resources for individuals, families, and businesses.",
+    "icon": "🏠"
+  },
+  {
+    "id": "res-25",
+    "name": "ENISA (EU Agency for Cybersecurity)",
+    "url": "https://www.enisa.europa.eu",
+    "category": "government",
+    "description": "European Union agency dedicated to achieving a high common level of cybersecurity across Europe.",
+    "icon": "🇪🇺"
+  }
+]
