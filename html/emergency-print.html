@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Print-friendly emergency response guide for cyber incidents: phishing, financial fraud, hacked accounts, malware/ransomware, identity theft, stolen device. India-specific reporting contacts.">
+  <meta name="robots" content="noindex">
+  <title>Emergency Response Guide (Print Version) – CyberShield</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%230f766e'/%3E%3Ctext x='50%25' y='55%25' dominant-baseline='middle' text-anchor='middle' fill='white' font-size='60' font-weight='bold'%3E%E2%9A%A1%3C/text%3E%3C/svg%3E">
+  <style>
+    /* Self-contained: deliberately NOT style.css — this page must be
+       print-first and light-only, independent of the theme toggle. */
+    :root {
+      --ink: #1e293b;
+      --ink-secondary: #475569;
+      --ink-muted: #64748b;
+      --line: #cbd5e1;
+      --danger: #dc2626;
+      --danger-bg: #fee2e2;
+      --warning: #d97706;
+      --warning-bg: #fef3c7;
+      --primary: #0f766e;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { font-size: 16px; }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      color: var(--ink);
+      background: #ffffff;
+      line-height: 1.6;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      max-width: 800px;
+    }
+
+    /* ---------- Page header ---------- */
+    .print-header { text-align: center; margin-bottom: 1.5rem; }
+    .print-logo {
+      font-size: 1.5rem;
+      font-weight: 800;
+      color: var(--primary);
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      text-decoration: none;
+    }
+    .print-header h1 { font-size: 1.75rem; margin-top: 0.5rem; line-height: 1.25; }
+    .print-header .tagline { color: var(--ink-secondary); margin-top: 0.5rem; font-size: 0.9375rem; }
+    .print-date { color: var(--ink-muted); font-size: 0.8125rem; margin-top: 0.25rem; }
+
+    /* ---------- Contact strip ---------- */
+    .contacts {
+      border: 2px solid var(--danger);
+      border-radius: 10px;
+      padding: 1rem 1.25rem;
+      margin-bottom: 1.5rem;
+      background: var(--danger-bg);
+    }
+    .contacts h2 {
+      color: var(--danger);
+      font-size: 1rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 0.75rem;
+    }
+    .contacts-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 0.75rem 1.5rem;
+    }
+    .contact-item strong { display: block; font-size: 0.875rem; }
+    .contact-item .value { font-family: var(--font-mono, 'JetBrains Mono', monospace); font-weight: 600; }
+    .contact-item .desc { font-size: 0.8125rem; color: var(--ink-secondary); }
+
+    /* ---------- Disclaimer ---------- */
+    .disclaimer {
+      border: 1px solid var(--warning);
+      background: var(--warning-bg);
+      border-radius: 10px;
+      padding: 0.875rem 1.125rem;
+      margin-bottom: 2rem;
+      font-size: 0.875rem;
+      color: var(--ink-secondary);
+    }
+    .disclaimer strong { color: var(--warning); }
+
+    /* ---------- Sections ---------- */
+    .incident {
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      padding: 1.25rem 1.5rem;
+      margin-bottom: 1.5rem;
+      page-break-inside: avoid;
+      break-inside: avoid;
+    }
+    .incident > h2 {
+      font-size: 1.25rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      border-bottom: 2px solid var(--line);
+      padding-bottom: 0.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .steps { list-style: none; counter-reset: step; }
+    .step {
+      counter-increment: step;
+      position: relative;
+      padding-left: 3rem;
+      margin-bottom: 1rem;
+    }
+    .step:last-child { margin-bottom: 0; }
+    .step::before {
+      content: counter(step);
+      position: absolute;
+      left: 0;
+      top: 0.1rem;
+      width: 2rem;
+      height: 2rem;
+      background: var(--danger);
+      color: #ffffff;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 0.875rem;
+    }
+    .step h3 { font-size: 1rem; margin-bottom: 0.25rem; }
+    .step p { font-size: 0.9375rem; color: var(--ink-secondary); }
+    .step a { color: var(--primary); word-break: break-all; }
+
+    .note {
+      margin-top: 1rem;
+      border: 1px solid var(--danger);
+      border-radius: 8px;
+      padding: 0.75rem 1rem;
+      background: var(--danger-bg);
+      color: var(--danger);
+      font-size: 0.875rem;
+      page-break-inside: avoid;
+      break-inside: avoid;
+    }
+    .note + .note { margin-top: 0.5rem; }
+
+    /* ---------- Footer / actions ---------- */
+    .print-footer {
+      margin-top: 2rem;
+      padding-top: 1rem;
+      border-top: 1px solid var(--line);
+      text-align: center;
+      color: var(--ink-muted);
+      font-size: 0.8125rem;
+    }
+    .print-actions {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 0.75rem;
+      margin-top: 2rem;
+    }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.625rem 1.25rem;
+      font-size: 0.9375rem;
+      font-weight: 600;
+      border-radius: 8px;
+      border: 1px solid var(--line);
+      background: #f1f5f9;
+      color: var(--ink);
+      cursor: pointer;
+      text-decoration: none;
+      font-family: inherit;
+    }
+    .btn-primary { background: var(--primary); border-color: var(--primary); color: #ffffff; }
+
+    /* ---------- Screen-only convenience ---------- */
+    @media screen and (max-width: 600px) {
+      body { padding: 1.25rem 1rem; }
+      .incident { padding: 1rem; }
+    }
+
+    /* ---------- Print ---------- */
+    @media print {
+      body { padding: 0; max-width: none; font-size: 12px; }
+      .print-actions, .no-print { display: none !important; }
+      a { text-decoration: none; color: inherit; }
+      .incident { border-color: #94a3b8; }
+      .step::before { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+      .contacts, .disclaimer, .note { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+      h1, h2, h3 { page-break-after: avoid; }
+    }
+  </style>
+</head>
+<body>
+  <header class="print-header">
+    <a href="emergency.html" class="print-logo">🛡️ CyberShield</a>
+    <h1>I Got Trapped – What To Do Now</h1>
+    <p class="tagline">Emergency response guide for common cyber incidents. India-specific reporting contacts included.</p>
+    <p class="print-date">Printed: <span id="print-date">—</span></p>
+  </header>
+
+  <section class="contacts" aria-label="India emergency contacts">
+    <h2>🚨 India Emergency Contacts – Quick Reference</h2>
+    <div class="contacts-grid">
+      <div class="contact-item">
+        <strong>National Cyber Crime Helpline</strong>
+        <span class="value">1930</span>
+        <span class="desc">24/7 helpline for financial cyber fraud</span>
+      </div>
+      <div class="contact-item">
+        <strong>Report Cybercrime Online</strong>
+        <span class="value"><a href="https://cybercrime.gov.in" target="_blank" rel="noopener">cybercrime.gov.in</a></span>
+        <span class="desc">Official Government of India portal</span>
+      </div>
+      <div class="contact-item">
+        <strong>CERT-In (Incident Reporting)</strong>
+        <span class="value"><a href="https://www.cert-in.org.in" target="_blank" rel="noopener">cert-in.org.in</a></span>
+        <span class="desc">Indian Computer Emergency Response Team</span>
+      </div>
+      <div class="contact-item">
+        <strong>Stolen Mobile Blocking</strong>
+        <span class="value"><a href="https://www.ceir.gov.in" target="_blank" rel="noopener">ceir.gov.in</a></span>
+        <span class="desc">Report and block a stolen/lost mobile device</span>
+      </div>
+      <div class="contact-item">
+        <strong>Your Bank's Fraud Helpline</strong>
+        <span class="desc">Check the back of your debit/credit card or bank website for the 24/7 fraud-reporting number</span>
+      </div>
+    </div>
+  </section>
+
+  <div class="disclaimer" role="note">
+    <strong>Important:</strong> This guide provides general educational information. It is <strong>not a substitute for professional legal, financial, or incident-response advice</strong>. For serious incidents, contact law enforcement and professional security firms immediately. Emergency numbers may change — always verify current contacts on official websites.
+  </div>
+
+  <main>
+    <section class="incident" aria-labelledby="phishing-title">
+      <h2 id="phishing-title">🎣 Phishing Attack Response</h2>
+      <ol class="steps">
+        <li class="step">
+          <h3>Do Not Interact Further</h3>
+          <p>Do not click any links, download attachments, or reply to the message. Do not enter any credentials on pages you accessed via the suspicious link.</p>
+        </li>
+        <li class="step">
+          <h3>Change Compromised Credentials Immediately</h3>
+          <p>From a <strong>clean, trusted device</strong>, change passwords for any accounts where you entered credentials. Use unique, strong passwords. Enable MFA if not already active.</p>
+        </li>
+        <li class="step">
+          <h3>Report the Phishing</h3>
+          <p><strong>India:</strong> Forward to <code>reportphishing@cert-in.org.in</code> and report at <a href="https://cybercrime.gov.in" target="_blank" rel="noopener">cybercrime.gov.in</a>.<br><strong>Global:</strong> Report to <a href="mailto:reportphishing@apwg.org">APWG</a>, Google Safe Browsing, or the impersonated organization's abuse email.</p>
+        </li>
+        <li class="step">
+          <h3>Scan for Malware</h3>
+          <p>Run a full antivirus/anti-malware scan on the device used. If you downloaded and opened any attachment, assume compromise until the scan completes clean.</p>
+        </li>
+        <li class="step">
+          <h3>Monitor Accounts</h3>
+          <p>Check for unauthorized activity on email, banking, and social media. Set up login alerts. Review account recovery options and connected apps.</p>
+        </li>
+      </ol>
+      <div class="note"><strong>If you entered banking credentials:</strong> Contact your bank immediately via their official fraud helpline (on back of card). Request card block/reissue if card details were entered.</div>
+    </section>
+
+    <section class="incident" aria-labelledby="financial-title">
+      <h2 id="financial-title">💳 Financial Fraud Response</h2>
+      <ol class="steps">
+        <li class="step">
+          <h3>Contact Your Bank Immediately</h3>
+          <p>Contact your bank or financial institution immediately using the official customer-care number from your bank's website, mobile app, or the back of your card. Explain the fraudulent transaction and request that the affected account, card, or payment method be blocked if necessary.</p>
+        </li>
+        <li class="step">
+          <h3>Block Cards and Payment Methods</h3>
+          <p>Temporarily block or disable debit cards, credit cards, UPI accounts, or other payment methods involved in the fraud. <strong>Do not use phone numbers or links provided by the suspected fraudster.</strong></p>
+        </li>
+        <li class="step">
+          <h3>Report the Fraud</h3>
+          <p><strong>India:</strong> Report financial cyber fraud through <a href="https://cybercrime.gov.in" target="_blank" rel="noopener">cybercrime.gov.in</a> or call <strong>1930</strong> as soon as possible. Provide transaction details, screenshots, phone numbers, and other relevant evidence.<br><strong>Global:</strong> Contact your local cybercrime authority or your financial institution's fraud-reporting service.</p>
+        </li>
+        <li class="step">
+          <h3>Preserve Evidence</h3>
+          <p>Keep transaction IDs, bank statements, screenshots, emails, messages, phone numbers, payment receipts, and other communication related to the fraud. <strong>Do not delete evidence</strong> until the investigation is complete.</p>
+        </li>
+        <li class="step">
+          <h3>Secure Your Accounts</h3>
+          <p>Change passwords and PINs associated with affected financial accounts. Enable multi-factor authentication where available and review recent login and transaction activity for unauthorized actions.</p>
+        </li>
+      </ol>
+      <div class="note"><strong>If money was transferred:</strong> Contact your bank immediately and provide the transaction/reference number. The sooner the fraud is reported, the sooner the bank or payment provider can attempt to stop or trace the transaction.</div>
+    </section>
+
+    <section class="incident" aria-labelledby="hacked-title">
+      <h2 id="hacked-title">🔐 Hacked Account Response</h2>
+      <ol class="steps">
+        <li class="step">
+          <h3>Secure the Account Immediately</h3>
+          <p>If you can still access the account, change the password immediately from a <strong>trusted device</strong>. Use a strong, unique password that you have not used on other websites.</p>
+        </li>
+        <li class="step">
+          <h3>Sign Out of Unknown Devices</h3>
+          <p>Check the account's active sessions, logged-in devices, and recent login activity. Sign out of devices or sessions that you do not recognize.</p>
+        </li>
+        <li class="step">
+          <h3>Enable Multi-Factor Authentication</h3>
+          <p>Turn on multi-factor authentication (MFA) or two-factor authentication (2FA). Prefer an authenticator app or security key when available.</p>
+        </li>
+        <li class="step">
+          <h3>Check Recovery Information</h3>
+          <p>Review the account's recovery email address, phone number, security questions, connected applications, and forwarding rules. Remove anything that was added without your permission.</p>
+        </li>
+        <li class="step">
+          <h3>Recover the Account</h3>
+          <p>If you cannot log in, use the platform's official account-recovery page. <strong>Do not use recovery links sent by unknown people</strong> through email, SMS, or social media.</p>
+        </li>
+      </ol>
+      <div class="note"><strong>If the same password was used elsewhere:</strong> Change that password on every other account where it was used. Never reuse a compromised password.</div>
+      <div class="note"><strong>If the account was used to contact others:</strong> Inform your contacts that the account was compromised so they do not trust suspicious messages or links sent from it.</div>
+    </section>
+
+    <section class="incident" aria-labelledby="malware-title">
+      <h2 id="malware-title">🦠 Malware / Ransomware Response</h2>
+      <ol class="steps">
+        <li class="step">
+          <h3>Disconnect the Infected Device</h3>
+          <p>Disconnect the affected device from the internet by turning off Wi-Fi or unplugging the network cable. If ransomware is spreading across a network, disconnect the device from shared networks and drives.</p>
+        </li>
+        <li class="step">
+          <h3>Do Not Interact With Suspicious Files</h3>
+          <p>Do not open suspicious files, click unknown links, or continue running programs that appear malicious. <strong>Do not attempt to modify or delete encrypted files</strong> if ransomware is suspected.</p>
+        </li>
+        <li class="step">
+          <h3>Report the Incident</h3>
+          <p><strong>India:</strong> Report serious cyber incidents through <a href="https://cybercrime.gov.in" target="_blank" rel="noopener">cybercrime.gov.in</a> and contact <a href="https://www.cert-in.org.in" target="_blank" rel="noopener">CERT-In</a> when applicable.<br><strong>Organization:</strong> Inform your organization's IT or security team immediately.<br><strong>Global:</strong> Contact your local cybercrime or cybersecurity incident-response authority.</p>
+        </li>
+        <li class="step">
+          <h3>Scan and Clean the Device</h3>
+          <p>Use a trusted, updated antivirus or anti-malware solution to scan the device. If the infection cannot be removed safely, seek professional technical assistance instead of continuing to use the device.</p>
+        </li>
+        <li class="step">
+          <h3>Restore From Safe Backups</h3>
+          <p>If files were encrypted or deleted, restore them from a known-clean backup after the system has been secured. <strong>Do not connect backup drives</strong> until you are confident the malware has been removed.</p>
+        </li>
+      </ol>
+      <div class="note"><strong>If ransomware demands payment:</strong> Do not assume that paying guarantees recovery of your files. Preserve evidence, disconnect affected systems, and seek assistance from cybersecurity professionals or relevant authorities.</div>
+    </section>
+
+    <section class="incident" aria-labelledby="identity-title">
+      <h2 id="identity-title">🪪 Identity Theft Response</h2>
+      <ol class="steps">
+        <li class="step">
+          <h3>Secure Your Accounts</h3>
+          <p>Immediately change passwords for email, banking, social media, and other important accounts. Use unique passwords and enable multi-factor authentication wherever possible.</p>
+        </li>
+        <li class="step">
+          <h3>Contact Financial Institutions</h3>
+          <p>Contact your bank, credit-card provider, or other affected financial institutions using official contact information. Inform them that your personal information may have been misused.</p>
+        </li>
+        <li class="step">
+          <h3>Check for Unauthorized Activity</h3>
+          <p>Review bank accounts, credit-card statements, emails, mobile accounts, and other services for transactions, account changes, or applications that you did not authorize.</p>
+        </li>
+        <li class="step">
+          <h3>Report the Identity Theft</h3>
+          <p><strong>India:</strong> Report the incident through <a href="https://cybercrime.gov.in" target="_blank" rel="noopener">cybercrime.gov.in</a> and contact the relevant financial institution or authority.<br><strong>Global:</strong> Report the incident to your local cybercrime authority and affected organizations.</p>
+        </li>
+        <li class="step">
+          <h3>Protect Your Personal Information</h3>
+          <p>Avoid sharing identity documents, OTPs, passwords, PINs, or financial information with unknown people. Be alert for <strong>follow-up phishing attempts</strong> using the information already obtained by the attacker.</p>
+        </li>
+      </ol>
+      <div class="note"><strong>If identity documents were misused:</strong> Contact the relevant issuing authority and affected organizations to determine whether the document or account needs to be blocked, replaced, or flagged.</div>
+    </section>
+
+    <section class="incident" aria-labelledby="device-title">
+      <h2 id="device-title">📱 Stolen Device Response</h2>
+      <ol class="steps">
+        <li class="step">
+          <h3>Lock the Device Remotely</h3>
+          <p>Use the official device-finding service, such as <a href="https://www.google.com/android/find" target="_blank" rel="noopener">Find My Device</a> (Android) or <a href="https://www.icloud.com/find" target="_blank" rel="noopener">Find My</a> (iOS), to remotely lock the device. If available, display a message or contact number on the lock screen.</p>
+        </li>
+        <li class="step">
+          <h3>Track the Device Safely</h3>
+          <p>Check the device's last known location through the official tracking service. <strong>Do not attempt to confront or physically recover the device yourself</strong> if its location is known.</p>
+        </li>
+        <li class="step">
+          <h3>Report the Theft</h3>
+          <p>Report the stolen device to the local police and provide the device's identifying information, such as the IMEI number when applicable. In India, you can also use the <a href="https://www.ceir.gov.in" target="_blank" rel="noopener">CEIR portal</a> for reporting and blocking a stolen mobile device.</p>
+        </li>
+        <li class="step">
+          <h3>Contact Your Mobile Network Provider</h3>
+          <p>Inform your mobile network provider about the theft and request that the SIM/eSIM be blocked or replaced. Ask about the procedures for protecting your mobile number from unauthorized use.</p>
+        </li>
+        <li class="step">
+          <h3>Secure Your Accounts</h3>
+          <p>Change passwords for important accounts that were accessible from the stolen device, especially email, banking, cloud storage, and social-media accounts. Sign out the stolen device from your accounts where possible.</p>
+        </li>
+      </ol>
+      <div class="note"><strong>If the device contains sensitive information:</strong> Use the official remote-wipe feature if recovery is unlikely and the device contains sensitive personal, financial, or confidential information.</div>
+      <div class="note"><strong>If banking apps were installed:</strong> Contact your bank immediately through its official channel and inform them that the device has been stolen. Monitor your accounts for unauthorized activity.</div>
+    </section>
+  </main>
+
+  <div class="print-actions no-print">
+    <button type="button" class="btn btn-primary" id="print-btn">
+      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 6 21 12 15 18 21 18 9 6 9"></polyline><path d="M12 9V6a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v3"></path></svg>
+      Print / Save as PDF
+    </button>
+    <a href="emergency.html" class="btn">
+      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+      Back to Interactive Guide
+    </a>
+  </div>
+
+  <footer class="print-footer">
+    <p>&copy; 2025 CyberShield. Educational purposes only. Not a substitute for professional security advice.</p>
+    <p>Source: <a href="https://cybercrime.gov.in" target="_blank" rel="noopener">cybercrime.gov.in</a> · Helpline <strong>1930</strong> · Verify contacts on official websites before acting.</p>
+  </footer>
+
+  <script src="../js/emergency-print.js"></script>
+</body>
+</html>

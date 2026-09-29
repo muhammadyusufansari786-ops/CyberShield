@@ -1,0 +1,920 @@
+[
+  {
+    "term": "Phishing",
+    "definition": "A phishing attack is a fraudulent message, usually an email, that pretends to come from a trusted source such as a bank, delivery company, or colleague. Its goal is to trick you into clicking a malicious link, opening an infected attachment, or handing over passwords and card details.",
+    "explanation": "Attackers copy real logos, wording, and sender names so the message looks genuine. The link inside typically opens a fake login page that silently records whatever you type. Phishing works because it attacks human trust rather than technical weaknesses, which is why it remains the most common starting point for cybercrime.",
+    "example": "You receive an email saying your bank account will be blocked in 24 hours unless you 'verify' your password on the linked site, which is actually a look-alike page controlled by the attacker.",
+    "risks": "Stolen credentials can lead to emptied bank accounts, identity theft, or attackers using your email account to reset passwords on all your other services.",
+    "safety": "Check the sender's full email address, hover over links to preview destinations, never enter credentials after arriving from an emailed link, and report suspicious mail. In India, forward phishing emails to reportphishing@cert-in.org.in.",
+    "category": "attacks"
+  },
+  {
+    "term": "Spear Phishing",
+    "definition": "Spear phishing is a targeted phishing attack aimed at one specific person or organization instead of thousands of random victims. The attacker researches the target first and uses personal details to make the message highly believable.",
+    "explanation": "Details scraped from social media, college websites, or old data breaches are woven into the message so it feels personal and legitimate. A common form is Business Email Compromise, where the attacker impersonates a boss or professor and requests an urgent payment or sensitive file.",
+    "example": "An email that appears to come from your head of department asks you to urgently purchase gift cards for a 'student welfare program' and send the codes by reply.",
+    "risks": "Because the message is so convincing, victims transfer real money or disclose confidential data. Organizations have lost huge sums through a single well-researched spear phishing email.",
+    "safety": "Verify unusual requests through a second channel, such as calling the person on a known number. Limit what you post publicly, and treat any request involving money or credentials with extra suspicion.",
+    "category": "attacks"
+  },
+  {
+    "term": "Smishing",
+    "definition": "Smishing is phishing carried out through SMS or messaging apps instead of email. The text message creates urgency or curiosity to push you toward a malicious link or a phone call with the scammer.",
+    "explanation": "Because phone screens display only the message and a short link, there is less context to judge authenticity than on a desktop. Attackers exploit this by impersonating banks, courier companies, and government schemes. Some links install malicious Android apps that read your OTPs.",
+    "example": "A text claims your parcel is stuck at customs and asks you to pay a small 'clearance fee' by clicking a link, which opens a fake payment page that captures your card details.",
+    "risks": "Victims lose money through fake payments, or install malware that silently drains accounts using intercepted OTPs.",
+    "safety": "Do not click links in unexpected messages. Open the official app or type the company's website manually to verify claims, and never share an OTP with anyone who contacts you.",
+    "category": "attacks"
+  },
+  {
+    "term": "Quishing",
+    "definition": "Quishing is QR code phishing: using a malicious QR code to send victims to a fraudulent website. The QR code hides the real destination, so you cannot inspect the link before scanning it.",
+    "explanation": "Payment QR codes are everywhere in India, so people scan them by habit without checking anything. Attackers exploit this trust by covering genuine QR stickers with fake ones, or embedding QR codes in emails because security filters cannot read images.",
+    "example": "A scammer pastes their own QR sticker over the original one at a parking stand, so the payment goes to their account and the 'receipt' page phishes your UPI credentials.",
+    "risks": "Money sent to a fraudster's UPI ID is hard to recover, and fake payment pages can capture card and banking details.",
+    "safety": "Preview the URL that opens after scanning before entering anything, verify the merchant name shown by UPI apps, and for high-value payments, prefer entering UPI IDs manually instead of scanning.",
+    "category": "attacks"
+  },
+  {
+    "term": "Vishing",
+    "definition": "Vishing is voice phishing: fraudulent phone calls or voice messages designed to extract sensitive information or money. The caller impersonates someone trustworthy, such as a bank officer, government official, or tech-support agent.",
+    "explanation": "Callers create pressure by claiming your KYC has expired, your account is involved in fraud, or your number will be disconnected. Some scams use spoofed numbers that display a genuine bank helpline. More extreme versions, known as 'digital arrest' scams, threaten victims with fake police cases over video calls.",
+    "example": "A caller claiming to be from your bank's fraud team says a suspicious transaction is pending and asks you to 'confirm' the OTP they just sent to stop it.",
+    "risks": "Victims hand over OTPs, card details, or transfer money directly. In digital arrest scams, people have lost lakhs while staying on the call for hours.",
+    "safety": "Remember that no bank or government agency ever asks for OTPs, PINs, or remote access. Hang up, wait a minute, and call the official number printed on your card or the organization's website.",
+    "category": "attacks"
+  },
+  {
+    "term": "Ransomware",
+    "definition": "Ransomware is malware that encrypts a victim's files, making them unreadable, and then demands payment, usually in cryptocurrency, for the decryption key. It is one of the most damaging types of malware for individuals and organizations alike.",
+    "explanation": "It typically enters through phishing attachments, unpatched remote-access services, or infected downloads. After encrypting files, it changes the wallpaper and displays ransom instructions. Modern ransomware gangs also steal data first and threaten to publish it, adding extortion to encryption.",
+    "example": "The WannaCry outbreak of 2017 locked computers in hospitals and companies across 150 countries, including India, exploiting an unpatched Windows flaw.",
+    "risks": "Victims can permanently lose photos, documents, and business data. Paying the ransom is discouraged because there is no guarantee of decryption and it funds further crime.",
+    "safety": "Keep offline or cloud backups that ransomware cannot reach, install updates promptly, never open unexpected attachments, and if infected, disconnect the device and report to cybercrime.gov.in instead of paying.",
+    "category": "malware"
+  },
+  {
+    "term": "MFA (Multi-Factor Authentication)",
+    "definition": "Multi-factor authentication is a login method that requires two or more independent proofs of identity before granting access. These proofs come from different categories: something you know (password), something you have (phone or security key), or something you are (fingerprint or face).",
+    "explanation": "The strength of MFA comes from independence: a stolen password alone is useless without the second factor. Even if criminals phish or guess your password, they still cannot log in without physical access to your device or your biometrics.",
+    "example": "After entering your net-banking password, the app asks for a 6-digit code generated by your authenticator app. A thief with only your password cannot proceed.",
+    "risks": "Accounts protected by only a password are one leaked database away from takeover. Email is especially critical, because it can reset the passwords of almost everything else.",
+    "safety": "Enable MFA everywhere it is offered, starting with email and banking. Prefer authenticator apps or passkeys over SMS codes, which can be intercepted through SIM swapping.",
+    "category": "authentication"
+  },
+  {
+    "term": "2FA (Two-Factor Authentication)",
+    "definition": "Two-factor authentication is a specific form of MFA that uses exactly two factors, typically a password plus a one-time code. It is the most common second line of defense after a password.",
+    "explanation": "The second factor usually arrives as an SMS code, a number from an authenticator app, or a push notification you approve. Adding it takes minutes but blocks the vast majority of automated account takeover attempts, because stolen passwords alone stop working.",
+    "example": "You log into a shopping site with your password, then your phone shows a code that must be entered within 60 seconds to complete the login.",
+    "risks": "Not all 2FA is equally strong. SMS codes can be intercepted through SIM swap attacks, and attackers can phish approval prompts by spamming 'push' requests until you tap Accept.",
+    "safety": "Enable 2FA on every important account, especially email. Use an authenticator app or hardware key where possible, and if a login prompt appears that you did not start, deny it and change your password.",
+    "category": "authentication"
+  },
+  {
+    "term": "OTP (One-Time Password)",
+    "definition": "A one-time password is a code that is valid for only a single login or transaction and expires quickly, usually within a few minutes. It is commonly delivered by SMS, email, or an authenticator app.",
+    "explanation": "OTPs work as a second factor: even if someone knows your password, they need the code sent to your device. However, the system's security depends entirely on the code staying secret. Fraudsters therefore focus on tricking victims into revealing it rather than breaking the technology.",
+    "example": "While making a UPI payment you receive a 6-digit OTP. If a 'bank representative' on the phone asks you to read it out, that person is a scammer, because no genuine service needs your OTP.",
+    "risks": "Sharing an OTP is equivalent to authorizing the transaction yourself. Banks often cannot reverse payments lost this way, since the system logged it as a legitimate approval.",
+    "safety": "Never share an OTP with anyone, no matter how urgent the reason sounds. Enter OTPs only yourself, on your own device, for transactions you personally initiated.",
+    "category": "authentication"
+  },
+  {
+    "term": "TOTP (Time-based OTP)",
+    "definition": "TOTP is an algorithm that generates one-time passwords from the current time and a secret shared between the service and your device. It is the technology behind authenticator apps such as Google Authenticator and Authy.",
+    "explanation": "When you set up TOTP, you scan a QR code that saves the shared secret on your phone. The app then produces a new 6-digit code every 30 seconds, working entirely offline. The server computes the same code and compares, so codes cannot be intercepted in transit like SMS OTPs.",
+    "example": "You open your authenticator app to log into a website and see a code that will be replaced by a new one in the next few seconds. You type it in and are logged in.",
+    "risks": "If someone photographs or steals your QR code during setup, they can generate your codes indefinitely. Losing your phone without backup codes can lock you out of your accounts.",
+    "safety": "Prefer TOTP apps over SMS for 2FA, store your QR setup codes securely, and save the backup codes each service gives you in a safe offline place.",
+    "category": "authentication"
+  },
+  {
+    "term": "Credential Stuffing",
+    "definition": "Credential stuffing is an automated attack that replays stolen username and password pairs from one breach against many other websites. It succeeds because people reuse the same password across services.",
+    "explanation": "Attackers buy or download lists of billions of leaked credentials, then use bots to test them on banking, shopping, and social media sites. The attacks are quiet: one successful login among thousands of tests looks normal to the site, so victims often discover the takeover only after money or data is gone.",
+    "example": "A forum you signed up for in 2015 gets breached. Because you reused that password on your email, attackers log into your email and reset your bank and social media passwords.",
+    "risks": "Account takeover across multiple services, financial fraud, and identity theft. Attackers often change recovery details first to lock out the real owner.",
+    "safety": "Use a unique password for every site with a password manager, enable MFA so passwords alone are not enough, and check haveibeenpwned.com to see if your email appears in known breaches.",
+    "category": "attacks"
+  },
+  {
+    "term": "Password Spraying",
+    "definition": "Password spraying is an attack that tries a small number of very common passwords against a large number of usernames. Instead of exhausting attempts on one account, it spreads guesses across many to avoid lockouts.",
+    "explanation": "Because most systems lock an account after a few failed attempts, spraying waits. The attacker tries 'Password@123' against every account, waits a day, then tries 'Summer@2024', and so on. Only one weak user anywhere in the organization is needed for entry.",
+    "example": "An attacker sprays a college's student portal with the password pattern 'College@123', and one out of thousands of accounts happens to use exactly that.",
+    "risks": "A single success can expose student records, internal email, or serve as the first foothold for a much larger attack on the organization.",
+    "safety": "Organizations should block common passwords, enforce MFA, and monitor for distributed login failures. As a user, avoid passwords based on the organization's name and use long passphrases instead.",
+    "category": "attacks"
+  },
+  {
+    "term": "Brute Force Attack",
+    "definition": "A brute force attack systematically tries every possible password combination until the correct one is found. It is guaranteed to work eventually, but the time required grows explosively with password length.",
+    "explanation": "Modern attackers use powerful graphics cards that can test billions of passwords per second against stolen hash files, but online attacks are slowed by login limits. This is why length matters more than exotic symbols: each extra character multiplies the search space enormously.",
+    "example": "An 8-character password with mixed characters might fall in hours, while a 16-character passphrase would take centuries with the same hardware.",
+    "risks": "Weak or short passwords can be cracked quickly, giving attackers full access to whatever the account protects.",
+    "safety": "Use long passwords or passphrases of 14+ characters, enable MFA, and prefer services that limit login attempts and detect suspicious activity.",
+    "category": "attacks"
+  },
+  {
+    "term": "Dictionary Attack",
+    "definition": "A dictionary attack is a password cracking method that tests a pre-compiled list of likely words and their variations instead of every possible combination. It exploits how predictable human-chosen passwords are.",
+    "explanation": "The lists include common passwords, names, sports teams, and movie titles, plus substitutions like 'a' for '@' or 's' for '$'. Because most people pick memorable words, dictionary attacks crack a large share of passwords in minutes while brute force would take years.",
+    "example": "The password 'Rahul@2024' looks strong with its symbol and year, but it falls instantly to a dictionary attack that tries names plus the current year.",
+    "risks": "Predictable passwords give a false sense of security and are cracked long before lockout policies can help.",
+    "safety": "Build passphrases from four or more unrelated random words, or let a password manager generate random passwords. Avoid anything based on your name, birthday, or favorite team.",
+    "category": "attacks"
+  },
+  {
+    "term": "Rainbow Table",
+    "definition": "A rainbow table is a pre-computed lookup table that maps huge numbers of password hashes back to their original passwords. It lets attackers crack hashes quickly without recomputing them.",
+    "explanation": "Computing hashes for billions of guesses takes time, so attackers do it once, store the results, and reuse the table for every breach. A simple hash without protection can be looked up in seconds. This is why the storage method matters as much as the password itself.",
+    "example": "If a website stores unsalted MD5 hashes and its database leaks, an attacker finds your hash in a free online rainbow table within seconds.",
+    "risks": "Websites that hash passwords without salts expose every user to instant cracking after a breach.",
+    "safety": "As a user, you cannot control a site's storage, but unique passwords limit the damage from any single breach. Reputable services use salted, slow hashing algorithms such as bcrypt or Argon2.",
+    "category": "crypto"
+  },
+  {
+    "term": "Salt (Cryptography)",
+    "definition": "A salt is a random piece of data added to each password before hashing, so that identical passwords produce completely different stored hashes. Salts are stored openly alongside the hash; their job is to defeat pre-computation attacks.",
+    "explanation": "Without a salt, every user with the password 'sunshine' has the identical hash, and one rainbow table cracks them all. With a unique salt per user, attackers must crack each password individually, which is vastly more expensive.",
+    "example": "Two users on a site both choose 'sunshine'. One is stored as hash(AX92... + sunshine) and the other as hash(KQ77... + sunshine), so the stored values share nothing.",
+    "risks": "Unsalted password storage turns a single breach into a mass credential compromise.",
+    "safety": "This is a developer-side defense. If you build anything that stores passwords, use a standard library such as bcrypt, scrypt, or Argon2, which apply salts automatically.",
+    "category": "crypto"
+  },
+  {
+    "term": "Hashing",
+    "definition": "Hashing is a one-way mathematical process that converts any input into a fixed-size string of characters called a hash or digest. The same input always produces the same hash, but the hash cannot be reversed to reveal the input.",
+    "explanation": "This one-way property makes hashing ideal for storing passwords: a site can verify you typed the right password without ever storing it. Hashing also detects file tampering, because even a tiny change produces a completely different digest. It is not encryption, since encryption is designed to be reversed with a key.",
+    "example": "When you download software, the site publishes its SHA-256 hash. You can hash your downloaded file and compare, proving it was not modified in transit.",
+    "risks": "Using outdated hash functions like MD5 or SHA-1 for security purposes is dangerous because they are now considered broken.",
+    "safety": "For passwords, only slow, salted password-hashing algorithms should be used. For file verification, compare hashes from a trusted source over HTTPS.",
+    "category": "crypto"
+  },
+  {
+    "term": "Encryption",
+    "definition": "Encryption is the process of converting readable data (plaintext) into a scrambled form (ciphertext) using an algorithm and a key. Only someone holding the correct key can decrypt it back into readable form.",
+    "explanation": "Encryption protects confidentiality everywhere in modern life: website traffic, phone storage, messaging apps, and bank transfers. Its security rests on the key, not on keeping the algorithm secret, which allows public scrutiny of the mathematics while keys stay private.",
+    "example": "WhatsApp uses end-to-end encryption, so your messages are scrambled on your phone and only decrypted on the recipient's phone. Not even WhatsApp can read them.",
+    "risks": "Sending sensitive data without encryption, such as entering passwords on 'http://' sites, exposes it to anyone on the network path. Weak or reused keys can undo all protection.",
+    "safety": "Use HTTPS websites for anything sensitive, enable full-disk encryption on your devices (BitLocker or FileVault), and use encrypted messaging apps for private conversations.",
+    "category": "crypto"
+  },
+  {
+    "term": "Symmetric Encryption",
+    "definition": "Symmetric encryption uses the same secret key to both encrypt and decrypt data. It is fast and efficient, which is why it protects large volumes of data such as disks, databases, and Wi-Fi traffic.",
+    "explanation": "The main challenge is key distribution: both parties need the identical key, and securely sharing it is hard. That problem is solved in practice by using asymmetric encryption to agree on a symmetric key, as HTTPS does. AES is the modern standard used worldwide.",
+    "example": "Your home Wi-Fi protected by WPA2 uses a shared password as the symmetric key. Every device on the network encrypts its traffic with that same key.",
+    "risks": "If the shared key leaks, all communication encrypted with it is exposed, often retroactively if attackers recorded old traffic.",
+    "safety": "Use long, random Wi-Fi passwords and change them when someone you do not trust leaves your home. For devices, standard AES-based tools are the right choice.",
+    "category": "crypto"
+  },
+  {
+    "term": "Asymmetric Encryption",
+    "definition": "Asymmetric encryption uses a matched key pair: a public key that anyone can use to encrypt data, and a private key that only the owner uses to decrypt it. It solves the key-sharing problem of symmetric encryption.",
+    "explanation": "Whatever one key locks, only its partner can unlock. This enables secure communication with strangers and powers digital signatures, where the private key signs and everyone verifies with the public key. It is slower than symmetric encryption, so real systems combine both: asymmetric for the handshake, symmetric for the data.",
+    "example": "When you visit your bank's website, your browser uses the bank's public key to set up the session. Only the bank's private key can read what you send, so intercepting traffic does not help an attacker.",
+    "risks": "If a private key is stolen or leaked, attackers can impersonate the owner or decrypt recorded traffic. Losing it can be equally disruptive.",
+    "safety": "Keep private keys in secure storage and never share them. As a website visitor, simply checking for the padlock confirms this system is working for you.",
+    "category": "crypto"
+  },
+  {
+    "term": "Public Key Infrastructure (PKI)",
+    "definition": "PKI is the framework of hardware, software, policies, and trusted organizations that makes public-key encryption usable at internet scale. It answers the key question: how do you know a public key really belongs to who claims it?",
+    "explanation": "PKI relies on Certificate Authorities that verify identities and issue digital certificates binding names to public keys. Browsers and operating systems ship with a trusted list of CAs. When you see a padlock in the address bar, PKI is what guarantees the certificate behind it.",
+    "example": "Your browser trusts a CA like DigiCert. When you visit a government portal, that CA's certificate confirms the site is genuine, not a look-alike.",
+    "risks": "If a Certificate Authority is compromised or misused, attackers can issue fake certificates for real websites, enabling nearly undetectable phishing.",
+    "safety": "As a user, pay attention to certificate warnings; they usually mean something is genuinely wrong. Never proceed past invalid certificate errors for banking or payments.",
+    "category": "crypto"
+  },
+  {
+    "term": "Digital Certificate",
+    "definition": "A digital certificate is an electronic document that binds a public key to a verified identity, such as a website or company, and is signed by a Certificate Authority. It is essentially an identity card for the internet.",
+    "explanation": "The certificate contains the owner's name, the public key, validity dates, and the CA's signature. Browsers check this automatically on every HTTPS connection: right owner, right key, not expired, signed by someone trusted. If any check fails, you see a warning.",
+    "example": "The padlock next to a banking website's address shows its certificate. Clicking it reveals who the site belongs to and which CA verified it.",
+    "risks": "Certificates can be phished around: attackers register look-alike domains and get legitimate certificates for them, so the padlock alone does not guarantee the site is who you intended.",
+    "safety": "Check the actual domain name in the address bar, not just the padlock. Certificate warnings on sites you trust are a serious signal; stop and investigate.",
+    "category": "crypto"
+  },
+  {
+    "term": "Certificate Authority (CA)",
+    "definition": "A Certificate Authority is a trusted organization that verifies identities and issues digital certificates. Browsers and operating systems maintain a list of CAs they trust, forming the backbone of web security.",
+    "explanation": "Before issuing a certificate, the CA checks that the requester actually controls the domain, and for higher-assurance certificates, verifies legal identity. Because every CA can issue certificates for any domain, the whole system depends on all of them behaving honestly.",
+    "example": "Let's Encrypt is a free, automated CA that issues certificates for millions of websites, making HTTPS affordable for everyone.",
+    "risks": "History shows CA failures happen: compromised CAs have issued fraudulent certificates used to intercept traffic. Browsers respond by revoking trust in such CAs.",
+    "safety": "Users need do nothing special, but developers should automate certificate renewal and monitor expiry, because expired certificates cause outages and trust warnings.",
+    "category": "crypto"
+  },
+  {
+    "term": "Malware",
+    "definition": "Malware is any software deliberately designed to damage, disrupt, or gain unauthorized access to a computer system. It is the umbrella term covering viruses, worms, trojans, ransomware, spyware, and many other threats.",
+    "explanation": "Malware spreads through infected downloads, email attachments, malicious links, compromised USB drives, and software vulnerabilities. Its goals vary: stealing data, extorting money, spying, or hijacking devices into botnets. Knowing the umbrella term helps because the defenses overlap: updates, trusted sources, and antivirus stop most families at once.",
+    "example": "A student downloads a 'free premium app' from a random website, and the bundled malware silently subscribes the phone to paid SMS services.",
+    "risks": "Consequences range from annoying pop-ups to emptied accounts, stolen identities, and permanently locked files.",
+    "safety": "Install software only from official stores or vendor websites, keep your OS and apps updated, use built-in antivirus such as Windows Defender, and be suspicious of anything offering premium content for free.",
+    "category": "malware"
+  },
+  {
+    "term": "Virus",
+    "definition": "A virus is malware that attaches itself to legitimate files or programs and spreads when the infected file is run or shared. Unlike worms, it needs human action to travel, such as opening a document or copying a file.",
+    "explanation": "Classic viruses spread via USB drives and email attachments, embedding themselves in executables or document macros. They are less dominant today but still relevant through Office macro viruses and files shared on messaging apps. Once run, they can corrupt files, steal data, or install other malware.",
+    "example": "A Word document named 'Project_Report.docm' contains a macro virus that runs when macros are enabled, corrupting documents and emailing itself to contacts.",
+    "risks": "Infected files can silently spread through shared drives, pen drives, and email attachments before anyone notices.",
+    "safety": "Never enable macros in documents you did not expect, scan USB drives before opening, keep antivirus active, and treat unexpected attachments as dangerous until verified.",
+    "category": "malware"
+  },
+  {
+    "term": "Worm",
+    "definition": "A worm is standalone malware that copies itself across networks automatically, without needing a host file or any user action. This self-spreading ability makes worms potentially explosive in how fast they move.",
+    "explanation": "Worms exploit vulnerabilities in operating systems and network services to hop from machine to machine. Famous examples like Conficker and the WannaCry spreader infected millions of machines within days. Even without a payload, worms consume bandwidth and crash networks; with one, they deliver ransomware or botnets.",
+    "example": "In 2003, the Blaster worm infected hundreds of thousands of Windows PCs within hours simply because they lacked a patch released weeks earlier.",
+    "risks": "Rapid network-wide infection, outages, and a compromised base from which other attacks launch.",
+    "safety": "Patch promptly, because worms exploit known flaws. Keep firewalls enabled, and organizations should segment networks to slow any outbreak.",
+    "category": "malware"
+  },
+  {
+    "term": "Trojan Horse",
+    "definition": "A trojan is malware disguised as legitimate or desirable software. Like the wooden horse of legend, it looks useful or harmless on the outside while carrying a malicious payload inside.",
+    "explanation": "Trojans spread because victims install them willingly: fake app installers, cracked software, fake antivirus tools, or games with hidden functions. Once run, they open backdoors, drop ransomware, or steal credentials. Unlike viruses and worms, trojans do not self-replicate; they depend entirely on deception.",
+    "example": "A website offers a free 'PDF converter'. The installed program converts PDFs normally, while quietly installing a keylogger in the background.",
+    "risks": "Backdoor access lets attackers return anytime, steal data, watch through your webcam, or encrypt files for ransom.",
+    "safety": "Download only from official stores and vendor sites, be extremely wary of cracked or 'free premium' software, and review app permissions after installing anything new.",
+    "category": "malware"
+  },
+  {
+    "term": "RAT (Remote Access Trojan)",
+    "definition": "A RAT is a trojan that gives the attacker complete remote control over the infected system, as if they were sitting at the keyboard. It is among the most invasive forms of malware.",
+    "explanation": "RATs are sold openly on hacking forums as ready-made tools. Once installed, they allow file browsing, screen viewing, webcam and microphone activation, keystroke logging, and password theft. They are used for spying, sextortion, and corporate espionage.",
+    "example": "A job seeker receives an 'assignment' file from a fake recruiter. Opening it installs a RAT, and days later the victim is blackmailed with recordings from their own webcam.",
+    "risks": "Total loss of privacy, blackmail, theft of every credential saved on the machine, and use of your device to attack others.",
+    "safety": "Cover webcams when not in use, never open unexpected attachments even from plausible recruiters, run antivirus, and disconnect from the network if you suspect a RAT.",
+    "category": "malware"
+  },
+  {
+    "term": "Spyware",
+    "definition": "Spyware is software that secretly monitors your activity and collects personal information without consent. It quietly gathers browsing habits, keystrokes, locations, and credentials, then sends them to a third party.",
+    "explanation": "Spyware arrives bundled with free downloads, fake apps, or as 'stalkerware' installed by someone with physical access to your device. It is designed to be invisible: no icons, no notifications, minimal battery footprint. Collected data is used for targeted fraud or sold to data brokers.",
+    "example": "Commercial spyware like Pegasus has been used against journalists and activists, capable of reading messages and activating cameras without any user interaction.",
+    "risks": "Chronic privacy loss, credential theft, and in domestic-abuse situations, physical danger when stalkers track locations in real time.",
+    "safety": "Review installed apps for anything unfamiliar, keep your phone locked with a PIN only you know, avoid sideloading apps, and use reputable anti-spyware scanners if you suspect monitoring.",
+    "category": "malware"
+  },
+  {
+    "term": "Keylogger",
+    "definition": "A keylogger is a program or device that records every keystroke typed on a keyboard, capturing passwords, messages, card numbers, and search queries. It is a favorite tool for credential theft.",
+    "explanation": "Software keyloggers arrive via trojans and malicious downloads; hardware keyloggers are tiny plugs placed between keyboard and computer. Everything typed is stored or streamed to the attacker. Because it captures input rather than stored data, even freshly changed passwords can be stolen.",
+    "example": "Skimmers fitted on ATMs often pair a card reader with a tiny keylogger or pinpad overlay, capturing both card data and PINs of every user.",
+    "risks": "Complete capture of banking credentials, email access, and any other typed secrets, often before victims know anything is wrong.",
+    "safety": "Use MFA, which limits the value of stolen keystrokes, keep antivirus updated, avoid typing passwords on public computers, and check ATMs and card machines for attached devices.",
+    "category": "malware"
+  },
+  {
+    "term": "Adware",
+    "definition": "Adware is software that automatically displays unwanted advertisements, often through pop-ups or injected banners. It is frequently bundled with free software and sits in the gray area between nuisance and malware.",
+    "explanation": "Adware tracks browsing to target ads, slows systems, and can redirect searches through attacker-controlled pages. Some variants cross into malware by installing other programs or harvesting data. Its main distribution trick is hiding in installer options that users click through without reading.",
+    "example": "After installing a free video downloader with default settings, your browser suddenly shows ads on every page and your homepage has changed.",
+    "risks": "Privacy erosion through tracking, exposure to scam advertisements, and degraded device performance.",
+    "safety": "Choose 'custom' installation and uncheck bundled offers, install apps from official stores, use an ad blocker, and remove unfamiliar browser extensions if ads suddenly multiply.",
+    "category": "malware"
+  },
+  {
+    "term": "Rootkit",
+    "definition": "A rootkit is malware engineered to gain administrator-level access and then hide its presence from the operating system, user, and security tools. It is designed to be the last thing anyone ever discovers.",
+    "explanation": "Rootkits intercept system functions to make their files, processes, and network connections invisible. Some operate below the OS in firmware, surviving reinstalls. Detection requires specialized scanners or booting from clean media, and removal often means reinstalling the system entirely.",
+    "example": "The Sony BMG rootkit of 2005 was hidden in music CDs and silently installed software on millions of PCs, demonstrating how completely rootkits can hide from users.",
+    "risks": "Attackers maintain permanent, invisible control: stealing data, launching attacks, and re-infecting the machine after cleanup attempts.",
+    "safety": "Enable Secure Boot, keep firmware and OS updated, use antivirus with rootkit scanning, and if a rootkit is confirmed, back up data and reinstall the OS from clean media.",
+    "category": "malware"
+  },
+  {
+    "term": "Botnet",
+    "definition": "A botnet is a network of malware-infected devices, called bots or zombies, that are remotely controlled by an attacker known as a botmaster. Owners usually have no idea their devices are part of it.",
+    "explanation": "Botmasters command thousands or millions of bots through hidden channels, renting them out for DDoS attacks, spam campaigns, password cracking, and cryptocurrency mining. Any internet-connected device is a target: PCs, routers, cameras, even smart TVs.",
+    "example": "The Mirai botnet in 2016 conscripted hundreds of thousands of routers and security cameras using default passwords, then knocked major websites offline with record-breaking traffic floods.",
+    "risks": "Your device becomes a criminal tool: slower performance, banned from services, and legally entangled in attacks launched from it.",
+    "safety": "Change default passwords on routers and IoT devices immediately, update their firmware, run antivirus on computers, and check your router's connected-devices list for unknowns.",
+    "category": "malware"
+  },
+  {
+    "term": "DDoS (Distributed Denial-of-Service)",
+    "definition": "A DDoS attack overwhelms a website or service with massive traffic from thousands of compromised machines until legitimate users cannot reach it. The goal is disruption, not data theft.",
+    "explanation": "Attackers direct botnets to flood the target with requests, exhausting bandwidth, memory, or connection capacity. Attacks range from simple traffic floods to sophisticated application-layer attacks that mimic real users. Some groups use DDoS for extortion, activism, or as a smokescreen for quieter intrusions.",
+    "example": "In 2016, a DDoS attack on DNS provider Dyn disrupted Twitter, Netflix, and Reddit across large parts of the United States.",
+    "risks": "For organizations: revenue loss, reputational damage, and customers unable to access services. For individuals: mainly inconvenience when sites they rely on go dark.",
+    "safety": "Organizations should use CDN and DDoS protection services with traffic filtering. Individuals need no special defense, but understanding DDoS explains why popular sites sometimes go down.",
+    "category": "malware"
+  },
+  {
+    "term": "Social Engineering",
+    "definition": "Social engineering is the art of manipulating people into giving up confidential information or performing actions that compromise security. Instead of hacking computers, it hacks human trust, fear, and helpfulness.",
+    "explanation": "Attackers exploit psychological triggers: urgency, authority, fear, greed, and the natural desire to be helpful. It underlies phishing, vishing, pretexting, and most fraud. It is dangerous precisely because no software vulnerability is needed; a convincing story is enough.",
+    "example": "A caller says they are from the IT department, claims your account has a virus, and politely asks you to install a 'fix' that is actually remote-access malware.",
+    "risks": "Everything from stolen passwords to physical break-ins. Even technically strong organizations fall because employees are the easiest target.",
+    "safety": "Slow down when pressured, verify identities independently, question urgency, and remember that legitimate organizations never ask for passwords or OTPs. When in doubt, hang up and call back on an official number.",
+    "category": "attacks"
+  },
+  {
+    "term": "Pretexting",
+    "definition": "Pretexting is creating a fabricated scenario, or pretext, to manipulate someone into revealing information or performing an action. The attacker builds a believable identity and story first, then exploits your cooperation.",
+    "explanation": "The pretext gives a reason for the request: an HR survey, a courier needing building access, an auditor verifying records. Skilled pretexters research their targets and rehearse details, so answers to follow-up questions sound natural. It is social engineering with a script.",
+    "example": "Someone calls reception posing as a vendor's new driver, says they cannot remember the delivery gate code, and asks for it 'to complete today's scheduled delivery'.",
+    "risks": "Information leaks that enable larger attacks: door codes, colleague names, system details, or direct financial fraud.",
+    "safety": "Verify the requester through official channels before sharing anything, follow organizational procedures for identity checks, and remember that real professionals expect verification.",
+    "category": "attacks"
+  },
+  {
+    "term": "Baiting",
+    "definition": "Baiting lures victims with the promise of something desirable, such as free software, movie downloads, or a lost USB drive, to deliver malware or steal information. It exploits curiosity and greed instead of fear.",
+    "explanation": "The bait lowers your guard because you feel you are gaining something. Common forms include fake cracked-software sites, 'free Netflix premium' pages, infected USB drives scattered in parking lots, and job-offer attachments. Once the victim takes the bait, the payload installs or the phishing page harvests data.",
+    "example": "A pen drive labeled 'Salary_April_2025' is left in a company lobby. A curious employee plugs it in, and it silently installs a keylogger.",
+    "risks": "Malware infection, credential theft, and in USB cases, malware running as soon as the drive's contents are opened.",
+    "safety": "Never plug in found USB drives, avoid 'too good to be true' downloads, get software from official sources, and remember that curiosity about something you did not expect is exactly what attackers count on.",
+    "category": "attacks"
+  },
+  {
+    "term": "Tailgating",
+    "definition": "Tailgating, also called piggybacking, is a physical security breach where an unauthorized person follows an authorized person through a secured door or gate. It bypasses expensive digital controls with nothing more than politeness.",
+    "explanation": "Attackers exploit social norms: holding the door is courteous, and challenging someone feels rude. They dress like employees, carry boxes or coffee, and appear rushed or distracted. In offices, labs, and data centers, a single tailgating incident can defeat the entire access-control system.",
+    "example": "An attacker in a courier uniform, arms full of packages, follows an employee through the badge-controlled door; the employee helpfully holds it open.",
+    "risks": "Stolen devices, planted hardware keyloggers, access to sensitive documents, and network jacks in trusted areas.",
+    "safety": "Use your own badge every time, even when someone is behind you, and politely direct visitors to reception. Organizations should train staff and use mantrap doors in sensitive zones.",
+    "category": "attacks"
+  },
+  {
+    "term": "Identity Theft",
+    "definition": "Identity theft is the fraudulent acquisition and use of someone's personal information, usually for financial gain. Criminals impersonate the victim to open accounts, take loans, file taxes, or commit other fraud in their name.",
+    "explanation": "Identity data is collected from data breaches, phishing, stolen documents, social media, and even discarded mail. With enough pieces, such as name, Aadhaar or PAN, birthdate, and address, criminals pass identity checks. Victims often discover it only when a loan is denied or unknown bills arrive.",
+    "example": "Using details from a leaked database, a criminal applies for a personal loan in someone's name. The victim learns about it months later from a collection notice.",
+    "risks": "Financial loss, damaged credit scores, months of effort to correct records, and legal complications from crimes committed in your name.",
+    "safety": "Limit what you share online, shred documents with personal details, monitor bank statements and credit reports, use strong unique passwords with MFA, and act immediately by reporting to the bank and cybercrime.gov.in if you suspect misuse.",
+    "category": "attacks"
+  },
+  {
+    "term": "SIM Swapping",
+    "definition": "SIM swapping is an attack where a criminal convinces a mobile carrier to transfer the victim's phone number to a SIM card they control. Once done, every call and SMS meant for the victim, including banking OTPs, goes to the attacker.",
+    "explanation": "Attackers gather personal details from breaches or social media, then impersonate the victim to the carrier, often claiming a 'lost phone'. Carrier staff tricked by plausible answers activate the new SIM. This defeats SMS-based 2FA, which is why SIM swapping has become a favorite tool for draining bank and crypto accounts.",
+    "example": "A victim's phone suddenly shows 'No Service' while their bank sends OTPs for transactions they did not make; the number now lives on the attacker's SIM.",
+    "risks": "Total compromise of SMS-based authentication, emptied bank accounts, hijacked social media and email, and long battles to recover the number.",
+    "safety": "Prefer authenticator apps or hardware keys over SMS 2FA, set a carrier PIN on your account, and if your phone loses service unexpectedly, contact your carrier immediately from another line.",
+    "category": "attacks"
+  },
+  {
+    "term": "Deepfake",
+    "definition": "A deepfake is AI-generated synthetic media, video or audio, that convincingly shows someone saying or doing things they never did. Modern tools need only seconds of sample audio or a few photos to produce it.",
+    "explanation": "Deepfakes power new generations of fraud: fake 'CEO' video calls approving payments, cloned voices of relatives begging for emergency money, and fabricated evidence. Because human intuition is calibrated to trust faces and voices, deepfakes defeat the strongest instinct most people rely on.",
+    "example": "In a well-known 2024 case, an employee in Hong Kong joined a video call with what appeared to be the company's CFO and colleagues, all deepfakes, and transferred about $25 million as instructed.",
+    "risks": "Large-scale financial fraud, blackmail with fabricated media, reputational destruction, and erosion of trust in video evidence generally.",
+    "safety": "Verify unusual money or data requests through a second channel, agree on family code words for emergency calls, and treat unexpected video or voice instructions with the same skepticism as a phishing email.",
+    "category": "attacks"
+  },
+  {
+    "term": "Zero-Day Vulnerability",
+    "definition": "A zero-day vulnerability is a security flaw that the software vendor does not yet know about, so no patch exists. The name comes from the vendor having had 'zero days' to fix it, which makes these flaws especially dangerous.",
+    "explanation": "Because defenses and updates are still blind to the flaw, attackers can exploit it freely until it is discovered and patched. Once discovered and patched, it is no longer a zero-day, but unpatched users remain exposed for weeks. Well-funded groups hoard zero-days for espionage or sell them for large sums.",
+    "example": "Before Google Chrome publicly announced a new exploit, attackers were already using it to hack targets; every Chrome user was exposed until the emergency update arrived.",
+    "risks": "Attacks succeed even on fully updated systems, which is why zero-days are prized for spying and ransomware.",
+    "safety": "Update automatically so you get the fix the day it ships, use reputable security software for behavior-based blocking, and avoid installing unnecessary browser extensions and software that widen your attack surface.",
+    "category": "defense"
+  },
+  {
+    "term": "Exploit",
+    "definition": "An exploit is a piece of code or a technique that takes advantage of a specific vulnerability to make a system do something it should not. The vulnerability is the unlocked door; the exploit is the act of walking through it.",
+    "explanation": "Exploits range from simple one-line inputs to complex programs. They are catalogued alongside the vulnerabilities they target, and security researchers publish working exploits so vendors and defenders can test their systems, though attackers use the same code offensively.",
+    "example": "A vulnerability in a file-sharing app allows a specially crafted filename to run commands; the exploit is that crafted filename string.",
+    "risks": "An exploit turns a harmless flaw into account takeover, data theft, or malware delivery.",
+    "safety": "Apply updates promptly since patches close the doors exploits use, download software only from trusted sources, and use security software that blocks common exploit techniques.",
+    "category": "defense"
+  },
+  {
+    "term": "Patch",
+    "definition": "A patch is a software update released to fix a vulnerability, a bug, or a stability problem. Security patches close the holes that attackers use, which makes installing them one of the most effective defenses available.",
+    "explanation": "When a flaw is discovered, developers write a fix and distribute it as a patch. Attackers immediately reverse-engineer patches to understand the flaw and attack unpatched systems, which is why the gap between patch release and installation is prime attack time. Operating systems, browsers, routers, and phones all need patching.",
+    "example": "Microsoft releases a monthly 'Patch Tuesday' bundle; the March 2017 update that would have blocked WannaCry sat uninstalled on hundreds of thousands of machines that were hit two months later.",
+    "risks": "Unpatched systems remain exposed to well-known, scriptable attacks that require almost no skill to run.",
+    "safety": "Enable automatic updates on your OS, browser, and phone; update routers and smart devices too; and restart when updates ask, because many patches only apply after a reboot.",
+    "category": "defense"
+  },
+  {
+    "term": "CVE (Common Vulnerabilities and Exposures)",
+    "definition": "CVE is a standardized numbering system that gives every publicly known vulnerability a unique identifier, like a serial number for security flaws. A CVE ID looks like CVE-2024-12345, where the first part is the year of disclosure.",
+    "explanation": "Maintained by the nonprofit CVE Program, CVE IDs let vendors, researchers, and news outlets refer to the exact same flaw unambiguously. When a vendor or article mentions a CVE, you can look it up in public databases to see affected products, severity, and whether a patch exists.",
+    "example": "The 2021 Log4Shell flaw was tracked as CVE-2021-44228; that single identifier pointed engineers worldwide to the same critical Java logging bug.",
+    "risks": "Without a common naming system, defenders would waste time trying to work out which reports describe the same flaw.",
+    "safety": "When software you use is in the news for a flaw, search its CVE ID to check severity and whether a fix exists, then update as soon as the patched version is available.",
+    "category": "defense"
+  },
+  {
+    "term": "CVSS (Common Vulnerability Scoring System)",
+    "definition": "CVSS is an open framework that rates the severity of vulnerabilities on a scale from 0.0 to 10.0. The score summarizes how easy a flaw is to exploit and how much damage it can do.",
+    "explanation": "The score considers factors such as whether the flaw can be exploited remotely, whether it needs authentication, and what impact it has on confidentiality, integrity, and availability. Bands are commonly read as Low (0.1-3.9), Medium (4.0-6.9), High (7.0-8.9), and Critical (9.0-10.0). Scores guide how urgently organizations patch.",
+    "example": "A flaw rated CVSS 10.0 that lets any internet user take over a server without credentials is patched the same day; a Medium 5.0 local flaw may wait for the next maintenance window.",
+    "risks": "Treating all vulnerabilities equally wastes resources, while ignoring scores entirely leaves critical holes open.",
+    "safety": "For your own systems, prioritize patching High and Critical items first. As a reader, remember the score reflects severity, not the chance that you personally are affected.",
+    "category": "defense"
+  },
+  {
+    "term": "Patch Management",
+    "definition": "Patch management is the ongoing process of finding, testing, and installing software updates across systems before attackers exploit known flaws. It turns 'install updates' from advice into a repeatable organizational routine.",
+    "explanation": "A good cycle inventories devices and software, watches vendor advisories and CVEs, tests patches on non-critical machines, then rolls them out broadly and verifies completion. The hard part is scale and compatibility: one legacy application can block a critical patch, so priorities must be managed actively.",
+    "example": "A university IT team tests the new Windows security update on a handful of lab machines, then deploys it to thousands of PCs over a week, prioritizing internet-facing servers.",
+    "risks": "Most major breaches exploit vulnerabilities that had patches available for months; the failure is process, not technology.",
+    "safety": "Automate updates wherever possible, keep an inventory so nothing is forgotten, include routers and IoT devices, and patch internet-facing and critical systems first.",
+    "category": "defense"
+  },
+  {
+    "term": "Firewall",
+    "definition": "A firewall is a security system that monitors and controls network traffic flowing in and out, based on predefined rules. It acts like a checkpoint between your trusted devices and the outside internet.",
+    "explanation": "Firewalls decide which connections to allow: they can block incoming connection attempts from the internet while letting your browsing and downloads through. Windows and macOS include one, and home routers add another layer. Properly configured, they make your devices invisible to opportunistic scans and block many worms.",
+    "example": "Your home router's firewall prevents random internet hosts from connecting to your laptop's file-sharing port, while your video calls and web browsing work normally.",
+    "risks": "With no firewall, every listening service on your device is directly reachable and can be probed or attacked by anyone on the internet.",
+    "safety": "Keep the built-in firewall of your OS enabled, leave your router's firewall on, and only allow exceptions for apps you know and trust.",
+    "category": "network"
+  },
+  {
+    "term": "WAF (Web Application Firewall)",
+    "definition": "A WAF is a firewall designed specifically for web applications: it inspects HTTP requests and responses and blocks malicious ones before they reach the application. Where a normal firewall sees only connections, a WAF understands web traffic.",
+    "explanation": "WAFs detect patterns like SQL injection payloads, cross-site scripting attempts, and known bot or scanner signatures. They sit in front of the application, often as a cloud service, and can also rate-limit traffic to blunt credential stuffing and application-layer DDoS.",
+    "example": "An attacker submits a search box input designed to dump the database. The WAF recognizes the SQL pattern and blocks the request, while logging the source IP.",
+    "risks": "Without a WAF, web applications rely solely on their own code being perfect, and a single overlooked input field can expose the database.",
+    "safety": "For site owners, a WAF is a strong safety net but never a substitute for secure coding. For users, WAFs are invisible; you simply benefit when a shady request is blocked.",
+    "category": "network"
+  },
+  {
+    "term": "IDS/IPS",
+    "definition": "An Intrusion Detection System (IDS) watches network or host activity and raises alerts when it spots something malicious. An Intrusion Prevention System (IPS) goes further and blocks the malicious activity in real time.",
+    "explanation": "Both systems compare traffic and behavior against signatures of known attacks and models of normal activity. An IDS is like a security camera that calls for help; an IPS is a guard who physically stops the intruder. They complement firewalls by catching attacks that slip through allowed channels, like malware hiding inside permitted web traffic.",
+    "example": "A laptop on the office network starts scanning hundreds of internal addresses. The IPS drops the suspicious traffic and alerts the security team before anything is compromised.",
+    "risks": "Without such monitoring, intruders can operate quietly for weeks, which is how large breaches happen.",
+    "safety": "This is primarily organizational defense. Individuals get similar benefits from modern antivirus with behavior monitoring, which is why it should stay enabled.",
+    "category": "network"
+  },
+  {
+    "term": "VPN (Virtual Private Network)",
+    "definition": "A VPN creates an encrypted tunnel between your device and a VPN server, so your internet traffic is hidden from local networks and your IP address is replaced by the server's. It protects privacy on untrusted networks, not from every threat.",
+    "explanation": "When you use hotel or airport Wi-Fi, anyone on that network could snoop or run attacks. A VPN encrypts everything before it leaves your device, making it unreadable locally. The VPN provider, however, can see your traffic, so choosing a trustworthy, no-logs provider matters.",
+    "example": "While working from a cafe, you connect to the office VPN; all your traffic is encrypted past the cafe's network, and internal office systems treat you as being inside the office.",
+    "risks": "A shady VPN can log and sell everything you do, which is worse than no VPN. Free VPNs are especially likely to monetize your data.",
+    "safety": "Use reputable paid VPNs or your organization's VPN, avoid unknown free ones, and remember a VPN does not stop phishing or malware; it protects the pipe, not the person.",
+    "category": "network"
+  },
+  {
+    "term": "Tor",
+    "definition": "Tor is free software and a network that enables anonymous communication by bouncing your traffic through several volunteer-run relays, each encrypting a layer. No single relay knows both who you are and where you are going.",
+    "explanation": "Tor's onion routing wraps your traffic in layers of encryption: each relay peels one layer and passes the rest along. It is used by journalists, activists, and ordinary users who need privacy, and unfortunately also by criminals, which colors its reputation. Accessing normal sites through Tor is legal in most countries.",
+    "example": "A journalist in a country with heavy surveillance uses the Tor Browser to communicate with sources without revealing her location or identity to network monitors.",
+    "risks": "Tor protects your network identity, not your behavior: logging into personal accounts over Tor can deanonymize you, and some sites block Tor traffic.",
+    "safety": "If you need Tor, use the official Tor Browser, avoid logging into personal accounts through it, and treat 'onion' sites claiming to be banks or shops as scams.",
+    "category": "network"
+  },
+  {
+    "term": "DNS (Domain Name System)",
+    "definition": "DNS is the internet's address book: it translates human-friendly domain names like example.com into the IP addresses computers actually use. Every website visit begins with a DNS lookup.",
+    "explanation": "When you type an address, your device asks a DNS resolver to find the matching IP. Because DNS predates security thinking, its traditional queries are unencrypted, which lets networks see and sometimes redirect your lookups. Attackers abuse DNS for phishing redirects, malware command channels, and data theft.",
+    "example": "On a cafe network, DNS could be manipulated so that bank.com silently resolves to an impostor server running a phishing copy of the site.",
+    "risks": "DNS hijacking redirects users to fake sites invisibly, and 'DNS tunneling' can smuggle stolen data out of networks.",
+    "safety": "Use trusted resolvers with encrypted DNS (see DoH/DoT) on your devices, verify certificates by checking the padlock, and be suspicious if a familiar site looks wrong on a new network.",
+    "category": "network"
+  },
+  {
+    "term": "DNSSEC",
+    "definition": "DNSSEC is a set of security extensions that adds digital signatures to DNS records, letting resolvers verify that responses are authentic and unmodified. It authenticates DNS data; it does not encrypt it.",
+    "explanation": "DNSSEC builds a chain of trust from the root zone down through registrars to individual domains. If someone tries to spoof a DNS answer, the signature check fails and the resolver rejects it. Adoption is growing but still far from universal, so it is one layer of defense rather than a complete fix.",
+    "example": "A government domain signs its DNS records. When an attacker attempts a cache-poisoning attack to redirect visitors, resolvers that validate DNSSEC refuse the forged answers.",
+    "risks": "Without DNSSEC, DNS spoofing and cache poisoning can silently reroute users to attacker-controlled servers.",
+    "safety": "As a user, you benefit automatically when domains use DNSSEC; the practical step is using resolvers that validate, which major providers do. Site owners should sign their domains.",
+    "category": "network"
+  },
+  {
+    "term": "DoH (DNS over HTTPS)",
+    "definition": "DoH performs DNS lookups inside encrypted HTTPS connections instead of sending them as plain, readable queries. This prevents networks from seeing which sites you look up and from tampering with the answers.",
+    "explanation": "Traditional DNS leaks every domain you visit to anyone watching the network, including cafe operators and ISPs. DoH wraps the same lookups in the same encryption used for web traffic. Browsers like Firefox and Chrome, and modern OS versions, support enabling it in settings.",
+    "example": "You enable DoH in your browser settings; the cafe's network can now see that your device is talking to the internet, but not which domains you are resolving.",
+    "risks": "DoH shifts trust to whoever operates the chosen resolver, so a poor provider choice just moves the surveillance point. Some enterprise networks also dislike it because it bypasses their controls.",
+    "safety": "Enable DoH in your browser or OS and choose a reputable resolver such as Cloudflare, Google, or Quad9. On managed work networks, follow your IT policy.",
+    "category": "network"
+  },
+  {
+    "term": "DoT (DNS over TLS)",
+    "definition": "DoT is a protocol that encrypts DNS queries using TLS on a dedicated port. Like DoH, it prevents eavesdropping and manipulation of DNS lookups, but it operates as a distinct service rather than inside web traffic.",
+    "explanation": "DoT gives the same confidentiality and integrity benefits as DoH, with a technical difference: because DoT uses its own port (853), networks can easily identify and block or manage it, while DoH blends into normal HTTPS traffic. Android's Private DNS feature uses DoT.",
+    "example": "On Android, you set Private DNS to a provider's hostname; from then on, all DNS from the phone is encrypted via DoT, even for apps.",
+    "risks": "Without encrypted DNS of some form, your browsing domains are visible to and modifiable by the local network.",
+    "safety": "On Android, configure Private DNS with a reputable provider; on desktops, either DoT or DoH through OS or browser settings achieves similar protection.",
+    "category": "network"
+  },
+  {
+    "term": "SSL/TLS",
+    "definition": "SSL and its modern successor TLS are cryptographic protocols that secure communication over networks. They are what turns plain HTTP into HTTPS, providing encryption, integrity, and server authentication for web traffic.",
+    "explanation": "When you connect to an HTTPS site, a TLS handshake verifies the server's certificate and establishes session keys; after that, everything travels encrypted and tamper-proof. SSL versions are obsolete and insecure, and 'SSL' survives mainly as a legacy name in product labels.",
+    "example": "The padlock in your browser address bar means TLS is active: your passwords and card details cross the internet scrambled and unreadable to interceptors.",
+    "risks": "Sites without TLS expose everything you enter to anyone on the path, and outdated TLS configurations can be downgraded or broken.",
+    "safety": "Only submit sensitive information on HTTPS pages, take certificate warnings seriously, and never ignore browser warnings that TLS is invalid or outdated on sites handling money or logins.",
+    "category": "crypto"
+  },
+  {
+    "term": "Certificate Pinning",
+    "definition": "Certificate pinning is a technique where an application embeds, or 'pins', the identity of the certificate or key it expects from a server, and refuses connections presenting anything else. It protects against impostor certificates, even ones wrongly issued by a trusted CA.",
+    "explanation": "Because any Certificate Authority can issue a certificate for any domain, an attacker who tricks a CA can impersonate a site. Pinning closes that hole for specific apps: banking apps, for example, pin their servers' keys so a fraudulent certificate fails the check and the connection is refused.",
+    "example": "A banking app checks that the server's key matches the pin baked into the app. Even with a fake certificate that the OS would trust, the app refuses to connect.",
+    "risks": "Pinning can backfire: if the server legitimately changes its certificate and the app was not updated, users get locked out until a new release ships.",
+    "safety": "For users, pinning is invisible protection inside apps, which is one reason critical actions belong in official apps rather than browsers. Developers should pin backup keys too.",
+    "category": "crypto"
+  },
+  {
+    "term": "MITM (Man-in-the-Middle)",
+    "definition": "A man-in-the-middle attack is one where the attacker secretly positions themselves between two parties who believe they are talking directly to each other, then relays, reads, and possibly alters the communication.",
+    "explanation": "MITM happens on networks where attackers control or impersonate infrastructure: rogue Wi-Fi hotspots, ARP spoofing on local networks, or DNS hijacking. Without encryption like TLS, both sides have no way to notice the eavesdropper. With TLS and certificate validation, MITM attempts fail because the attacker cannot present a valid certificate.",
+    "example": "An attacker sets up 'Free_Airport_WiFi'. You connect, and everything you do on non-HTTPS sites passes through their laptop, including login details.",
+    "risks": "Stolen credentials, session hijacking, and silently modified content such as swapped download files.",
+    "safety": "Prefer HTTPS everywhere, avoid sensitive logins on public Wi-Fi or use a VPN, disable auto-connect to open hotspots, and heed certificate warnings, which are exactly what a MITM triggers.",
+    "category": "network"
+  },
+  {
+    "term": "HSTS (HTTP Strict Transport Security)",
+    "definition": "HSTS is a policy that a website sends telling browsers to use only HTTPS for all future visits to that domain, never plain HTTP. It prevents downgrade attacks where attackers force an insecure connection.",
+    "explanation": "On first HTTPS visit, the site's response includes the HSTS header with a duration. The browser then remembers: for that period, every attempt to reach the site is automatically upgraded to HTTPS, and certificate errors cannot be clicked through. This closes the gap where an attacker intercepts the very first HTTP request.",
+    "example": "After visiting gmail.com once, your browser refuses any attempt to load it over http:// and silently uses https:// instead for the HSTS duration.",
+    "risks": "Sites without HSTS remain vulnerable to SSL-stripping attacks on hostile networks. Misconfigured HSTS on the site side can lock users out for its duration, so it must be set up carefully.",
+    "safety": "Users need no action; browsers enforce HSTS automatically. Website owners should enable it, ideally including the preload list, once they are certain HTTPS works site-wide.",
+    "category": "network"
+  },
+  {
+    "term": "CSP (Content Security Policy)",
+    "definition": "CSP is a security layer that website owners configure to declare exactly which sources of scripts, styles, and other resources the browser may load on their pages. Everything not explicitly allowed is blocked, sharply reducing what an injected attack can do.",
+    "explanation": "CSP is delivered as an HTTP header. When properly configured, it stops injected scripts from running even if an attacker manages to slip them into a page, because the browser refuses code from unlisted origins. It is one of the strongest mitigations against cross-site scripting.",
+    "example": "A blog allows scripts only from its own domain. An attacker posts a comment containing a script tag pointing elsewhere; the browser blocks it from executing.",
+    "risks": "Without CSP, a single injection point anywhere in a site can lead to full script execution in every visitor's browser.",
+    "safety": "This protects site visitors automatically. Developers should adopt CSP incrementally, testing with report-only mode before enforcing, and avoid unsafe-inline settings that weaken it.",
+    "category": "web"
+  },
+  {
+    "term": "XSS (Cross-Site Scripting)",
+    "definition": "XSS is a vulnerability that lets attackers inject malicious scripts into web pages that other users view. The script runs in the victim's browser with the site's permissions, because the browser cannot tell it apart from the site's own code.",
+    "explanation": "XSS typically enters through unsanitized user input, such as comments, profile fields, or search boxes. Attack types: stored (saved on the site, hits everyone), reflected (arrives via a crafted link), and DOM-based (arises from client-side code). With script execution, attackers can steal cookies and session tokens or redirect users to phishing pages.",
+    "example": "A forum allows raw HTML in posts. An attacker posts a script that silently sends each viewer's session cookie to their server, letting them hijack those accounts.",
+    "risks": "Account takeover, data theft, malicious redirects, and using your site as a delivery platform for further attacks.",
+    "safety": "For users: be wary of links with strange parameters and keep browsers updated. For developers: escape output by default, use template auto-escaping, validate input, and add a Content Security Policy.",
+    "category": "web"
+  },
+  {
+    "term": "CSRF (Cross-Site Request Forgery)",
+    "definition": "CSRF is an attack that tricks a logged-in user's browser into sending unintended requests to a website, using the session the browser already holds. The site sees a valid, authenticated request and cannot tell it apart from a genuine one.",
+    "explanation": "The attacker hosts a page with a hidden form or image that triggers an action, such as transferring money or changing an email address. When the victim, logged into the target site, visits that page, the browser fires the request with cookies attached. Defenses include anti-CSRF tokens and SameSite cookies.",
+    "example": "While logged into your bank, you open a random blog containing a hidden auto-submitting form that requests a transfer to the attacker's account; your browser sends it with your session.",
+    "risks": "Unauthorized actions performed as you: money transfers, email or password changes, purchases, or data deletion.",
+    "safety": "Log out of sensitive accounts when finished, use modern browsers (SameSite protections are on by default), and for developers, implement anti-CSRF tokens and SameSite cookies.",
+    "category": "web"
+  },
+  {
+    "term": "SQL Injection",
+    "definition": "SQL injection is an attack where malicious SQL code is inserted into input fields so the database executes it as part of the application's query. It remains one of the most damaging web vulnerabilities because it targets the data store itself.",
+    "explanation": "When an application builds queries by pasting user input directly into SQL, attackers can change the query's meaning: bypass logins, dump entire tables, or modify and delete records. It has enabled some of history's largest breaches. The fix is parameterized queries, which keep code and data strictly separate.",
+    "example": "In a login form, entering ' OR '1'='1 as the password can make the query always true, logging the attacker in as an admin without knowing any password.",
+    "risks": "Complete database compromise: personal data of thousands, credential dumps, and in some cases server takeover through database features.",
+    "safety": "For users: no client-side defense exists, so favor reputable services. For developers: use parameterized queries or ORM, never concatenate input into SQL, validate input, and limit database account privileges.",
+    "category": "web"
+  },
+  {
+    "term": "OWASP (Open Web Application Security Project)",
+    "definition": "OWASP is a nonprofit foundation that improves software security through community-led open projects, documentation, and tools. It is best known for the OWASP Top 10 and for practical guidance that developers can apply directly.",
+    "explanation": "OWASP publishes free resources: testing guides, cheat sheets on secure coding, and tools like ZAP for finding vulnerabilities. Its material is volunteer-written, vendor-neutral, and used by universities and companies worldwide to structure security education and practice.",
+    "example": "A developer unsure how to prevent authentication flaws reads OWASP's Authentication Cheat Sheet, then configures the project's login flow following its recommendations.",
+    "risks": "Teams that skip established guidance like OWASP's tend to repeat well-known, already-solved vulnerability classes.",
+    "safety": "If you build web applications, make OWASP resources part of your learning; if you are a student, the OWASP Top 10 is the best starting map of real-world web risks.",
+    "category": "web"
+  },
+  {
+    "term": "OWASP Top 10",
+    "definition": "The OWASP Top 10 is a widely cited awareness document listing the ten most critical security risks to web applications, updated every few years from real-world data. It is the standard starting point for learning web security.",
+    "explanation": "Categories in recent editions include Broken Access Control, Cryptographic Failures, Injection, and Security Misconfiguration. The list guides developers on what to defend first and gives students a curriculum-shaped overview of how real applications get compromised.",
+    "example": "A college course on web security dedicates one week to each OWASP Top 10 category, with labs where students exploit and then fix each risk in a sample app.",
+    "risks": "Ignoring the Top 10 leaves applications open to the exact mistakes attackers look for first.",
+    "safety": "Developers should map their projects against the Top 10 during design and review. Students can use it as a checklist of concepts worth mastering.",
+    "category": "web"
+  },
+  {
+    "term": "Penetration Testing",
+    "definition": "Penetration testing, or pen testing, is an authorized simulated cyberattack against a system to find exploitable weaknesses before real attackers do. Testers use the same tools and techniques as criminals, but with permission and a written scope.",
+    "explanation": "A pen test typically moves through reconnaissance, exploitation, and reporting. Findings are ranked by severity and delivered with fixes. Good tests cover technical flaws, weak configurations, and sometimes human factors like phishing susceptibility. Regular testing catches what automated scans miss.",
+    "example": "A bank hires testers before launching its new app. They find a broken access control that lets any user view other accounts' statements; the flaw is fixed before launch.",
+    "risks": "Skipping pen testing leaves flaws for hostile discovery. Note that unauthorized testing, however well-intentioned, is illegal.",
+    "safety": "Organizations should test after major changes and at least annually, always with signed authorization. Students can practice legally on dedicated platforms like Hack The Box or TryHackMe.",
+    "category": "defense"
+  },
+  {
+    "term": "Red Team / Blue Team",
+    "definition": "Red teams are attackers by role: they probe defenses using realistic adversary tactics. Blue teams are defenders: they detect, respond to, and harden against attacks. Purple teaming is the practice of having both work together continuously.",
+    "explanation": "The color split mirrors military exercises. Red teams simulate real threats, testing detection and response under pressure, while blue teams tune monitoring and close gaps. The value emerges in the feedback loop: every red action teaches the blue team what to watch for next.",
+    "example": "During an exercise, the red team enters via a phishing email; the blue team, unable to stop the entry, improves email filtering and response playbooks based on what happened.",
+    "risks": "Defense without realistic testing tends to be theoretical. Teams that never rehearse respond slowly when a real incident arrives.",
+    "safety": "Organizations should run periodic exercises with clear rules of engagement and joint debriefs, converting findings into concrete improvements.",
+    "category": "defense"
+  },
+  {
+    "term": "SIEM (Security Information and Event Management)",
+    "definition": "A SIEM is a platform that collects security logs and events from across an organization's systems, correlates them, and alerts on patterns that indicate attacks. It is the central nervous system of security monitoring.",
+    "explanation": "Firewalls, servers, applications, and endpoints all produce logs. Separately, they look like noise; a SIEM correlates them, spotting when several individually boring events combine into an attack story, such as a login from a new country followed by unusual data downloads.",
+    "example": "A SIEM notices one employee account accessing hundreds of files at 3 AM from two countries within an hour, correlates the events, and alerts analysts who stop the breach in progress.",
+    "risks": "Without central monitoring, evidence of an attack sits scattered in logs nobody reads until long after the damage.",
+    "safety": "Organizations should centralize logging, tune alert rules to reduce noise, and define who responds when alerts fire. Well-configured logging also shortens incident investigation dramatically.",
+    "category": "defense"
+  },
+  {
+    "term": "SOC (Security Operations Center)",
+    "definition": "A SOC is the centralized team and facility responsible for monitoring, detecting, and responding to security incidents around the clock. If the SIEM is the nervous system, the SOC is the brain and hands.",
+    "explanation": "SOC analysts triage alerts, investigate suspicious activity, and coordinate containment, working in shifts to maintain continuous coverage. Larger SOCs use tiers: first-line analysts triage, deeper tiers hunt threats and handle complex investigations. Many organizations without their own SOC outsource the function.",
+    "example": "When ransomware hits a company at 2 AM, the SOC on duty detects the unusual encryption activity, isolates affected machines, and starts response before the office opens.",
+    "risks": "Attacks do not keep office hours; without continuous monitoring, intruders act freely during nights and weekends.",
+    "safety": "Organizations should ensure 24/7 monitoring either in-house or through managed services, and document escalation paths so alerts lead to action rather than email silence.",
+    "category": "defense"
+  },
+  {
+    "term": "Incident Response",
+    "definition": "Incident response is the structured approach an organization follows to detect, contain, eradicate, and recover from a security breach. Its purpose is to limit damage, shorten downtime, and learn from every incident.",
+    "explanation": "The standard cycle runs: preparation, detection and analysis, containment, eradication, recovery, and lessons learned. Preparation matters most: teams with playbooks, contacts, and backups act in minutes, while unprepared ones improvise under panic. A post-incident review turns every breach into improved defenses.",
+    "example": "When a phished employee's account starts spamming, the response team disables the account, revokes sessions, hunts for data access, resets credentials, and later adds MFA enforcement.",
+    "risks": "Improvised responses make breaches worse: evidence destroyed, wrong systems restored, and attackers retaining hidden access while everyone believes the crisis is over.",
+    "safety": "Prepare an incident response plan before you need it, with clear roles, out-of-band communication, and offline backups. Individuals should know the emergency steps for a compromised account too.",
+    "category": "defense"
+  },
+  {
+    "term": "Forensics (Digital)",
+    "definition": "Digital forensics is the investigation and analysis of digital devices and data to establish what happened, often for legal proceedings. Specialists recover deleted files, trace actions, and preserve evidence so it remains admissible in court.",
+    "explanation": "Forensic work follows strict procedures: images of storage are taken and verified with hashes so originals stay untouched, timelines are reconstructed from logs and file metadata, and findings are documented for legal scrutiny. It is used in fraud cases, malware incidents, employee misconduct, and criminal investigations.",
+    "example": "After a data leak, forensic analysts determine which files an ex-employee copied and when, from USB history and file access logs, providing evidence for legal action.",
+    "risks": "Poorly handled evidence loses legal value: booting a suspect drive alters it, chain-of-custody mistakes invalidate findings, and rushed analysis can miss the real story.",
+    "safety": "If an incident may go legal, stop using the device immediately, document every action taken, and involve professionals early rather than experimenting on the evidence.",
+    "category": "defense"
+  },
+  {
+    "term": "Threat Intelligence",
+    "definition": "Threat intelligence is evidence-based knowledge about existing or emerging threats, including attacker tactics, malware families, and indicators like malicious IP addresses and domains. Its purpose is to make defense proactive instead of reactive.",
+    "explanation": "Sources include security vendors, government advisories (such as CERT-In bulletins), industry sharing communities, and open feeds. Good intelligence answers concrete questions: which groups target our sector, what techniques do they use, and what signs would reveal them in our logs? ",
+    "example": "A vendor advisory warns of a new phishing kit imitating a bank used in the region; the organization adds the kit's domains to its blocklist before any employee receives the emails.",
+    "risks": "Raw feeds without context overwhelm teams with noise; intelligence is only valuable when it leads to a defensive action.",
+    "safety": "Organizations should start with free reputable sources like CERT-In and CISA advisories, integrate indicators into defenses, and revisit them as threats evolve.",
+    "category": "defense"
+  },
+  {
+    "term": "APT (Advanced Persistent Threat)",
+    "definition": "An APT is a well-resourced attacker, often a nation-state group, that gains unauthorized access to a network and remains undetected for a long time to achieve a strategic goal. 'Advanced' and 'persistent' describe both the skill and the patience.",
+    "explanation": "APTs combine spear phishing, zero-days, and custom malware, moving quietly through networks while maintaining multiple footholds. Targets are chosen for value: governments, infrastructure, research, and strategic industries. Detection is difficult because activity is designed to imitate normal operations.",
+    "example": "Stuxnet, discovered in 2010, reportedly sabotaged Iranian nuclear centrifuges using multiple zero-days and bespoke malware, showing how sophisticated and patient APT operations can be.",
+    "risks": "Long-term espionage, sabotage of critical systems, and theft of research or state secrets, often discovered only after years.",
+    "safety": "Organizations should monitor continuously, hunt for anomalies rather than waiting for alarms, segment networks, and assume breaches will be attempted: resilience planning matters as much as prevention.",
+    "category": "defense"
+  },
+  {
+    "term": "Supply Chain Attack",
+    "definition": "A supply chain attack compromises a target by first compromising something the target trusts and depends on: a software vendor, an update server, or a third-party service. The attack rides in through the back door of legitimate trust.",
+    "explanation": "Modern software depends on thousands of components. If an attacker poisons one, every customer who installs or updates receives malware from a completely trusted source. These attacks are difficult to detect because the malicious code arrives signed, verified, and expected.",
+    "example": "The SolarWinds attack of 2020 planted malware in a routine software update, reaching thousands of organizations including government agencies, because the update itself was trusted.",
+    "risks": "One compromise propagates to many victims simultaneously, and the trusted delivery channel bypasses most defenses.",
+    "safety": "Organizations should know their dependencies, verify software signatures, monitor vendor advisories, and apply least privilege to integration accounts. Developers should pin dependencies and verify update pipelines.",
+    "category": "defense"
+  },
+  {
+    "term": "Zero Trust",
+    "definition": "Zero Trust is a security model that abandons the idea of a trusted internal network: every user, device, and request must be verified every time, regardless of where it originates. The motto is 'never trust, always verify.' ",
+    "explanation": "Traditional models trusted everything inside the office network, so one breach meant free movement everywhere. Zero Trust instead verifies identity and device health for each request, grants only the minimum access needed, and keeps checking as sessions continue. It reflects reality: staff work from anywhere, and attackers eventually get inside. ",
+    "example": "With Zero Trust, an employee logging in from the office must still pass MFA and device checks to open a sensitive system, exactly as they would from home. ",
+    "risks": "Without it, a single compromised laptop or stolen password can cascade into organization-wide compromise, as lateral movement goes unchallenged.",
+    "safety": "Organizations should start with strong identity: MFA everywhere, least privilege, and device posture checks. For individuals, the mindset applies too: verify each request on its merits, not by its source. ",
+    "category": "authentication"
+  },
+  {
+    "term": "Least Privilege",
+    "definition": "The principle of least privilege grants every user, program, or process only the minimum access needed to perform its function, and nothing more. It limits what any single compromise can damage. ",
+    "explanation": "A database web app needs to read certain tables, not drop the whole database; an intern needs their department's files, not the entire file server. Enforcing this means a stolen account reveals less and does less damage. It also reduces accidents, since users cannot delete what they cannot reach. ",
+    "example": "A support agent's account can view customer tickets but not payment details or admin settings, so a phished support account cannot be used to export the payment database. ",
+    "risks": "Over-privileged accounts turn minor breaches into disasters; attackers actively hunt for admin rights because they unlock everything. ",
+    "safety": "Grant minimum access by default, review permissions periodically and remove unneeded ones, use separate admin accounts, and never browse or email from an administrator login. ",
+    "category": "defense"
+  },
+  {
+    "term": "Data Minimization",
+    "definition": "Data minimization is the privacy principle of collecting only the personal data actually needed for a stated purpose, keeping it only as long as necessary. What you do not collect cannot be leaked. ",
+    "explanation": "Many organizations hoard data 'just in case', creating liability: every extra field is something that can be breached, misused, or violate regulations like the DPDP Act and GDPR. Minimization means asking, for each field: why do we need this, and what happens if it leaks? If there is no good answer, do not collect it. ",
+    "example": "A college event form asking for Aadhaar numbers and exact home addresses for a free workshop is over-collecting; name and email would suffice. ",
+    "risks": "Hoarded data becomes a breach amplifier: the more collected, the greater the harm when compromised, and the greater the regulatory exposure. ",
+    "safety": "For organizations: define the purpose before collecting, purge data when no longer needed. For individuals: give the minimum information required, and question forms that demand sensitive data without clear reasons. ",
+    "category": "privacy"
+  },
+  {
+    "term": "GDPR (General Data Protection Regulation)",
+    "definition": "GDPR is the European Union's comprehensive data protection law, governing how organizations collect, use, and safeguard personal data of people in the EU. It has become the global benchmark for privacy regulation since taking effect in 2018. ",
+    "explanation": "GDPR grants individuals rights over their data: access, correction, deletion, and portability. It imposes duties on organizations: lawful bases for processing, minimal collection, breach notification within 72 hours, and privacy by design. Fines reach up to 4% of global revenue or EUR 20 million, whichever is higher. ",
+    "example": "A small Indian startup selling to European customers must follow GDPR: obtain clear consent, minimize data collected, and notify authorities within 72 hours if breached. ",
+    "risks": "Non-compliance brings heavy fines, forced suspension of processing, and reputational damage that can sink small companies. ",
+    "safety": "Organizations handling EU residents' data should map their data flows, establish lawful bases, and prepare breach procedures. India's equivalent is the DPDP Act, 2023. ",
+    "category": "privacy"
+  },
+  {
+    "term": "PII (Personally Identifiable Information)",
+    "definition": "PII is any information that can identify a specific individual, alone or combined with other data. Names, Aadhaar and PAN numbers, addresses, phone numbers, email addresses, and biometric records are all PII. ",
+    "explanation": "PII is the raw material of identity theft and fraud, which is why it is regulated and valuable. Individually harmless pieces combine dangerously: a birthdate plus a phone number plus a hometown can unlock account security questions. Protection duties attach to PII from collection through deletion. ",
+    "example": "A leaked spreadsheet of name, phone, email, and city might seem harmless, but it is precisely the dataset scammers use to personalize convincing vishing calls. ",
+    "risks": "Exposure leads to identity theft, targeted phishing, financial fraud, and legal liability for whoever leaked it. ",
+    "safety": "Share PII only when necessary and only through secure channels, encrypt or redact it in storage and documents, avoid posting it publicly, and treat any request for your PII with healthy skepticism. ",
+    "category": "privacy"
+  },
+  {
+    "term": "Data Breach",
+    "definition": "A data breach is a security incident where confidential or protected data is accessed, stolen, or exposed without authorization. Breaches range from misconfigured cloud storage to full-scale network intrusions. ",
+    "explanation": "Common causes include stolen credentials, phishing, unpatched vulnerabilities, and simple human error like emailing files to the wrong recipient. The consequences flow to two groups: organizations face fines, lawsuits, and lost trust, while affected individuals face fraud and phishing for years afterward. ",
+    "example": "A company leaves a cloud storage bucket public; web crawlers index it, and the personal records of millions of users become downloadable by anyone. ",
+    "risks": "For individuals: identity theft, targeted scams, and credential compromise. For organizations: regulatory fines, class actions, and lasting reputational harm. ",
+    "safety": "Individuals: check haveibeenpwned.com, use unique passwords per site, and enable MFA so one breach does not cascade. Organizations: encrypt data, minimize collection, control access, and rehearse breach response. ",
+    "category": "privacy"
+  },
+  {
+    "term": "Encryption at Rest",
+    "definition": "Encryption at rest protects data while it is stored on disks, databases, or backups, scrambling it so that stolen hardware or leaked files are useless without the key. It covers everything from a lost laptop to a breached cloud bucket.",
+    "explanation": "Data 'at rest' is inactive: files on your drive, records in a database, archives in backups. Encrypting it means a thief with the physical drive or a copied file still cannot read anything without the keys, which are kept separately and protected. Modern phones, Windows BitLocker, macOS FileVault, and major cloud providers do this by default or with a setting.",
+    "example": "A university laptop containing thousands of student records is stolen from an office. Because full-disk encryption was enabled, the drive's contents are unreadable and no breach of student data occurred.",
+    "risks": "Unencrypted stored data turns every loss, disposal, or misconfiguration into a potential data breach, since the files are readable by whoever obtains them.",
+    "safety": "Enable full-disk encryption on every laptop and phone, ensure cloud services you choose encrypt stored data, and encrypt sensitive backups separately from the systems they protect.",
+    "category": "crypto"
+  },
+  {
+    "term": "Encryption in Transit",
+    "definition": "Encryption in transit protects data while it travels between systems, such as between your browser and a website or between two servers. It ensures that anyone intercepting the traffic sees only unreadable ciphertext.",
+    "explanation": "Data in motion passes through many networks and devices: your router, the ISP, internet exchanges, and data centers. TLS (the S in HTTPS) is the standard protection, encrypting the connection and verifying the server's identity. Without it, credentials, messages, and card numbers cross the network in the clear.",
+    "example": "Submitting a password on an https:// site encrypts it in transit; the same action on an http:// page sends it openly, readable by anyone on the network path.",
+    "risks": "Unencrypted traffic exposes logins, messages, and personal data to eavesdroppers and enables man-in-the-middle manipulation.",
+    "safety": "Use HTTPS sites for anything sensitive, prefer apps and services that encrypt by default, and on untrusted Wi-Fi, rely on HTTPS and a VPN for anything private.",
+    "category": "crypto"
+  },
+  {
+    "term": "Key Management",
+    "definition": "Key management is the practice of generating, storing, distributing, rotating, and destroying cryptographic keys securely. Encryption is only as strong as the care taken with its keys, because a leaked key defeats even perfect algorithms.",
+    "explanation": "Keys must be created with proper randomness, stored where attackers cannot reach them, delivered safely to whoever needs them, changed periodically, and destroyed when retired. Most real-world encryption failures are key management failures: hardcoded keys in source code, keys shared over email, or keys never rotated after staff leave.",
+    "example": "A developer hardcodes an API encryption key into a mobile app. Attackers extract it from the app's download, decrypt everything, and the organization must re-encrypt all data with new keys.",
+    "risks": "Poor key management silently nullifies encryption investments: data remains encrypted, but the attacker holds the keys.",
+    "safety": "Never hardcode keys in code or share them by chat, use secret managers or hardware modules, rotate keys periodically, and keep backup keys offline. Individuals: protect the passwords and recovery codes that guard your encrypted devices.",
+    "category": "crypto"
+  },
+  {
+    "term": "Hardware Security Module (HSM)",
+    "definition": "An HSM is a dedicated physical device that generates, stores, and uses cryptographic keys without ever exposing them to the outside. Keys live inside the tamper-resistant hardware, and operations happen within it.",
+    "explanation": "Because keys never leave the HSM, malware on the host cannot read them; it can only request operations like signing or decryption, which the device performs internally. HSMs are built to resist tampering and often wipe their keys if physically attacked. Banks, certificate authorities, and cloud providers rely on them for their most critical keys.",
+    "example": "A payment processor stores its card-transaction signing keys in an HSM; even a fully compromised server can request signatures but can never extract the key itself.",
+    "risks": "Managing critical keys in ordinary software makes them readable by any attacker who compromises the machine, along with everything they protect.",
+    "safety": "Organizations handling high-value keys should use HSMs or managed cloud equivalents (cloud KMS). Individuals already benefit: phone secure elements and TPM chips in laptops are personal-scale HSMs protecting passkeys and device keys.",
+    "category": "crypto"
+  },
+  {
+    "term": "Passphrase",
+    "definition": "A passphrase is a password made of a sequence of words or a longer memorable sentence, typically much longer than a conventional password. Length gives it strength: 'purple-coffee-river-otter' is far harder to crack than 'P@ss1'.",
+    "explanation": "Cracking time grows with every character, so extra length beats extra symbols. Four or five unrelated random words create a passphrase that is strong against automated attacks yet easy for a human to remember. Passphrases work especially well for the few passwords you must memorize, like your device login or password manager master password.",
+    "example": "Instead of 'Sunny@2025', a student uses 'mango-tram-planet-violin'. It is easier to remember, contains no personal details, and takes vastly longer to crack.",
+    "risks": "A passphrase is only strong if the words are truly random; famous quotes, song lyrics, or personally meaningful phrases fall to dictionary attacks.",
+    "safety": "Pick 4+ unrelated random words (a password manager or dice can choose them), add a number or symbol if the site requires, and never reuse your master passphrase anywhere else.",
+    "category": "authentication"
+  },
+  {
+    "term": "Password Manager",
+    "definition": "A password manager is software that securely stores all your passwords in an encrypted vault, unlocked by one master password. It also generates strong unique passwords and can autofill them, so you never need to memorize more than one.",
+    "explanation": "The vault is encrypted with keys derived from your master password, so even the provider cannot read your stored credentials. This enables the single most important password habit: a unique, random password for every account, so one breach never cascades into others. Reputable options include Bitwarden, 1Password, and the built-in managers in browsers and phones.",
+    "example": "A shopping site suffers a breach. Because your password there was unique and generated by the manager, none of your other accounts are affected, and you change just that one password.",
+    "risks": "The master password becomes the single key to your digital life: a weak one or one phished away compromises everything. Storing it in a note or reusing it defeats the purpose.",
+    "safety": "Choose a reputable manager, create a long master passphrase, enable MFA on the vault itself, and use its generator everywhere instead of inventing passwords yourself.",
+    "category": "authentication"
+  },
+  {
+    "term": "FIDO2 / WebAuthn",
+    "definition": "FIDO2 is a family of standards for passwordless login built on public-key cryptography, with WebAuthn as its web component. Instead of typing a secret, your device proves its identity by signing a challenge with a key that never leaves it.",
+    "explanation": "When you register, your device generates a key pair and gives the website only the public key. To log in, the site sends a challenge that the device signs with its private key, which stays locked inside secure hardware. Since no shared secret is ever sent or stored by the site, phishing and database breaches cannot steal reusable credentials.",
+    "example": "You log in to a supported site using your fingerprint: your phone signs the challenge internally. A phishing site for the same domain gets nowhere, because the key only signs for the genuine domain.",
+    "risks": "The main operational risk is device loss, so recovery methods must be set up in advance. Phished passwords and leaked databases are the risks FIDO2 eliminates.",
+    "safety": "Use passkeys or security keys for important accounts wherever offered, register a backup device or key, and keep recovery codes offline in case hardware is lost.",
+    "category": "authentication"
+  },
+  {
+    "term": "Passkey",
+    "definition": "A passkey is a FIDO2 credential stored on your device or synced through your platform account, replacing passwords with a cryptographic key pair. Logging in means unlocking the device with a fingerprint, face, or PIN, and confirming the sign-in.",
+    "explanation": "Passkeys are tied to the website's domain, so a fake look-alike site cannot request them; the browser simply refuses. Modern platforms sync passkeys across your devices through end-to-end encrypted cloud accounts, solving the device-loss problem. They are phishing-resistant by design and much faster than typing passwords.",
+    "example": "You create a passkey for your email account. Later, on a phishing page imitating your provider, login is impossible: the browser will not offer a passkey for the wrong domain.",
+    "risks": "Losing access to all synced devices without recovery arrangements can lock you out, and passkeys are only as safe as the device unlock method guarding them.",
+    "safety": "Adopt passkeys where sites offer them, ensure they sync to your platform account or register a second device, and keep a strong PIN or biometric on every device holding them.",
+    "category": "authentication"
+  },
+  {
+    "term": "Single Sign-On (SSO)",
+    "definition": "Single sign-on lets a user authenticate once and then access multiple applications without logging in again for each one. Universities and companies use it so one login opens email, portals, cloud apps, and internal systems together.",
+    "explanation": "SSO centralizes authentication in an identity provider: applications trust it to confirm who you are. This improves security and convenience, because users manage one strong, MFA-protected login instead of dozens of weak ones, and administrators can revoke access everywhere at once. The trade-off is concentration: that one account is a high-value target.",
+    "example": "A college student logs into the university portal once, then opens email, the library system, the LMS, and the exam portal without ever seeing another login page.",
+    "risks": "Compromise of the central identity account unlocks every connected application, so SSO credentials must be protected accordingly.",
+    "safety": "Protect the SSO account with strong MFA and a unique passphrase, log out on shared computers, and treat any login page asking for those credentials with maximum scrutiny.",
+    "category": "authentication"
+  },
+  {
+    "term": "SAML (Security Assertion Markup Language)",
+    "definition": "SAML is an XML-based standard for exchanging authentication and authorization data, best known for powering enterprise single sign-on between an identity provider and business applications. It is how your work login signs you into third-party tools.",
+    "explanation": "When you access a SAML-protected app, it redirects you to your organization's identity provider, which authenticates you and returns a signed assertion: a tamper-proof statement of who you are and what you may access. The app verifies the signature and logs you in. SAML 2.0 dominates corporate SSO, while newer web apps often use OIDC.",
+    "example": "A company connects its HR portal and Salesforce to its identity provider via SAML, so employees use one corporate login with MFA for both, and offboarding disables access everywhere at once.",
+    "risks": "Misconfigured SAML trust settings have enabled major breaches: if an attacker can forge or obtain a valid assertion, they inherit legitimate access.",
+    "safety": "For users, SAML SSO means protecting your central corporate login. For administrators, enforce signed assertions, validate carefully, and keep the identity provider locked down.",
+    "category": "authentication"
+  },
+  {
+    "term": "OAuth 2.0",
+    "definition": "OAuth 2.0 is an authorization framework that lets an application access specific parts of your account on another service, without ever seeing your password. It is the machinery behind 'Sign in with Google' and app permission prompts.",
+    "explanation": "You approve a request, the service issues the application a limited-scope token, and the app uses that token for exactly the approved actions, revocable anytime. Your password goes only to the genuine service. The design separates authentication from authorization and limits blast radius: a compromised app loses only its token, not your credentials.",
+    "example": "A photo-printing app asks for access to your Google Photos. You approve, Google gives it a token for photos only; the app never learns your Google password and cannot read your email.",
+    "risks": "Malicious apps can request excessive scopes, and users habitually click 'Allow' without reading, granting more access than intended.",
+    "safety": "Read permission requests and grant the minimum needed, review and revoke old app access in your account settings periodically, and never enter your password anywhere except the genuine provider's page.",
+    "category": "authentication"
+  },
+  {
+    "term": "OpenID Connect (OIDC)",
+    "definition": "OpenID Connect is an identity layer built on top of OAuth 2.0 that lets applications verify who a user is and obtain basic profile information. Where OAuth answers 'what can this app access?', OIDC answers 'who is this user?'. ",
+    "explanation": "After you authenticate with the identity provider, the app receives a signed ID token containing your identity claims, which it verifies cryptographically. OIDC is simpler and more web-friendly than SAML, uses JSON instead of XML, and has become the default for modern 'Sign in with...' flows on web and mobile.",
+    "example": "A news site offers 'Continue with Apple'. Under the hood, OIDC verifies your Apple identity and passes your name and email to the site, without the site ever handling your Apple password.",
+    "risks": "The concentration risk mirrors SSO: whoever controls the identity account controls the logins, and careless token handling by apps can leak sessions.",
+    "safety": "Use OIDC logins from a strong, MFA-protected central account, review which apps you have linked, and revoke access you no longer use.",
+    "category": "authentication"
+  },
+  {
+    "term": "CERT-In",
+    "definition": "CERT-In is the Indian Computer Emergency Response Team, the national agency responsible for responding to cybersecurity incidents and issuing alerts and advisories. It operates under the Ministry of Electronics and IT.",
+    "explanation": "CERT-In tracks vulnerabilities and threats affecting Indian users, publishes advisories and guidelines, coordinates incident response across organizations, and operates the Cyber Swachhta Kendra for botnet cleanup. It also mandates that significant incidents be reported within hours, making it the central coordination point for India's cyber defense.",
+    "example": "A company discovers ransomware on its network. Besides internal response, Indian regulations require it to report the incident to CERT-In, which may provide guidance and correlate it with other attacks.",
+    "risks": "Ignoring CERT-In advisories leaves known vulnerabilities unpatched, and failure to report mandated incidents carries legal consequences.",
+    "safety": "Follow cert-in.org.in for advisories, patch what its bulletins flag, and know the reporting channels before you need them. Individuals can forward phishing emails to reportphishing@cert-in.org.in.",
+    "category": "agencies"
+  },
+  {
+    "term": "I4C (Indian Cyber Crime Coordination Centre)",
+    "definition": "I4C is the Government of India initiative to coordinate the fight against cybercrime across states and agencies. It runs the national cybercrime reporting portal and the helpline, giving citizens a single place to report online fraud.",
+    "explanation": "I4C ties together law enforcement, banks, and telecom providers so reports translate into action: freezing fraudulent transactions, blocking scam numbers and websites, and analyzing nationwide patterns. Its complaint portal (cybercrime.gov.in) and 1930 helpline are the first steps most Indian victims should take after online fraud.",
+    "example": "Minutes after a UPI fraud, a victim calls 1930 and files on cybercrime.gov.in. The quick report lets banks freeze the money in the fraudster's account before it is withdrawn.",
+    "risks": "Delay is the enemy: reporting hours later often means stolen money has already been layered through multiple accounts and cannot be recovered.",
+    "safety": "Save the 1930 helpline and cybercrime.gov.in in your phone now, and report fraud immediately with transaction details, screenshots, and the scammer's contact information.",
+    "category": "agencies"
+  },
+  {
+    "term": "Cybercrime.gov.in",
+    "definition": "Cybercrime.gov.in is the official Government of India portal for reporting cybercrimes, operated under I4C. It handles online financial fraud, women and child related crimes, social media offenses, hacking, and other cyber offenses. ",
+    "explanation": "The portal lets victims file complaints from anywhere, with special fast-track handling for financial fraud where freezing the money quickly matters most. It complements the 1930 helpline for money-related cases. Reports feed into coordinated action with banks and law enforcement across states.",
+    "example": "After losing money to a fake investment app, a user files a detailed complaint on the portal with screenshots and transaction IDs, enabling banks to freeze the linked accounts.",
+    "risks": "Not reporting means criminals continue undisturbed and recovery odds drop to near zero, since digital trails fade fast.",
+    "safety": "Beware of look-alike URLs: the genuine portal is cybercrime.gov.in. Report promptly, keep all evidence, and for urgent financial fraud call 1930 first.",
+    "category": "agencies"
+  },
+  {
+    "term": "CISA",
+    "definition": "CISA is the Cybersecurity and Infrastructure Security Agency, the United States federal agency responsible for national cyber defense and infrastructure protection. Its free guidance and alerts are used by defenders worldwide, including in India. ",
+    "explanation": "CISA publishes known exploited vulnerability catalogs, ransomware guidance, incident reporting channels, and plain-language best practices for individuals and organizations. Because threats are global, its advisories on active exploitation are valuable regardless of where you operate, and it coordinates internationally with partners like CERT-In.",
+    "example": "CISA adds a newly exploited software flaw to its Known Exploited Vulnerabilities catalog; security teams worldwide, including Indian companies, prioritize patching it that day.",
+    "risks": "Organizations that ignore authoritative advisories patch by habit rather than priority, often too late for actively exploited flaws.",
+    "safety": "Follow cisa.gov alerts or its feed alongside CERT-In advisories, and use its free checklists for small organizations as a baseline.",
+    "category": "agencies"
+  },
+  {
+    "term": "NIST",
+    "definition": "NIST is the US National Institute of Standards and Technology, the agency that develops the cybersecurity standards and guidelines used as reference points worldwide. Its Cybersecurity Framework and password guidance are among its best-known outputs. ",
+    "explanation": "NIST publications like the Cybersecurity Framework, SP 800-53 controls, and SP 800-63 digital identity guidelines shape how organizations everywhere structure security. Its password guidance notably changed thinking: favor length and usability over forced complexity and frequent rotation, which had produced weaker real-world behavior.",
+    "example": "A startup designs its security program using the NIST Cybersecurity Framework's core functions: Govern, Identify, Protect, Detect, Respond, and Recover, giving it a structure investors and enterprise customers recognize.",
+    "risks": "Reinventing security practice from scratch tends to miss proven basics that NIST documents already cover.",
+    "safety": "Use NIST's free publications as study and design references; students should read its password guidance to understand modern, evidence-based authentication policy.",
+    "category": "agencies"
+  },
+  {
+    "term": "ISO 27001",
+    "definition": "ISO 27001 is the international standard for Information Security Management Systems, defining how an organization should systematically manage information security. Certification demonstrates that a recognized, audited security program exists. ",
+    "explanation": "The standard requires a risk-based approach: identify assets and risks, choose controls from its Annex A catalog, set policies, train staff, run audits, and improve continuously. Certification is performed by accredited auditors and is often demanded in enterprise contracts, especially in India's IT services sector, as proof of security maturity.",
+    "example": "A software vendor pursuing enterprise clients obtains ISO 27001 certification; procurement teams can now accept its security posture without a bespoke audit for every deal.",
+    "risks": "Treating certification as a paper exercise yields a certificate without real security; auditors and attackers both eventually find the gaps.",
+    "safety": "Organizations should build genuine practices behind the paperwork: leadership commitment, real risk assessments, and continuous improvement rather than checkbox compliance.",
+    "category": "privacy"
+  },
+  {
+    "term": "PCI DSS",
+    "definition": "PCI DSS is the Payment Card Industry Data Security Standard, a set of security requirements that any organization handling card payments must follow. It was created by the card networks to reduce payment fraud. ",
+    "explanation": "The standard mandates controls such as encrypting card data in transit and at rest, network segmentation, access control, monitoring, and regular testing. Compliance levels and validation intensity scale with transaction volume. For Indian merchants and developers, PCI DSS governs how card data may be collected, processed, and stored.",
+    "example": "An online store must never store raw card numbers; it uses a payment gateway and tokenization, keeping itself within a small compliance scope and customers' cards out of its database.",
+    "risks": "Non-compliance brings heavy fines, loss of card-processing ability, and severe liability if card data is breached.",
+    "safety": "Never store card data yourself if you can avoid it; use PCI-compliant gateways and tokenization, and keep the systems that touch payments isolated and monitored.",
+    "category": "privacy"
+  },
+  {
+    "term": "HIPAA",
+    "definition": "HIPAA is the US Health Insurance Portability and Accountability Act, which protects sensitive patient health information from disclosure without consent. It sets the rules for how hospitals, insurers, and their vendors handle medical data. ",
+    "explanation": "HIPAA requires safeguards for protected health information: technical measures like encryption and access logging, physical measures like facility security, and administrative measures like training and business associate agreements. Medical records are prime targets because they support blackmail, insurance fraud, and identity theft better than almost any other data type.",
+    "example": "A healthcare software startup serving US hospitals signs business associate agreements and encrypts all patient data, becoming compliant enough to win contracts.",
+    "risks": "Violations bring substantial fines, lawsuits, and reputational ruin; healthcare breaches consistently rank among the costliest.",
+    "safety": "Anyone handling health data should minimize collection, encrypt it, log access, and train staff that medical information is never shared casually, even internally.",
+    "category": "privacy"
+  },
+  {
+    "term": "SOC 2",
+    "definition": "SOC 2 is an audit framework that evaluates how a service organization manages customer data against five trust principles: security, availability, processing integrity, confidentiality, and privacy. It is the standard assurance report for cloud and SaaS companies. ",
+    "explanation": "An independent auditor tests whether the organization's controls actually operate over time, producing Type I (design at a point in time) or Type II (operating effectiveness over a period) reports. Enterprise customers require SOC 2 before signing contracts, making it a de facto market entry requirement for software vendors.",
+    "example": "A SaaS startup completes a SOC 2 Type II audit; its sales team can now answer enterprise security questionnaires with a report instead of losing deals to bigger competitors.",
+    "risks": "Focusing on passing the audit rather than real control effectiveness leaves actual security weak, and customers increasingly read beyond the badge.",
+    "safety": "Organizations should treat SOC 2 as a byproduct of genuine security operations: documented controls, access reviews, monitoring, and incident processes that would function even unannounced.",
+    "category": "privacy"
+  }
+]

@@ -1,0 +1,92 @@
+[
+  {
+    "id": 1,
+    "type": "email",
+    "question": "Is this a phishing attempt?",
+    "scenario": "Subject: Your Netflix account is suspended. Click here to reactivate: netflix-secure-login.xyz/confirm",
+    "options": ["Legitimate Netflix email", "Phishing scam"],
+    "correct": 1,
+    "explanation": "The sender address is not @netflix.com and the link goes to a suspicious domain (xyz instead of com)."
+  },
+  {
+    "id": 2,
+    "type": "sms",
+    "question": "What should you do?",
+    "scenario": "SMS: \"Your UPI payment of ₹5,000 is pending. Reply YES to confirm or call 1800-123-4567.\"",
+    "options": ["Reply YES", "Ignore & block the number", "Call the number"],
+    "correct": 1,
+    "explanation": "Legitimate services never ask you to reply YES via SMS to confirm a payment. This is smishing."
+  },
+  {
+    "id": 3,
+    "type": "url",
+    "question": "Is the QR code safe?",
+    "scenario": "QR code on a \"Free Wi-Fi\" flyer at a café. Scanning it opens http://free-wifi-guest.tk.",
+    "options": ["Safe – gives free Wi-Fi", "Scam – leads to a phishing site"],
+    "correct": 1,
+    "explanation": "Unverified QR codes can direct you to malicious sites that steal credentials or install malware."
+  },
+  {
+    "id": 4,
+    "type": "email",
+    "question": "Is this legitimate?",
+    "scenario": "Subject: IT Department: Password Expiry Notice. Attachment: password-reset-form.pdf",
+    "options": ["Legitimate IT notice", "Phishing scam"],
+    "correct": 1,
+    "explanation": "Unexpected password expiry notices with attachments are classic phishing. IT departments typically email, not attach PDFs."
+  },
+  {
+    "id": 5,
+    "type": "sms",
+    "question": "What type of scam is this?",
+    "scenario": "SMS: \"You won ₹1,00,000! Click here to claim: bit.ly/freemoney\".",
+    "options": ["Lottery scam", "Legitimate prize"],
+    "correct": 0,
+    "explanation": "You can't win a lottery you didn't enter. This is a classic advance-fee fraud scheme."
+  },
+  {
+    "id": 6,
+    "type": "url",
+    "question": "Is this URL safe?",
+    "scenario": "https://paypall-security-update.com/verify-account",
+    "options": ["Safe – PayPal security page", "Fake – lookalike domain"],
+    "correct": 1,
+    "explanation": "The domain has \"paypall\" (double L) instead of \"paypal\". This is a typo-squatting phishing site."
+  },
+  {
+    "id": 7,
+    "type": "email",
+    "question": "Is this a business email compromise?",
+    "scenario": "Subject: Urgent: Wire Transfer Request. From: CEO <ceo@company-domain.com>. Body: \"Transfer $50,000 to this vendor immediately.\"",
+    "options": ["Legitimate CEO request", "Business email compromise"],
+    "correct": 1,
+    "explanation": "Even from a familiar sender, verify wire transfer requests through a separate channel (phone call)."
+  },
+  {
+    "id": 8,
+    "type": "sms",
+    "question": "What is this?",
+    "scenario": "SMS: \"Your package is held at customs. Pay ₹2,000 release fee: http://customs-verify.tk\".",
+    "options": ["Legitimate customs notice", "Smishing scam"],
+    "correct": 1,
+    "explanation": "Customs agencies don't send payment links via SMS for released packages. This is a delivery scam."
+  },
+  {
+    "id": 9,
+    "type": "url",
+    "question": "Identify the threat:",
+    "scenario": "http://irda-login-security-update.in/verify",
+    "options": ["Legitimate insurance portal", "Phishing site"],
+    "correct": 1,
+    "explanation": ".in domain claiming to be IRA (Insurance Regulatory Authority) is a phishing site mimicking legitimate authority."
+  },
+  {
+    "id": 10,
+    "type": "email",
+    "question": "Is this a job scam?",
+    "scenario": "Email: \"We want to hire you! Transfer setup kit money via Zelle, we'll reimburse.\"",
+    "options": ["Legitimate job offer", "Job scam"],
+    "correct": 1,
+    "explanation": "Legitimate employers never ask new employees to transfer money or use personal payment apps."
+  }
+]

@@ -1,0 +1,352 @@
+[
+  {
+    "id": "phishing",
+    "name": "Phishing",
+    "category": "social",
+    "icon": "🎣",
+    "iconBg": "var(--color-info-bg)",
+    "iconColor": "var(--color-info)",
+    "example": "Email claiming your bank account is compromised, urging you to click a link to \"verify\" your credentials.",
+    "signs": [
+      "Generic greetings (\"Dear Customer\")",
+      "Urgent/threatening language",
+      "Sender address doesn't match claimed organization",
+      "Suspicious URLs (hover to check)",
+      "Poor grammar/spelling (though AI is improving this)",
+      "Requests for credentials, OTPs, or payments"
+    ],
+    "prevention": [
+      "Verify sender through official channels",
+      "Navigate directly to websites (don't click links)",
+      "Enable MFA on all accounts",
+      "Report phishing to organization's abuse email",
+      "Use email filtering and anti-phishing tools"
+    ]
+  },
+  {
+    "id": "smishing",
+    "name": "Smishing (SMS Phishing)",
+    "category": "social",
+    "icon": "📱",
+    "iconBg": "var(--color-warning-bg)",
+    "iconColor": "var(--color-warning)",
+    "example": "SMS: 'Your package delivery failed. Click here to reschedule: bit.ly/fake-link'",
+    "signs": [
+      "Unexpected delivery/payment notifications",
+      "Shortened URLs (bit.ly, tinyurl)",
+      "Requests to reply with YES/NO or call a number",
+      "Claims from banks, govt, or courier services"
+    ],
+    "prevention": [
+      "Never click links in unexpected SMS",
+      "Verify through official app/website",
+      "Don't reply to suspicious texts",
+      "Report to 1930 (India) or carrier spam reporting"
+    ]
+  },
+  {
+    "id": "vishing",
+    "name": "Vishing (Voice Phishing)",
+    "category": "social",
+    "icon": "📞",
+    "iconBg": "var(--color-danger-bg)",
+    "iconColor": "var(--color-danger)",
+    "example": "\"Microsoft Support\" calls claiming your computer has a virus, requests remote access.",
+    "signs": [
+      "Unsolicited tech support calls",
+      "Pressure to act immediately",
+      "Requests for remote access (TeamViewer, AnyDesk)",
+      "Demands for payment via gift cards/crypto"
+    ],
+    "prevention": [
+      "Hang up on unsolicited support calls",
+      "Legitimate companies never call unprompted",
+      "Verify via official support number",
+      "Never grant remote access to strangers"
+    ]
+  },
+  {
+    "id": "ransomware",
+    "name": "Ransomware",
+    "category": "malware",
+    "icon": "🔒",
+    "iconBg": "var(--color-danger-bg)",
+    "iconColor": "var(--color-danger)",
+    "example": "File-encrypting malware that demands cryptocurrency payment for decryption key.",
+    "signs": [
+      "Files suddenly have new extensions (.locked, .encrypted)",
+      "Ransom note on desktop or in folders",
+      "Cannot open documents, images, databases",
+      "System performance degrades during encryption"
+    ],
+    "prevention": [
+      "Maintain offline, encrypted backups",
+      "Keep systems and software patched",
+      "Use reputable endpoint protection",
+      "Disable macros in Office by default",
+      "Segment networks to limit lateral movement"
+    ]
+  },
+  {
+    "id": "spyware",
+    "name": "Spyware & Stalkerware",
+    "category": "malware",
+    "icon": "👁️",
+    "iconBg": "var(--color-warning-bg)",
+    "iconColor": "var(--color-warning)",
+    "example": "App secretly installed on phone tracks location, reads messages, records calls.",
+    "signs": [
+      "Battery drains unusually fast",
+      "High data usage when idle",
+      "Unknown apps in device admin list",
+      "Partner knows private conversations/location",
+      "Phone feels warm when not in use"
+    ],
+    "prevention": [
+      "Use strong device lock (PIN/biometric)",
+      "Review app permissions regularly",
+      "Install apps only from official stores",
+      "Run anti-spyware scans",
+      "Factory reset if compromised"
+    ]
+  },
+  {
+    "id": "trojan",
+    "name": "Trojans & RATs",
+    "category": "malware",
+    "icon": "🐴",
+    "iconBg": "var(--color-primary-bg)",
+    "iconColor": "var(--color-primary)",
+    "example": "\"Free PDF Converter\" installs remote access trojan giving attacker full control.",
+    "signs": [
+      "Unexpected system slowdowns",
+      "Mouse moves on its own",
+      "Webcam light activates randomly",
+      "Unknown processes in Task Manager",
+      "Antivirus disabled without user action"
+    ],
+    "prevention": [
+      "Download only from official sources",
+      "Keep real-time protection enabled",
+      "Don't disable UAC (Windows) / Gatekeeper (Mac)",
+      "Scan downloads before opening"
+    ]
+  },
+  {
+    "id": "social-engineering",
+    "name": "Social Engineering",
+    "category": "social",
+    "icon": "🎭",
+    "iconBg": "var(--color-accent)",
+    "iconColor": "var(--color-accent)",
+    "example": "Attacker poses as IT support, builds trust, then asks for password \"to fix an issue.\"",
+    "signs": [
+      "Too-good-to-be-true offers",
+      "Requests to bypass security procedures",
+      "Emotional manipulation (fear, urgency, greed)",
+      "Impersonation of authority figures"
+    ],
+    "prevention": [
+      "Verify identity through independent channels",
+      "Never share passwords/OTPs with anyone",
+      "Follow established security procedures",
+      "Report suspicious requests to security team"
+    ]
+  },
+  {
+    "id": "identity-theft",
+    "name": "Identity Theft",
+    "category": "identity",
+    "icon": "🆔",
+    "iconBg": "var(--color-danger-bg)",
+    "iconColor": "var(--color-danger)",
+    "example": "Fraudster uses stolen PAN/Aadhaar to take loans, open credit cards in your name.",
+    "signs": [
+      "Unfamiliar accounts on credit report",
+      "Bills for services you didn't use",
+      "Denied credit despite good history",
+      "Missing mail/bank statements",
+      "IRS/Tax notices for income you didn't earn"
+    ],
+    "prevention": [
+      "Shred documents with personal info",
+      "Monitor credit reports regularly",
+      "Freeze credit if not applying for loans",
+      "Use unique passwords + MFA everywhere",
+      "Be cautious sharing PAN/Aadhaar"
+    ]
+  },
+  {
+    "id": "password-attacks",
+    "name": "Password Attacks",
+    "category": "financial",
+    "icon": "🔓",
+    "iconBg": "var(--color-warning-bg)",
+    "iconColor": "var(--color-warning)",
+    "example": "Credential stuffing uses leaked passwords from one breach to access other accounts.",
+    "signs": [
+      "Login alerts from unfamiliar locations/devices",
+      "Multiple failed login attempts",
+      "Password reset emails you didn't request",
+      "Account lockout notifications"
+    ],
+    "prevention": [
+      "Unique password for every account",
+      "Use password manager",
+      "Enable MFA (prefer authenticator app)",
+      "Check haveibeenpwned.com regularly",
+      "Rotate passwords after known breaches"
+    ]
+  },
+  {
+    "id": "fake-sites",
+    "name": "Fake Websites & Apps",
+    "category": "financial",
+    "icon": "🌐",
+    "iconBg": "var(--color-info-bg)",
+    "iconColor": "var(--color-info)",
+    "example": "Clone of bank website (bankofindla.com vs bankofindia.com) steals login credentials.",
+    "signs": [
+      "Slight misspellings in domain name",
+      "HTTP instead of HTTPS (or invalid cert)",
+      "Poor design, broken links, generic images",
+      "Requests unusual information",
+      "No contact info or privacy policy"
+    ],
+    "prevention": [
+      "Bookmark official sites",
+      "Check URL carefully before entering credentials",
+      "Use browser password manager (auto-fills only on correct domain)",
+      "Verify app publisher in Play Store/App Store"
+    ]
+  },
+  {
+    "id": "upi-fraud",
+    "name": "UPI / Payment Fraud",
+    "category": "financial",
+    "icon": "💸",
+    "iconBg": "var(--color-success-bg)",
+    "iconColor": "var(--color-success)",
+    "example": "\"Collect request\" for ₹5000 saying \"Approve to receive refund\" - actually sends money.",
+    "signs": [
+      "Unexpected collect requests",
+      "Pressure to approve quickly",
+      "Requests to share UPI PIN or OTP",
+      "QR codes asking for payment to \"verify\" account"
+    ],
+    "prevention": [
+      "Never share UPI PIN with anyone",
+      "Verify collect requests in app before approving",
+      "Use \"Request Money\" only for receiving",
+      "Set daily transaction limits",
+      "Report fraud to bank & cybercrime.gov.in immediately"
+    ]
+  },
+  {
+    "id": "qr-phishing",
+    "name": "QR Phishing (Quishing)",
+    "category": "emerging",
+    "icon": "📷",
+    "iconBg": "var(--color-primary-bg)",
+    "iconColor": "var(--color-primary)",
+    "example": "QR code on parking meter flyer leads to fake payment page harvesting card details.",
+    "signs": [
+      "QR codes in unexpected places",
+      "URL after scanning looks suspicious",
+      "Requests for credentials/payment info",
+      "No clear indication of destination"
+    ],
+    "prevention": [
+      "Verify source before scanning",
+      "Preview URL before opening (most cameras show it)",
+      "Use QR scanner with URL preview",
+      "Don't scan random QR codes in public"
+    ]
+  },
+  {
+    "id": "sim-swap",
+    "name": "SIM Swapping",
+    "category": "emerging",
+    "icon": "📱",
+    "iconBg": "var(--color-danger-bg)",
+    "iconColor": "var(--color-danger)",
+    "example": "Attacker convinces carrier to port your number, receives your 2FA codes, takes over accounts.",
+    "signs": [
+      "Sudden loss of cellular service",
+      "SMS about SIM change/port request",
+      "Can't receive 2FA codes",
+      "Accounts accessed from unknown locations"
+    ],
+    "prevention": [
+      "Set up port-out PIN with carrier",
+      "Use authenticator apps (not SMS) for 2FA",
+      "Enable SIM lock PIN on device",
+      "Monitor for unexpected carrier communications"
+    ]
+  },
+  {
+    "id": "deepfake",
+    "name": "Deepfake Scams",
+    "category": "emerging",
+    "icon": "🤖",
+    "iconBg": "var(--color-warning-bg)",
+    "iconColor": "var(--color-warning)",
+    "example": "AI-generated voice clone of CEO authorizes ₹2 Cr wire transfer. Video call with fake CEO.",
+    "signs": [
+      "Unusual urgent requests from leadership",
+      "Slight lip-sync or audio artifacts",
+      "Refusal to use established verification",
+      "Requests to bypass normal approval chains"
+    ],
+    "prevention": [
+      "Establish secret passphrases for exec requests",
+      "Require multi-channel verification for transfers",
+      "Train finance/HR teams on deepfake risks",
+      "Use callback procedures for financial requests"
+    ]
+  },
+  {
+    "id": "insider",
+    "name": "Insider Threats",
+    "category": "emerging",
+    "icon": "👤",
+    "iconBg": "var(--color-info-bg)",
+    "iconColor": "var(--color-info)",
+    "example": "Disgruntled employee downloads customer database before resignation.",
+    "signs": [
+      "Unusual data access patterns",
+      "Large file transfers after hours",
+      "Accessing systems unrelated to role",
+      "Disabling security tools/logging"
+    ],
+    "prevention": [
+      "Principle of least privilege access",
+      "User behavior analytics (UEBA)",
+      "Monitor privileged account activity",
+      "Secure offboarding procedures",
+      "Data loss prevention (DLP) tools"
+    ]
+  },
+  {
+    "id": "ddos",
+    "name": "DDoS Attacks",
+    "category": "malware",
+    "icon": "🌊",
+    "iconBg": "var(--color-primary-bg)",
+    "iconColor": "var(--color-primary)",
+    "example": "Website overwhelmed by botnet traffic, legitimate users cannot access services.",
+    "signs": [
+      "Slow or unresponsive website",
+      "Unusual traffic spikes in analytics",
+      "Server resource exhaustion",
+      "Ransom demand to stop attack"
+    ],
+    "prevention": [
+      "Use DDoS protection service (Cloudflare, AWS Shield)",
+      "Implement rate limiting and WAF",
+      "Use CDN to absorb traffic",
+      "Have incident response plan ready",
+      "Monitor for pre-attack reconnaissance"
+    ]
+  }
+]

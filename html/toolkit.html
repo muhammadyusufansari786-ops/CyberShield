@@ -1,0 +1,515 @@
+﻿<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Cyber safety checklists for passwords, devices, privacy, phishing, and backups. Track your security hygiene progress.">
+  <title>Cyber Safety Toolkit – CyberShield</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%230f766e'/%3E%3Ctext x='50%25' y='55%25' dominant-baseline='middle' text-anchor='middle' fill='white' font-size='60' font-weight='bold'%3E%E2%9A%A1%3C/text%3E%3C/svg%3E">
+</head>
+<body>
+  <a href="#main-content" class="visually-hidden focus-visible">Skip to main content</a>
+
+  <header class="header" role="banner">
+    <div class="header-inner">
+      <a href="index.html" class="logo" aria-label="CyberShield Home">
+        <span class="logo-icon" aria-hidden="true">🛡️</span>
+        <span>CyberShield</span>
+      </a>
+      
+      <nav class="nav-desktop" role="navigation" aria-label="Main navigation">
+        <ul class="nav-list">
+          <li><a href="index.html" class="nav-link"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>Home</a></li>
+          <li><a href="password.html" class="nav-link"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>Password</a></li>
+          <li><a href="quiz.html" class="nav-link"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>Quiz</a></li>
+          <li><a href="news.html" class="nav-link"><svg xmlns="http://www.w3.org/2000.svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 22h16a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2z"></path><polyline points="8 14 12 10 16 14"></polyline><line x1="12" y1="16" x2="12" y2="22"></line></svg>News</a></li>
+          <li><a href="threats.html" class="nav-link"><svg xmlns="http://www.w3.org/2000.svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path><line x1="12" y1="9" x2="12" y2="13"></line><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>Threats</a></li>
+          <li><a href="emergency.html" class="nav-link"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>Emergency</a></li>
+          <li><a href="toolkit.html" class="nav-link active" aria-current="page"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path></svg>Toolkit</a></li>
+          <li><a href="tips.html" class="nav-link"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"></path><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"></path></svg>Tips</a></li>
+          <li><a href="simulator.html" class="nav-link"><svg xmlns="http://www.w3.org/2000.svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"></rect><path d="M8 21h8"></path><path d="M12 17v4"></path></svg>Simulator</a></li>
+          <li><a href="glossary.html" class="nav-link"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>Glossary</a></li>
+          <li><a href="resources.html" class="nav-link"><svg xmlns="http://www.w3.org/2000.svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>Resources</a></li>
+          <li><a href="about.html" class="nav-link"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>About</a></li>
+        </ul>
+      </nav>
+      
+      <div class="header-actions">
+        <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode" type="button">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+        </button>
+        <button id="mobile-menu-btn" class="mobile-menu-btn" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-nav-overlay" type="button">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div id="mobile-nav-overlay" class="mobile-nav-overlay" role="dialog" aria-modal="true" aria-label="Navigation menu">
+    <div id="mobile-nav-panel" class="mobile-nav-panel">
+      <div class="mobile-nav-header">
+        <a href="index.html" class="logo" aria-label="CyberShield Home">
+          <span class="logo-icon" aria-hidden="true">🛡️</span>
+          <span>CyberShield</span>
+        </a>
+        <button id="mobile-nav-close" class="mobile-nav-close" aria-label="Close menu" type="button">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+        </button>
+      </div>
+      <ul class="mobile-nav-list">
+        <li><a href="index.html" class="mobile-nav-link"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>Home</a></li>
+        <li><a href="password.html" class="mobile-nav-link"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>Password Checker</a></li>
+        <li><a href="quiz.html" class="mobile-nav-link"><svg xmlns="http://www.w3.org/2000.svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>Quiz</a></li>
+        <li><a href="news.html" class="mobile-nav-link"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 22h16a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2z"></path><polyline points="8 14 12 10 16 14"></polyline><line x1="12" y1="16" x2="12" y2="22"></line></svg>News</a></li>
+        <li><a href="threats.html" class="mobile-nav-link"><svg xmlns="http://www.w3.org/2000.svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path><line x1="12" y1="9" x2="12" y2="13"></line><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>Threats</a></li>
+        <li><a href="emergency.html" class="mobile-nav-link"><svg xmlns="http://www.w3.org/2000.svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>Emergency</a></li>
+        <li><a href="toolkit.html" class="mobile-nav-link active" aria-current="page"><svg xmlns="http://www.w3.org/2000.svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path></svg>Toolkit</a></li>
+        <li><a href="tips.html" class="mobile-nav-link"><svg xmlns="http://www.w3.org/2000.svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"></path><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"></path></svg>Daily Tips</a></li>
+        <li><a href="simulator.html" class="mobile-nav-link"><svg xmlns="http://www.w3.org/2000.svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"></rect><path d="M8 21h8"></path><path d="M12 17v4"></path></svg>Simulator</a></li>
+        <li><a href="glossary.html" class="mobile-nav-link"><svg xmlns="http://www.w3.org/2000.svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>Glossary</a></li>
+        <li><a href="resources.html" class="mobile-nav-link"><svg xmlns="http://www.w3.org/2000.svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>Resources</a></li>
+        <li><a href="about.html" class="mobile-nav-link"><svg xmlns="http://www.w3.org/2000.svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>About</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <main id="main-content" role="main">
+    <section class="section" style="padding-top: 3rem;">
+      <div class="container">
+        <div style="max-width: 1000px; margin: 0 auto;">
+          <nav aria-label="Breadcrumb" style="margin-bottom: 1.5rem;">
+            <ol style="display: flex; justify-content: center; gap: 0.5rem; list-style: none; font-size: 0.875rem; color: var(--color-text-muted);">
+              <li><a href="index.html" style="color: var(--color-text-muted);">Home</a></li>
+              <li aria-hidden="true">/</li>
+              <li aria-current="page">Safety Toolkit</li>
+            </ol>
+          </nav>
+          <header style="text-align: center; margin-bottom: 2rem;">
+            <h1>Cyber Safety Toolkit</h1>
+            <p style="color: var(--color-text-secondary); font-size: 1.125rem; margin-top: 0.75rem;">Interactive checklists to build and maintain your security hygiene. Progress saved locally in your browser.</p>
+          </header>
+
+          <!-- Overall Progress -->
+          <div class="card" style="margin-bottom: 2rem;">
+            <div class="card-header">
+              <h2 class="card-title">Overall Progress</h2>
+            </div>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem;">
+              <div class="progress-item" id="toolkit-overall-progress" style="grid-column: 1 / -1;">
+                <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 0.5rem;">
+                  <span style="font-weight: 600;">Total Completion</span>
+                  <span id="overall-percentage" style="font-weight: 700; color: var(--color-primary);">0%</span>
+                </div>
+                <div style="height: 12px; background: var(--color-border); border-radius: 6px; overflow: hidden;">
+                  <div id="overall-bar" style="height: 100%; width: 0%; background: linear-gradient(90deg, var(--color-primary), var(--color-primary-light)); border-radius: 6px; transition: width 0.5s ease;"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Checklists Grid -->
+          <div class="toolkit-grid" id="toolkit-grid" role="list" aria-label="Security checklists">
+            <!-- Populated by JavaScript -->
+          </div>
+
+          <!-- Export/Import -->
+          <div class="card" style="margin-top: 2rem;">
+            <div class="card-header">
+              <h2 class="card-title">Backup & Restore</h2>
+              <p class="card-subtitle">Export your progress to a file or restore from backup</p>
+            </div>
+            <div style="display: flex; flex-wrap: wrap; gap: 1rem;">
+              <button type="button" class="btn btn-secondary" id="export-btn">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+                Export Progress
+              </button>
+              <button type="button" class="btn btn-secondary" id="import-btn">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="17 8 12 3 7 8"></polyline><line x1="12" y1="3" x2="12" y2="15"></line></svg>
+                Import Progress
+              </button>
+              <input type="file" id="import-file" accept=".json" style="display: none;">
+              <button type="button" class="btn btn-ghost" id="reset-all-btn">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"></path><path d="M21 12a9 9 0 1 1-9 9 9.75 9.75 0 0 1 6.74-2.74L21 16"></path></svg>
+                Reset All
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="footer-logo logo" aria-label="CyberShield Home">
+            <span class="logo-icon" aria-hidden="true">🛡️</span>
+            <span>CyberShield</span>
+          </a>
+          <p class="footer-tagline">Your beginner-friendly cybersecurity awareness platform.</p>
+        </div>
+        <div>
+          <h3 class="footer-title">Learning Modules</h3>
+          <ul class="footer-links">
+            <li><a href="password.html" class="footer-link">Password Checker</a></li>
+            <li><a href="quiz.html" class="footer-link">Cybersecurity Quiz</a></li>
+            <li><a href="threats.html" class="footer-link">Common Threats</a></li>
+            <li><a href="emergency.html" class="footer-link">Emergency Guide</a></li>
+            <li><a href="toolkit.html" class="footer-link">Safety Toolkit</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="footer-title">Tools & Resources</h3>
+          <ul class="footer-links">
+            <li><a href="simulator.html" class="footer-link">Spot the Scam</a></li>
+            <li><a href="tips.html" class="footer-link">Daily Tips</a></li>
+            <li><a href="glossary.html" class="footer-link">Cyber Glossary</a></li>
+            <li><a href="news.html" class="footer-link">Cyber News</a></li>
+            <li><a href="resources.html" class="footer-link">Trusted Sources</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="footer-title">Legal & Privacy</h3>
+          <ul class="footer-links">
+            <li><a href="about.html" class="footer-link">About & Disclaimer</a></li>
+            <li><a href="#" class="footer-link">Privacy Policy</a></li>
+            <li><a href="#" class="footer-link">Terms of Use</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 CyberShield. Educational purposes only. Not a substitute for professional security advice.</p>
+        <div class="footer-legal">
+          <a href="#">Privacy</a>
+          <a href="#">Terms</a>
+          <a href="#">Contact</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+  <script>
+    // Toolkit Data
+    const TOOLKIT_DATA = {
+      password: {
+        id: 'password',
+        title: 'Password & MFA',
+        icon: '🔐',
+        iconBg: 'var(--color-primary-bg)',
+        iconColor: 'var(--color-primary)',
+        description: 'Secure authentication practices',
+        items: [
+          { id: 'p1', text: 'Use unique password for every account' },
+          { id: 'p2', text: 'Passwords are 12+ characters with mixed case, numbers, symbols' },
+          { id: 'p3', text: 'Passwords stored in reputable password manager (not browser/notes)' },
+          { id: 'p4', text: 'MFA enabled on all critical accounts (email, banking, social, cloud)' },
+          { id: 'p5', text: 'MFA uses authenticator app or hardware key (not SMS where possible)' },
+          { id: 'p6', text: 'Master password for password manager is strong and memorized' },
+          { id: 'p7', text: 'Recovery codes for MFA stored securely offline' },
+          { id: 'p8', text: 'Regular password health check (quarterly) using password manager audit' }
+        ]
+      },
+      device: {
+        id: 'device',
+        title: 'Device Security',
+        icon: '💻',
+        iconBg: 'var(--color-info-bg)',
+        iconColor: 'var(--color-info)',
+        description: 'Keep your devices hardened',
+        items: [
+          { id: 'd1', text: 'OS and all software set to auto-update' },
+          { id: 'd2', text: 'Full disk encryption enabled (BitLocker, FileVault, LUKS)' },
+          { id: 'd3', text: 'Strong screen lock (PIN 6+ digits / alphanumeric / biometric)' },
+          { id: 'd4', text: 'Reputable antivirus/EDR installed and updated' },
+          { id: 'd5', text: 'Firewall enabled (built-in or third-party)' },
+          { id: 'd6', text: 'Automatic lock after 5 min inactivity' },
+          { id: 'd7', text: 'Admin account separate from daily user account' },
+          { id: 'd8', text: 'Remote wipe/find my device enabled' },
+          { id: 'd9', text: 'Unused services/ports disabled (Bluetooth, file sharing, remote desktop)' },
+          { id: 'd10', text: 'Firmware/BIOS updated and password protected' }
+        ]
+      },
+      privacy: {
+        id: 'privacy',
+        title: 'Privacy Protection',
+        icon: '🔒',
+        iconBg: 'var(--color-success-bg)',
+        iconColor: 'var(--color-success)',
+        description: 'Control your digital footprint',
+        items: [
+          { id: 'pr1', text: 'Browser: tracker blocking enabled (uBlock Origin, Privacy Badger)' },
+          { id: 'pr2', text: 'Search engine: privacy-focused (DuckDuckGo, Brave, Startpage)' },
+          { id: 'pr3', text: 'Social media: profiles private, minimal personal info shared' },
+          { id: 'pr4', text: 'App permissions reviewed quarterly (location, contacts, microphone, camera)' },
+          { id: 'pr5', text: 'Location services off except for essential apps (maps, ride-share)' },
+          { id: 'pr6', text: 'Ad personalization opted out (Google, Meta, Apple, Microsoft)' },
+          { id: 'pr7', text: 'Data broker opt-outs completed (or use service like DeleteMe)' },
+          { id: 'pr8', text: 'Email aliases used for signups (SimpleLogin, AnonAddy, Firefox Relay)' },
+          { id: 'pr9', text: 'DNS over HTTPS/TLS enabled (Cloudflare 1.1.1.1, NextDNS, Quad9)' },
+          { id: 'pr10', text: 'Regular "haveibeenpwned.com" checks for email exposure' }
+        ]
+      },
+      phishing: {
+        id: 'phishing',
+        title: 'Phishing Defense',
+        icon: '🎣',
+        iconBg: 'var(--color-warning-bg)',
+        iconColor: 'var(--color-warning)',
+        description: 'Recognize and resist social engineering',
+        items: [
+          { id: 'ph1', text: 'Never share OTPs, PINs, or passwords with anyone (including "support")' },
+          { id: 'ph2', text: 'Verify sender address before clicking links (hover to check actual URL)' },
+          { id: 'ph3', text: 'Navigate directly to sites (bookmarks/typed URL) instead of email links' },
+          { id: 'ph4', text: 'Report suspicious emails to organization\'s abuse/security email' },
+          { id: 'ph5', text: 'Use email client\'s "Report Phishing" button' },
+          { id: 'ph6', text: 'Enable DMARC/SPF/DKIM on personal domains' },
+          { id: 'ph7', text: 'Verify unexpected requests via secondary channel (call known number)' },
+          { id: 'ph8', text: 'Be wary of urgency, threats, too-good-to-be-true offers' },
+          { id: 'ph9', text: 'Check for lookalike domains (paypa1.com, amaz0n-security.xyz)' },
+          { id: 'ph10', text: 'Participate in phishing simulation training if offered by employer' }
+        ]
+      },
+      backup: {
+        id: 'backup',
+        title: 'Backup Strategy',
+        icon: '💾',
+        iconBg: 'var(--color-danger-bg)',
+        iconColor: 'var(--color-danger)',
+        description: 'Ensure data recoverability',
+        items: [
+          { id: 'b1', text: '3-2-1 rule: 3 copies, 2 media types, 1 offsite' },
+          { id: 'b2', text: 'Automatic daily backup for critical files' },
+          { id: 'b3', text: 'Weekly full system image backup' },
+          { id: 'b4', text: 'At least one backup completely offline (air-gapped)' },
+          { id: 'b5', text: 'Cloud backup encrypted client-side (Cryptomator, Veracrypt, or provider E2EE)' },
+          { id: 'b6', text: 'Backup restoration tested quarterly' },
+          { id: 'b7', text: 'Mobile photos/videos auto-backed up to encrypted cloud' },
+          { id: 'b8', text: 'Password manager vault backed up (encrypted export stored offline)' },
+          { id: 'b9', text: 'Recovery keys for encryption (BitLocker, FileVault, LUKS) stored offline' },
+          { id: 'b10', text: 'Documented recovery procedure with RTO/RPO targets' }
+        ]
+      }
+    };
+
+    // Toolkit Controller
+    class ToolkitController {
+      constructor() {
+        this.grid = document.getElementById('toolkit-grid');
+        this.overallBar = document.getElementById('overall-bar');
+        this.overallPercentage = document.getElementById('overall-percentage');
+        this.exportBtn = document.getElementById('export-btn');
+        this.importBtn = document.getElementById('import-btn');
+        this.importFile = document.getElementById('import-file');
+        this.resetBtn = document.getElementById('reset-all-btn');
+        
+        this.checklists = {};
+        this.bindEvents();
+        this.loadProgress();
+        this.render();
+      }
+
+      bindEvents() {
+        this.exportBtn.addEventListener('click', () => this.exportProgress());
+        this.importBtn.addEventListener('click', () => this.importFile.click());
+        this.importFile.addEventListener('change', (e) => this.importProgress(e));
+        this.resetBtn.addEventListener('click', () => this.resetAll());
+      }
+
+      loadProgress() {
+        const saved = CyberShield.Utils.storage.get('toolkit-progress', {});
+        this.checklists = saved;
+        
+        // Initialize missing checklists
+        Object.keys(TOOLKIT_DATA).forEach(id => {
+          if (!this.checklists[id]) {
+            this.checklists[id] = {};
+          }
+        });
+      }
+
+      saveProgress() {
+        CyberShield.Utils.storage.set('toolkit-progress', this.checklists);
+        this.updateOverallProgress();
+      }
+
+      updateOverallProgress() {
+        let totalItems = 0;
+        let completedItems = 0;
+        
+        Object.values(TOOLKIT_DATA).forEach(list => {
+          totalItems += list.items.length;
+          list.items.forEach(item => {
+            if (this.checklists[list.id]?.[item.id]) completedItems++;
+          });
+        });
+        
+        const percentage = totalItems > 0 ? Math.round((completedItems / totalItems) * 100) : 0;
+        this.overallBar.style.width = `${percentage}%`;
+        this.overallPercentage.textContent = `${percentage}%`;
+      }
+
+      render() {
+        this.grid.innerHTML = Object.values(TOOLKIT_DATA).map(list => this.createChecklistCard(list)).join('');
+        this.bindCheckboxEvents();
+        this.updateOverallProgress();
+      }
+
+      createChecklistCard(list) {
+        const completed = list.items.filter(item => this.checklists[list.id]?.[item.id]).length;
+        const total = list.items.length;
+        const percentage = total > 0 ? Math.round((completed / total) * 100) : 0;
+        
+        return `
+          <article class="card checklist-card" data-checklist="${list.id}" role="listitem">
+            <header class="checklist-header">
+              <div class="checklist-icon" style="background: ${list.iconBg}; color: ${list.iconColor};" aria-hidden="true">${list.icon}</div>
+              <div>
+                <h3 class="checklist-title">${list.title}</h3>
+                <p style="font-size: 0.8125rem; color: var(--color-text-muted);">${list.description}</p>
+              </div>
+              <div style="margin-left: auto; text-align: right;">
+                <div style="font-weight: 700; color: var(--color-primary);">${completed}/${total}</div>
+                <div style="font-size: 0.75rem; color: var(--color-text-muted);">${percentage}% complete</div>
+              </div>
+            </header>
+            <div style="height: 6px; background: var(--color-border); border-radius: 3px; margin-bottom: 1rem; overflow: hidden;">
+              <div style="height: 100%; width: ${percentage}%; background: linear-gradient(90deg, var(--color-primary), var(--color-primary-light)); border-radius: 3px; transition: width 0.3s ease;"></div>
+            </div>
+            <ul class="checklist-items" role="list" aria-label="${list.title} checklist">
+              ${list.items.map(item => `
+                <li class="checklist-item" data-item-id="${item.id}">
+                  <input type="checkbox" class="checklist-checkbox" id="${list.id}-${item.id}" ${this.checklists[list.id]?.[item.id] ? 'checked' : ''} aria-label="${this.escapeHtml(item.text)}">
+                  <label for="${list.id}-${item.id}" class="checklist-text">${this.escapeHtml(item.text)}</label>
+                </li>
+              `).join('')}
+            </ul>
+          </article>
+        `;
+      }
+
+      bindCheckboxEvents() {
+        this.grid.querySelectorAll('.checklist-checkbox').forEach(checkbox => {
+          checkbox.addEventListener('change', (e) => {
+            const itemId = e.target.id.split('-').pop();
+            const listId = e.target.closest('[data-checklist]').dataset.checklist;
+            
+            if (!this.checklists[listId]) this.checklists[listId] = {};
+            this.checklists[listId][itemId] = e.target.checked;
+            
+            this.saveProgress();
+            this.updateCardProgress(listId);
+          });
+        });
+      }
+
+      updateCardProgress(listId) {
+        const card = this.grid.querySelector(`[data-checklist="${listId}"]`);
+        if (!card) return;
+        
+        const list = TOOLKIT_DATA[listId];
+        const completed = list.items.filter(item => this.checklists[listId]?.[item.id]).length;
+        const total = list.items.length;
+        const percentage = total > 0 ? Math.round((completed / total) * 100) : 0;
+        
+        card.querySelector('[style*="font-weight: 700"]').textContent = `${completed}/${total}`;
+        card.querySelector('[style*="font-size: 0.75rem"]').textContent = `${percentage}% complete`;
+        card.querySelector('[style*="height: 6px"] > div').style.width = `${percentage}%`;
+      }
+
+      exportProgress() {
+        const data = {
+          version: 1,
+          exportedAt: new Date().toISOString(),
+          checklists: this.checklists
+        };
+        
+        const blob = new Blob([JSON.stringify(data, null, 2)], { type: 'application/json' });
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = `cybershield-toolkit-${new Date().toISOString().split('T')[0]}.json`;
+        a.click();
+        URL.revokeObjectURL(url);
+      }
+
+      importProgress(event) {
+        const file = event.target.files[0];
+        if (!file) return;
+        
+        const reader = new FileReader();
+        reader.onload = (e) => {
+          try {
+            const data = JSON.parse(e.target.result);
+            if (data.checklists && typeof data.checklists === 'object') {
+              this.checklists = { ...this.checklists, ...data.checklists };
+              this.saveProgress();
+              this.render();
+              this.showToast('Progress imported successfully!');
+            } else {
+              throw new Error('Invalid file format');
+            }
+          } catch (err) {
+            this.showToast('Failed to import: ' + err.message, 'error');
+          }
+        };
+        reader.readAsText(file);
+        event.target.value = '';
+      }
+
+      resetAll() {
+        if (!confirm('Reset ALL checklist progress? This cannot be undone.')) return;
+        if (!confirm('Are you sure? All your progress will be lost.')) return;
+        
+        this.checklists = {};
+        Object.keys(TOOLKIT_DATA).forEach(id => { this.checklists[id] = {}; });
+        this.saveProgress();
+        this.render();
+        this.showToast('All progress reset');
+      }
+
+      showToast(message, type = 'success') {
+        const existing = document.querySelector('.toast');
+        if (existing) existing.remove();
+
+        const toast = document.createElement('div');
+        toast.className = 'toast';
+        toast.style.cssText = `
+          position: fixed;
+          bottom: 2rem;
+          right: 2rem;
+          background: ${type === 'error' ? 'var(--color-danger)' : 'var(--color-primary)'};
+          color: white;
+          padding: 1rem 1.5rem;
+          border-radius: var(--radius-md);
+          box-shadow: var(--shadow-lg);
+          z-index: 1000;
+          animation: slideUp 0.3s ease;
+        `;
+        toast.textContent = message;
+        document.body.appendChild(toast);
+
+        setTimeout(() => {
+          toast.style.animation = 'fadeOut 0.3s ease forwards';
+          setTimeout(() => toast.remove(), 300);
+        }, 3000);
+      }
+
+      escapeHtml(text) {
+        const div = document.createElement('div');
+        div.textContent = text;
+        return div.innerHTML;
+      }
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      new ToolkitController();
+    });
+  </script>
+</body>
+</html>
