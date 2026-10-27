@@ -67,50 +67,78 @@
   };
 
   // ========================================
-  // Mobile Navigation
+  // Navigation Drawer (left side, opened from the header hamburger)
   // ========================================
   const MobileNav = {
     init() {
-      this.menuBtn = document.getElementById('mobile-menu-btn');
-      this.overlay = document.getElementById('mobile-nav-overlay');
-      this.panel = document.getElementById('mobile-nav-panel');
-      this.closeBtn = document.getElementById('mobile-nav-close');
-      this.links = document.querySelectorAll('.mobile-nav-link');
+      this.menuBtn = document.getElementById('nav-toggle');
+      this.overlay = document.getElementById('nav-overlay');
+      this.panel = document.getElementById('nav-drawer');
+      this.closeBtn = document.getElementById('nav-close');
+      this.links = document.querySelectorAll('.nav-drawer-link');
       
-      if (!this.menuBtn || !this.overlay) return;
+      if (!this.menuBtn || !this.overlay || !this.closeBtn) return;
       
       this.bindEvents();
       this.highlightActive();
     },
     
     bindEvents() {
-      this.menuBtn.addEventListener('click', () => this.open());
+      // Toggle: same button opens AND closes the menu
+      this.menuBtn.addEventListener('click', () => {
+        this.overlay.classList.contains('open') ? this.close() : this.open();
+      });
       this.closeBtn.addEventListener('click', () => this.close());
       this.overlay.addEventListener('click', (e) => {
         if (e.target === this.overlay) this.close();
       });
-      
+
       this.links.forEach(link => {
         link.addEventListener('click', () => this.close());
       });
-      
-      // Close on Escape key
+
+      // Close on Escape key and return focus to the menu button
       document.addEventListener('keydown', (e) => {
         if (e.key === 'Escape' && this.overlay.classList.contains('open')) {
           this.close();
+          this.menuBtn.focus();
+        }
+      });
+
+      // Keep Tab focus inside the open menu (simple focus trap)
+      this.overlay.addEventListener('keydown', (e) => {
+        if (e.key !== 'Tab') return;
+        const focusables = this.overlay.querySelectorAll('a[href], button:not([disabled])');
+        if (!focusables.length) return;
+        const first = focusables[0];
+        const last = focusables[focusables.length - 1];
+        if (e.shiftKey && document.activeElement === first) {
+          e.preventDefault();
+          last.focus();
+        } else if (!e.shiftKey && document.activeElement === last) {
+          e.preventDefault();
+          first.focus();
         }
       });
     },
-    
+
     open() {
       this.overlay.classList.add('open');
       document.body.style.overflow = 'hidden';
-      this.panel.focus();
+      this.menuBtn.setAttribute('aria-expanded', 'true');
+      this.menuBtn.setAttribute('aria-label', 'Close menu');
+      // Focus must wait a frame until the overlay's visibility transition
+      // makes it focusable
+      requestAnimationFrame(() => {
+        if (this.overlay.classList.contains('open')) this.closeBtn.focus();
+      });
     },
-    
+
     close() {
       this.overlay.classList.remove('open');
       document.body.style.overflow = '';
+      this.menuBtn.setAttribute('aria-expanded', 'false');
+      this.menuBtn.setAttribute('aria-label', 'Open menu');
     },
     
     highlightActive() {
@@ -119,23 +147,11 @@
         const href = link.getAttribute('href');
         if (href === currentPath || (currentPath === '' && href === 'index.html')) {
           link.classList.add('active');
+          link.setAttribute('aria-current', 'page');
         }
       });
     }
   };
-
-  // ========================================
-  // Active Navigation Highlighting (Desktop)
-  // ========================================
-  function highlightActiveNav() {
-    const currentPath = window.location.pathname.split('/').pop() || 'index.html';
-    document.querySelectorAll('.nav-link').forEach(link => {
-      const href = link.getAttribute('href');
-      if (href === currentPath || (currentPath === '' && href === 'index.html')) {
-        link.classList.add('active');
-      }
-    });
-  }
 
   // ========================================
   // Smooth Scroll for Anchor Links
@@ -234,23 +250,22 @@
   document.addEventListener('DOMContentLoaded', () => {
     ThemeManager.init();
     MobileNav.init();
-    highlightActiveNav();
     initSmoothScroll();
     initScrollAnimations();
     
     // Expose utilities globally
     window.CyberShield = { Utils };
     
-    // Add theme toggle to mobile nav if not exists
-    const mobileNavPanel = document.getElementById('mobile-nav-panel');
-    if (mobileNavPanel && !document.getElementById('mobile-theme-toggle')) {
+    // Add theme toggle to the navigation drawer if not exists
+    const navDrawer = document.getElementById('nav-drawer');
+    if (navDrawer && !document.getElementById('mobile-theme-toggle')) {
       const themeToggle = document.createElement('button');
       themeToggle.id = 'mobile-theme-toggle';
       themeToggle.className = 'theme-toggle';
       themeToggle.setAttribute('aria-label', 'Toggle dark mode');
       themeToggle.style.marginTop = 'auto';
       themeToggle.style.alignSelf = 'center';
-      mobileNavPanel.appendChild(themeToggle);
+      navDrawer.appendChild(themeToggle);
       ThemeManager.mobileThemeToggle = themeToggle;
       ThemeManager.updateIcons(document.documentElement.getAttribute('data-theme') || 'light');
       themeToggle.addEventListener('click', () => ThemeManager.toggle());

@@ -97,18 +97,31 @@
 
     renderResources() {
       if (!this.grid) return;
-      this.grid.innerHTML = this.filteredData.map(item => `
+      this.grid.innerHTML = this.filteredData.map(item => {
+        // Progressive disclosure only for genuinely long descriptions -
+        // short cards (all current ones) stay fully visible with no button.
+        const longDesc = (item.description || '').length > 160;
+        const descId = `resource-${item.id}-desc`;
+        const descriptionHtml = `<p class="resource-description${longDesc ? ' line-clamp-3' : ''}"${longDesc ? ` id="${descId}"` : ''} style="color: var(--color-text-secondary); font-size: 0.9375rem; margin-bottom: 1rem;">${this.escapeHtml(item.description)}</p>
+          ${longDesc ? `
+          <button type="button" class="viewmore-btn" aria-expanded="false" aria-controls="${descId}">
+            <span class="viewmore-label">View More</span>
+            <span class="viewmore-arrow" aria-hidden="true">→</span>
+          </button>` : ''}`;
+
+        return `
         <article class="card resource-card" style="text-align: center;" data-category="${item.category}" role="listitem">
           <div class="resource-icon" style="font-size: 2rem; margin-bottom: 1rem;" aria-hidden="true">${item.icon}</div>
           <h3 class="resource-title" style="margin-bottom: 0.5rem;">${this.escapeHtml(item.name)}</h3>
-          <p class="resource-description" style="color: var(--color-text-secondary); font-size: 0.9375rem; margin-bottom: 1rem;">${this.escapeHtml(item.description)}</p>
+          ${descriptionHtml}
           <a href="${item.url}" target="_blank" rel="noopener noreferrer" class="resource-link btn btn-primary" style="display: inline-flex; align-items: center; gap: 0.375rem;">
             Visit
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
           </a>
           <span class="badge badge-info" style="margin-top: 0.75rem; display: inline-block; font-size: 0.6875rem;">${this.formatCategory(item.category)}</span>
         </article>
-      `).join('');
+      `;
+      }).join('');
 
       // Animate cards
       const cards = this.grid.querySelectorAll('.resource-card');

@@ -98,13 +98,15 @@
     // After rendering, expand and highlight the deep-linked term, then scroll to it
     focusOpenTerm() {
       if (!this.pendingScroll || !this.openTerm || !this.glossaryList) return;
-      const details = [...this.glossaryList.querySelectorAll('details')]
-        .find(d => d.querySelector('summary').textContent.trim() === this.openTerm.term);
-      if (details) {
-        details.open = true;
-        details.classList.add('glossary-term-highlight');
+      const card = [...this.glossaryList.querySelectorAll('.glossary-term')]
+        .find(d => d.querySelector('.glossary-term-name')?.textContent.trim() === this.openTerm.term);
+      if (card) {
+        card.classList.add('glossary-term-highlight');
+        // A deliberately deep-linked term is wanted in full: expand its details.
+        const region = card.querySelector('.viewmore-region');
+        if (region && window.CyberViewMore) window.CyberViewMore.open(region);
         setTimeout(() => {
-          details.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          card.scrollIntoView({ behavior: 'smooth', block: 'start' });
         }, 50);
       }
       this.pendingScroll = false;
@@ -244,7 +246,7 @@
 
     renderTerms() {
       if (!this.glossaryList) return;
-      this.glossaryList.innerHTML = this.filteredData.map(item => {
+      this.glossaryList.innerHTML = this.filteredData.map((item, index) => {
         const term = this.escapeHtml(item.term);
         const definition = this.escapeHtml(item.definition || '');
         const explanation = this.escapeHtml(item.explanation || '');
@@ -265,26 +267,32 @@
           ? `<p class="glossary-paragraph"><strong>How to stay safe:</strong> ${safety}</p>`
           : '';
 
-        return `
-        <details class="glossary-term" style="margin-bottom: 0.5rem;">
-          <summary style="cursor: pointer; padding: 1rem 1.25rem; font-weight: 600; list-style: none; display: flex; align-items: center; justify-content: space-between;">
-            ${term}
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-left: 1rem; flex-shrink: 0; transition: transform var(--transition-fast);"><polyline points="6 9 12 15 18 9"></polyline></svg>
-          </summary>
-          <div class="glossary-definition" style="padding: 0 1.25rem 1.25rem; color: var(--color-text-secondary); line-height: 1.7; border-top: 1px solid var(--color-border); margin-top: -1px;">
-            <p class="glossary-paragraph">${definition}</p>${explanationHtml}${exampleHtml}${risksHtml}${safetyHtml}
+        // Progressive disclosure: term + short definition are always visible;
+        // the long explanation lives once in the DOM behind View More.
+        const detailId = `glossary-term-${index}-details`;
+        const hasDetails = !!(explanation || example || risks || safety);
+        // Button lives AFTER the expandable region: collapsed it sits right
+        // after the short definition (the region is zero-height), expanded it
+        // lands at the very bottom of the revealed details.
+        const moreHtml = hasDetails
+          ? `
+          <div class="viewmore-region glossary-term-more" id="${detailId}">
+            <div class="viewmore-inner">${explanationHtml}${exampleHtml}${risksHtml}${safetyHtml}</div>
           </div>
-        </details>
+          <button type="button" class="viewmore-btn" aria-expanded="false" aria-controls="${detailId}">
+            <span class="viewmore-label">View More</span>
+            <span class="viewmore-arrow" aria-hidden="true">→</span>
+          </button>`
+          : '';
+
+        return `
+        <article class="glossary-term">
+          <h3 class="glossary-term-name">${term}</h3>
+          <p class="glossary-definition">${definition}</p>
+          ${moreHtml}
+        </article>
       `;
       }).join('');
-
-      // Add toggle animation handler
-      this.glossaryList.querySelectorAll('details').forEach(detail => {
-        detail.addEventListener('toggle', () => {
-          const icon = detail.querySelector('summary svg');
-          if (icon) icon.style.transform = detail.open ? 'rotate(180deg)' : 'rotate(0deg)';
-        });
-      });
 
       this.focusOpenTerm();
     }

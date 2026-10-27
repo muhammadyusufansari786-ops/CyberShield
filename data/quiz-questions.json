@@ -3,7 +3,12 @@
     "id": "q1",
     "category": "passwords",
     "question": "What is the minimum recommended length for a strong password?",
-    "options": ["8 characters", "10 characters", "12 characters", "16 characters"],
+    "options": [
+      "8 characters",
+      "10 characters",
+      "12 characters",
+      "16 characters"
+    ],
     "correct": 2,
     "explanation": "While 8 characters was once standard, modern computing power makes 12+ characters the recommended minimum for strong passwords."
   },
@@ -11,7 +16,12 @@
     "id": "q2",
     "category": "passwords",
     "question": "Which of these passwords would have the highest entropy?",
-    "options": ["P@ssw0rd123!", "correct-horse-battery-staple", "X7#mK9$pL2", "Tr0ub4dor&3"],
+    "options": [
+      "P@ssw0rd123!",
+      "correct-horse-battery-staple",
+      "X7#mK9$pL2",
+      "Tr0ub4dor&3"
+    ],
     "correct": 1,
     "explanation": "Passphrases like 'correct-horse-battery-staple' (4 random words) have high entropy because of their length (25+ chars) while remaining memorable."
   },
@@ -300,5 +310,116 @@
     ],
     "correct": 1,
     "explanation": "A salt is unique random data added to each password before hashing, ensuring identical passwords produce different hashes."
+  },
+  {
+    "id": "q25",
+    "category": "scam",
+    "question": "Spot the scam: You receive an email - \"Subject: Your Netflix account is suspended. Click here to reactivate: netflix-secure-login.xyz/confirm\". Is this a phishing attempt?",
+    "options": [
+      "Legitimate Netflix email",
+      "Phishing scam"
+    ],
+    "correct": 1,
+    "explanation": "The sender address is not @netflix.com and the link goes to a suspicious domain (xyz instead of com)."
+  },
+  {
+    "id": "q26",
+    "category": "scam",
+    "question": "Spot the scam: An SMS reads - \"Your UPI payment of ₹5,000 is pending. Reply YES to confirm or call 1800-123-4567.\" What should you do?",
+    "options": [
+      "Reply YES",
+      "Ignore & block the number",
+      "Call the number"
+    ],
+    "correct": 1,
+    "explanation": "Legitimate services never ask you to reply YES via SMS to confirm a payment. This is smishing."
+  },
+  {
+    "id": "q27",
+    "category": "scam",
+    "question": "Spot the scam: A QR code on a \"Free Wi-Fi\" flyer at a café opens http://free-wifi-guest.tk when scanned. Is the QR code safe?",
+    "options": [
+      "Safe - gives free Wi-Fi",
+      "Scam - leads to a phishing site"
+    ],
+    "correct": 1,
+    "explanation": "Unverified QR codes can direct you to malicious sites that steal credentials or install malware."
+  },
+  {
+    "id": "q28",
+    "category": "scam",
+    "question": "Spot the scam: You get an email - \"Subject: IT Department: Password Expiry Notice\" with an attachment named password-reset-form.pdf. Is this legitimate?",
+    "options": [
+      "Legitimate IT notice",
+      "Phishing scam"
+    ],
+    "correct": 1,
+    "explanation": "Unexpected password expiry notices with attachments are classic phishing. IT departments typically email, not attach PDFs."
+  },
+  {
+    "id": "q29",
+    "category": "scam",
+    "question": "Spot the scam: An SMS reads - \"You won ₹1,00,000! Click here to claim: bit.ly/freemoney\". What type of scam is this?",
+    "options": [
+      "Lottery scam",
+      "Legitimate prize"
+    ],
+    "correct": 0,
+    "explanation": "You can't win a lottery you didn't enter. This is a classic advance-fee fraud scheme."
+  },
+  {
+    "id": "q30",
+    "category": "scam",
+    "question": "Spot the scam: Is this URL safe - https://paypall-security-update.com/verify-account ?",
+    "options": [
+      "Safe - PayPal security page",
+      "Fake - lookalike domain"
+    ],
+    "correct": 1,
+    "explanation": "The domain has \"paypall\" (double L) instead of \"paypal\". This is a typo-squatting phishing site."
+  },
+  {
+    "id": "q31",
+    "category": "scam",
+    "question": "Spot the scam: Your CEO emails - \"Urgent: Wire Transfer Request. Transfer $50,000 to this vendor immediately.\" Is this a business email compromise risk?",
+    "options": [
+      "Legitimate CEO request",
+      "Business email compromise"
+    ],
+    "correct": 1,
+    "explanation": "Even from a familiar sender, verify wire transfer requests through a separate channel (phone call)."
+  },
+  {
+    "id": "q32",
+    "category": "scam",
+    "question": "Spot the scam: An SMS reads - \"Your package is held at customs. Pay ₹2,000 release fee: http://customs-verify.tk\". What is this?",
+    "options": [
+      "Legitimate customs notice",
+      "Smishing scam"
+    ],
+    "correct": 1,
+    "explanation": "Customs agencies don't send payment links via SMS for released packages. This is a delivery scam."
+  },
+  {
+    "id": "q33",
+    "category": "scam",
+    "question": "Spot the scam: Identify the threat - http://irda-login-security-update.in/verify",
+    "options": [
+      "Legitimate insurance portal",
+      "Phishing site"
+    ],
+    "correct": 1,
+    "explanation": "The .in domain claiming to be IRDAI (Insurance Regulatory Authority) is a phishing site mimicking a legitimate authority."
+  },
+  {
+    "id": "q34",
+    "category": "scam",
+    "question": "Spot the scam: An email says - \"We want to hire you! Transfer setup kit money via Zelle, we'll reimburse.\" Is this a job scam?",
+    "options": [
+      "Legitimate job offer",
+      "Job scam"
+    ],
+    "correct": 1,
+    "explanation": "Legitimate employers never ask new employees to transfer money or use personal payment apps."
   }
 ]

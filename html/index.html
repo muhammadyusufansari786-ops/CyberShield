@@ -25,88 +25,96 @@
   <!-- Header -->
   <header class="header" role="banner">
     <div class="header-inner">
+      <button id="nav-toggle" class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="nav-drawer" type="button">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+      </button>
       <a href="index.html" class="logo" aria-label="CyberShield Home">
         <span class="logo-icon" aria-hidden="true">🛡️</span>
         <span>CyberShield</span>
       </a>
       
-      <nav class="nav-desktop" role="navigation" aria-label="Main navigation">
-        <ul class="nav-list">
-          <li><a href="index.html" class="nav-link active" aria-current="page"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>Home</a></li>
-          <li><a href="password.html" class="nav-link"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>Password</a></li>
-          <li><a href="quiz.html" class="nav-link"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>Quiz</a></li>
-          <li><a href="news.html" class="nav-link"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 22h16a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2z"></path><polyline points="2 22 2 22 2 22"></polyline><polyline points="8 14 12 10 16 14"></polyline><line x1="12" y1="16" x2="12" y2="22"></line></svg>News</a></li>
-          <li><a href="threats.html" class="nav-link"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path><line x1="12" y1="9" x2="12" y2="13"></line><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>Threats</a></li>
-          <li><a href="emergency.html" class="nav-link"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>Emergency</a></li>
-          <li><a href="toolkit.html" class="nav-link"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path></svg>Toolkit</a></li>
-          <li><a href="tips.html" class="nav-link"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"></path><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"></path></svg>Tips</a></li>
-          <li><a href="simulator.html" class="nav-link"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"></rect><path d="M8 21h8"></path><path d="M12 17v4"></path></svg>Simulator</a></li>
-          <li><a href="glossary.html" class="nav-link"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>Glossary</a></li>
-          <li><a href="resources.html" class="nav-link"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>Resources</a></li>
-          <li><a href="about.html" class="nav-link"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>About</a></li>
-        </ul>
-      </nav>
       
       <div class="header-actions">
         <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode" type="button">
           <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
         </button>
-        <button id="mobile-menu-btn" class="mobile-menu-btn" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-nav-overlay" type="button">
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
-        </button>
       </div>
     </div>
   </header>
-
-  <!-- Mobile Navigation Overlay -->
-  <div id="mobile-nav-overlay" class="mobile-nav-overlay" role="dialog" aria-modal="true" aria-label="Navigation menu">
-    <div id="mobile-nav-panel" class="mobile-nav-panel">
-      <div class="mobile-nav-header">
+  <!-- Navigation Drawer (opens from the left) -->
+  <div id="nav-overlay" class="nav-overlay" role="dialog" aria-modal="true" aria-label="Navigation menu">
+    <nav id="nav-drawer" class="nav-drawer" aria-label="Main navigation">
+      <div class="nav-drawer-header">
         <a href="index.html" class="logo" aria-label="CyberShield Home">
           <span class="logo-icon" aria-hidden="true">🛡️</span>
           <span>CyberShield</span>
         </a>
-        <button id="mobile-nav-close" class="mobile-nav-close" aria-label="Close menu" type="button">
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+        <button id="nav-close" class="nav-close" aria-label="Close menu" type="button">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
         </button>
       </div>
-      <ul class="mobile-nav-list">
-        <li><a href="index.html" class="mobile-nav-link"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>Home</a></li>
-        <li><a href="password.html" class="mobile-nav-link"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>Password Checker</a></li>
-        <li><a href="quiz.html" class="mobile-nav-link"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>Quiz</a></li>
-        <li><a href="news.html" class="mobile-nav-link"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 22h16a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2z"></path><polyline points="8 14 12 10 16 14"></polyline><line x1="12" y1="16" x2="12" y2="22"></line></svg>News</a></li>
-        <li><a href="threats.html" class="mobile-nav-link"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path><line x1="12" y1="9" x2="12" y2="13"></line><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>Threats</a></li>
-        <li><a href="emergency.html" class="mobile-nav-link"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>Emergency</a></li>
-        <li><a href="toolkit.html" class="mobile-nav-link"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path></svg>Toolkit</a></li>
-        <li><a href="tips.html" class="mobile-nav-link"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"></path><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"></path></svg>Daily Tips</a></li>
-        <li><a href="simulator.html" class="mobile-nav-link"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"></rect><path d="M8 21h8"></path><path d="M12 17v4"></path></svg>Simulator</a></li>
-        <li><a href="glossary.html" class="mobile-nav-link"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>Glossary</a></li>
-        <li><a href="resources.html" class="mobile-nav-link"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>Resources</a></li>
-        <li><a href="about.html" class="mobile-nav-link"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>About</a></li>
+      <ul class="nav-drawer-list">
+        <li><a href="index.html" class="nav-drawer-link"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>Home</a></li>
+        <li><a href="password.html" class="nav-drawer-link"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>Password Checker</a></li>
+        <li><a href="quiz.html" class="nav-drawer-link"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>Quiz</a></li>
+        <li><a href="news.html" class="nav-drawer-link"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 22h16a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2z"></path><polyline points="8 14 12 10 16 14"></polyline><line x1="12" y1="16" x2="12" y2="22"></line></svg>News</a></li>
+        <li><a href="threats.html" class="nav-drawer-link"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path><line x1="12" y1="9" x2="12" y2="13"></line><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>Threats</a></li>
+        <li><a href="toolkit.html" class="nav-drawer-link"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path></svg>Toolkit</a></li>
+        <li><a href="glossary.html" class="nav-drawer-link"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>Glossary</a></li>
+        <li><a href="resources.html" class="nav-drawer-link"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>Resources</a></li>
+        <li><a href="ai-assistant.html" class="nav-drawer-link"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l1.9 5.1L19 10l-5.1 1.9L12 17l-1.9-5.1L5 10l5.1-1.9z"></path><path d="M19 15l.9 2.1L22 18l-2.1.9L19 21l-.9-2.1L16 18l2.1-.9z"></path></svg>AI CyberShield</a></li>
+        <li><a href="about.html" class="nav-drawer-link"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>About</a></li>
       </ul>
-    </div>
+      <div class="nav-drawer-footer">
+        <p>In an emergency? Call <strong>1930</strong> or report at
+          <a href="https://cybercrime.gov.in" target="_blank" rel="noopener">cybercrime.gov.in</a></p>
+      </div>
+    </nav>
   </div>
 
-  <!-- Main Content -->
   <main id="main-content" role="main">
+    <!-- Cybercrime Emergency Ticker (continuous right→left marquee) -->
+    <section class="emergency-ticker-section" aria-label="Cybercrime emergency quick access">
+      <div class="container">
+        <div class="emergency-ticker" role="region" aria-label="Cybercrime emergency helpline and reporting links">
+          <span class="emergency-ticker-badge" aria-hidden="true">🚨 EMERGENCY</span>
+          <div class="emergency-ticker-viewport">
+            <ul class="emergency-ticker-track" id="emergency-ticker-track">
+              <li class="emergency-ticker-item">
+                <a class="emergency-ticker-link" href="tel:1930">Call <strong>1930</strong> — National Cybercrime Helpline (24×7)</a>
+              </li>
+              <li class="emergency-ticker-item">
+                <a class="emergency-ticker-link emergency-ticker-link--portal" href="https://cybercrime.gov.in/" target="_blank" rel="noopener noreferrer">Report cybercrime at <strong>cybercrime.gov.in</strong> <span aria-hidden="true">↗</span></a>
+              </li>
+              <li class="emergency-ticker-item">
+                <a class="emergency-ticker-link" href="https://www.ceir.gov.in/" target="_blank" rel="noopener noreferrer">Block a stolen phone at <strong>ceir.gov.in</strong> <span aria-hidden="true">↗</span></a>
+              </li>
+              <li class="emergency-ticker-item">
+                <a class="emergency-ticker-link" href="toolkit.html#emergency-response">Step-by-step emergency guide <span aria-hidden="true">→</span></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- Hero Section -->
     <section class="hero" aria-labelledby="hero-title">
       <div class="container">
         <div class="hero-content">
           <div class="hero-text">
-            <span class="hero-badge">🛡️ Cybersecurity Awareness Platform</span>
-            <h1 id="hero-title" class="hero-title">Stay Safe <span class="highlight">Online</span> with <span class="highlight">CyberShield</span></h1>
-            <p class="hero-description">Your beginner-friendly guide to digital safety. Learn password security, spot scams, understand threats, and build cyber resilience—all in one place.</p>
+            <span class="hero-badge">Cybersecurity Awareness Platform</span>
+            <h1 id="hero-title" class="hero-title">Build Better Cybersecurity Habits</h1>
+            <p class="hero-description">CyberShield is a free learning platform for students and professionals. Learn to spot phishing and scam messages, create strong passwords, respond to security incidents, and stay informed—with practical tools, not jargon.</p>
             <div class="hero-actions">
               <a href="password.html" class="btn btn-primary btn-lg">Check Password Strength</a>
-              <a href="quiz.html" class="btn btn-secondary btn-lg">Take Quiz</a>
+              <a href="quiz.html" class="btn btn-secondary btn-lg">Take the Quiz</a>
             </div>
           </div>
           
           <div class="hero-visual">
             <div class="hero-illustration" aria-hidden="true">
               <div class="illustration-content">
-                <div class="illustration-icon">🛡️</div>
                 <div class="illustration-stats">
                   <div class="stat-item">
                     <div class="stat-value" data-count="12">0</div>
@@ -123,6 +131,25 @@
                 </div>
               </div>
             </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Today's Cyber Tip — compact one-at-a-time rotator -->
+    <section class="section daily-tips-section" id="daily-tips" aria-labelledby="daily-tips-title">
+      <div class="container">
+        <div class="daily-tips-widget card">
+          <div class="daily-tips-head">
+            <h2 id="daily-tips-title" class="daily-tips-title"><span class="daily-tips-icon" aria-hidden="true">🛡️</span>Today's Cyber Tip</h2>
+            <span class="daily-tips-counter" id="daily-tips-counter">1/3</span>
+          </div>
+          <div class="daily-tip-stage" id="daily-tip-stage">
+            <p class="daily-tip-text" id="daily-tip-text">Loading today's tip…</p>
+          </div>
+          <div class="daily-tips-foot">
+            <div class="daily-tips-dots" id="daily-tips-dots" role="group" aria-label="Choose a tip"></div>
+            <span class="daily-tips-date" id="daily-tips-date"></span>
           </div>
         </div>
       </div>
@@ -146,7 +173,7 @@
           <article class="feature-card card" role="listitem">
             <div class="feature-icon">🧪</div>
             <h3 class="feature-title">Practice Safely</h3>
-            <p class="feature-description">Test your knowledge with quizzes, check password strength, and try the scam simulator—all risk-free.</p>
+            <p class="feature-description">Test your knowledge with quizzes, check password strength, and practice spotting real scam messages—all risk-free.</p>
           </article>
           
           <article class="feature-card card" role="listitem">
@@ -158,55 +185,76 @@
       </div>
     </section>
 
-    <!-- Quick Access Cards -->
-    <section class="section" aria-labelledby="quick-access-title">
+    <!-- Explore CyberShield -->
+    <section class="section" aria-labelledby="explore-title">
       <div class="container">
         <header class="section-header">
-          <h2 id="quick-access-title">Quick Access</h2>
-          <p>Jump directly to the tools you need most</p>
+          <h2 id="explore-title">Explore CyberShield</h2>
+          <p>Every module is free, works without registration, and runs entirely in your browser</p>
         </header>
-        
+
         <div class="features-grid" role="list">
           <article class="feature-card card" role="listitem">
             <div class="feature-icon">🔐</div>
-            <h3 class="feature-title">Password Strength</h3>
-            <p class="feature-description">Analyze password security instantly with entropy-based scoring and actionable feedback.</p>
-            <a href="password.html" class="btn btn-primary btn-sm mt-2">Try Now</a>
+            <h3 class="feature-title">Password Security</h3>
+            <p class="feature-description">Analyze password strength with entropy-based scoring and get actionable feedback.</p>
+            <a href="password.html" class="glossary-jump mt-2">Open Password Checker →</a>
           </article>
-          
+
           <article class="feature-card card" role="listitem">
             <div class="feature-icon">🧠</div>
             <h3 class="feature-title">Cybersecurity Quiz</h3>
-            <p class="feature-description">Test your knowledge with randomized questions, explanations, and timed challenges.</p>
-            <a href="quiz.html" class="btn btn-primary btn-sm mt-2">Start Quiz</a>
+            <p class="feature-description">Randomized questions with explanations, category filters, and an optional timer.</p>
+            <a href="quiz.html" class="glossary-jump mt-2">Start the Quiz →</a>
           </article>
-          
+
+          <article class="feature-card card" role="listitem">
+            <div class="feature-icon">📰</div>
+            <h3 class="feature-title">Cyber News</h3>
+            <p class="feature-description">Current cybersecurity headlines with category filters and plain-language AI explanations.</p>
+            <a href="news.html" class="glossary-jump mt-2">Read the News →</a>
+          </article>
+
+          <article class="feature-card card" role="listitem">
+            <div class="feature-icon">⚠️</div>
+            <h3 class="feature-title">Common Threats</h3>
+            <p class="feature-description">A threat library covering phishing, malware, identity theft, and social engineering.</p>
+            <a href="threats.html" class="glossary-jump mt-2">Browse Threats →</a>
+          </article>
+
           <article class="feature-card card" role="listitem">
             <div class="feature-icon">🚨</div>
-            <h3 class="feature-title">Emergency Guide</h3>
-            <p class="feature-description">Step-by-step actions for phishing, fraud, hacked accounts, and more—India-specific contacts included.</p>
-            <a href="emergency.html" class="btn btn-accent btn-sm mt-2">View Guide</a>
+            <h3 class="feature-title">Emergency Response</h3>
+            <p class="feature-description">Step-by-step guidance for compromised accounts, fraud, and device theft—India-specific contacts included.</p>
+            <a href="toolkit.html#emergency-response" class="glossary-jump mt-2">View the Guide →</a>
           </article>
-          
-          <article class="feature-card card" role="listitem">
-            <div class="feature-icon">🎯</div>
-            <h3 class="feature-title">Spot the Scam</h3>
-            <p class="feature-description">Interactive simulator with real-world phishing emails, SMS, and QR code scams.</p>
-            <a href="simulator.html" class="btn btn-primary btn-sm mt-2">Try Simulator</a>
-          </article>
-          
+
           <article class="feature-card card" role="listitem">
             <div class="feature-icon">📋</div>
             <h3 class="feature-title">Safety Toolkit</h3>
-            <p class="feature-description">Checklists for passwords, devices, privacy, phishing, and backups—all in one place.</p>
-            <a href="toolkit.html" class="btn btn-primary btn-sm mt-2">Open Toolkit</a>
+            <p class="feature-description">Printable checklists for passwords, devices, privacy, phishing, and backups.</p>
+            <a href="toolkit.html" class="glossary-jump mt-2">Open the Toolkit →</a>
           </article>
-          
+
+          <article class="feature-card card" role="listitem">
+            <div class="feature-icon">🎯</div>
+            <h3 class="feature-title">Spot the Scam</h3>
+            <p class="feature-description">Scam-awareness training with realistic emails, SMS, and QR-code scenarios—now a dedicated quiz category.</p>
+            <a href="quiz.html" class="glossary-jump mt-2">Try Scam Awareness →</a>
+          </article>
+
           <article class="feature-card card" role="listitem">
             <div class="feature-icon">📚</div>
-            <h3 class="feature-title">Glossary & Resources</h3>
-            <p class="feature-description">Beginner-friendly definitions and curated links to CERT-In, CISA, NIST, OWASP, and more.</p>
-            <a href="glossary.html" class="btn btn-primary btn-sm mt-2">Explore</a>
+            <h3 class="feature-title">Cyber Glossary</h3>
+            <p class="feature-description">100+ plain-language definitions with examples and protection tips.</p>
+            <a href="glossary.html" class="glossary-jump mt-2">Explore Terms →</a>
+          </article>
+
+          <article class="feature-card card" role="listitem">
+            <div class="feature-icon">✨</div>
+            <h3 class="feature-title">AI CyberShield</h3>
+            <p class="feature-description">Ask a security-tutor AI about suspicious messages, scams, and safe habits.</p>
+            <a href="ai-assistant.html" class="glossary-jump mt-2">Chat Now →</a>
           </article>
         </div>
       </div>
@@ -251,9 +299,9 @@
             <div class="progress-status">Not Started</div>
           </article>
           
-          <article class="progress-item" data-module="simulator" role="listitem">
+          <article class="progress-item" data-module="scam" role="listitem">
             <div class="progress-icon" aria-hidden="true">🎯</div>
-            <h3 class="progress-title">Scam Simulator</h3>
+            <h3 class="progress-title">Scam Awareness</h3>
             <div class="progress-status">Not Started</div>
           </article>
         </div>
@@ -264,8 +312,8 @@
     <section class="cta-section" aria-labelledby="cta-title">
       <div class="container">
         <div class="cta-content">
-          <h2 id="cta-title" class="cta-title">Ready to Build Your Cyber Resilience?</h2>
-          <p class="cta-text">Join thousands of users learning to protect themselves online. Start with any module—no registration required.</p>
+          <h2 id="cta-title" class="cta-title">Start Building Safer Habits Today</h2>
+          <p class="cta-text">Pick a module and spend five minutes—check a password, take a short quiz, or learn what to do in an emergency. No sign-up, no cost.</p>
           <div class="cta-actions">
             <a href="password.html" class="btn btn-light btn-lg">Check Your Password</a>
             <a href="quiz.html" class="btn btn-outline-light btn-lg">Take the Quiz</a>
@@ -293,7 +341,7 @@
             <li><a href="password.html" class="footer-link">Password Checker</a></li>
             <li><a href="quiz.html" class="footer-link">Cybersecurity Quiz</a></li>
             <li><a href="threats.html" class="footer-link">Common Threats</a></li>
-            <li><a href="emergency.html" class="footer-link">Emergency Guide</a></li>
+            <li><a href="toolkit.html#emergency-response" class="footer-link">Emergency Guide</a></li>
             <li><a href="toolkit.html" class="footer-link">Safety Toolkit</a></li>
           </ul>
         </div>
@@ -301,8 +349,8 @@
         <div>
           <h3 class="footer-title">Tools & Resources</h3>
           <ul class="footer-links">
-            <li><a href="simulator.html" class="footer-link">Spot the Scam</a></li>
-            <li><a href="tips.html" class="footer-link">Daily Tips</a></li>
+            <li><a href="quiz.html" class="footer-link">Spot the Scam</a></li>
+            <li><a href="index.html#daily-tips" class="footer-link">Daily Tips</a></li>
             <li><a href="glossary.html" class="footer-link">Cyber Glossary</a></li>
             <li><a href="news.html" class="footer-link">Cyber News</a></li>
             <li><a href="resources.html" class="footer-link">Trusted Sources</a></li>
@@ -376,6 +424,94 @@
           }
         }
       });
+
+      // Emergency ticker: duplicate the items once (aria-hidden clones) so the
+      // CSS translateX(-50%) animation loops seamlessly right→left. Spacing
+      // lives on the items, so both copies are pixel-identical. Under
+      // prefers-reduced-motion the JS duplicate is skipped and the CSS shows      // a static, wrapping row instead.
+      const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+      const initTicker = () => {
+        const track = document.getElementById('emergency-ticker-track');
+        if (!track) return;
+        track.querySelectorAll('.emergency-ticker-clone').forEach(n => n.remove());
+        if (prefersReducedMotion.matches) return;
+        Array.from(track.children).forEach(li => {
+          const clone = li.cloneNode(true);
+          clone.classList.add('emergency-ticker-clone');
+          clone.setAttribute('aria-hidden', 'true');
+          clone.querySelectorAll('a').forEach(a => a.setAttribute('tabindex', '-1'));
+          track.appendChild(clone);
+        });
+      };
+      initTicker();
+      if (typeof prefersReducedMotion.addEventListener === 'function') {
+        prefersReducedMotion.addEventListener('change', initTicker);
+      }
+
+      // Today's Cyber Tip: exactly 3 deterministic picks per day from the
+      // shared tips dataset (same 3 tips all day, a new set every day),
+      // shown ONE at a time in a compact rotator. Refreshing never reshuffles
+      // within a day.
+      fetch('../data/tips-data.json')
+        .then(r => { if (!r.ok) throw new Error(r.status); return r.json(); })
+        .then(tips => {
+          const stage = document.getElementById('daily-tip-stage');
+          const textEl = document.getElementById('daily-tip-text');
+          if (!stage || !textEl || !Array.isArray(tips) || tips.length === 0) return;
+          const today = new Date();
+          const dayOfYear = Math.floor((today - new Date(today.getFullYear(), 0, 0)) / 86400000);
+          const start = (dayOfYear * 3) % tips.length;
+          const picks = [0, 1, 2].map(i => tips[(start + i) % tips.length]);
+          const dateEl = document.getElementById('daily-tips-date');
+          if (dateEl) dateEl.textContent = today.toLocaleDateString('en-IN', { weekday: 'short', day: 'numeric', month: 'short', year: 'numeric' });
+
+          const counterEl = document.getElementById('daily-tips-counter');
+          const dotsWrap = document.getElementById('daily-tips-dots');
+          let dots = [];
+          if (dotsWrap) {
+            dotsWrap.innerHTML = picks.map((_, i) =>
+              `<button type="button" class="daily-tips-dot${i === 0 ? ' is-active' : ''}" aria-label="Show tip ${i + 1} of ${picks.length}"></button>`).join('');
+            dots = Array.from(dotsWrap.children);
+          }
+
+          let index = 0;
+          let timer = null;
+
+          const applyTip = (i) => {
+            textEl.textContent = picks[i].text || 'Stay safe online.';
+            if (counterEl) counterEl.textContent = `${i + 1}/${picks.length}`;
+            dots.forEach((d, di) => d.classList.toggle('is-active', di === i));
+          };
+
+          const goTo = (i) => {
+            index = (i + picks.length) % picks.length;
+            if (prefersReducedMotion.matches) { applyTip(index); return; }
+            textEl.classList.add('is-out');
+            setTimeout(() => {
+              applyTip(index);
+              textEl.classList.remove('is-out');
+              textEl.classList.add('is-in');
+              requestAnimationFrame(() => requestAnimationFrame(() => textEl.classList.remove('is-in')));
+            }, 240);
+          };
+
+          applyTip(0);
+
+          const startTimer = () => {
+            if (timer || prefersReducedMotion.matches) return;
+            timer = setInterval(() => goTo(index + 1), 4500);
+          };
+          const stopTimer = () => { clearInterval(timer); timer = null; };
+
+          startTimer();
+          stage.addEventListener('focusin', stopTimer);
+          stage.addEventListener('focusout', startTimer);
+          dots.forEach((d, di) => d.addEventListener('click', () => { stopTimer(); goTo(di); startTimer(); }));
+        })
+        .catch(() => {
+          const textEl = document.getElementById('daily-tip-text');
+          if (textEl) textEl.textContent = '⚠️ Could not load today\'s tip. Please refresh.';
+        });
     });
   </script>
 </body>

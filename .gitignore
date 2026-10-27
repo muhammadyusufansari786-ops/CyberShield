@@ -1,0 +1,15 @@
+# Never commit secrets
+.env
+.env.local
+.env.*.local
+
+# Dependencies
+node_modules/
+
+# Local logs
+server.log
+*.log
+
+# OS junk
+Thumbs.db
+.DS_Store
