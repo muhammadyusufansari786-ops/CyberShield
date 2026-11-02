@@ -23,6 +23,11 @@
       this.glossaryList = document.getElementById('glossary-list');
       this.noResults = document.getElementById('no-results');
 
+      // Pagination: show 10 terms initially, reveal 10 more per "View More".
+      this.visibleCount = 10;
+      this.loadMoreCount = 10;
+      this.loadMoreWrap = null;
+
       this.loadData();
     }
 
@@ -42,6 +47,7 @@
           this.bindEvents();
           this.renderCategories();
           this.renderAlphabet();
+          this.initLoadMore();
           this.applyUrlParams();
           this.applyFilters();
         })
@@ -88,6 +94,16 @@
         return true;
       });
 
+      // Reset the visible-card limit on every filter change so a new search
+      // or category starts from the initial 10-card view again.
+      this.visibleCount = 10;
+      // A deep-linked term (?term=...) must be present even if it falls
+      // beyond the first batch, so its "View More" details can be opened.
+      if (this.openTerm) {
+        const openIdx = this.filteredData.indexOf(this.openTerm);
+        if (openIdx >= this.visibleCount) this.visibleCount = openIdx + 1;
+      }
+
       this.renderTerms();
       this.updateFilterCounts();
       if (this.noResults) {
@@ -96,6 +112,42 @@
     }
 
     // After rendering, expand and highlight the deep-linked term, then scroll to it
+    // Pagination UI: one centered button after the currently visible cards.
+    // Lives outside the list container so it always sits below the last card.
+    initLoadMore() {
+      if (!this.glossaryList || this.loadMoreWrap) return;
+      this.loadMoreWrap = document.createElement('div');
+      this.loadMoreWrap.id = 'glossary-load-more';
+      this.loadMoreWrap.style.cssText = 'text-align: center; margin-top: 1.5rem;';
+      this.glossaryList.insertAdjacentElement('afterend', this.loadMoreWrap);
+    }
+
+    loadMore() {
+      this.visibleCount += this.loadMoreCount;
+      this.renderTerms();
+    }
+
+    updateLoadMore() {
+      if (!this.glossaryList || !this.loadMoreWrap) return;
+      const shown = Math.min(this.visibleCount, this.filteredData.length);
+      const remaining = this.filteredData.length - shown;
+
+      if (remaining > 0) {
+        this.loadMoreWrap.innerHTML =
+          '<button type="button" id="glossary-view-more" class="btn btn-primary" ' +
+          'aria-label="Show more glossary terms">View More →</button>';
+        this.loadMoreWrap.querySelector('#glossary-view-more')
+          .addEventListener('click', () => this.loadMore());
+      } else {
+        // Subtle confirmation only when the user actually expanded past the
+        // initial batch; hide entirely when everything already fits.
+        this.loadMoreWrap.innerHTML =
+          this.filteredData.length > 10 && this.visibleCount > 10
+            ? '<p style="color: var(--color-text-muted); font-size: 0.875rem;">All terms loaded.</p>'
+            : '';
+      }
+    }
+
     focusOpenTerm() {
       if (!this.pendingScroll || !this.openTerm || !this.glossaryList) return;
       const card = [...this.glossaryList.querySelectorAll('.glossary-term')]
@@ -108,6 +160,9 @@
         setTimeout(() => {
           card.scrollIntoView({ behavior: 'smooth', block: 'start' });
         }, 50);
+        // Done with the deep link: later filter changes must go back to the
+        // normal 10-card limit.
+        this.openTerm = null;
       }
       this.pendingScroll = false;
     }
@@ -246,7 +301,8 @@
 
     renderTerms() {
       if (!this.glossaryList) return;
-      this.glossaryList.innerHTML = this.filteredData.map((item, index) => {
+      const visibleItems = this.filteredData.slice(0, this.visibleCount);
+      this.glossaryList.innerHTML = visibleItems.map((item, index) => {
         const term = this.escapeHtml(item.term);
         const definition = this.escapeHtml(item.definition || '');
         const explanation = this.escapeHtml(item.explanation || '');
@@ -295,6 +351,7 @@
       }).join('');
 
       this.focusOpenTerm();
+      this.updateLoadMore();
     }
 
     escapeHtml(text) {

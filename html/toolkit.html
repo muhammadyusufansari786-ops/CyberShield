@@ -102,29 +102,6 @@
           <div class="toolkit-grid" id="toolkit-grid" role="list" aria-label="Security checklists">
             <!-- Populated by JavaScript -->
           </div>
-
-          <!-- Export/Import -->
-          <div class="card" style="margin-top: 2rem;">
-            <div class="card-header">
-              <h2 class="card-title">Backup & Restore</h2>
-              <p class="card-subtitle">Export your progress to a file or restore from backup</p>
-            </div>
-            <div style="display: flex; flex-wrap: wrap; gap: 1rem;">
-              <button type="button" class="btn btn-secondary" id="export-btn">
-                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
-                Export Progress
-              </button>
-              <button type="button" class="btn btn-secondary" id="import-btn">
-                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="17 8 12 3 7 8"></polyline><line x1="12" y1="3" x2="12" y2="15"></line></svg>
-                Import Progress
-              </button>
-              <input type="file" id="import-file" accept=".json" style="display: none;">
-              <button type="button" class="btn btn-ghost" id="reset-all-btn">
-                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"></path><path d="M21 12a9 9 0 1 1-9 9 9.75 9.75 0 0 1 6.74-2.74L21 16"></path></svg>
-                Reset All
-              </button>
-            </div>
-          </div>
         </div>
       </div>
     </section>
@@ -565,57 +542,10 @@
     </section>
   </main>
 
-  <footer class="footer" role="contentinfo">
-    <div class="container">
-      <div class="footer-grid">
-        <div class="footer-brand">
-          <a href="index.html" class="footer-logo logo" aria-label="CyberShield Home">
-            <span class="logo-icon" aria-hidden="true">🛡️</span>
-            <span>CyberShield</span>
-          </a>
-          <p class="footer-tagline">Your beginner-friendly cybersecurity awareness platform.</p>
-        </div>
-        <div>
-          <h3 class="footer-title">Learning Modules</h3>
-          <ul class="footer-links">
-            <li><a href="password.html" class="footer-link">Password Checker</a></li>
-            <li><a href="quiz.html" class="footer-link">Cybersecurity Quiz</a></li>
-            <li><a href="threats.html" class="footer-link">Common Threats</a></li>
-            <li><a href="toolkit.html#emergency-response" class="footer-link">Emergency Guide</a></li>
-            <li><a href="toolkit.html" class="footer-link">Safety Toolkit</a></li>
-          </ul>
-        </div>
-        <div>
-          <h3 class="footer-title">Tools & Resources</h3>
-          <ul class="footer-links">
-            <li><a href="quiz.html" class="footer-link">Spot the Scam</a></li>
-            <li><a href="index.html#daily-tips" class="footer-link">Daily Tips</a></li>
-            <li><a href="glossary.html" class="footer-link">Cyber Glossary</a></li>
-            <li><a href="news.html" class="footer-link">Cyber News</a></li>
-            <li><a href="resources.html" class="footer-link">Trusted Sources</a></li>
-          </ul>
-        </div>
-        <div>
-          <h3 class="footer-title">Legal & Privacy</h3>
-          <ul class="footer-links">
-            <li><a href="about.html" class="footer-link">About & Disclaimer</a></li>
-            <li><a href="#" class="footer-link">Privacy Policy</a></li>
-            <li><a href="#" class="footer-link">Terms of Use</a></li>
-          </ul>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        <p>&copy; 2025 CyberShield. Educational purposes only. Not a substitute for professional security advice.</p>
-        <div class="footer-legal">
-          <a href="#">Privacy</a>
-          <a href="#">Terms</a>
-          <a href="#">Contact</a>
-        </div>
-      </div>
-    </div>
-  </footer>
+  <footer id="site-footer" class="footer" role="contentinfo" aria-label="Site footer"></footer>
 
   <script src="../js/main.js"></script>
+  <script src="../js/footer.js" defer></script>
   <script src="../js/view-more.js"></script>
   <script src="../js/ai-client.js"></script>
   <script src="../js/scam-analyzer.js"></script>
@@ -729,22 +659,10 @@
         this.grid = document.getElementById('toolkit-grid');
         this.overallBar = document.getElementById('overall-bar');
         this.overallPercentage = document.getElementById('overall-percentage');
-        this.exportBtn = document.getElementById('export-btn');
-        this.importBtn = document.getElementById('import-btn');
-        this.importFile = document.getElementById('import-file');
-        this.resetBtn = document.getElementById('reset-all-btn');
         
         this.checklists = {};
-        this.bindEvents();
         this.loadProgress();
         this.render();
-      }
-
-      bindEvents() {
-        this.exportBtn.addEventListener('click', () => this.exportProgress());
-        this.importBtn.addEventListener('click', () => this.importFile.click());
-        this.importFile.addEventListener('change', (e) => this.importProgress(e));
-        this.resetBtn.addEventListener('click', () => this.resetAll());
       }
 
       loadProgress() {
@@ -864,84 +782,6 @@
         card.querySelector('[style*="font-weight: 700"]').textContent = `${completed}/${total}`;
         card.querySelector('[style*="font-size: 0.75rem"]').textContent = `${percentage}% complete`;
         card.querySelector('[style*="height: 6px"] > div').style.width = `${percentage}%`;
-      }
-
-      exportProgress() {
-        const data = {
-          version: 1,
-          exportedAt: new Date().toISOString(),
-          checklists: this.checklists
-        };
-        
-        const blob = new Blob([JSON.stringify(data, null, 2)], { type: 'application/json' });
-        const url = URL.createObjectURL(blob);
-        const a = document.createElement('a');
-        a.href = url;
-        a.download = `cybershield-toolkit-${new Date().toISOString().split('T')[0]}.json`;
-        a.click();
-        URL.revokeObjectURL(url);
-      }
-
-      importProgress(event) {
-        const file = event.target.files[0];
-        if (!file) return;
-        
-        const reader = new FileReader();
-        reader.onload = (e) => {
-          try {
-            const data = JSON.parse(e.target.result);
-            if (data.checklists && typeof data.checklists === 'object') {
-              this.checklists = { ...this.checklists, ...data.checklists };
-              this.saveProgress();
-              this.render();
-              this.showToast('Progress imported successfully!');
-            } else {
-              throw new Error('Invalid file format');
-            }
-          } catch (err) {
-            this.showToast('Failed to import: ' + err.message, 'error');
-          }
-        };
-        reader.readAsText(file);
-        event.target.value = '';
-      }
-
-      resetAll() {
-        if (!confirm('Reset ALL checklist progress? This cannot be undone.')) return;
-        if (!confirm('Are you sure? All your progress will be lost.')) return;
-        
-        this.checklists = {};
-        Object.keys(TOOLKIT_DATA).forEach(id => { this.checklists[id] = {}; });
-        this.saveProgress();
-        this.render();
-        this.showToast('All progress reset');
-      }
-
-      showToast(message, type = 'success') {
-        const existing = document.querySelector('.toast');
-        if (existing) existing.remove();
-
-        const toast = document.createElement('div');
-        toast.className = 'toast';
-        toast.style.cssText = `
-          position: fixed;
-          bottom: 2rem;
-          right: 2rem;
-          background: ${type === 'error' ? 'var(--color-danger)' : 'var(--color-primary)'};
-          color: white;
-          padding: 1rem 1.5rem;
-          border-radius: var(--radius-md);
-          box-shadow: var(--shadow-lg);
-          z-index: 1000;
-          animation: slideUp 0.3s ease;
-        `;
-        toast.textContent = message;
-        document.body.appendChild(toast);
-
-        setTimeout(() => {
-          toast.style.animation = 'fadeOut 0.3s ease forwards';
-          setTimeout(() => toast.remove(), 300);
-        }, 3000);
       }
 
       escapeHtml(text) {
