@@ -1,17 +1,42 @@
+
+> cybershield@2.0.0 start
+> node server/server.js
+
+[db] ✅ Connected to MongoDB Atlas (db: cybershield)
 ┌──────────────────────────────────────────────────────┐
 │  🛡️  CyberShield AI backend                          │
 ├──────────────────────────────────────────────────────┤
 │  Site + API :  http://localhost:3000                 │
+│  Database   :  ✅ MongoDB Atlas connected             │
 │  Gemini key :  ✅ loaded from .env      │
 │  Endpoints  :  POST /api/ai/scam-analyze             │
 │                POST /api/ai/tutor                    │
 │                POST /api/ai/learning-path            │
 │                POST /api/ai/news-explain             │
+│                POST /api/auth/register | login       │
+│                GET  /api/auth/me | /api/dashboard    │
 └──────────────────────────────────────────────────────┘
-[gemini] request failed (status=): Gemini request timed out
-[gemini] request failed (status=): Gemini request timed out
-[gemini] request failed (status=): Gemini request timed out
-[gemini] request failed (status=): Gemini request timed out
-[gemini] request failed (status=): Gemini request timed out
-[gemini] request failed (status=): Gemini request timed out
-[gemini] request failed (status=): Gemini request timed out
+[gemini] model=gemini-3.8-flash fail=timeout/hang (no response from upstream - not a key/auth problem) status=none after 12011ms detail=Gemini request timed out
+[gemini] gemini-3.8-flash unavailable, switching to fallback gemini-3.5-flash-lite
+[gemini] fallback gemini-3.5-flash-lite served the request in 15487ms total
+[gemini] model=gemini-3.8-flash fail=temporary service outage (503) status=503 after 1567ms detail={"error":{"code":503,"message":"This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.","status":"UNA
+[gemini] gemini-3.8-flash transient error -> retry 2/2 in 1619ms
+[gemini] model=gemini-3.8-flash fail=timeout/hang (no response from upstream - not a key/auth problem) status=none after 12004ms detail=Gemini request timed out
+[gemini] gemini-3.8-flash unavailable, switching to fallback gemini-3.5-flash-lite
+[gemini] fallback gemini-3.5-flash-lite served the request in 18420ms total
+[gemini] model=gemini-3.8-flash fail=timeout/hang (no response from upstream - not a key/auth problem) status=none after 12005ms detail=Gemini request timed out
+[gemini] gemini-3.8-flash unavailable, switching to fallback gemini-3.5-flash-lite
+[gemini] fallback gemini-3.5-flash-lite served the request in 14216ms total
+[gemini] model=gemini-3.8-flash fail=temporary service outage (503) status=503 after 5006ms detail={"error":{"code":503,"message":"This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.","status":"UNA
+[gemini] gemini-3.8-flash transient error -> retry 2/2 in 1397ms
+[gemini] model=gemini-3.8-flash fail=timeout/hang (no response from upstream - not a key/auth problem) status=none after 12002ms detail=Gemini request timed out
+[gemini] gemini-3.8-flash unavailable, switching to fallback gemini-3.5-flash-lite
+[gemini] fallback gemini-3.5-flash-lite served the request in 20405ms total
+[gemini] model=gemini-3.8-flash fail=timeout/hang (no response from upstream - not a key/auth problem) status=none after 12007ms detail=Gemini request timed out
+[gemini] gemini-3.8-flash unavailable, switching to fallback gemini-3.5-flash-lite
+[gemini] fallback gemini-3.5-flash-lite served the request in 13413ms total
+[gemini] model=gemini-3.8-flash fail=temporary service outage (503) status=503 after 1522ms detail={"error":{"code":503,"message":"This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.","status":"UNA
+[gemini] gemini-3.8-flash transient error -> retry 2/2 in 1441ms
+[gemini] model=gemini-3.8-flash fail=timeout/hang (no response from upstream - not a key/auth problem) status=none after 12010ms detail=Gemini request timed out
+[gemini] gemini-3.8-flash unavailable, switching to fallback gemini-3.5-flash-lite
+[gemini] fallback gemini-3.5-flash-lite served the request in 16972ms total

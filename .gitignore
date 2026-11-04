@@ -2,6 +2,7 @@
 .env
 .env.local
 .env.*.local
+server/config/.session-secret
 
 # Dependencies
 node_modules/

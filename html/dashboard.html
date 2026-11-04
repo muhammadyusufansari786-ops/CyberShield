@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Your personal CyberShield dashboard - quiz performance, scam analyses and learning progress.">
+  <title>My Dashboard – CyberShield</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%230f766e'/%3E%3Ctext x='50%25' y='55%25' dominant-baseline='middle' text-anchor='middle' fill='white' font-size='60' font-weight='bold'%3E⚡%3C/text%3E%3C/svg%3E">
+</head>
+<body>
+  <a href="#main-content" class="visually-hidden focus-visible">Skip to main content</a>
+
+  <header class="header" role="banner">
+    <div class="header-inner">
+      <a href="index.html" class="logo" aria-label="CyberShield Home">
+        <span class="logo-icon" aria-hidden="true">🛡️</span>
+        <span>CyberShield</span>
+      </a>
+      <div class="header-actions">
+        <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode" type="button">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content" role="main">
+    <!-- Dashboard header -->
+    <section class="section" style="padding-top: 3rem;">
+      <div class="container">
+        <div style="max-width: 900px; margin: 0 auto;">
+          <div class="card" style="margin-bottom: 1.5rem;">
+            <div style="display: flex; flex-wrap: wrap; gap: 1rem; align-items: center; justify-content: space-between;">
+              <div style="display: flex; gap: 0.75rem; align-items: center;">
+                <div style="width: 3rem; height: 3rem; border-radius: 50%; background: var(--color-primary); color: white; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 1.25rem;" id="dash-avatar" aria-hidden="true">–</div>
+                <div>
+                  <h1 id="dash-welcome" class="card-title" style="font-size: 1.25rem;">Loading your dashboard…</h1>
+                  <p class="dash-meta" id="dash-email">&nbsp;</p>
+                  <p class="dash-meta" id="dash-created">&nbsp;</p>
+                </div>
+              </div>
+              <button type="button" id="logout-btn" class="btn btn-secondary" hidden>
+                Sign Out
+              </button>
+            </div>
+          </div>
+
+          <div id="dashboard-error" class="auth-error" role="alert" aria-live="assertive"></div>
+          <div id="dashboard-loading" class="dash-loading">Loading your data…</div>
+
+          <div id="dashboard-content" style="display: grid; gap: 1.5rem;" hidden>
+            <!-- Quiz performance -->
+            <div class="card">
+              <header class="card-header">
+                <div>
+                  <h2 class="card-title">Quiz Performance</h2>
+                  <p class="card-subtitle">Your cybersecurity quiz history.</p>
+                </div>
+                <a href="quiz.html" class="btn btn-secondary btn-sm">Take a Quiz</a>
+              </header>
+              <div id="quiz-card-body" class="dash-empty">
+                <span class="dash-empty-icon" aria-hidden="true">📊</span>
+                <p>No quiz attempts yet. Take your first quiz to start tracking progress.</p>
+              </div>
+            </div>
+
+            <!-- Scam analysis history -->
+            <div class="card">
+              <header class="card-header">
+                <div>
+                  <h2 class="card-title">Scam Analysis History</h2>
+                  <p class="card-subtitle">Messages and screenshots you have checked with the AI Scam Analyzer.</p>
+                </div>
+                <a href="toolkit.html" class="btn btn-secondary btn-sm">Open Analyzer</a>
+              </header>
+              <div id="scam-card-body" class="dash-empty">
+                <span class="dash-empty-icon" aria-hidden="true">🔎</span>
+                <p>Nothing analyzed yet. Use the AI Scam Analyzer to check suspicious messages.</p>
+              </div>
+            </div>
+
+            <!-- Learning progress -->
+            <div class="card">
+              <header class="card-header">
+                <div>
+                  <h2 class="card-title">Learning Progress</h2>
+                  <p class="card-subtitle">Your personalized learning paths.</p>
+                </div>
+                <a href="ai-assistant.html" class="btn btn-secondary btn-sm">AI Tutor</a>
+              </header>
+              <div id="progress-card-body" class="dash-empty">
+                <span class="dash-empty-icon" aria-hidden="true">🚀</span>
+                <p>No learning paths yet. Generate one after completing a quiz.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer id="site-footer" class="footer" role="contentinfo" aria-label="Site footer"></footer>
+
+  <script src="../js/main.js"></script>
+  <script src="../js/footer.js" defer></script>
+  <script src="../js/dashboard.js" defer></script>
+</body>
+</html>

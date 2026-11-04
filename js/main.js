@@ -245,6 +245,90 @@
   };
 
   // ========================================
+  // Auth buttons in the header + navigation drawer
+  // ========================================
+  // One shared <script> handles ALL pages: asks /api/auth/me ONCE, then
+  // fills .header-actions with Sign in/Register (or a Dashboard button once
+  // signed in) and appends matching links to the nav drawer. Login/Register
+  // pages hide their own button so the header never contains a duplicate.
+  const AuthUI = {
+    async init() {
+      this.drawerList = document.querySelector('#nav-drawer .nav-drawer-list');
+
+      let signedIn = false;
+      try {
+        const res = await fetch('/api/auth/me', { credentials: 'include' });
+        signedIn = res.ok; // identity is NOT read client-side - just the flag
+      } catch {
+        signedIn = false; // server offline: show the standard logged-out UI
+      }
+      this.render(signedIn);
+    },
+
+    render(signedIn) {
+      const page = window.location.pathname.split('/').pop() || 'index.html';
+      this.renderHeader(signedIn, page);
+      this.renderDrawer(signedIn);
+    },
+
+    renderHeader(signedIn, page) {
+      const actions = document.querySelector('.header-actions');
+      if (!actions || actions.querySelector('.nav-auth')) return;
+
+      const wrap = document.createElement('div');
+      wrap.className = 'nav-auth';
+
+      const login = document.createElement('a');
+      login.href = 'login.html';
+      login.className = 'btn btn-ghost btn-sm';
+      login.textContent = 'Sign In';
+
+      const register = document.createElement('a');
+      register.href = 'register.html';
+      register.className = 'btn btn-primary btn-sm';
+      register.textContent = 'Register';
+
+      if (signedIn) {
+        // A signed-in user gets their dashboard link instead of auth buttons.
+        const dash = document.createElement('a');
+        dash.href = 'dashboard.html';
+        dash.className = 'btn btn-primary btn-sm';
+        dash.textContent = page === 'dashboard.html' ? 'Signed in' : 'My Dashboard';
+        wrap.appendChild(dash);
+      } else {
+        // On the login page the Sign In button is redundant (and vice versa).
+        if (page !== 'login.html') wrap.appendChild(login);
+        if (page !== 'register.html') wrap.appendChild(register);
+      }
+
+      // Insert before the theme toggle so the toggle always stays top-right.
+      const themeToggle = actions.querySelector('.theme-toggle');
+      actions.insertBefore(wrap, themeToggle || null);
+    },
+
+    renderDrawer(signedIn) {
+      if (!this.drawerList) return;
+
+      const item = document.createElement('li');
+      item.className = 'nav-drawer-auth-item';
+      item.innerHTML = signedIn
+        ? this.drawerLinkHtml('dashboard.html', 'My Dashboard',
+            '<rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect>')
+        : this.drawerLinkHtml('login.html', 'Sign In / Register',
+            '<rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path>');
+      // The .nav-drawer-footer is a sibling of the list, appended after it,
+      // so appending here keeps the auth link last among the page links.
+      this.drawerList.appendChild(item);
+    },
+
+    drawerLinkHtml(href, label, paths) {
+      return '<a href="' + href + '" class="nav-drawer-link nav-drawer-link--auth">' +
+        '<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">' + paths + '</svg>' +
+        label + '</a>';
+    },
+  };
+
+  // ========================================
   // Initialize on DOM Ready
   // ========================================
   document.addEventListener('DOMContentLoaded', () => {
@@ -252,6 +336,7 @@
     MobileNav.init();
     initSmoothScroll();
     initScrollAnimations();
+    AuthUI.init();
     
     // Expose utilities globally
     window.CyberShield = { Utils };

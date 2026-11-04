@@ -14,10 +14,14 @@ import { GoogleGenAI } from '@google/genai';
 
 const MODEL = process.env.GEMINI_MODEL || 'gemini-3.8-flash';
 const FALLBACK_MODEL = process.env.GEMINI_FALLBACK_MODEL || 'gemini-3.5-flash-lite';
-// 12s per attempt: normal replies land well inside it; a hanging model trips
-// the timeout fast so the request failovers to the fallback within seconds
-// (was 60s originally, then 30s x2 attempts = ~65s before the fallback ran).
-const TIMEOUT_MS = 12_000;
+// 12s for the primary: normal replies land well inside it; a hanging model
+// trips the timeout fast so the request failovers to the fallback within
+// seconds. The fallback gets 20s: live testing showed the lightweight model
+// legitimately needs ~14s under load, and the old 12s cap was killing
+// requests the fallback was actually about to answer (server.log showed
+// "Gemini request timed out" at 12015ms on gemini-3.5-flash-lite).
+const PRIMARY_TIMEOUT_MS = 12_000;
+const FALLBACK_TIMEOUT_MS = 20_000;
 
 /** The exact message the frontend shows when Gemini is unreachable. */
 export const AI_UNAVAILABLE_MESSAGE =
@@ -67,10 +71,10 @@ function parseJsonLoose(text) {
   return JSON.parse(unfenced);
 }
 
-function runWithTimeout(promise) {
+function runWithTimeout(promise, timeoutMs) {
   let timer;
   const timeout = new Promise((_, reject) => {
-    timer = setTimeout(() => reject(new Error('Gemini request timed out')), TIMEOUT_MS);
+    timer = setTimeout(() => reject(new Error('Gemini request timed out')), timeoutMs);
   });
   return Promise.race([promise, timeout]).finally(() => clearTimeout(timer));
 }
@@ -99,14 +103,26 @@ function isTransient(err) {
 }
 
 /**
- * Retry transient Gemini failures, strictly bounded:
+ * Retry transient Gemini failures with EXPONENTIAL BACKOFF, strictly bounded:
  * - timeout/hang: NO retry on the same model (a hung model usually hangs
- *   again); withTransientRetry throws immediately and the caller failsovers
+ *   again) - withTransientRetry throws immediately and the caller failsovers
  *   to a different model, which is what actually helps.
- * - fast capacity errors (429/503): at most 2 attempts with a 1.5s pause.
- * - everything else (auth, invalid model, malformed request): fails fast.
+ * - fast transient errors (429/503/502): up to `attempts` tries, waiting
+ *   baseDelay * 2^i (capped) plus jitter between them - Google's 503s are
+ *   usually brief capacity spikes, so a short pause often clears them.
+ * - everything else (auth 401/403, invalid model 404, malformed request
+ *   400): fails fast - retrying permanent errors can never help.
  */
-async function withTransientRetry(fn, attempts = 2) {
+function backoffDelayMs(baseMs, attemptNo, capMs = 5_000) {
+  const exponential = Math.min(baseMs * 2 ** attemptNo, capMs);
+  // +/- 40% jitter so parallel requests don't retry in lockstep.
+  return Math.round(exponential * (0.6 + Math.random() * 0.8));
+}
+
+async function withTransientRetry(
+  fn,
+  { attempts = 2, baseDelayMs = 1500, model = '' } = {}
+) {
   let lastErr;
   for (let i = 0; i < attempts; i++) {
     try {
@@ -114,7 +130,9 @@ async function withTransientRetry(fn, attempts = 2) {
     } catch (err) {
       lastErr = err;
       if (!isTransient(err) || isTimeoutErr(err) || i === attempts - 1) throw err;
-      await sleep(1500);
+      const delay = backoffDelayMs(baseDelayMs, i);
+      console.warn(`[gemini] ${model || 'model'} transient error -> retry ${i + 2}/${attempts} in ${delay}ms`);
+      await sleep(delay);
     }
   }
   throw lastErr;
@@ -139,30 +157,40 @@ async function withTransientRetry(fn, attempts = 2) {
 
 /**
  * generateContent with bounded retries + fallback model.
- * gemini-3.8-flash intermittently hangs at connect level or returns 503/429
- * on the free tier. Timeouts fail over immediately; fast capacity errors get
- * one retry; anything else fails fast. Worst case below (~26s) happens only
- * when BOTH models hang; typical failover answers in ~10-15s.
+ * gemini-3.8-flash intermittently returns 503/429 ("high demand") on the
+ * free tier - ONE in-model retry with exponential backoff clears most of
+ * them; stubborn failures (and any hang) fail over to the different fallback
+ * model, which is what actually helps. Timeouts never retry on the same
+ * model. Requests still running when the per-model cap hits are answered by
+ * the other model; anything else fails fast (auth/400s) or surfaces the
+ * friendly AI_UNAVAILABLE_MESSAGE. Worst case (BOTH models hang) adds up to
+ * roughly a minute; typical failover answers in ~10-15s.
  */
 async function generateWithFallback(config) {
   const ai = getClient();
-  const attempt = (model) =>
-    withTransientRetry(async () => {
-      const started = Date.now();
-      try {
-        return await runWithTimeout(ai.models.generateContent({ model, ...config }));
-      } catch (err) {
-        logGeminiFailure(model, err, Date.now() - started);
-        throw err;
-      }
-    });
+  const attempt = (model, timeoutMs) =>
+    withTransientRetry(
+      async () => {
+        const started = Date.now();
+        try {
+          return await runWithTimeout(
+            ai.models.generateContent({ model, ...config }),
+            timeoutMs
+          );
+        } catch (err) {
+          logGeminiFailure(model, err, Date.now() - started);
+          throw err;
+        }
+      },
+      { attempts: 2, baseDelayMs: 1500, model }
+    );
   const t0 = Date.now();
   try {
-    return await attempt(MODEL);
+    return await attempt(MODEL, PRIMARY_TIMEOUT_MS);
   } catch (err) {
     if (isTransient(err) && FALLBACK_MODEL && FALLBACK_MODEL !== MODEL) {
       console.warn(`[gemini] ${MODEL} unavailable, switching to fallback ${FALLBACK_MODEL}`);
-      const result = await attempt(FALLBACK_MODEL);
+      const result = await attempt(FALLBACK_MODEL, FALLBACK_TIMEOUT_MS);
       console.info(`[gemini] fallback ${FALLBACK_MODEL} served the request in ${Date.now() - t0}ms total`);
       return result;
     }
