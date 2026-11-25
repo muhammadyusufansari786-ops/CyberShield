@@ -10,7 +10,10 @@
       "16 characters"
     ],
     "correct": 2,
-    "explanation": "While 8 characters was once standard, modern computing power makes 12+ characters the recommended minimum for strong passwords."
+    "explanation": "While 8 characters was once standard, modern computing power makes 12+ characters the recommended minimum for strong passwords.",
+    "topic": "password-security",
+    "difficulty": "easy",
+    "subtopic": "Password Security"
   },
   {
     "id": "q2",
@@ -23,7 +26,10 @@
       "Tr0ub4dor&3"
     ],
     "correct": 1,
-    "explanation": "Passphrases like 'correct-horse-battery-staple' (4 random words) have high entropy because of their length (25+ chars) while remaining memorable."
+    "explanation": "Passphrases like 'correct-horse-battery-staple' (4 random words) have high entropy because of their length (25+ chars) while remaining memorable.",
+    "topic": "password-security",
+    "difficulty": "medium",
+    "subtopic": "Password Security"
   },
   {
     "id": "q3",
@@ -36,7 +42,10 @@
       "Managed Firewall Appliance - hardware firewall device"
     ],
     "correct": 0,
-    "explanation": "MFA (Multi-Factor Authentication) requires two or more independent categories of credentials: something you know (password), something you have (phone/authenticator), or something you are (biometric)."
+    "explanation": "MFA (Multi-Factor Authentication) requires two or more independent categories of credentials: something you know (password), something you have (phone/authenticator), or something you are (biometric).",
+    "topic": "password-security",
+    "difficulty": "easy",
+    "subtopic": "Password Security"
   },
   {
     "id": "q4",
@@ -49,7 +58,10 @@
       "It makes passwords easier to remember"
     ],
     "correct": 1,
-    "explanation": "Credential stuffing attacks use username/password pairs from one breach to try logging into other services. Unique passwords prevent a single breach from compromising multiple accounts."
+    "explanation": "Credential stuffing attacks use username/password pairs from one breach to try logging into other services. Unique passwords prevent a single breach from compromising multiple accounts.",
+    "topic": "password-security",
+    "difficulty": "easy",
+    "subtopic": "Password Security"
   },
   {
     "id": "q5",
@@ -62,7 +74,10 @@
       "Forward to friends to warn them"
     ],
     "correct": 2,
-    "explanation": "This is a classic phishing attempt. Legitimate companies use their own domains (paypal.com), not subdomains on unrelated domains."
+    "explanation": "This is a classic phishing attempt. Legitimate companies use their own domains (paypal.com), not subdomains on unrelated domains.",
+    "topic": "phishing-social",
+    "difficulty": "medium",
+    "subtopic": "Phishing and Social Engineering"
   },
   {
     "id": "q6",
@@ -75,7 +90,10 @@
       "All of the above"
     ],
     "correct": 0,
-    "explanation": "Phishing often uses generic greetings, urgency, and links that don't match the claimed sender."
+    "explanation": "Phishing often uses generic greetings, urgency, and links that don't match the claimed sender.",
+    "topic": "phishing-social",
+    "difficulty": "easy",
+    "subtopic": "Phishing and Social Engineering"
   },
   {
     "id": "q7",
@@ -88,7 +106,10 @@
       "Reply with your bank details"
     ],
     "correct": 1,
-    "explanation": "Legitimate services never ask you to reply YES via SMS to confirm a payment. This is smishing."
+    "explanation": "Legitimate services never ask you to reply YES via SMS to confirm a payment. This is smishing.",
+    "topic": "financial-fraud",
+    "difficulty": "medium",
+    "subtopic": "Financial Fraud"
   },
   {
     "id": "q8",
@@ -101,7 +122,10 @@
       "Phishing via USB drives"
     ],
     "correct": 0,
-    "explanation": "Quishing = QR code phishing. Attackers place malicious QR codes in public places that lead to phishing sites when scanned."
+    "explanation": "Quishing = QR code phishing. Attackers place malicious QR codes in public places that lead to phishing sites when scanned.",
+    "topic": "phishing-social",
+    "difficulty": "medium",
+    "subtopic": "Phishing and Social Engineering"
   },
   {
     "id": "q9",
@@ -114,7 +138,10 @@
       "There is no difference - they are the same thing"
     ],
     "correct": 2,
-    "explanation": "Viruses attach to legitimate files/programs and require user execution to spread. Worms are standalone programs that self-replicate and spread automatically."
+    "explanation": "Viruses attach to legitimate files/programs and require user execution to spread. Worms are standalone programs that self-replicate and spread automatically.",
+    "topic": "malware-ransomware",
+    "difficulty": "easy",
+    "subtopic": "Malware and Ransomware"
   },
   {
     "id": "q10",
@@ -127,7 +154,10 @@
       "QR codes on restaurant menus"
     ],
     "correct": 1,
-    "explanation": "The vast majority of ransomware infections start with phishing emails containing malicious attachments or links to exploit kits."
+    "explanation": "The vast majority of ransomware infections start with phishing emails containing malicious attachments or links to exploit kits.",
+    "topic": "malware-ransomware",
+    "difficulty": "medium",
+    "subtopic": "Malware and Ransomware"
   },
   {
     "id": "q11",
@@ -140,7 +170,10 @@
       "Try to decrypt files using online tools"
     ],
     "correct": 1,
-    "explanation": "Disconnecting prevents spread to network shares. Don't power off (may lose encryption keys in memory). Never pay ransom."
+    "explanation": "Disconnecting prevents spread to network shares. Don't power off (may lose encryption keys in memory). Never pay ransom.",
+    "topic": "malware-ransomware",
+    "difficulty": "easy",
+    "subtopic": "Malware and Ransomware"
   },
   {
     "id": "q12",
@@ -153,7 +186,10 @@
       "A blockchain network"
     ],
     "correct": 1,
-    "explanation": "A botnet is a collection of malware-infected devices (bots) controlled remotely by an attacker (botmaster)."
+    "explanation": "A botnet is a collection of malware-infected devices (bots) controlled remotely by an attacker (botmaster).",
+    "topic": "malware-ransomware",
+    "difficulty": "medium",
+    "subtopic": "Malware and Ransomware"
   },
   {
     "id": "q13",
@@ -166,7 +202,10 @@
       "Data is encrypted at the end of each day"
     ],
     "correct": 0,
-    "explanation": "E2EE means only the communicating users can read messages. The service provider cannot access the content."
+    "explanation": "E2EE means only the communicating users can read messages. The service provider cannot access the content.",
+    "topic": "data-privacy",
+    "difficulty": "medium",
+    "subtopic": "Data Privacy"
   },
   {
     "id": "q14",
@@ -179,7 +218,10 @@
       "Using a VPN on public Wi-Fi"
     ],
     "correct": 1,
-    "explanation": "Granting unnecessary permissions exposes your data. Follow the principle of least privilege."
+    "explanation": "Granting unnecessary permissions exposes your data. Follow the principle of least privilege.",
+    "topic": "data-privacy",
+    "difficulty": "easy",
+    "subtopic": "Data Privacy"
   },
   {
     "id": "q15",
@@ -192,7 +234,10 @@
       "Encrypting data to minimize exposure"
     ],
     "correct": 1,
-    "explanation": "Data minimization is a core privacy principle: only collect, process, and retain the minimum personal data needed."
+    "explanation": "Data minimization is a core privacy principle: only collect, process, and retain the minimum personal data needed.",
+    "topic": "data-privacy",
+    "difficulty": "medium",
+    "subtopic": "Data Privacy"
   },
   {
     "id": "q16",
@@ -205,7 +250,10 @@
       "Apps won't work on newer Android versions"
     ],
     "correct": 1,
-    "explanation": "Official app stores review apps for malware. Sideloaded apps bypass this protection."
+    "explanation": "Official app stores review apps for malware. Sideloaded apps bypass this protection.",
+    "topic": "safe-browsing",
+    "difficulty": "easy",
+    "subtopic": "Safe Browsing"
   },
   {
     "id": "q17",
@@ -218,7 +266,10 @@
       "A feature that lets you use two numbers on one SIM"
     ],
     "correct": 1,
-    "explanation": "SIM swapping is when attackers social-engineer carriers to port your phone number to their SIM, intercepting 2FA codes."
+    "explanation": "SIM swapping is when attackers social-engineer carriers to port your phone number to their SIM, intercepting 2FA codes.",
+    "topic": "identity-theft",
+    "difficulty": "medium",
+    "subtopic": "Identity Theft"
   },
   {
     "id": "q18",
@@ -231,7 +282,10 @@
       "Face unlock (basic)"
     ],
     "correct": 2,
-    "explanation": "6-digit PIN has 1,000,000 combinations vs 10,000 for 4-digit. Alphanumeric passwords are even stronger."
+    "explanation": "6-digit PIN has 1,000,000 combinations vs 10,000 for 4-digit. Alphanumeric passwords are even stronger.",
+    "topic": "safe-browsing",
+    "difficulty": "easy",
+    "subtopic": "Safe Browsing"
   },
   {
     "id": "q19",
@@ -244,7 +298,10 @@
       "A password manager feature"
     ],
     "correct": 1,
-    "explanation": "Credential stuffing automates login attempts using credentials from data breaches."
+    "explanation": "Credential stuffing automates login attempts using credentials from data breaches.",
+    "topic": "password-security",
+    "difficulty": "medium",
+    "subtopic": "Password Security"
   },
   {
     "id": "q20",
@@ -257,7 +314,10 @@
       "Pay the fee they request to fix the 'virus'"
     ],
     "correct": 2,
-    "explanation": "This is a tech support scam. Microsoft never makes unsolicited calls about computer viruses."
+    "explanation": "This is a tech support scam. Microsoft never makes unsolicited calls about computer viruses.",
+    "topic": "phishing-social",
+    "difficulty": "medium",
+    "subtopic": "Phishing and Social Engineering"
   },
   {
     "id": "q21",
@@ -270,7 +330,10 @@
       "A vulnerability that requires zero clicks to exploit"
     ],
     "correct": 1,
-    "explanation": "A zero-day vulnerability is unknown to the vendor, meaning no patch exists."
+    "explanation": "A zero-day vulnerability is unknown to the vendor, meaning no patch exists.",
+    "topic": "emerging-threats",
+    "difficulty": "hard",
+    "subtopic": "Emerging Cyber Threats"
   },
   {
     "id": "q22",
@@ -283,7 +346,10 @@
       "Your passwords from keyloggers"
     ],
     "correct": 0,
-    "explanation": "A VPN encrypts traffic between your device and the VPN server, protecting from ISP and eavesdroppers."
+    "explanation": "A VPN encrypts traffic between your device and the VPN server, protecting from ISP and eavesdroppers.",
+    "topic": "data-privacy",
+    "difficulty": "medium",
+    "subtopic": "Data Privacy"
   },
   {
     "id": "q23",
@@ -296,7 +362,10 @@
       "Turn off your phone at night"
     ],
     "correct": 1,
-    "explanation": "Contact your carrier to set up a port-out PIN. This prevents attackers from social-engineering carrier support."
+    "explanation": "Contact your carrier to set up a port-out PIN. This prevents attackers from social-engineering carrier support.",
+    "topic": "identity-theft",
+    "difficulty": "medium",
+    "subtopic": "Identity Theft"
   },
   {
     "id": "q24",
@@ -309,7 +378,10 @@
       "To slow down the hashing process"
     ],
     "correct": 1,
-    "explanation": "A salt is unique random data added to each password before hashing, ensuring identical passwords produce different hashes."
+    "explanation": "A salt is unique random data added to each password before hashing, ensuring identical passwords produce different hashes.",
+    "topic": "password-security",
+    "difficulty": "hard",
+    "subtopic": "Password Security"
   },
   {
     "id": "q25",
@@ -317,10 +389,15 @@
     "question": "Spot the scam: You receive an email - \"Subject: Your Netflix account is suspended. Click here to reactivate: netflix-secure-login.xyz/confirm\". Is this a phishing attempt?",
     "options": [
       "Legitimate Netflix email",
-      "Phishing scam"
+      "Phishing scam",
+      "A legitimate Netflix renewal notice",
+      "A harmless marketing newsletter"
     ],
     "correct": 1,
-    "explanation": "The sender address is not @netflix.com and the link goes to a suspicious domain (xyz instead of com)."
+    "explanation": "The sender address is not @netflix.com and the link goes to a suspicious domain (xyz instead of com).",
+    "topic": "phishing-social",
+    "difficulty": "easy",
+    "subtopic": "Phishing and Social Engineering"
   },
   {
     "id": "q26",
@@ -329,10 +406,14 @@
     "options": [
       "Reply YES",
       "Ignore & block the number",
-      "Call the number"
+      "Call the number",
+      "Reply STOP to opt out"
     ],
     "correct": 1,
-    "explanation": "Legitimate services never ask you to reply YES via SMS to confirm a payment. This is smishing."
+    "explanation": "Legitimate services never ask you to reply YES via SMS to confirm a payment. This is smishing.",
+    "topic": "financial-fraud",
+    "difficulty": "medium",
+    "subtopic": "Financial Fraud"
   },
   {
     "id": "q27",
@@ -340,10 +421,15 @@
     "question": "Spot the scam: A QR code on a \"Free Wi-Fi\" flyer at a café opens http://free-wifi-guest.tk when scanned. Is the QR code safe?",
     "options": [
       "Safe - gives free Wi-Fi",
-      "Scam - leads to a phishing site"
+      "Scam - leads to a phishing site",
+      "Safe if the cafe looks reputable",
+      "Safe if the QR code is printed on official paper"
     ],
     "correct": 1,
-    "explanation": "Unverified QR codes can direct you to malicious sites that steal credentials or install malware."
+    "explanation": "Unverified QR codes can direct you to malicious sites that steal credentials or install malware.",
+    "topic": "financial-fraud",
+    "difficulty": "medium",
+    "subtopic": "Financial Fraud"
   },
   {
     "id": "q28",
@@ -351,10 +437,15 @@
     "question": "Spot the scam: You get an email - \"Subject: IT Department: Password Expiry Notice\" with an attachment named password-reset-form.pdf. Is this legitimate?",
     "options": [
       "Legitimate IT notice",
-      "Phishing scam"
+      "Phishing scam",
+      "A routine HR policy update",
+      "A legitimate security awareness test"
     ],
     "correct": 1,
-    "explanation": "Unexpected password expiry notices with attachments are classic phishing. IT departments typically email, not attach PDFs."
+    "explanation": "Unexpected password expiry notices with attachments are classic phishing. IT departments typically email, not attach PDFs.",
+    "topic": "phishing-social",
+    "difficulty": "easy",
+    "subtopic": "Phishing and Social Engineering"
   },
   {
     "id": "q29",
@@ -362,10 +453,15 @@
     "question": "Spot the scam: An SMS reads - \"You won ₹1,00,000! Click here to claim: bit.ly/freemoney\". What type of scam is this?",
     "options": [
       "Lottery scam",
-      "Legitimate prize"
+      "Legitimate prize",
+      "A bank reward notification",
+      "A tax refund notification"
     ],
     "correct": 0,
-    "explanation": "You can't win a lottery you didn't enter. This is a classic advance-fee fraud scheme."
+    "explanation": "You can't win a lottery you didn't enter. This is a classic advance-fee fraud scheme.",
+    "topic": "financial-fraud",
+    "difficulty": "easy",
+    "subtopic": "Financial Fraud"
   },
   {
     "id": "q30",
@@ -373,10 +469,15 @@
     "question": "Spot the scam: Is this URL safe - https://paypall-security-update.com/verify-account ?",
     "options": [
       "Safe - PayPal security page",
-      "Fake - lookalike domain"
+      "Fake - lookalike domain",
+      "Safe because the page uses HTTPS",
+      "A PayPal regional partner site"
     ],
     "correct": 1,
-    "explanation": "The domain has \"paypall\" (double L) instead of \"paypal\". This is a typo-squatting phishing site."
+    "explanation": "The domain has \"paypall\" (double L) instead of \"paypal\". This is a typo-squatting phishing site.",
+    "topic": "safe-browsing",
+    "difficulty": "medium",
+    "subtopic": "Safe Browsing"
   },
   {
     "id": "q31",
@@ -384,10 +485,15 @@
     "question": "Spot the scam: Your CEO emails - \"Urgent: Wire Transfer Request. Transfer $50,000 to this vendor immediately.\" Is this a business email compromise risk?",
     "options": [
       "Legitimate CEO request",
-      "Business email compromise"
+      "Business email compromise",
+      "A routine vendor payment request",
+      "An internal audit request"
     ],
     "correct": 1,
-    "explanation": "Even from a familiar sender, verify wire transfer requests through a separate channel (phone call)."
+    "explanation": "Even from a familiar sender, verify wire transfer requests through a separate channel (phone call).",
+    "topic": "financial-fraud",
+    "difficulty": "hard",
+    "subtopic": "Financial Fraud"
   },
   {
     "id": "q32",
@@ -395,10 +501,15 @@
     "question": "Spot the scam: An SMS reads - \"Your package is held at customs. Pay ₹2,000 release fee: http://customs-verify.tk\". What is this?",
     "options": [
       "Legitimate customs notice",
-      "Smishing scam"
+      "Smishing scam",
+      "A courier tracking update",
+      "A government customs notice"
     ],
     "correct": 1,
-    "explanation": "Customs agencies don't send payment links via SMS for released packages. This is a delivery scam."
+    "explanation": "Customs agencies don't send payment links via SMS for released packages. This is a delivery scam.",
+    "topic": "phishing-social",
+    "difficulty": "medium",
+    "subtopic": "Phishing and Social Engineering"
   },
   {
     "id": "q33",
@@ -406,10 +517,15 @@
     "question": "Spot the scam: Identify the threat - http://irda-login-security-update.in/verify",
     "options": [
       "Legitimate insurance portal",
-      "Phishing site"
+      "Phishing site",
+      "The official IRDAI website",
+      "A bank insurance partner page"
     ],
     "correct": 1,
-    "explanation": "The .in domain claiming to be IRDAI (Insurance Regulatory Authority) is a phishing site mimicking a legitimate authority."
+    "explanation": "The .in domain claiming to be IRDAI (Insurance Regulatory Authority) is a phishing site mimicking a legitimate authority.",
+    "topic": "safe-browsing",
+    "difficulty": "hard",
+    "subtopic": "Safe Browsing"
   },
   {
     "id": "q34",
@@ -417,9 +533,734 @@
     "question": "Spot the scam: An email says - \"We want to hire you! Transfer setup kit money via Zelle, we'll reimburse.\" Is this a job scam?",
     "options": [
       "Legitimate job offer",
-      "Job scam"
+      "Job scam",
+      "A legitimate staffing agency offer",
+      "A paid internship with a placement fee"
     ],
     "correct": 1,
-    "explanation": "Legitimate employers never ask new employees to transfer money or use personal payment apps."
+    "explanation": "Legitimate employers never ask new employees to transfer money or use personal payment apps.",
+    "topic": "financial-fraud",
+    "difficulty": "medium",
+    "subtopic": "Financial Fraud"
+  },
+  {
+    "id": "q35",
+    "category": "privacy",
+    "topic": "network-security",
+    "difficulty": "easy",
+    "question": "Which device usually acts as the first line of defence between your home network and the internet?",
+    "options": [
+      "The router (with its built-in firewall)",
+      "The printer",
+      "A smart speaker",
+      "The monitor"
+    ],
+    "correct": 0,
+    "explanation": "The router sits between your devices and the internet, so its firewall and firmware are your first line of defence.",
+    "subtopic": "Network Security"
+  },
+  {
+    "id": "q36",
+    "category": "privacy",
+    "topic": "network-security",
+    "difficulty": "easy",
+    "question": "What does HTTPS actually guarantee?",
+    "options": [
+      "That traffic between your browser and the site is encrypted",
+      "That the site owner is honest",
+      "That the site contains no malware",
+      "That your identity is verified to the site"
+    ],
+    "correct": 0,
+    "explanation": "HTTPS encrypts the connection; it says nothing about whether the site is trustworthy.",
+    "subtopic": "Network Security"
+  },
+  {
+    "id": "q37",
+    "category": "privacy",
+    "topic": "network-security",
+    "difficulty": "medium",
+    "question": "What is the main risk of signing into accounts over an open public Wi-Fi network without a VPN?",
+    "options": [
+      "Other devices on that network may intercept your unencrypted traffic",
+      "Your laptop battery drains faster",
+      "Your browser loses its saved bookmarks",
+      "The Wi-Fi owner can read your local files directly"
+    ],
+    "correct": 0,
+    "explanation": "On shared or rogue networks an attacker can capture traffic; a VPN or mobile data removes that exposure.",
+    "subtopic": "Network Security"
+  },
+  {
+    "id": "q38",
+    "category": "privacy",
+    "topic": "network-security",
+    "difficulty": "medium",
+    "question": "A VPN mainly hides your traffic from which party?",
+    "options": [
+      "The local network and your internet provider",
+      "The website you are visiting",
+      "Your operating system",
+      "The website certificate authority"
+    ],
+    "correct": 0,
+    "explanation": "A VPN tunnels traffic past the local network and ISP; the destination site still sees your requests.",
+    "subtopic": "Network Security"
+  },
+  {
+    "id": "q39",
+    "category": "privacy",
+    "topic": "network-security",
+    "difficulty": "medium",
+    "question": "Which change makes a home router meaningfully safer?",
+    "options": [
+      "Changing the default admin password and disabling WPS",
+      "Renaming the Wi-Fi to something official",
+      "Hiding the SSID only",
+      "Using the same password as your email"
+    ],
+    "correct": 0,
+    "explanation": "Default admin credentials and WPS are common entry points; changing them and updating firmware matters far more than hiding the SSID.",
+    "subtopic": "Network Security"
+  },
+  {
+    "id": "q40",
+    "category": "privacy",
+    "topic": "network-security",
+    "difficulty": "hard",
+    "question": "What is network segmentation?",
+    "options": [
+      "Splitting a network into isolated zones so a breach cannot spread freely",
+      "Splitting large files into packets",
+      "Using several Wi-Fi extenders",
+      "Encrypting every packet twice"
+    ],
+    "correct": 0,
+    "explanation": "Segmentation limits lateral movement: an infected guest or IoT device cannot reach servers holding sensitive data.",
+    "subtopic": "Network Security"
+  },
+  {
+    "id": "q41",
+    "category": "privacy",
+    "topic": "network-security",
+    "difficulty": "hard",
+    "question": "What does DNSSEC protect against?",
+    "options": [
+      "Forged DNS answers that redirect you to the wrong server",
+      "Weak Wi-Fi passwords",
+      "Phishing emails that never use links",
+      "Malware inside attachments"
+    ],
+    "correct": 0,
+    "explanation": "DNSSEC cryptographically signs DNS records so a spoofed answer (cache poisoning) can be detected.",
+    "subtopic": "Network Security"
+  },
+  {
+    "id": "q42",
+    "category": "privacy",
+    "topic": "network-security",
+    "difficulty": "medium",
+    "question": "Which port does HTTPS use by default?",
+    "options": [
+      "443",
+      "80",
+      "21",
+      "25"
+    ],
+    "correct": 0,
+    "explanation": "HTTPS defaults to TCP 443, while plain HTTP uses port 80.",
+    "subtopic": "Network Security"
+  },
+  {
+    "id": "q43",
+    "category": "privacy",
+    "topic": "network-security",
+    "difficulty": "hard",
+    "question": "What is ARP spoofing typically used for on a local network?",
+    "options": [
+      "Positioning the attacker as a man-in-the-middle",
+      "Cracking Wi-Fi encryption",
+      "Speeding up local file transfers",
+      "Blocking spam emails"
+    ],
+    "correct": 0,
+    "explanation": "Fake ARP replies make your device send traffic to the attacker, who can then read or alter it.",
+    "subtopic": "Network Security"
+  },
+  {
+    "id": "q44",
+    "category": "privacy",
+    "topic": "network-security",
+    "difficulty": "easy",
+    "question": "Why should you install router firmware updates?",
+    "options": [
+      "They patch security holes attackers actively exploit",
+      "They make the Wi-Fi signal stronger",
+      "They increase your data plan",
+      "They remove the need for a password"
+    ],
+    "correct": 0,
+    "explanation": "Unpatched routers are a favourite target for botnets; firmware updates close known flaws.",
+    "subtopic": "Network Security"
+  },
+  {
+    "id": "q45",
+    "category": "privacy",
+    "topic": "identity-theft",
+    "difficulty": "easy",
+    "question": "Which combination is most dangerous to post publicly?",
+    "options": [
+      "Full name, date of birth and an ID or account number",
+      "Your favourite colour",
+      "A photo of your pet",
+      "Your favourite movie"
+    ],
+    "correct": 0,
+    "explanation": "That combination is exactly what many identity checks ask for, so it enables impersonation.",
+    "subtopic": "Identity Theft"
+  },
+  {
+    "id": "q46",
+    "category": "privacy",
+    "topic": "identity-theft",
+    "difficulty": "medium",
+    "question": "Which is a classic early signal of identity theft?",
+    "options": [
+      "A loan application or credit account you never opened",
+      "A newsletter you subscribed to",
+      "A delivery arriving early",
+      "A password reset you requested yourself"
+    ],
+    "correct": 0,
+    "explanation": "Accounts opened in your name show up on your credit report long before the debt collectors call.",
+    "subtopic": "Identity Theft"
+  },
+  {
+    "id": "q47",
+    "category": "privacy",
+    "topic": "identity-theft",
+    "difficulty": "medium",
+    "question": "How can you check whether someone opened accounts in your name?",
+    "options": [
+      "Review your credit report regularly for unknown accounts",
+      "Search your name on social media",
+      "Check your Wi-Fi signal strength",
+      "Change your email signature"
+    ],
+    "correct": 0,
+    "explanation": "A credit report lists credit accounts and enquiries, making it the standard check for identity fraud.",
+    "subtopic": "Identity Theft"
+  },
+  {
+    "id": "q48",
+    "category": "privacy",
+    "topic": "identity-theft",
+    "difficulty": "hard",
+    "question": "What does account takeover usually rely on first?",
+    "options": [
+      "Reused or stolen credentials combined with weak recovery options",
+      "Physical theft of your laptop",
+      "A slow internet connection",
+      "Too many browser tabs"
+    ],
+    "correct": 0,
+    "explanation": "Attackers rarely \"hack\" the account: they reuse leaked passwords or abuse recovery channels.",
+    "subtopic": "Identity Theft"
+  },
+  {
+    "id": "q49",
+    "category": "privacy",
+    "topic": "identity-theft",
+    "difficulty": "easy",
+    "question": "Your Aadhaar number has been exposed. What is the most useful first step?",
+    "options": [
+      "Monitor accounts, lock your credit where possible and report misuse",
+      "Delete your email account",
+      "Change your phone number immediately",
+      "Ignore it, Aadhaar numbers are public"
+    ],
+    "correct": 0,
+    "explanation": "You cannot change the number, but you can watch for misuse, add alerts and report fraud quickly.",
+    "subtopic": "Identity Theft"
+  },
+  {
+    "id": "q50",
+    "category": "privacy",
+    "topic": "identity-theft",
+    "difficulty": "medium",
+    "question": "Why is reusing your email password especially risky for identity theft?",
+    "options": [
+      "Email controls password resets for almost every other account",
+      "Email passwords are stored in plain text",
+      "Email companies sell passwords",
+      "Email is always unencrypted"
+    ],
+    "correct": 0,
+    "explanation": "Whoever controls your email can reset your bank, social and shopping accounts.",
+    "subtopic": "Identity Theft"
+  },
+  {
+    "id": "q51",
+    "category": "privacy",
+    "topic": "identity-theft",
+    "difficulty": "hard",
+    "question": "What is synthetic identity fraud?",
+    "options": [
+      "Combining real and fake details to create a new identity that passes checks",
+      "Using someone else's photo online",
+      "Creating an AI-generated profile picture",
+      "Stealing a physical ID card"
+    ],
+    "correct": 0,
+    "explanation": "Fraudsters mix a real identifier (often a child's or unused SSN/PAN) with invented details to build credit.",
+    "subtopic": "Identity Theft"
+  },
+  {
+    "id": "q52",
+    "category": "malware",
+    "topic": "malware-ransomware",
+    "difficulty": "easy",
+    "question": "A ransomware screen demands payment to unlock your files. What should you do first?",
+    "options": [
+      "Disconnect from the network and restore from a clean backup",
+      "Pay quickly to get a discount",
+      "Restart the computer repeatedly",
+      "Email the attackers your ID proof"
+    ],
+    "correct": 0,
+    "explanation": "Paying funds crime without guaranteeing recovery; isolating the machine and restoring a backup is the safe path.",
+    "subtopic": "Malware and Ransomware"
+  },
+  {
+    "id": "q53",
+    "category": "malware",
+    "topic": "malware-ransomware",
+    "difficulty": "medium",
+    "question": "How does fileless malware usually avoid antivirus detection?",
+    "options": [
+      "It runs in memory using trusted system tools instead of dropping a file",
+      "It hides in your photos",
+      "It only runs when the PC is off",
+      "It encrypts itself with your Wi-Fi password"
+    ],
+    "correct": 0,
+    "explanation": "Living in memory and abusing PowerShell or WMI leaves few artefacts on disk for scanners to find.",
+    "subtopic": "Malware and Ransomware"
+  },
+  {
+    "id": "q54",
+    "category": "malware",
+    "topic": "malware-ransomware",
+    "difficulty": "hard",
+    "question": "What does \"living off the land\" mean in an intrusion?",
+    "options": [
+      "Using legitimate built-in tools to avoid raising alarms",
+      "Hiding malware in a farm app",
+      "Attacking only offline computers",
+      "Stealing physical hard drives"
+    ],
+    "correct": 0,
+    "explanation": "Attackers use signed utilities like PowerShell, PsExec or WMI so their activity blends into normal admin work.",
+    "subtopic": "Malware and Ransomware"
+  },
+  {
+    "id": "q55",
+    "category": "malware",
+    "topic": "malware-ransomware",
+    "difficulty": "medium",
+    "question": "Why are offline or immutable backups critical against ransomware?",
+    "options": [
+      "Ransomware cannot encrypt backups it cannot reach",
+      "They make the computer faster",
+      "They replace the need for antivirus",
+      "They automatically decrypt files"
+    ],
+    "correct": 0,
+    "explanation": "Connected drives and network shares get encrypted too; an offline copy is what makes recovery possible.",
+    "subtopic": "Malware and Ransomware"
+  },
+  {
+    "id": "q77",
+    "category": "malware",
+    "topic": "malware-ransomware",
+    "difficulty": "hard",
+    "question": "What is double-extortion ransomware?",
+    "options": [
+      "Encrypting files and also threatening to publish stolen data",
+      "Encrypting the same file twice",
+      "Demanding payment in two currencies",
+      "Infecting two computers at once"
+    ],
+    "correct": 0,
+    "explanation": "Data is exfiltrated before encryption, so paying for the key does not stop a leak threat.",
+    "subtopic": "Malware and Ransomware"
+  },
+  {
+    "id": "q56",
+    "category": "scam",
+    "topic": "emerging-threats",
+    "difficulty": "easy",
+    "question": "What is a deepfake?",
+    "options": [
+      "AI-generated audio or video that convincingly imitates a real person",
+      "A photo with a deep shadow",
+      "A fake Wi-Fi hotspot",
+      "An email with a spoofed sender name"
+    ],
+    "correct": 0,
+    "explanation": "Deepfakes synthesise faces or voices, and are used for fraud, blackmail and disinformation.",
+    "subtopic": "Emerging Cyber Threats"
+  },
+  {
+    "id": "q57",
+    "category": "scam",
+    "topic": "emerging-threats",
+    "difficulty": "medium",
+    "question": "What is a prompt injection attack against an AI assistant?",
+    "options": [
+      "Hidden instructions in content that hijack the assistant's behaviour",
+      "Flooding the assistant with too many questions",
+      "Guessing the assistant's password",
+      "Injecting malware into the AI model file"
+    ],
+    "correct": 0,
+    "explanation": "Text inside a web page or document can contain instructions the model follows, overriding its intended task.",
+    "subtopic": "Emerging Cyber Threats"
+  },
+  {
+    "id": "q58",
+    "category": "scam",
+    "topic": "emerging-threats",
+    "difficulty": "medium",
+    "question": "How is AI voice cloning most often used by scammers?",
+    "options": [
+      "To impersonate a relative or executive and demand urgent money",
+      "To improve call-centre accents",
+      "To translate videos",
+      "To generate stronger passwords"
+    ],
+    "correct": 0,
+    "explanation": "A few seconds of public audio is enough to fake a distressed relative asking for an urgent transfer.",
+    "subtopic": "Emerging Cyber Threats"
+  },
+  {
+    "id": "q59",
+    "category": "scam",
+    "topic": "emerging-threats",
+    "difficulty": "hard",
+    "question": "What makes LLM-written phishing emails more dangerous than older templates?",
+    "options": [
+      "They are fluent, context-aware and free of the grammar tells people were taught to spot",
+      "They bypass HTTPS",
+      "They cannot be filtered at all",
+      "They always come from a real bank domain"
+    ],
+    "correct": 0,
+    "explanation": "Polished, personalised language removes the classic \"bad grammar\" warning sign, so verify senders instead.",
+    "subtopic": "Emerging Cyber Threats"
+  },
+  {
+    "id": "q60",
+    "category": "malware",
+    "topic": "emerging-threats",
+    "difficulty": "medium",
+    "question": "What is a zero-click exploit?",
+    "options": [
+      "An attack that works without the victim clicking or opening anything",
+      "A phishing link with no destination",
+      "An email with an empty body",
+      "An ad that costs nothing"
+    ],
+    "correct": 0,
+    "explanation": "Zero-click attacks abuse flaws in messaging or media handling, so patching is the main defence.",
+    "subtopic": "Emerging Cyber Threats"
+  },
+  {
+    "id": "q61",
+    "category": "scam",
+    "topic": "emerging-threats",
+    "difficulty": "easy",
+    "question": "Why should you avoid pasting personal or work data into public AI chatbots?",
+    "options": [
+      "The data may be stored, logged or reused by the provider",
+      "The chatbot will answer more slowly",
+      "It uses more battery",
+      "It breaks the chat window"
+    ],
+    "correct": 0,
+    "explanation": "Anything you paste can leave your control, so treat chatbots as public and never share secrets or personal records.",
+    "subtopic": "Emerging Cyber Threats"
+  },
+  {
+    "id": "q62",
+    "category": "scam",
+    "topic": "emerging-threats",
+    "difficulty": "hard",
+    "question": "What is phishing-as-a-service (PhaaS)?",
+    "options": [
+      "Criminal kits and subscriptions that let non-experts run phishing campaigns",
+      "A legitimate email marketing platform",
+      "A government anti-phishing programme",
+      "A browser setting that blocks spam"
+    ],
+    "correct": 0,
+    "explanation": "PhaaS sells ready-made fake pages, hosting and campaign tools, which is why phishing quality has risen sharply.",
+    "subtopic": "Emerging Cyber Threats"
+  },
+  {
+    "id": "q63",
+    "category": "passwords",
+    "topic": "password-security",
+    "difficulty": "medium",
+    "question": "Why is an authenticator app generally safer than SMS for one-time codes?",
+    "options": [
+      "SMS codes can be intercepted or stolen through SIM swapping",
+      "SMS codes expire instantly",
+      "Authenticator codes never expire",
+      "Apps do not need a password"
+    ],
+    "correct": 0,
+    "explanation": "SMS depends on the mobile network and your SIM; app codes are generated locally and are not readable by a SIM swap.",
+    "subtopic": "Password Security"
+  },
+  {
+    "id": "q64",
+    "category": "passwords",
+    "topic": "password-security",
+    "difficulty": "hard",
+    "question": "Why are passkeys considered phishing-resistant?",
+    "options": [
+      "They are bound to the website's origin, so a lookalike site cannot use them",
+      "They are longer than passwords",
+      "They are stored in your browser history",
+      "They change every 30 seconds"
+    ],
+    "correct": 0,
+    "explanation": "Passkeys use public-key cryptography tied to the real domain, so a fake login page gets nothing reusable.",
+    "subtopic": "Password Security"
+  },
+  {
+    "id": "q65",
+    "category": "phishing",
+    "topic": "phishing-social",
+    "difficulty": "medium",
+    "question": "How does spear phishing differ from bulk phishing?",
+    "options": [
+      "It is researched and personalised for one person or team",
+      "It only targets mobile phones",
+      "It never contains links",
+      "It is always sent by SMS"
+    ],
+    "correct": 0,
+    "explanation": "Spear phishing uses real names, projects and relationships, which makes the request far more convincing.",
+    "subtopic": "Phishing and Social Engineering"
+  },
+  {
+    "id": "q66",
+    "category": "phishing",
+    "topic": "phishing-social",
+    "difficulty": "hard",
+    "question": "A supplier emails new bank details for an unpaid invoice. What is the safest response?",
+    "options": [
+      "Call the supplier on a number you already have and verify before paying",
+      "Reply asking them to confirm by email",
+      "Pay quickly to avoid late fees",
+      "Forward it to a colleague to check later"
+    ],
+    "correct": 0,
+    "explanation": "Invoice and bank-detail changes are the core of business email compromise; verify out-of-band with a known number.",
+    "subtopic": "Phishing and Social Engineering"
+  },
+  {
+    "id": "q78",
+    "category": "phishing",
+    "topic": "phishing-social",
+    "difficulty": "hard",
+    "question": "What is MFA fatigue (push bombing)?",
+    "options": [
+      "Spamming approval prompts until the victim accepts one",
+      "Forgetting your second factor",
+      "Using MFA on too many sites",
+      "A slow authenticator app"
+    ],
+    "correct": 0,
+    "explanation": "Repeated push notifications, sometimes paired with a fake support call, wear the victim down into approving.",
+    "subtopic": "Phishing and Social Engineering"
+  },
+  {
+    "id": "q67",
+    "category": "scam",
+    "topic": "financial-fraud",
+    "difficulty": "easy",
+    "question": "A buyer says you must approve a UPI \"collect request\" before they can pay you. What actually happens?",
+    "options": [
+      "Money leaves your account instead of arriving",
+      "You receive the money instantly",
+      "Nothing happens until you scan a QR code",
+      "The bank holds the amount for 24 hours"
+    ],
+    "correct": 0,
+    "explanation": "Approving a collect request debits you; receiving money never needs a PIN or an approval.",
+    "subtopic": "Financial Fraud"
+  },
+  {
+    "id": "q68",
+    "category": "scam",
+    "topic": "financial-fraud",
+    "difficulty": "hard",
+    "question": "What characterises a \"safe account\" scam?",
+    "options": [
+      "A caller convinces you to move money to an account \"for safekeeping\"",
+      "A bank opens a savings account for you",
+      "An escrow service holds payment for a purchase",
+      "A wallet with two-factor authentication"
+    ],
+    "correct": 0,
+    "explanation": "No bank or police force asks you to transfer funds to a \"safe\" account; once transferred, the money is gone.",
+    "subtopic": "Financial Fraud"
+  },
+  {
+    "id": "q69",
+    "category": "privacy",
+    "topic": "data-privacy",
+    "difficulty": "easy",
+    "question": "What is a privacy policy for?",
+    "options": [
+      "Explaining what data a service collects and how it is used",
+      "Guaranteeing the service is secure",
+      "Listing the company's employees",
+      "Blocking cookies automatically"
+    ],
+    "correct": 0,
+    "explanation": "It is a disclosure of data practices, not a security guarantee.",
+    "subtopic": "Data Privacy"
+  },
+  {
+    "id": "q70",
+    "category": "privacy",
+    "topic": "data-privacy",
+    "difficulty": "medium",
+    "question": "What is the main purpose of India's Digital Personal Data Protection Act, 2023?",
+    "options": [
+      "Giving people rights over their personal data and requiring consent",
+      "Banning all data collection",
+      "Regulating only government websites",
+      "Replacing the IT Act entirely"
+    ],
+    "correct": 0,
+    "explanation": "The DPDP Act sets consent, purpose-limitation and data-principal rights for digital personal data.",
+    "subtopic": "Data Privacy"
+  },
+  {
+    "id": "q71",
+    "category": "privacy",
+    "topic": "data-privacy",
+    "difficulty": "medium",
+    "question": "What does the \"right to erasure\" allow?",
+    "options": [
+      "Asking an organisation to delete personal data it no longer needs",
+      "Deleting your browser history only",
+      "Removing your name from search results permanently",
+      "Erasing data from backups instantly"
+    ],
+    "correct": 0,
+    "explanation": "It is a data-subject right to have personal data deleted, subject to legal retention requirements.",
+    "subtopic": "Data Privacy"
+  },
+  {
+    "id": "q72",
+    "category": "privacy",
+    "topic": "data-privacy",
+    "difficulty": "hard",
+    "question": "What is the key difference between anonymisation and pseudonymisation?",
+    "options": [
+      "Anonymised data cannot be re-linked to a person; pseudonymised data can",
+      "They are the same thing",
+      "Pseudonymisation deletes all data",
+      "Anonymisation only applies to photos"
+    ],
+    "correct": 0,
+    "explanation": "Pseudonymised records keep a mapping key, so they remain personal data under most privacy laws.",
+    "subtopic": "Data Privacy"
+  },
+  {
+    "id": "q79",
+    "category": "privacy",
+    "topic": "data-privacy",
+    "difficulty": "hard",
+    "question": "Why can simply removing names still fail to anonymise a dataset?",
+    "options": [
+      "Combinations of remaining details can re-identify people",
+      "Names are never personal data",
+      "Anonymisation only works on paper",
+      "Removing names always satisfies the law"
+    ],
+    "correct": 0,
+    "explanation": "Age, postcode and job can uniquely identify someone; true anonymisation needs stronger techniques.",
+    "subtopic": "Data Privacy"
+  },
+  {
+    "id": "q73",
+    "category": "privacy",
+    "topic": "safe-browsing",
+    "difficulty": "easy",
+    "question": "What does the padlock in your browser address bar prove?",
+    "options": [
+      "The connection is encrypted - not that the site is trustworthy",
+      "The site has been audited for safety",
+      "The site cannot contain malware",
+      "The company is registered"
+    ],
+    "correct": 0,
+    "explanation": "Padlocks only confirm encryption; phishing sites can have valid certificates too.",
+    "subtopic": "Safe Browsing"
+  },
+  {
+    "id": "q74",
+    "category": "privacy",
+    "topic": "safe-browsing",
+    "difficulty": "medium",
+    "question": "Why should you review the permissions of a browser extension before installing it?",
+    "options": [
+      "Extensions can read and change data on every site you visit",
+      "Extensions always slow the browser down",
+      "Extensions cannot be removed later",
+      "Extensions use your camera by default"
+    ],
+    "correct": 0,
+    "explanation": "A malicious or compromised extension can read pages, cookies and form data across all your tabs.",
+    "subtopic": "Safe Browsing"
+  },
+  {
+    "id": "q75",
+    "category": "privacy",
+    "topic": "safe-browsing",
+    "difficulty": "medium",
+    "question": "What is the safest way to handle a software download from an unfamiliar site?",
+    "options": [
+      "Verify the publisher and scan the file before running it",
+      "Run it immediately to see if it works",
+      "Disable antivirus first",
+      "Rename the file before opening"
+    ],
+    "correct": 0,
+    "explanation": "Downloads are a top malware vector; prefer official sources and scan anything unexpected.",
+    "subtopic": "Safe Browsing"
+  },
+  {
+    "id": "q76",
+    "category": "privacy",
+    "topic": "safe-browsing",
+    "difficulty": "hard",
+    "question": "What is a homograph (IDN) attack?",
+    "options": [
+      "Using lookalike Unicode characters to fake a trusted domain",
+      "Attacking a website with too many images",
+      "Sending the same email twice",
+      "Registering a domain with two hyphens"
+    ],
+    "correct": 0,
+    "explanation": "Characters from other scripts can render almost identically to Latin letters, creating convincing fake domains.",
+    "subtopic": "Safe Browsing"
   }
 ]

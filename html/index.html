@@ -41,7 +41,8 @@
       </div>
     </div>
   </header>
-  <!-- Navigation Drawer (opens from the left) -->
+
+  <!-- Navigation Drawer (opens from the left) -->
   <div id="nav-overlay" class="nav-overlay" role="dialog" aria-modal="true" aria-label="Navigation menu">
     <nav id="nav-drawer" class="nav-drawer" aria-label="Main navigation">
       <div class="nav-drawer-header">
@@ -113,23 +114,9 @@
           </div>
           
           <div class="hero-visual">
-            <div class="hero-illustration" aria-hidden="true">
-              <div class="illustration-content">
-                <div class="illustration-stats">
-                  <div class="stat-item">
-                    <div class="stat-value" data-count="12">0</div>
-                    <div class="stat-label">Modules</div>
-                  </div>
-                  <div class="stat-item">
-                    <div class="stat-value" data-count="50">0</div>
-                    <div class="stat-label">Threats</div>
-                  </div>
-                  <div class="stat-item">
-                    <div class="stat-value" data-count="100">0</div>
-                    <div class="stat-label">Tips</div>
-                  </div>
-                </div>
-              </div>
+            <div class="hero-illustration">
+              <img class="hero-photo" src="/images/photos/cybersecurity-hero.webp" alt="Cybersecurity analyst working in a modern security operations center monitoring threat alerts on multiple screens" loading="eager" width="520" height="340" onerror="this.classList.add('img-error'); this.alt='';">
+              <div class="hero-overlay" aria-hidden="true"></div>
             </div>
           </div>
         </div>
@@ -165,21 +152,30 @@
         
         <div class="features-grid" role="list">
           <article class="feature-card card" role="listitem">
-            <div class="feature-icon">🔍</div>
-            <h3 class="feature-title">Explore & Learn</h3>
-            <p class="feature-description">Browse interactive modules covering passwords, threats, scams, and safety practices at your own pace.</p>
+            <img class="feature-card-photo" src="/images/photos/learning-progress.webp" alt="Professional reviewing a cybersecurity learning dashboard with progress tracking and course completion" loading="lazy" width="400" height="180" onerror="this.style.display='none';">
+            <div class="feature-card-body">
+              <div class="feature-icon">🔍</div>
+              <h3 class="feature-title">Explore & Learn</h3>
+              <p class="feature-description">Browse interactive modules covering passwords, threats, scams, and safety practices at your own pace.</p>
+            </div>
           </article>
           
           <article class="feature-card card" role="listitem">
-            <div class="feature-icon">🧪</div>
-            <h3 class="feature-title">Practice Safely</h3>
-            <p class="feature-description">Test your knowledge with quizzes, check password strength, and practice spotting real scam messages—all risk-free.</p>
+            <img class="feature-card-photo" src="/images/photos/practice-safe.webp" alt="Person participating in cybersecurity training and safe practice exercises on a computer" loading="lazy" width="400" height="180" onerror="this.style.display='none';">
+            <div class="feature-card-body">
+              <div class="feature-icon">🧪</div>
+              <h3 class="feature-title">Practice Safely</h3>
+              <p class="feature-description">Test your knowledge with quizzes, check password strength, and practice spotting real scam messages—all risk-free.</p>
+            </div>
           </article>
           
           <article class="feature-card card" role="listitem">
-            <div class="feature-icon">📈</div>
-            <h3 class="feature-title">Track Progress</h3>
-            <p class="feature-description">Monitor your learning journey with completion tracking and personalized recommendations.</p>
+            <img class="feature-card-photo" src="/images/photos/security-tools-v2.webp" alt="Person configuring digital security settings and device protection on a laptop" loading="lazy" width="400" height="180" onerror="this.style.display='none';">
+            <div class="feature-card-body">
+              <div class="feature-icon">📈</div>
+              <h3 class="feature-title">Track Progress</h3>
+              <p class="feature-description">Monitor your learning journey with completion tracking and personalized recommendations.</p>
+            </div>
           </article>
         </div>
       </div>
@@ -195,45 +191,63 @@
 
         <div class="features-grid" role="list">
           <article class="feature-card card" role="listitem">
-            <div class="feature-icon">🔐</div>
-            <h3 class="feature-title">Password Security</h3>
-            <p class="feature-description">Analyze password strength with entropy-based scoring and get actionable feedback.</p>
-            <a href="password.html" class="glossary-jump mt-2">Open Password Checker →</a>
+            <img class="feature-card-photo" src="/images/photos/password-crack.webp" alt="Computer screen showing a login panel with password entry representing secure account authentication" loading="lazy" width="400" height="180" onerror="this.style.display='none';">
+            <div class="feature-card-body">
+              <div class="feature-icon">🔐</div>
+              <h3 class="feature-title">Password Security</h3>
+              <p class="feature-description">Analyze password strength with entropy-based scoring and get actionable feedback.</p>
+              <a href="password.html" class="glossary-jump mt-2">Open Password Checker →</a>
+            </div>
           </article>
 
           <article class="feature-card card" role="listitem">
-            <div class="feature-icon">🧠</div>
-            <h3 class="feature-title">Cybersecurity Quiz</h3>
-            <p class="feature-description">Randomized questions with explanations, category filters, and an optional timer.</p>
-            <a href="quiz.html" class="glossary-jump mt-2">Start the Quiz →</a>
+            <img class="feature-card-photo" src="/images/photos/learner-quiz.webp" alt="Person taking a cybersecurity knowledge quiz with questions on a computer screen" loading="lazy" width="400" height="180" onerror="this.style.display='none';">
+            <div class="feature-card-body">
+              <div class="feature-icon">🧠</div>
+              <h3 class="feature-title">Cybersecurity Quiz</h3>
+              <p class="feature-description">Randomized questions with explanations, category filters, and an optional timer.</p>
+              <a href="quiz.html" class="glossary-jump mt-2">Start the Quiz →</a>
+            </div>
           </article>
 
           <article class="feature-card card" role="listitem">
-            <div class="feature-icon">📰</div>
-            <h3 class="feature-title">Cyber News</h3>
-            <p class="feature-description">Current cybersecurity headlines with category filters and plain-language AI explanations.</p>
-            <a href="news.html" class="glossary-jump mt-2">Read the News →</a>
+            <img class="feature-card-photo" src="/images/photos/newsroom-journalist.webp" alt="Technology journalist researching and writing cybersecurity news stories at a desk" loading="lazy" width="400" height="180" onerror="this.style.display='none';">
+            <div class="feature-card-body">
+              <div class="feature-icon">📰</div>
+              <h3 class="feature-title">Cyber News</h3>
+              <p class="feature-description">Current cybersecurity headlines with category filters and plain-language AI explanations.</p>
+              <a href="news.html" class="glossary-jump mt-2">Read the News →</a>
+            </div>
           </article>
 
           <article class="feature-card card" role="listitem">
-            <div class="feature-icon">⚠️</div>
-            <h3 class="feature-title">Common Threats</h3>
-            <p class="feature-description">A threat library covering phishing, malware, identity theft, and social engineering.</p>
-            <a href="threats.html" class="glossary-jump mt-2">Browse Threats →</a>
+            <img class="feature-card-photo" src="/images/photos/phishing-email.webp" alt="Person reviewing a suspicious phishing email on a laptop screen" loading="lazy" width="400" height="180" onerror="this.style.display='none';">
+            <div class="feature-card-body">
+              <div class="feature-icon">⚠️</div>
+              <h3 class="feature-title">Common Threats</h3>
+              <p class="feature-description">A threat library covering phishing, malware, identity theft, and social engineering.</p>
+              <a href="threats.html" class="glossary-jump mt-2">Browse Threats →</a>
+            </div>
+          </article>
+
+                      <article class="feature-card card" role="listitem">
+            <img class="feature-card-photo" src="/images/photos/incident-response.webp" alt="Cybersecurity incident response team investigating a security incident together at a workstation" loading="lazy" width="400" height="180" onerror="this.style.display='none';">
+            <div class="feature-card-body">
+              <div class="feature-icon">🚨</div>
+              <h3 class="feature-title">Emergency Response</h3>
+              <p class="feature-description">Step-by-step guidance for compromised accounts, fraud, and device theft—India-specific contacts included.</p>
+              <a href="toolkit.html#emergency-response" class="glossary-jump mt-2">View the Guide →</a>
+            </div>
           </article>
 
           <article class="feature-card card" role="listitem">
-            <div class="feature-icon">🚨</div>
-            <h3 class="feature-title">Emergency Response</h3>
-            <p class="feature-description">Step-by-step guidance for compromised accounts, fraud, and device theft—India-specific contacts included.</p>
-            <a href="toolkit.html#emergency-response" class="glossary-jump mt-2">View the Guide →</a>
-          </article>
-
-          <article class="feature-card card" role="listitem">
-            <div class="feature-icon">📋</div>
-            <h3 class="feature-title">Safety Toolkit</h3>
-            <p class="feature-description">Printable checklists for passwords, devices, privacy, phishing, and backups.</p>
-            <a href="toolkit.html" class="glossary-jump mt-2">Open the Toolkit →</a>
+            <img class="feature-card-photo" src="/images/photos/security-toolkit.webp" alt="Person using digital security tools and configuring device protection settings" loading="lazy" width="400" height="180" onerror="this.style.display='none';">
+            <div class="feature-card-body">
+              <div class="feature-icon">📋</div>
+              <h3 class="feature-title">Safety Toolkit</h3>
+              <p class="feature-description">Printable checklists for passwords, devices, privacy, phishing, and backups.</p>
+              <a href="toolkit.html" class="glossary-jump mt-2">Open the Toolkit →</a>
+            </div>
           </article>
 
           <article class="feature-card card" role="listitem">
@@ -251,10 +265,13 @@
           </article>
 
           <article class="feature-card card" role="listitem">
-            <div class="feature-icon">✨</div>
-            <h3 class="feature-title">AI CyberShield</h3>
-            <p class="feature-description">Ask a security-tutor AI about suspicious messages, scams, and safe habits.</p>
-            <a href="ai-assistant.html" class="glossary-jump mt-2">Chat Now →</a>
+            <img class="feature-card-photo" src="/images/photos/ai-tutor.webp" alt="Person studying cybersecurity on a computer with AI tutor guidance and learning materials" loading="lazy" width="400" height="180" onerror="this.style.display='none';">
+            <div class="feature-card-body">
+              <div class="feature-icon">✨</div>
+              <h3 class="feature-title">AI CyberShield</h3>
+              <p class="feature-description">Ask a security-tutor AI about suspicious messages, scams, and safe habits.</p>
+              <a href="ai-assistant.html" class="glossary-jump mt-2">Chat Now →</a>
+            </div>
           </article>
         </div>
       </div>
@@ -376,7 +393,8 @@
       // Emergency ticker: duplicate the items once (aria-hidden clones) so the
       // CSS translateX(-50%) animation loops seamlessly right→left. Spacing
       // lives on the items, so both copies are pixel-identical. Under
-      // prefers-reduced-motion the JS duplicate is skipped and the CSS shows      // a static, wrapping row instead.
+      // prefers-reduced-motion the JS duplicate is skipped and the CSS shows
+      // a static, wrapping row instead.
       const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
       const initTicker = () => {
         const track = document.getElementById('emergency-ticker-track');

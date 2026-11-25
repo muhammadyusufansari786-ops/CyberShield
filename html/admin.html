@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Question Bank Admin – CyberShield</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%230f766e'/%3E%3Ctext x='50%25' y='55%25' dominant-baseline='middle' text-anchor='middle' fill='white' font-size='60' font-weight='bold'%3E%E2%9A%A1%3C/text%3E%3C/svg%3E">
+</head>
+<body class="admin-page">
+  <a href="#main-content" class="visually-hidden focus-visible">Skip to main content</a>
+
+  <header class="header" role="banner">
+    <div class="header-inner">
+      <a href="index.html" class="logo" aria-label="CyberShield Home">
+        <span class="logo-icon" aria-hidden="true">🛡️</span>
+        <span>CyberShield</span>
+      </a>
+      <div class="header-actions">
+        <a href="dashboard.html" class="btn btn-ghost btn-sm">My dashboard</a>
+        <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode" type="button">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content" role="main">
+    <section class="section" style="padding-top: 2.5rem;">
+      <div class="container">
+        <div class="admin-shell">
+          <header class="admin-head">
+            <div>
+              <span class="badge badge-info">Admin only</span>
+              <h1 style="margin-top: 0.5rem;">Question Bank Management</h1>
+              <p class="admin-sub">Approve AI drafts, edit questions, and watch the approved bank grow.</p>
+            </div>
+            <a href="quiz.html" class="btn btn-secondary btn-sm">Open quiz</a>
+          </header>
+
+          <div id="admin-status" class="admin-status" role="status" aria-live="polite"></div>
+          <div id="admin-denied" class="auth-error admin-denied" role="alert" hidden>
+            Administrator access required. <a href="login.html">Sign in</a> with an admin account.
+          </div>
+
+          <div id="admin-app" hidden>
+            <div id="admin-stats" class="admin-stats"></div>
+
+            <div class="admin-grid">
+              <div class="card admin-card">
+                <header class="card-header">
+                  <div>
+                    <h2 class="card-title">Generate questions with Gemini</h2>
+                    <p class="card-subtitle">Drafts land in the pending queue. Nothing is served until you approve it.</p>
+                  </div>
+                </header>
+                <form id="generate-form" class="admin-form">
+                  <label>Topic
+                    <select id="gen-topic" required></select>
+                  </label>
+                  <label>Difficulty
+                    <select id="gen-difficulty">
+                      <option value="easy">Easy</option>
+                      <option value="medium" selected>Medium</option>
+                      <option value="hard">Hard</option>
+                    </select>
+                  </label>
+                  <label>Questions
+                    <input id="gen-count" type="number" min="1" max="20" value="10" required>
+                  </label>
+                  <button type="submit" class="btn btn-primary" id="gen-submit">Generate batch</button>
+                </form>
+                <p id="generate-result" class="admin-note" role="status"></p>
+              </div>
+
+              <div class="card admin-card">
+                <header class="card-header">
+                  <div>
+                    <h2 class="card-title">Bank health</h2>
+                    <p class="card-subtitle">Live counts from MongoDB (approved only are served).</p>
+                  </div>
+                </header>
+                <div id="admin-bank-health" class="admin-health"></div>
+              </div>
+            </div>
+
+            <div class="card admin-card">
+              <header class="card-header">
+                <div>
+                  <h2 class="card-title">Review question bank</h2>
+                  <p class="card-subtitle">Pending drafts, approved questions and rejected records.</p>
+                </div>
+              </header>
+
+              <div class="admin-filters">
+                <label>Status
+                  <select id="filter-status">
+                    <option value="pending" selected>Pending</option>
+                    <option value="approved">Approved</option>
+                    <option value="rejected">Rejected</option>
+                  </select>
+                </label>
+                <label>Topic
+                  <select id="filter-topic"><option value="">All topics</option></select>
+                </label>
+                <label>Difficulty
+                  <select id="filter-difficulty">
+                    <option value="">All</option>
+                    <option value="easy">Easy</option>
+                    <option value="medium">Medium</option>
+                    <option value="hard">Hard</option>
+                  </select>
+                </label>
+                <label>Source
+                  <select id="filter-source">
+                    <option value="">All</option>
+                    <option value="human">Human</option>
+                    <option value="ai">AI</option>
+                  </select>
+                </label>
+                <label>Batch
+                  <select id="filter-batch"><option value="">All batches</option></select>
+                </label>
+                <label class="admin-search">Search
+                  <input id="filter-search" type="search" placeholder="ID, keyword, subtopic">
+                </label>
+                <button type="button" class="btn btn-secondary btn-sm" id="filter-apply">Apply</button>
+              </div>
+
+              <div id="admin-list" class="admin-list"></div>
+
+              <div class="admin-pager">
+                <button type="button" class="btn btn-ghost btn-sm" id="page-prev">← Previous</button>
+                <span id="page-label">Page 1</span>
+                <button type="button" class="btn btn-ghost btn-sm" id="page-next">Next →</button>
+              </div>
+            </div>
+
+            <div class="card admin-card">
+              <header class="card-header">
+                <div>
+                  <h2 class="card-title">Recent admin actions</h2>
+                  <p class="card-subtitle">Audit trail of approvals, edits and generation batches.</p>
+                </div>
+              </header>
+              <ul id="admin-logs" class="admin-logs"></ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer id="site-footer" class="footer" role="contentinfo" aria-label="Site footer"></footer>
+
+  <!-- Approve/edit dialog -->
+  <dialog id="edit-dialog" class="admin-dialog">
+    <form id="edit-form" method="dialog">
+      <h2 id="edit-title">Edit question</h2>
+      <p class="admin-note" id="edit-error" role="alert"></p>
+      <input type="hidden" id="edit-id">
+      <label>Question
+        <textarea id="edit-text" rows="3" maxlength="400" required></textarea>
+      </label>
+      <div class="admin-options">
+        <label>Option A <input id="edit-opt-0" maxlength="200" required></label>
+        <label>Option B <input id="edit-opt-1" maxlength="200" required></label>
+        <label>Option C <input id="edit-opt-2" maxlength="200" required></label>
+        <label>Option D <input id="edit-opt-3" maxlength="200" required></label>
+      </div>
+      <div class="admin-form">
+        <label>Correct answer
+          <select id="edit-correct">
+            <option value="0">A</option>
+            <option value="1">B</option>
+            <option value="2">C</option>
+            <option value="3">D</option>
+          </select>
+        </label>
+        <label>Topic
+          <select id="edit-topic"></select>
+        </label>
+        <label>Subtopic
+          <input id="edit-subtopic" maxlength="60" required>
+        </label>
+        <label>Difficulty
+          <select id="edit-difficulty">
+            <option value="easy">Easy</option>
+            <option value="medium">Medium</option>
+            <option value="hard">Hard</option>
+          </select>
+        </label>
+      </div>
+      <label>Explanation
+        <textarea id="edit-explanation" rows="3" maxlength="600" required></textarea>
+      </label>
+      <div class="admin-dialog-actions">
+        <button type="button" class="btn btn-ghost" id="edit-cancel">Cancel</button>
+        <button type="submit" class="btn btn-primary" id="edit-save">Save</button>
+      </div>
+    </form>
+  </dialog>
+
+  <!-- Reject dialog -->
+  <dialog id="reject-dialog" class="admin-dialog admin-dialog-sm">
+    <form id="reject-form" method="dialog">
+      <h2>Reject question</h2>
+      <p class="admin-note" id="reject-target"></p>
+      <label>Reason (optional)
+        <input id="reject-reason" maxlength="300" placeholder="Inaccurate, ambiguous, duplicate...">
+      </label>
+      <div class="admin-dialog-actions">
+        <button type="button" class="btn btn-ghost" id="reject-cancel">Cancel</button>
+        <button type="submit" class="btn btn-primary">Reject</button>
+      </div>
+    </form>
+  </dialog>
+
+  <script src="../js/main.js"></script>
+  <script src="../js/footer.js" defer></script>
+  <script src="../js/admin.js" defer></script>
+</body>
+</html>

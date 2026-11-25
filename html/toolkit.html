@@ -75,6 +75,10 @@
               <li aria-current="page">Safety Toolkit</li>
             </ol>
           </nav>
+          <div class="section-photo-banner">
+            <img class="section-photo-banner-photo" src="/images/photos/security-toolkit.webp" alt="Person using digital security tools and configuring device protection settings for cyber safety" loading="eager" width="1000" height="562" onerror="this.style.display='none';">
+            <div class="section-photo-banner-overlay" aria-hidden="true"></div>
+          </div>
           <header style="text-align: center; margin-bottom: 2rem;">
             <h1>Cyber Safety Toolkit</h1>
             <p style="color: var(--color-text-secondary); font-size: 1.125rem; margin-top: 0.75rem;">Interactive checklists to build and maintain your security hygiene. Progress saved locally in your browser.</p>
@@ -117,12 +121,17 @@
 
             <div class="card ai-analyzer-card">
               <div class="form-group">
-                <label for="scam-ai-text" class="form-label">Paste a suspicious message (WhatsApp / SMS / email / URL)</label>
+                <label for="scam-ai-text" class="form-label">Paste a suspicious message (SMS / WhatsApp / email / social media / banking)</label>
                 <textarea id="scam-ai-text" class="form-input" rows="6" placeholder="e.g. 'Dear customer, your KYC has expired. Update it within 2 hours at http://kyc-update.xyz or your account will be blocked…'"></textarea>
                 <div class="ai-input-meta">
                   <span id="scam-ai-char-count">0 / 6000</span>
                   <span>🔒 Never paste your real passwords or OTPs</span>
                 </div>
+              </div>
+
+              <div class="form-group">
+                <label for="scam-ai-url" class="form-label">Suspicious link <span class="ai-input-hint">(optional - checked structurally, never opened)</span></label>
+                <input id="scam-ai-url" class="form-input" type="url" placeholder="e.g. http://192.10.445-secure.xyz/kyc" spellcheck="false" autocomplete="off">
               </div>
 
               <div class="ai-upload-row">
@@ -131,6 +140,7 @@
                 </label>
                 <input type="file" id="scam-ai-file" accept="image/png,image/jpeg,image/webp,image/*" hidden>
                 <button type="button" class="btn btn-primary" id="scam-ai-analyze">🤖 Analyze with Gemini</button>
+                <button type="button" class="btn btn-ghost" id="scam-ai-clear">✖ Clear</button>
               </div>
 
               <div id="scam-ai-preview-wrap" style="display: none; margin-top: 1rem; align-items: flex-start; gap: 1rem;">

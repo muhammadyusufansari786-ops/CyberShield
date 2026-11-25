@@ -1,0 +1,1045 @@
+[
+  {
+    "id": "phishing",
+    "name": "Phishing",
+    "category": "social",
+    "categoryLabel": "Social Engineering",
+    "icon": "🎣",
+    "image": "/images/photos/phishing-email.webp",
+    "imageAlt": "Suspicious phishing email on a computer screen with deceptive link and fake sender address",
+    "tagline": "Fake emails and messages that steal your passwords or money.",
+    "overview": "Phishing is a social-engineering attack in which someone impersonates a trusted person or organisation - your bank, a courier, your university, even a colleague - to trick you into revealing a password, approving a payment, or opening a harmful attachment. It targets the person rather than the technology, so it slips past antivirus and firewalls. One stolen password can unlock email, banking and social accounts at once, which is why it remains the most common way accounts are taken over.",
+    "howItWorks": [
+      "Attackers copy a real brand's logo, colours and tone, then send the same message to thousands of addresses at a time.",
+      "The message invents urgency: an account will be suspended, a parcel will be returned, a salary is waiting.",
+      "A link leads to a lookalike login page on a domain that is subtly wrong, such as secure-bank-verify.com instead of the real bank.",
+      "Whatever you type - password, card number, one-time code - is captured and used within minutes.",
+      "Some versions skip links entirely and carry an attachment that installs malware when opened."
+    ],
+    "example": "A student gets an email that looks like the university IT helpdesk saying their account will be disabled in 24 hours. The link opens a convincing copy of the campus login page, which also asks for the one-time code. The attacker signs in immediately, changes the recovery email and locks the student out of their own account.",
+    "warningSigns": [
+      "An unexpected request for your password, PIN, OTP or card details - no real organisation asks by email.",
+      "A link whose domain is close to, but not exactly, the official one.",
+      "Urgency, threats of suspension, or a reward that expires today.",
+      "Generic greetings such as 'Dear Customer' when the sender should know your name.",
+      "An attachment you were not expecting, especially .zip, .html or .exe files.",
+      "A reply-to address on a different domain from the sender name."
+    ],
+    "risks": [
+      "Account takeover across email, banking and social media.",
+      "Direct financial loss through fraudulent transfers or card use.",
+      "Malware infection if an attachment is opened.",
+      "Identity theft if personal documents are handed over."
+    ],
+    "prevention": [
+      "Never enter credentials from a link in a message - open the app or type the address yourself.",
+      "Check the full sender address and the domain of every link before clicking.",
+      "Turn on two-factor authentication, preferably with an app or security key rather than SMS.",
+      "Treat urgency as a warning, not a reason to hurry.",
+      "Report suspicious mail to your organisation's IT or security team.",
+      "Hover over links on desktop to preview the real destination."
+    ],
+    "emergency": [
+      "Change the password of the affected account immediately, then change it anywhere you reused it.",
+      "Revoke active sessions and check recovery email and phone numbers for changes.",
+      "Contact your bank and block cards if payment details were entered.",
+      "Report at cybercrime.gov.in or call 1930 within the first hours for financial fraud.",
+      "Warn colleagues or family if the message came from your account."
+    ],
+    "related": [
+      "smishing",
+      "vishing",
+      "fake-sites"
+    ],
+    "glossary": [
+      "Phishing"
+    ],
+    "emergencyGuide": "phishing"
+  },
+  {
+    "id": "smishing",
+    "name": "Smishing (SMS Phishing)",
+    "category": "social",
+    "categoryLabel": "Social Engineering",
+    "icon": "📱",
+    "image": "/images/photos/smishing-text.webp",
+    "imageAlt": "Suspicious smishing text message on a smartphone screen with malicious link",
+    "tagline": "Scam text messages that push you to click a link or call a number.",
+    "overview": "Smishing is phishing delivered by SMS, WhatsApp or another messaging app. Because people trust text messages more than email and read them within minutes, a short message with a link or phone number is remarkably effective. Scammers pose as banks, delivery companies, government portals, electricity boards or even family members, and the small screen makes fake links harder to inspect.",
+    "howItWorks": [
+      "Scammers buy or generate lists of mobile numbers and send bulk messages through SMS gateways or cheap SIM farms.",
+      "The message borrows a familiar context: a KYC update, an unpaid bill, a held parcel, a tax refund.",
+      "A shortened link hides the real destination until it is already open.",
+      "The landing page collects card details, UPI PINs, OTPs or login credentials, or installs a malicious app.",
+      "Some messages instead ask you to call a number, where a fake 'executive' talks you through the fraud."
+    ],
+    "example": "A message claims a courier is holding a parcel because of an incomplete address and links to a 'reschedule delivery' page that charges a small fee. The page asks for the card number, expiry and OTP. The OTP authorises a much larger transaction, and the 'delivery fee' becomes a full account drain.",
+    "warningSigns": [
+      "A link in a text from an unknown or shortened sender ID.",
+      "Requests for an OTP, PIN, CVV or password over SMS - always fraud.",
+      "Messages that arrive from a normal 10-digit number but claim to be a bank or government office.",
+      "A deadline measured in hours, or a threat that service will be cut today.",
+      "Instructions to install an app sent as a link, especially an .apk file.",
+      "Grammar errors or a sender name that differs slightly from the official one."
+    ],
+    "risks": [
+      "Unauthorised transactions using stolen card or UPI details.",
+      "Malware or spyware installed through a sideloaded app.",
+      "Account takeover when credentials and OTPs are captured together.",
+      "Further fraud against your contacts from your hijacked number."
+    ],
+    "prevention": [
+      "Never share an OTP, UPI PIN or CVV with anyone, including someone claiming to be from the bank.",
+      "Do not open links in unexpected messages; use the official app instead.",
+      "Verify a delivery or bill claim by tracking the order or calling the published number.",
+      "Block and report spam senders, and enable spam filtering in your messaging app.",
+      "Avoid installing apps from links - use the official app store only.",
+      "Report fraud messages to 1909 or your operator's spam-report service."
+    ],
+    "emergency": [
+      "Contact your bank immediately to freeze the card or UPI account.",
+      "Call 1930 and file a complaint at cybercrime.gov.in - early reporting improves recovery chances.",
+      "If you installed an app, disconnect from the internet, uninstall it and run a security scan.",
+      "Change passwords for any account whose credentials you entered.",
+      "Inform contacts if the scam used your number so they ignore further messages."
+    ],
+    "related": [
+      "phishing",
+      "qr-phishing",
+      "upi-fraud"
+    ],
+    "glossary": [
+      "Smishing",
+      "OTP"
+    ],
+    "emergencyGuide": "financial"
+  },
+  {
+    "id": "vishing",
+    "name": "Vishing (Voice Phishing)",
+    "category": "social",
+    "categoryLabel": "Social Engineering",
+    "icon": "☎️",
+    "image": "/images/photos/vishing-call.webp",
+    "imageAlt": "Person receiving a suspicious vishing voice phishing phone call on a mobile phone",
+    "tagline": "Phone calls from fake bank, police or support staff.",
+    "overview": "Vishing is fraud carried out over a phone call or a voice message. The caller claims to be a bank officer, police officer, telecom engineer, courier or tech-support agent, and uses a rehearsed script and background noise to sound legitimate. Voice over IP lets scammers spoof the displayed number, so caller ID can show a real bank or government helpline while the call comes from anywhere.",
+    "howItWorks": [
+      "Scammers obtain your name, partial card number or recent transaction details from data leaks or earlier phishing.",
+      "The call opens with authority and urgency: a suspicious transaction, a police case, a SIM about to be blocked.",
+      "Caller ID is spoofed so the number matches the organisation's published line.",
+      "The caller walks you through installing a screen-sharing app, reading an OTP, or transferring money to a 'safe account'.",
+      "If you resist, you are transferred to a second 'senior officer' who increases the pressure."
+    ],
+    "example": "A caller says he is from the bank's fraud department and reads out three real transactions to prove it. He warns that a fourth payment is in progress and asks the customer to install a remote-support app so he can 'secure the account'. Once screen sharing is on, he watches the customer type the PIN and completes the transfer himself.",
+    "warningSigns": [
+      "An unsolicited call asking you to confirm a PIN, OTP, CVV or password.",
+      "Pressure to stay on the line, keep the call secret, or not tell family.",
+      "Instructions to install AnyDesk, TeamViewer or another remote-access app.",
+      "Requests to move money to a 'safe account' or 'government wallet'.",
+      "Caller ID showing an official number - it can be spoofed.",
+      "Fear tactics: arrest, legal notice, account freeze, or disconnection today."
+    ],
+    "risks": [
+      "Large unauthorised transfers that are hard to reverse.",
+      "Remote access to your device and every account on it.",
+      "Disclosure of personal data used for future impersonation.",
+      "Psychological distress and repeated targeting after a successful call."
+    ],
+    "prevention": [
+      "Hang up and call the organisation back on the number printed on your card or official website.",
+      "Remember that no bank, police force or government office asks for an OTP or PIN by phone.",
+      "Never install remote-access software at a stranger's request.",
+      "Keep a rule with family: no financial decisions during an unsolicited call.",
+      "Record the caller's claimed name and report the number afterwards.",
+      "Use the bank app's in-app support instead of numbers from search results or messages."
+    ],
+    "emergency": [
+      "End the call and contact your bank using the number on the card.",
+      "Report to 1930 and cybercrime.gov.in immediately if money moved or remote access was granted.",
+      "Uninstall any remote-access app and change banking passwords from a different device.",
+      "Check for new payees, mandates and device registrations in your banking app.",
+      "File a police complaint if the caller impersonated police or government officials."
+    ],
+    "related": [
+      "phishing",
+      "deepfake",
+      "sim-swap"
+    ],
+    "glossary": [
+      "Vishing",
+      "OTP"
+    ],
+    "emergencyGuide": "financial"
+  },
+  {
+    "id": "ransomware",
+    "name": "Ransomware",
+    "category": "malware",
+    "categoryLabel": "Malware & Attacks",
+    "icon": "🔒",
+    "image": "/images/photos/ransomware-screen.webp",
+    "imageAlt": "Computer screen showing ransomware malware infection with locked files and demand message",
+    "tagline": "Malware that encrypts your files and demands payment.",
+    "overview": "Ransomware is malicious software that encrypts documents, photos, databases or entire disks and then demands payment for the decryption key. Modern variants also copy data out first and threaten to publish it, so paying does not guarantee silence. Businesses, hospitals, schools and home users are all targets, and recovery depends almost entirely on backups that were never connected to the infected machine.",
+    "howItWorks": [
+      "Initial access usually comes from a phishing attachment, a malicious download, or an unpatched internet-facing service.",
+      "The malware spreads through shared folders and mapped drives to reach as many files as possible.",
+      "Files are encrypted with a strong key, and extensions or ransom notes are dropped in every folder.",
+      "Copies of the data are exfiltrated so attackers can add a leak threat to the payment demand.",
+      "A payment page, often on the dark web, offers a decryption tool in exchange for cryptocurrency."
+    ],
+    "example": "A small clinic opens an invoice attachment that installs ransomware across its shared drive overnight. Patient records, appointment files and the billing database are encrypted, and a note demands payment within 72 hours. The clinic's only backup was a USB drive left plugged in, which was encrypted too, forcing a full rebuild from paper records.",
+    "warningSigns": [
+      "Files suddenly renamed with unusual extensions or refusing to open.",
+      "A ransom note in every folder or as desktop wallpaper.",
+      "Security tools disabled, or antivirus warnings that stop appearing.",
+      "Unusually heavy disk activity and slow performance.",
+      "Remote-access tools running that nobody installed.",
+      "Staff receiving invoices or CVs they did not request."
+    ],
+    "risks": [
+      "Permanent loss of documents and records if backups fail.",
+      "Business downtime and lost income during recovery.",
+      "Data leak of customer, patient or employee information.",
+      "Legal and regulatory consequences for exposed personal data."
+    ],
+    "prevention": [
+      "Keep at least one offline or immutable backup and test restoring from it.",
+      "Apply security updates promptly, especially for remote-access and file-sharing services.",
+      "Do not open unexpected attachments; verify with the sender through another channel.",
+      "Use standard accounts for daily work and admin rights only when needed.",
+      "Segment networks so one infected machine cannot reach every share.",
+      "Disable macros and block executable attachments at the mail gateway where possible."
+    ],
+    "emergency": [
+      "Disconnect the infected device from the network and Wi-Fi immediately, without shutting it down.",
+      "Inform your IT or security team and isolate other machines that share drives.",
+      "Report to CERT-In and file a complaint at cybercrime.gov.in rather than paying.",
+      "Restore from a clean backup after wiping the infected system.",
+      "Change passwords from a clean device and check for persistence and stolen data."
+    ],
+    "related": [
+      "trojan",
+      "phishing",
+      "viruses-worms"
+    ],
+    "glossary": [
+      "Ransomware",
+      "Malware"
+    ],
+    "emergencyGuide": "malware"
+  },
+  {
+    "id": "spyware",
+    "name": "Spyware & Stalkerware",
+    "category": "malware",
+    "categoryLabel": "Malware & Attacks",
+    "icon": "🕵️",
+    "image": "/images/photos/digital-identity-binary-face.webp",
+    "imageAlt": "Close-up of a person whose face is overlaid with streams of binary data, representing hidden surveillance and spyware watching an individual",
+    "tagline": "Hidden software that watches what you type, see and say.",
+    "overview": "Spyware silently collects information - keystrokes, screenshots, browsing history, messages, location, microphone and camera - and sends it to someone else. Stalkerware is a related category installed by a partner, relative or employer to monitor a person without consent. Because it is designed to stay invisible and often needs physical access for a few minutes to install, antivirus alone may not remove it.",
+    "howItWorks": [
+      "Installation happens through a malicious app, a fake update, a phishing link, or brief physical access to the device.",
+      "The app requests accessibility, notification or device-administrator permissions that grant deep control.",
+      "It records keystrokes, screen content, messages and location, then uploads them to a remote server.",
+      "Battery, data usage and performance may degrade slightly, but the app hides its icon and name.",
+      "Some variants also capture credentials for email, banking and social accounts."
+    ],
+    "example": "A woman receives a 'phone finder' app from her partner, who insists it is for safety. The app hides itself, forwards her messages and shares her live location. Months later she discovers it while reviewing app permissions and finds the account has been receiving screenshots of her banking app.",
+    "warningSigns": [
+      "Battery draining faster or mobile data usage rising without explanation.",
+      "An unfamiliar app with device-admin or accessibility permissions.",
+      "Someone knowing details you only discussed privately on the device.",
+      "Unusual reboots, overheating, or a device that slows when idle.",
+      "A partner or relative insisting on installing software or knowing your passwords.",
+      "Settings changed, unknown profiles, or a device that left your possession briefly."
+    ],
+    "risks": [
+      "Loss of privacy over messages, photos, location and calls.",
+      "Stalking, harassment or domestic abuse escalating with the collected data.",
+      "Stolen credentials leading to financial and identity fraud.",
+      "Reputational harm if private material is leaked or used for blackmail."
+    ],
+    "prevention": [
+      "Install apps only from official stores and read permission requests carefully.",
+      "Never grant accessibility or device-admin rights to apps that do not clearly need them.",
+      "Keep the operating system and apps updated.",
+      "Use a screen lock and never leave the device unattended with strangers.",
+      "Run a reputable mobile security scan and review installed apps monthly.",
+      "If you suspect monitoring by someone close, seek support before changing anything."
+    ],
+    "emergency": [
+      "Document what you find before removing anything, especially in a domestic-abuse situation.",
+      "Revoke accessibility and device-admin access, then uninstall the app.",
+      "Change passwords from a different, trusted device and enable two-factor authentication.",
+      "Check linked devices and sessions in email, Google or Apple accounts.",
+      "Contact a helpline or the police if you are being stalked or blackmailed."
+    ],
+    "related": [
+      "trojan",
+      "password-attacks",
+      "phishing"
+    ],
+    "glossary": [
+      "Spyware",
+      "Stalkerware"
+    ],
+    "emergencyGuide": "device"
+  },
+  {
+    "id": "trojan",
+    "name": "Trojans & RATs",
+    "category": "malware",
+    "categoryLabel": "Malware & Attacks",
+    "icon": "🐴",
+    "image": "/images/photos/malware-incident.webp",
+    "imageAlt": "Computer malware incident with security warning and malicious software detection alert",
+    "tagline": "Malware hidden inside software that looks useful.",
+    "overview": "A Trojan is malicious code packaged inside something that appears legitimate - a cracked game, a PDF viewer, a 'free' office suite, a job offer attachment. Once it runs, it can install a Remote Access Trojan (RAT) that gives an attacker live control of the device: files, screen, camera, microphone and keyboard. Unlike viruses, Trojans do not spread by themselves; they rely on you trusting and running the file.",
+    "howItWorks": [
+      "Attackers bundle the payload with pirated software, fake installers, or attachments in job and invoice emails.",
+      "The file looks harmless and may even perform its advertised function to avoid suspicion.",
+      "On first run it installs itself in a hidden location and adds itself to startup.",
+      "A RAT connects out to a command-and-control server, often using ordinary web traffic to blend in.",
+      "The attacker then explores files, steals credentials, watches the screen or uses the device in further attacks."
+    ],
+    "example": "A freelancer downloads a 'cracked' design suite from a file-sharing site. The installer works, but it also places a RAT that starts on boot. Weeks later the attacker uses the camera and saved browser sessions to blackmail clients, and the freelancer cannot find the source until a full reinstall.",
+    "warningSigns": [
+      "Software downloaded from torrent or third-party download sites.",
+      "A small installer that contacts the internet for a large 'update' immediately.",
+      "Unknown processes or startup entries you did not create.",
+      "The camera light switching on unexpectedly, or the cursor moving on its own.",
+      "Antivirus or system tools blocked from opening.",
+      "Unexpected outbound connections or unusually high network use while idle."
+    ],
+    "risks": [
+      "Full remote control of your device and data.",
+      "Credential theft across every saved account.",
+      "Use of your machine to attack others, implicating you.",
+      "Privacy breaches through camera, microphone and file access."
+    ],
+    "prevention": [
+      "Download software only from official vendor sites or app stores.",
+      "Avoid pirated or cracked software entirely - it is the most common Trojan vehicle.",
+      "Keep automatic updates on for the operating system and applications.",
+      "Use a standard (non-administrator) account for daily use.",
+      "Do not open attachments from unknown senders, especially archives and installers.",
+      "Run a reputable security suite and review startup items periodically."
+    ],
+    "emergency": [
+      "Disconnect from the network to cut the attacker's remote access.",
+      "Change passwords from a different device, starting with email and banking.",
+      "Run a full scan, or reinstall the operating system if remote control is confirmed.",
+      "Check for unfamiliar logins, rules and forwarding in your email account.",
+      "Report the incident and warn contacts who may receive messages from your accounts."
+    ],
+    "related": [
+      "ransomware",
+      "spyware",
+      "viruses-worms"
+    ],
+    "glossary": [
+      "Trojan",
+      "Remote Access Trojan"
+    ],
+    "emergencyGuide": "device"
+  },
+  {
+    "id": "social-engineering",
+    "name": "Social Engineering",
+    "category": "social",
+    "categoryLabel": "Social Engineering",
+    "icon": "🎭",
+    "image": "/images/photos/masked-hacker-credit-card.webp",
+    "imageAlt": "Hooded attacker in an anonymous mask impersonating a trusted party while holding a stolen payment card",
+    "tagline": "Manipulating people into breaking their own security.",
+    "overview": "Social engineering is the craft behind most successful attacks: instead of breaking encryption, the attacker manipulates a person into handing over access. It exploits normal human traits - helpfulness, respect for authority, fear of consequences, curiosity and the wish to avoid embarrassment. Phishing, vishing and smishing are delivery methods; social engineering is the underlying technique of building trust and pressure.",
+    "howItWorks": [
+      "Reconnaissance: the attacker collects names, roles, relationships and public details from social media and leaks.",
+      "Pretext: a believable story is built, such as an auditor, a new employee, or a delivery agent in a hurry.",
+      "Trust and authority are established with accurate details and confident, official-sounding language.",
+      "Pressure is applied through deadlines, fear of loss, or the offer of help that would be rude to refuse.",
+      "The request is small at first - a link clicked, a code read out, a door held - and escalates once compliance begins."
+    ],
+    "example": "A caller reaches a company's front desk claiming to be an IT engineer who needs to test the new printer setup. Because he knows the floor number and the manager's name from LinkedIn, the receptionist lets him connect a laptop to the network. The device is used to map internal systems for a later ransomware attack.",
+    "warningSigns": [
+      "Someone creating urgency or fear while asking for access or information.",
+      "Authority claims that cannot be verified independently.",
+      "Requests to bypass a normal process 'just this once'.",
+      "Unusual curiosity about systems, colleagues or schedules.",
+      "A request that would be embarrassing to refuse - a classic pressure lever.",
+      "Details that seem too convenient, gathered from social media or a leak."
+    ],
+    "risks": [
+      "Unauthorised access to premises, systems or accounts.",
+      "Data disclosure that enables further targeted attacks.",
+      "Financial loss through approval fraud or fake invoices.",
+      "Erosion of trust and reputation inside an organisation."
+    ],
+    "prevention": [
+      "Verify identity through an independent channel before acting on any request.",
+      "Treat urgency and secrecy as red flags rather than reasons to comply.",
+      "Follow documented procedures even when the request seems trivial.",
+      "Share less personal and organisational detail publicly on social media.",
+      "Train staff with realistic simulations, not just annual slides.",
+      "Create a no-blame reporting culture so people report mistakes quickly."
+    ],
+    "emergency": [
+      "Stop the interaction and verify the person through a known contact.",
+      "Report to security or management immediately, even if you already complied.",
+      "Change any credentials or access granted during the conversation.",
+      "Review logs for actions taken with the compromised access.",
+      "Preserve messages, numbers and recordings as evidence."
+    ],
+    "related": [
+      "phishing",
+      "vishing",
+      "insider"
+    ],
+    "glossary": [
+      "Social Engineering",
+      "Pretexting"
+    ],
+    "emergencyGuide": "phishing"
+  },
+  {
+    "id": "identity-theft",
+    "name": "Identity Theft",
+    "category": "identity",
+    "categoryLabel": "Identity Theft",
+    "icon": "🪪",
+    "image": "/images/photos/identity-docs.webp",
+    "imageAlt": "Personal identity documents and sensitive information at risk of theft or compromise",
+    "tagline": "Someone using your personal details as their own.",
+    "overview": "Identity theft happens when someone obtains your personal information - name, date of birth, Aadhaar or PAN details, address, photographs, bank statements - and uses it to impersonate you. The fraud may be financial, such as a loan in your name, or reputational, such as fake profiles used to scam others. Victims often discover it months later, when a credit check fails or a recovery agent calls.",
+    "howItWorks": [
+      "Data is gathered from leaked databases, phishing pages, discarded documents, social media and fake KYC requests.",
+      "Small pieces are combined into a usable profile: name, date of birth, address and an identifier such as PAN or Aadhaar.",
+      "The attacker opens accounts, applies for loans, rents property or buys SIM cards in your name.",
+      "Verification is defeated with forged documents or by intercepting OTPs sent to a SIM they control.",
+      "The fraud surfaces later through credit records, collection calls or rejected applications."
+    ],
+    "example": "A man shares a photo of his new Aadhaar card on social media to celebrate a address change, with the number partly visible. Months later he receives loan recovery calls for a ₹80,000 loan he never took, opened with a forged e-KYC using his details and a SIM issued in his name.",
+    "warningSigns": [
+      "Loan or credit card offers, approvals or rejections you never applied for.",
+      "Calls from collection agents about debts that are not yours.",
+      "OTP messages for services you did not request.",
+      "A CIBIL or credit report showing accounts you do not recognise.",
+      "Missing bills, bank statements or government correspondence.",
+      "Being told your Aadhaar or PAN is already linked to another number or account."
+    ],
+    "risks": [
+      "Financial liability for loans and purchases made in your name.",
+      "A damaged credit score that takes years to repair.",
+      "Criminal activity traced to your identity.",
+      "Loss of access to government services and benefits."
+    ],
+    "prevention": [
+      "Never share full Aadhaar, PAN or bank details on social media or with unverified callers.",
+      "Mask identifiers on photocopies and write the purpose and date on them.",
+      "Check your credit report at least twice a year for unknown accounts.",
+      "Use strong, unique passwords and two-factor authentication on financial accounts.",
+      "Shred documents containing personal or financial information.",
+      "Respond to KYC requests only through official apps or branches."
+    ],
+    "emergency": [
+      "File a complaint at cybercrime.gov.in and call 1930 if money is involved.",
+      "Inform the police and obtain a copy of the complaint for banks and lenders.",
+      "Notify your bank and freeze or flag affected accounts.",
+      "Contact credit bureaus to place a fraud alert and dispute unknown accounts.",
+      "Report a lost or misused SIM to the operator and get it blocked."
+    ],
+    "related": [
+      "sim-swap",
+      "phishing",
+      "upi-fraud"
+    ],
+    "glossary": [
+      "Identity Theft",
+      "KYC"
+    ],
+    "emergencyGuide": "identity"
+  },
+  {
+    "id": "password-attacks",
+    "name": "Password Attacks",
+    "category": "financial",
+    "categoryLabel": "Financial Fraud",
+    "icon": "🔑",
+    "image": "/images/photos/password-crack.webp",
+    "imageAlt": "Unauthorized login attempt with password cracking or credential theft on a computer screen",
+    "tagline": "Guessing, cracking or reusing your way into accounts.",
+    "overview": "Password attacks aim to obtain working credentials for your accounts. They range from automated guessing against a login page, to cracking hashes stolen in a breach, to simply trying the same password you used on a site that was already leaked. Because people reuse passwords, one breach often unlocks email, banking and shopping accounts that share the same secret.",
+    "howItWorks": [
+      "Attackers collect email-password pairs from past breaches and try them on other services, a technique called credential stuffing.",
+      "Brute-force and dictionary tools try common passwords and known patterns at high speed.",
+      "Where hashes leak, offline cracking with GPUs tests billions of combinations per second.",
+      "Phishing pages, keyloggers or infostealer malware capture passwords as they are typed.",
+      "Once inside, attackers change recovery details, add forwarding rules and lock the real owner out."
+    ],
+    "example": "A gaming forum is breached and its password hashes leak. A user had used the same password for the forum and for online banking. Attackers test the pair against banking logins, succeed, and transfer money before the user notices a login alert on a device they do not own.",
+    "warningSigns": [
+      "Login alerts from devices or locations you do not recognise.",
+      "A password that no longer works on one service.",
+      "Password reset emails you did not request.",
+      "Friends receiving strange messages from your account.",
+      "Unfamiliar sessions or devices listed in account settings.",
+      "Unusual account activity such as new payees or forwarding rules."
+    ],
+    "risks": [
+      "Account takeover across multiple services through reuse.",
+      "Financial loss from banking and wallet access.",
+      "Data theft and impersonation of your contacts.",
+      "Permanent loss of accounts if recovery details are changed."
+    ],
+    "prevention": [
+      "Use a unique password for every account, managed with a password manager.",
+      "Choose long passphrases of four or more random words over short complex strings.",
+      "Turn on two-factor authentication, preferring an authenticator app or security key.",
+      "Check haveibeenpwned.com and change passwords for any breached service.",
+      "Never reuse your email password anywhere else.",
+      "Keep recovery email and phone numbers current."
+    ],
+    "emergency": [
+      "Reset the password immediately from a trusted device and sign out all sessions.",
+      "Re-secure the recovery email first if the attacker may control it.",
+      "Change the password on every account that shared the same one.",
+      "Enable two-factor authentication and review forwarding rules and app passwords.",
+      "Alert your bank if financial accounts were affected and report at cybercrime.gov.in."
+    ],
+    "related": [
+      "phishing",
+      "spyware",
+      "identity-theft"
+    ],
+    "glossary": [
+      "Credential Stuffing",
+      "Two-Factor Authentication"
+    ],
+    "emergencyGuide": "hacked"
+  },
+  {
+    "id": "fake-sites",
+    "name": "Fake Websites & Apps",
+    "category": "financial",
+    "categoryLabel": "Financial Fraud",
+    "icon": "🌐",
+    "image": "/images/photos/online-shopping-credit-card.webp",
+    "imageAlt": "Shopper holding a bank card while entering payment details on an online store in a laptop browser, the situation exploited by fake shopping sites",
+    "tagline": "Lookalike sites and apps built to capture your details.",
+    "overview": "Fake websites and apps imitate real brands closely enough to fool a hurried visitor. They appear in search ads, social media promotions, SMS links and app-store listings, and are used to harvest logins, card details and OTPs, or to sell goods that never arrive. The giveaway is usually in the address bar or the developer name, not in the design, which can be a perfect copy.",
+    "howItWorks": [
+      "A domain is registered that resembles the brand, sometimes using lookalike characters or a different extension.",
+      "The page copies the real site's layout, logo and checkout flow, often pixel for pixel.",
+      "Traffic is driven by search ads, social posts, SMS links and fake customer-care numbers.",
+      "Entered credentials, card numbers and OTPs are captured and used within minutes.",
+      "Some sites deliver a working product once to build reviews, then stop shipping, or install malware via an APK."
+    ],
+    "example": "A shopper searches for a discounted phone and clicks the top sponsored result. The site looks exactly like a major retailer and offers a 60% discount for paying by UPI. The payment goes through to a personal handle, the order confirmation is fake, and the site disappears within a week.",
+    "warningSigns": [
+      "A domain that is misspelled or uses an unusual extension.",
+      "Prices far below market rate with stock 'only for today'.",
+      "Payment requested by UPI transfer or gift card instead of a normal gateway.",
+      "No physical address, GST number or working customer-care line.",
+      "An app with few reviews, a generic developer name, or permissions unrelated to its purpose.",
+      "Grammar errors in policy pages, or pages that never load properly."
+    ],
+    "risks": [
+      "Card and banking details stolen and misused.",
+      "Payment sent with no possibility of chargeback.",
+      "Malware installed through a sideloaded app.",
+      "Account takeover when credentials are reused elsewhere."
+    ],
+    "prevention": [
+      "Type the official address or use a saved bookmark instead of clicking ads.",
+      "Check the domain character by character, including the extension.",
+      "Prefer payment methods with buyer protection over direct UPI transfers.",
+      "Verify seller details, reviews and contact information before paying.",
+      "Install shopping apps only from official stores and check the developer name.",
+      "Use a virtual or limited card for unfamiliar merchants."
+    ],
+    "emergency": [
+      "Block the card or report the UPI transaction in your bank app immediately.",
+      "Call 1930 and file a complaint at cybercrime.gov.in with screenshots and transaction IDs.",
+      "Change any password entered on the fake site, especially if reused.",
+      "Report the URL to Google Safe Browsing and the impersonated brand.",
+      "Monitor your statements for further unauthorised transactions."
+    ],
+    "related": [
+      "phishing",
+      "upi-fraud",
+      "qr-phishing"
+    ],
+    "glossary": [
+      "Typosquatting",
+      "Phishing"
+    ],
+    "emergencyGuide": "financial"
+  },
+  {
+    "id": "upi-fraud",
+    "name": "UPI & Payment Fraud",
+    "category": "financial",
+    "categoryLabel": "Financial Fraud",
+    "icon": "💸",
+    "image": "/images/photos/upi-fraud.webp",
+    "imageAlt": "Person holding a smartphone for mobile payment, representing UPI payment fraud and fake collect request scams in India",
+    "tagline": "Payment requests, fake refunds and 'collect' tricks.",
+    "overview": "UPI fraud abuses the speed and simplicity of instant payments. Common patterns include a request money notification disguised as a refund, a fake buyer who sends a 'collect request' instead of paying, QR codes that debit instead of credit, and fake customer-care numbers that talk victims through approving a payment. Because UPI transfers settle instantly, recovery depends on reporting within minutes.",
+    "howItWorks": [
+      "Scammers find targets through marketplace listings, social media sales, fake job offers or leaked data.",
+      "A convincing story is set up: a refund, an advance payment, a delivery fee or a KYC update.",
+      "The victim is asked to approve a collect request, scan a QR code, or enter a UPI PIN to 'receive' money.",
+      "Approving the request debits the account instantly - a PIN is never needed to receive money.",
+      "In some cases a remote-access app is used to read the OTP or complete the transfer directly."
+    ],
+    "example": "A seller lists a sofa online. The 'buyer' says he will pay immediately but needs the seller to accept a request. The seller approves the collect request for ₹5,000 believing it is an incoming payment, and the amount is debited instead. The buyer blocks the number and deletes the listing.",
+    "warningSigns": [
+      "Anyone asking you to enter a PIN or approve a request in order to receive money.",
+      "A QR code sent by a 'buyer' or 'customer care' agent.",
+      "Calls claiming a refund, cashback or prize that require a payment first.",
+      "Requests to install a screen-sharing app to 'complete verification'.",
+      "Customer-care numbers found through search ads or social posts rather than the official app.",
+      "Pressure to act before a payment window closes."
+    ],
+    "risks": [
+      "Immediate, often irreversible loss of money.",
+      "Repeated debits if a mandate or autopay is set up.",
+      "Compromise of linked bank accounts and card data.",
+      "Exposure of personal details used in later fraud."
+    ],
+    "prevention": [
+      "Remember that receiving money never requires a PIN, QR scan or collect approval.",
+      "Verify a buyer or seller only through the platform's official chat and payment flow.",
+      "Use official customer-care numbers from the bank's app or website.",
+      "Set UPI transaction limits and enable alerts for every debit.",
+      "Never install remote-access apps for banking support.",
+      "Check the payee name shown before approving any payment."
+    ],
+    "emergency": [
+      "Report the transaction in your UPI app and call your bank's fraud line immediately.",
+      "Call 1930 and file at cybercrime.gov.in within the golden hour for the best recovery chance.",
+      "Disable UPI or freeze the account if further debits are attempted.",
+      "Collect transaction IDs, screenshots and the fraudster's UPI handle as evidence.",
+      "Revoke any autopay mandates and change your UPI PIN."
+    ],
+    "related": [
+      "fake-sites",
+      "qr-phishing",
+      "smishing"
+    ],
+    "glossary": [
+      "UPI",
+      "Collect Request"
+    ],
+    "emergencyGuide": "financial"
+  },
+  {
+    "id": "qr-phishing",
+    "name": "QR Code Phishing (Quishing)",
+    "category": "emerging",
+    "categoryLabel": "Emerging Threats",
+    "icon": "🔳",
+    "image": "/images/photos/qr-phishing.webp",
+    "imageAlt": "Person scanning a QR code with a smartphone camera, representing QR code phishing (quishing) attacks",
+    "tagline": "Scanned codes that lead to fake payments and logins.",
+    "overview": "QR code phishing hides a malicious link inside a square of black and white pixels that people scan without reading. Attackers stick fake codes over legitimate ones on parking meters, restaurant tables, donation boxes and shop counters, or send codes in emails and messages that lead to fake payment pages or credential-harvesting logins. Since the destination is invisible until the scan completes, the usual 'check the link before you click' habit fails.",
+    "howItWorks": [
+      "A QR code is generated that points to a phishing page, a UPI collect request or a malicious app download.",
+      "The code is printed on a sticker and placed over a genuine code, or sent in a message or invoice.",
+      "The victim scans it with a phone camera or banking app and is taken to a lookalike page.",
+      "The page requests a login, card details, or approval of a payment request.",
+      "Because the interaction happens on a phone, warning signs such as odd URLs are harder to notice."
+    ],
+    "example": "A driver parks and scans the QR code on the payment board to pay for an hour. The page is a convincing municipal payment portal, but the code actually opens a UPI collect request for ₹2,000. Approving it with a PIN debits the amount instead of paying the parking fee.",
+    "warningSigns": [
+      "A sticker that looks pasted over an original code, or a code that is crooked or peeling.",
+      "A scan that opens a payment request rather than a payment page.",
+      "A login page reached by QR that asks for details the service should already have.",
+      "Codes received in emails or messages asking you to 'verify' an account or parcel.",
+      "Shortened or unfamiliar domains after scanning.",
+      "Requests for a PIN when you expected to pay a fixed amount."
+    ],
+    "risks": [
+      "Unauthorised payments approved by the victim.",
+      "Credential theft through fake login pages.",
+      "Malware installation from a linked APK download.",
+      "Financial loss at public locations where codes are commonly trusted."
+    ],
+    "prevention": [
+      "Inspect physical codes for stickers or tampering before scanning.",
+      "Check the payee name and amount on the payment screen before approving.",
+      "Use the official app to pay rather than scanning a code sent by a stranger.",
+      "Never scan a QR code that arrives in an unsolicited email or message.",
+      "Prefer entering the merchant's UPI ID manually in known locations.",
+      "Keep the phone's browser and payment apps updated with safe-browsing enabled."
+    ],
+    "emergency": [
+      "Report the transaction to your bank and UPI app immediately.",
+      "Call 1930 and file at cybercrime.gov.in with the code's location or screenshot.",
+      "Change any credentials entered on the page reached by the code.",
+      "Inform the venue or authority so the fake sticker can be removed.",
+      "Monitor the account for further debits and review autopay mandates."
+    ],
+    "related": [
+      "upi-fraud",
+      "fake-sites",
+      "smishing"
+    ],
+    "glossary": [
+      "QR Code",
+      "Quishing"
+    ],
+    "emergencyGuide": "financial"
+  },
+  {
+    "id": "sim-swap",
+    "name": "SIM Swapping",
+    "category": "emerging",
+    "categoryLabel": "Emerging Threats",
+    "icon": "📲",
+    "image": "/images/photos/sim-swap.webp",
+    "imageAlt": "Nano SIM card and tray for a smartphone, representing SIM swapping and mobile number takeover fraud",
+    "tagline": "Your phone number stolen, and every OTP with it.",
+    "overview": "SIM swapping is a takeover attack in which a fraudster convinces a mobile operator to transfer your number to a new SIM they control. Because most banking, email and social accounts still use SMS one-time codes for recovery, the attacker then receives every OTP sent to you. It often begins with personal details gathered from a data leak, phishing or social media, combined with a forged identity document.",
+    "howItWorks": [
+      "Personal details - name, date of birth, address, Aadhaar or the last four digits of the SIM - are collected.",
+      "The attacker poses as you at a retailer or calls the operator claiming a lost SIM or a damaged phone.",
+      "Identity checks are satisfied with forged documents or by answering questions from leaked data.",
+      "The number is activated on a new SIM, and your phone loses network coverage.",
+      "OTPs for banking, email and social accounts now arrive on the attacker's device, enabling resets and transfers."
+    ],
+    "example": "A man's phone shows 'No SIM' for two hours. By the time he visits a store, a new SIM has been issued in his name, his email password reset with an OTP, and a ₹1.5 lakh transfer made from his net banking. The attacker had his Aadhaar number from a leaked database and answered the operator's verification questions.",
+    "warningSigns": [
+      "Sudden loss of network coverage that does not recover after restarting.",
+      "Your number showing as inactive when others call it.",
+      "An SMS from the operator confirming a SIM change or replacement you did not request.",
+      "Unexpected OTPs for services you were not using, or none arriving at all.",
+      "Notifications about password changes you did not make.",
+      "Being asked by a 'telecom agent' to confirm details for a 5G upgrade or KYC."
+    ],
+    "risks": [
+      "Complete takeover of banking and email through OTP interception.",
+      "Identity fraud using your number for verification elsewhere.",
+      "Loss of access to social accounts used for recovery.",
+      "Harassment of your contacts from the hijacked number."
+    ],
+    "prevention": [
+      "Set a SIM PIN and an operator-level number lock or port-out freeze if available.",
+      "Never share Aadhaar, SIM or account details with unsolicited callers claiming 5G or KYC offers.",
+      "Prefer authenticator apps or security keys over SMS for two-factor authentication.",
+      "Ask your operator what identity checks are required for a SIM replacement.",
+      "Monitor your phone for unexpected loss of signal and act within minutes.",
+      "Keep a separate recovery email that is not tied to your phone number."
+    ],
+    "emergency": [
+      "Call your operator immediately to block the SIM and restore your number.",
+      "Change passwords for email and banking from another device, starting with email.",
+      "Contact your bank to freeze net banking and flag the account.",
+      "Call 1930 and file a complaint at cybercrime.gov.in.",
+      "Inform your operator in writing and request a SIM-swap fraud report for the police."
+    ],
+    "related": [
+      "identity-theft",
+      "vishing",
+      "phishing"
+    ],
+    "glossary": [
+      "SIM Swapping",
+      "OTP"
+    ],
+    "emergencyGuide": "hacked"
+  },
+  {
+    "id": "deepfake",
+    "name": "Deepfake & AI Scams",
+    "category": "emerging",
+    "categoryLabel": "Emerging Threats",
+    "icon": "🎥",
+    "image": "/images/photos/deepfake.webp",
+    "imageAlt": "AI-generated deepfake video or audio impersonation on a digital screen",
+    "tagline": "Synthetic voices and faces used to impersonate people you trust.",
+    "overview": "Deepfakes are AI-generated audio, images or video that convincingly show a real person saying or doing something they never did. Scammers use short voice samples from social media to clone a relative's voice for a distress call, or use a still photo to appear on a video call as a boss or official. The technology is cheap and fast, and a few seconds of public audio is often enough.",
+    "howItWorks": [
+      "Public voice notes, videos, photos and posts provide training material for the model.",
+      "A voice or face model is created, or a real-time face filter is used during a call.",
+      "A high-pressure story is prepared: an accident, an urgent payment, a confidential transfer.",
+      "The synthetic call or video is delivered through WhatsApp, a video meeting or a voicemail.",
+      "Payment is requested by UPI, gift card or crypto, and the attacker disappears before verification."
+    ],
+    "example": "A woman receives a WhatsApp voice note in her son's voice saying he has been detained and needs ₹50,000 urgently, with a police officer's number to call. The voice is a clone made from videos on his public Instagram. She transfers the money before reaching her son, who was in class the whole time.",
+    "warningSigns": [
+      "An urgent financial request that must be handled secretly or immediately.",
+      "Audio with unnatural pacing, flat emotion, or missing background noise.",
+      "Video where lip movement and audio are slightly out of sync, or the face looks too smooth.",
+      "Requests to switch to a text-only channel after a call.",
+      "A 'family emergency' that cannot be verified through another person.",
+      "Payment requested by UPI, gift card or crypto rather than a normal channel."
+    ],
+    "risks": [
+      "Large financial losses from impersonation scams.",
+      "Reputational damage from fabricated videos of you.",
+      "Blackmail using synthetic explicit content.",
+      "Erosion of trust in genuine calls and videos."
+    ],
+    "prevention": [
+      "Verify any urgent request by calling the person back on a known number.",
+      "Agree on a family code word for emergency requests.",
+      "Limit public voice notes and videos if you are frequently impersonated.",
+      "Ask a question only the real person could answer.",
+      "Be sceptical of video calls where the face rarely blinks or moves naturally.",
+      "Treat secrecy requests as a red flag."
+    ],
+    "emergency": [
+      "Stop all payments and contact the real person through a separate channel.",
+      "Report to 1930 and cybercrime.gov.in immediately if money was sent.",
+      "Preserve the recording, number and screenshots for the complaint.",
+      "Report the fake profile or number to the platform.",
+      "Seek legal advice and a police complaint for synthetic abusive content."
+    ],
+    "related": [
+      "vishing",
+      "social-engineering",
+      "identity-theft"
+    ],
+    "glossary": [
+      "Deepfake",
+      "Social Engineering"
+    ],
+    "emergencyGuide": "financial"
+  },
+  {
+    "id": "insider",
+    "name": "Insider Threats",
+    "category": "emerging",
+    "categoryLabel": "Emerging Threats",
+    "icon": "🧑‍💼",
+    "image": "/images/photos/insider.webp",
+    "imageAlt": "Person working at a desk in an office with a computer, representing insider threats and misuse of authorized access",
+    "tagline": "Danger from people who already have access.",
+    "overview": "An insider threat comes from someone with legitimate access - an employee, contractor, intern or business partner - who misuses it, whether deliberately for money or revenge, or accidentally through carelessness. Insiders bypass perimeter defences because they are already inside, and their activity often looks like normal work until data appears somewhere it should not.",
+    "howItWorks": [
+      "The person has legitimate credentials and knows which systems hold valuable data.",
+      "Access is expanded gradually, or existing permissions are abused beyond their intended purpose.",
+      "Data is copied to personal email, cloud drives, USB devices or photographed from a screen.",
+      "Logs may be cleared, or activity hidden inside normal working hours and familiar tools.",
+      "The data is sold, used to join a competitor, or leaked after a dispute or resignation."
+    ],
+    "example": "A sales employee resigns and, during the notice period, downloads the entire customer list and pricing history to a personal drive using a shared account that nobody monitors. Three months later the list is used to poach clients at a new employer, and the logs show only ordinary file access from a company laptop.",
+    "warningSigns": [
+      "Accessing files far outside a person's role or working hours.",
+      "Large downloads or transfers shortly before or after resignation.",
+      "Refusal to take leave, or work that only one person can perform.",
+      "Disabling security tools or sharing credentials with colleagues.",
+      "Unexplained interest in systems unrelated to the job.",
+      "Sudden lifestyle changes combined with financial pressure."
+    ],
+    "risks": [
+      "Loss of customer data, source code or trade secrets.",
+      "Regulatory penalties for data breaches.",
+      "Financial fraud through abused payment or admin access.",
+      "Reputational damage and loss of client trust."
+    ],
+    "prevention": [
+      "Apply least privilege and review access regularly, revoking it on role change or exit.",
+      "Log and alert on bulk downloads and off-hours access to sensitive data.",
+      "Separate duties so no single person can both approve and execute a payment.",
+      "Use data-loss-prevention controls on email and removable media.",
+      "Conduct exit interviews with immediate access removal.",
+      "Build a reporting channel so concerns can be raised safely."
+    ],
+    "emergency": [
+      "Revoke access immediately and preserve logs before anything is deleted.",
+      "Identify what was taken and whether personal data is involved.",
+      "Notify legal, HR and, if required, CERT-In and affected individuals.",
+      "Change shared credentials and rotate keys the person could access.",
+      "Consider a police complaint with documentary evidence."
+    ],
+    "related": [
+      "social-engineering",
+      "spyware",
+      "ransomware"
+    ],
+    "glossary": [
+      "Insider Threat",
+      "Least Privilege"
+    ],
+    "emergencyGuide": "hacked"
+  },
+  {
+    "id": "ddos",
+    "name": "DDoS Attacks",
+    "category": "malware",
+    "categoryLabel": "Malware & Attacks",
+    "icon": "🌊",
+    "image": "/images/photos/ddos-network.webp",
+    "imageAlt": "Network infrastructure experiencing heavy DDoS traffic attack on server systems",
+    "tagline": "Flooding a service until real users cannot reach it.",
+    "overview": "A distributed denial-of-service attack floods a website or online service with traffic from thousands of compromised devices so that legitimate users cannot connect. The devices form a botnet, often made of poorly secured routers, cameras and computers infected without their owners' knowledge. The goal may be extortion, sabotage, competitive harm or simply to hide another attack behind the noise.",
+    "howItWorks": [
+      "Attackers build a botnet by infecting insecure devices with malware.",
+      "A command is issued to all bots to send requests to one target at the same time.",
+      "Traffic is amplified using reflection techniques that multiply the volume several times over.",
+      "The target's bandwidth, connections or CPU are exhausted, and genuine users time out.",
+      "The attack may be repeated in waves, or paired with a ransom demand to stop it."
+    ],
+    "example": "A college fest website goes offline on the morning ticket sales open. The host sees millions of requests from thousands of IP addresses, far beyond capacity, and the site stays down for six hours. Ticket revenue is lost and students assume the site was hacked, though no data was taken.",
+    "warningSigns": [
+      "A sudden, unexplained drop in site availability or extreme slowness.",
+      "Traffic spikes from many countries or unusual device types.",
+      "Server logs filled with identical requests or malformed packets.",
+      "Bandwidth usage far above the normal baseline.",
+      "Hosting provider alerts about abnormal traffic or null-routed IPs.",
+      "A ransom message claiming responsibility."
+    ],
+    "risks": [
+      "Loss of revenue and customers during downtime.",
+      "Damage to reputation and search ranking.",
+      "Hosting overage charges from attack traffic.",
+      "Use as cover for data theft or another intrusion."
+    ],
+    "prevention": [
+      "Use a provider with DDoS mitigation and a content delivery network.",
+      "Rate-limit and validate requests at the edge and on the application.",
+      "Keep firmware and software updated, especially on internet-facing devices.",
+      "Change default passwords on routers, cameras and IoT devices.",
+      "Monitor traffic baselines so anomalies are noticed quickly.",
+      "Have a response plan with your hosting provider's escalation contacts."
+    ],
+    "emergency": [
+      "Contact your hosting or CDN provider to enable attack mitigation.",
+      "Temporarily block the offending traffic patterns or countries at the edge.",
+      "Inform customers with a status page rather than staying silent.",
+      "Preserve logs for the police complaint and insurance claim.",
+      "Report at cybercrime.gov.in and to CERT-In if the attack is sustained."
+    ],
+    "related": [
+      "viruses-worms",
+      "ransomware",
+      "mitm"
+    ],
+    "glossary": [
+      "DDoS",
+      "Botnet"
+    ],
+    "emergencyGuide": "device"
+  },
+  {
+    "id": "mitm",
+    "name": "Man-in-the-Middle (MITM)",
+    "category": "malware",
+    "categoryLabel": "Malware & Attacks",
+    "icon": "🕳️",
+    "image": "/images/photos/mitm.webp",
+    "imageAlt": "Person working on a laptop with coffee at a cafe, representing insecure public Wi-Fi and man-in-the-middle interception risks",
+    "tagline": "Someone quietly sitting between you and the service you trust.",
+    "overview": "In a man-in-the-middle attack, the attacker secretly relays or alters communication between two parties who believe they are talking directly. It happens on unsecured public Wi-Fi, through malicious proxies and browser extensions, through ARP or DNS spoofing on a local network, and through fake Wi-Fi hotspots that mimic legitimate ones. Anything not protected by end-to-end encryption can be read or modified.",
+    "howItWorks": [
+      "The attacker positions themselves on the path: a rogue hotspot, a compromised router, or a malicious proxy.",
+      "Victims connect and are served a fake login page or routed through an intercepting device.",
+      "Traffic is read, and on unencrypted connections credentials and session cookies are captured.",
+      "Data may be altered in transit, such as changing a bank account number in an invoice.",
+      "Interception continues silently until the session ends or the device is removed."
+    ],
+    "example": "A traveller connects to a free airport Wi-Fi called 'Airport_Free_WiFi'. A captive-portal page asks them to sign in with their email password to get access. The page is hosted by the attacker, who records the credentials and reuses the same password against the traveller's email account.",
+    "warningSigns": [
+      "A browser warning about an invalid or mismatched certificate.",
+      "Being logged out of services repeatedly, or sessions expiring oddly.",
+      "A captive portal asking for email, bank or social media passwords.",
+      "Network names that look official but differ by a character or two.",
+      "Downloads or pages that behave differently from usual.",
+      "Unexpected redirects to unfamiliar domains."
+    ],
+    "risks": [
+      "Theft of credentials and session cookies.",
+      "Altered transactions, invoices and messages.",
+      "Installation of malware through injected downloads.",
+      "Exposure of sensitive work or personal communication."
+    ],
+    "prevention": [
+      "Avoid sensitive logins on public Wi-Fi; use mobile data or a trusted VPN.",
+      "Check for HTTPS and a valid certificate before entering credentials.",
+      "Never enter account passwords into a captive portal.",
+      "Turn off auto-connect to open Wi-Fi networks.",
+      "Forget public networks after use and disable file sharing on them.",
+      "Keep browsers and extensions updated, and remove ones you do not use."
+    ],
+    "emergency": [
+      "Disconnect from the network immediately.",
+      "Change passwords for any account used on that connection, starting with email.",
+      "Sign out all sessions and check for unfamiliar devices.",
+      "Contact your bank if financial details were entered.",
+      "Report the rogue network or hotspot to the venue and at cybercrime.gov.in."
+    ],
+    "related": [
+      "fake-sites",
+      "phishing",
+      "ddos"
+    ],
+    "glossary": [
+      "Man-in-the-Middle",
+      "HTTPS"
+    ],
+    "emergencyGuide": "hacked"
+  },
+  {
+    "id": "viruses-worms",
+    "name": "Viruses & Worms",
+    "category": "malware",
+    "categoryLabel": "Malware & Attacks",
+    "icon": "🦠",
+    "image": "/images/photos/malware-upload-hacker-mask.webp",
+    "imageAlt": "Hacker in a glowing mask behind a malware warning screen uploading a virus to an infected computer",
+    "tagline": "Self-spreading code that copies itself from file to file and device to device.",
+    "overview": "Viruses and worms are classic self-replicating malware. A virus attaches itself to a legitimate file or program and spreads when that file is run or shared, while a worm spreads on its own across networks by exploiting unpatched services or weak credentials, without any user action. Both can carry additional payloads such as backdoors, spyware or ransomware, and worms can take down a network in minutes.",
+    "howItWorks": [
+      "Malware is introduced through an infected download, USB drive, email attachment or an exposed network service.",
+      "A virus inserts its code into executable files and runs whenever the host program starts.",
+      "A worm scans for other vulnerable machines and copies itself to them automatically.",
+      "Persistence is established through startup entries, scheduled tasks or services.",
+      "The payload activates: data theft, file encryption, or flooding the network with traffic."
+    ],
+    "example": "An employee plugs a found USB drive into an office PC to check its contents. A worm on the drive exploits an unpatched SMB service and spreads to every machine on the floor within fifteen minutes, encrypting shared folders as it goes and forcing a weekend of recovery work.",
+    "warningSigns": [
+      "Files changing size, appearing twice with odd extensions, or refusing to open.",
+      "Sudden network slowdown and heavy traffic between internal machines.",
+      "Programs launching on their own or windows flashing briefly.",
+      "New autorun entries, scheduled tasks or services you did not create.",
+      "Antivirus disabled or unable to update.",
+      "USB drives and shared folders behaving unusually."
+    ],
+    "risks": [
+      "Widespread data loss and system corruption.",
+      "Network-wide outages in minutes.",
+      "Backdoors that let attackers return later.",
+      "Theft of credentials and files by the payload."
+    ],
+    "prevention": [
+      "Apply operating system and software updates promptly.",
+      "Disable autorun for removable media and scan USB drives before opening.",
+      "Use a reputable antivirus and keep it updated.",
+      "Do not download software from unofficial sources.",
+      "Segment networks and disable unused file-sharing services.",
+      "Back up important data offline and test restores."
+    ],
+    "emergency": [
+      "Disconnect infected machines from the network and from each other.",
+      "Scan all removable media and shared drives.",
+      "Run a full scan and remove the malware, or reinstall if the system is deeply compromised.",
+      "Restore data from a clean backup and verify integrity.",
+      "Patch the vulnerability that allowed the spread before reconnecting."
+    ],
+    "related": [
+      "ransomware",
+      "trojan",
+      "ddos"
+    ],
+    "glossary": [
+      "Virus",
+      "Worm"
+    ],
+    "emergencyGuide": "malware"
+  }
+]

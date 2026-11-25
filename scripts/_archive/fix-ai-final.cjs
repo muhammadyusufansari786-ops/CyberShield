@@ -1,0 +1,310 @@
+"use strict";
+const fs = require("fs");
+const path = require("path");
+const root = process.cwd();
+const FILE = path.join(root, "server", "routes", "ai.js");
+
+const NL = String.fromCharCode(10);
+const BS = String.fromCharCode(92);
+const DQ = String.fromCharCode(34);
+const BT = String.fromCharCode(96);
+
+function escJsStr(raw) {
+  return DQ + raw.replace(/[\\"\\x00-\\x1f]/g, (c) => {
+    if (c === DQ) return "\\\"";
+    if (c === BS) return "\\\\";
+    const code = c.charCodeAt(0);
+    if (code < 0x10) return "\\x0" + code.toString(16);
+    return "\\x" + code.toString(16);
+  }) + DQ;
+}
+
+// Read the current broken file so we can preserve the bulk of the source
+// (scam, learning, news) exactly as the project intends, and only rebuild
+// the corrupted header + comment separators + regex escapes.
+const broken = fs.readFileSync(FILE, "utf8");
+
+// ---- Rebuild a clean header block (the broken file's header is corrupt). ----
+const header = [
+  "/**",
+  " * CyberShield - AI API routes",
+  " *",
+  " * POST /api/ai/scam-analyze    { text?, imageBase64?, imageMime? }",
+  " * POST /api/ai/tutor           { message, difficulty, history? }",
+  " * POST /api/ai/learning-path   { score, total, correct, strongAreas, weakAreas, categoryStats }",
+  " * POST /api/ai/news-explain    { article, question? }",
+  " *",
+  " * All routes: strict input validation, per-route body limits, friendly errors",
+  " * (raw Gemini/backend errors never reach the client).",
+  " */",
+  "",
+  "import express, { Router } from 'express';",
+  "import rateLimit, { ipKeyGenerator } from 'express-rate-limit';",
+  "import {",
+  "  analyzeScam,",
+  "  tutorAnswer,",
+  "  learningPath,",
+  "  explainNews,",
+  "  askAboutNews,",
+  "  AiServiceError,",
+  "} from '../services/gemini.js';",
+  "import { analyzeUrl } from '../services/url-analyzer.js';",
+  "import {",
+  "  buildFallbackReply,",
+  "  buildLearnerPrompt,",
+  "  detectUnsafeRequest,",
+  "  loadLearnerContext,",
+  "  normalizeTutorReply,",
+  "  serializeConversation,",
+  "  MAX_MESSAGE_LENGTH,",
+  "  MAX_STORED_MESSAGES,",
+  "  LEVELS,",
+  "} from '../services/tutor.js';",
+  "import { TutorConversation } from '../models/index.js';",
+  "import { requireAuth, sameOriginGuard } from '../middleware/auth.js';",
+  "import { TOPIC_LABELS, DIFFICULTIES } from '../services/adaptive.js';",
+  "",
+  "const router = Router();",
+  "",
+  "/**",
+  " * Trim and clamp a string, or return null when empty/invalid.",
+  " */",
+  "function str(v, max) {",
+  "  if (typeof v !== 'string') return null;",
+  "  const s = v.replace(/[\\u0000-\\u0008\\u000B\\u000C\\u000E-\\u001F]/g, '').trim();",
+  "  return s ? s.slice(0, max) : null;",
+  "}",
+  "",
+  "function strArray(v, maxItems, maxLen) {",
+  "  if (!Array.isArray(v)) return [];",
+  "  return v",
+  "    .filter((item) => typeof item === 'string' && item.trim())",
+  "    .slice(0, maxItems)",
+  "    .map((item) => item.trim().slice(0, maxLen));",
+  "}",
+  "",
+  "const ALLOWED_IMAGE_MIMES = new Set(['image/png', 'image/jpeg', 'image/jpg', 'image/webp']);",
+  "const MAX_IMAGE_BASE64 = 14_000_000; // ~10.5 MB binary",
+  "",
+  "function validImage(mime, base64) {",
+  "  if (typeof mime !== 'string' || !ALLOWED_IMAGE_MIMES.has(mime.toLowerCase())) return false;",
+  "  if (typeof base64 !== 'string' || !base64 || base64.length > MAX_IMAGE_BASE64) return false;",
+  "  return /^[A-Za-z0-9+/=\\r\\n]+$/.test(base64.slice(0, 1024)) && /^[A-Za-z0-9+/=\\s]*$/.test(base64);",
+  "}",
+  "",
+  "/** Strip a data-URL prefix if a client sends one. */",
+  "function stripDataUrl(mime, base64) {",
+  "  if (typeof base64 !== 'string') return { mime, base64 };",
+  "  const match = base64.match(/^data:([^;,]+);base64,(.*)$/s);",
+  "  if (match) return { mime: match[1], base64: match[2] };",
+  "  return { mime, base64 };",
+  "}",
+  "",
+  "function sendError(res, err) {",
+  "  if (err instanceof AiServiceError) {",
+  "    return res.status(err.status).json({ error: err.message });",
+  "  }",
+  "  console.error('[ai-route] unexpected error:', err?.message || err);",
+  "  return res.status(503).json({ error: 'AI service is temporarily unavailable. Please try again.' });",
+  "}",
+  "",
+].join(NL);
+
+// Rebuild the tutor section cleanly (signed-in, persisted, safety guard).
+const tutor = [
+  "/**",
+  " * 2. AI tutor (signed-in only)",
+  " *",
+  " * Every response is written to the signed-in user's TutorConversation",
+  " * document so follow-up questions keep their real context, and the",
+  " * browser can never load another account's chat.",
+  " */",
+  "",
+  "const tutorLimiter = rateLimit({",
+  "  windowMs: 10 * 60 * 1000,",
+  "  limit: 40, // 40 tutor messages per 10 min per signed-in user",
+  "  standardHeaders: 'draft-7',",
+  "  legacyHeaders: false,",
+  "  keyGenerator: (req) => req.session?.user?.id || ipKeyGenerator(req.ip),",
+  "  message: { error: 'Too many tutor messages for now. Please wait a moment and try again.' },",
+  "});",
+  "",
+  "router.post('/tutor', requireAuth, sameOriginGuard, tutorLimiter, express.json({ limit: '100kb' }), async (req, res, next) => {",
+  "  try {",
+  "    const userId = req.session.user.id;",
+  "",
+  "    // Validate input length before anything else.",
+  "    const raw = req.body?.message;",
+  "    if (typeof raw !== 'string' || raw.trim().length === 0) {",
+  "      return res.status(400).json({ error: 'Type a question for the AI tutor first.' });",
+  "    }",
+  "    if (raw.length > MAX_MESSAGE_LENGTH) {",
+  "      return res.status(400).json({ error: " + BT + "Questions must be ${MAX_MESSAGE_LENGTH} characters or fewer." + BT + " });",
+  "    }",
+  "    const clean = raw.replace(/[\\u0000-\\u0008\\u000B\\u000C\\u000E-\\u001F]/g, '').trim();",
+  "",
+  "    const difficulty = DIFFICULTIES.has(req.body?.difficulty) ? req.body.difficulty : 'beginner';",
+  "",
+  "    // Persistence + personalization in parallel.",
+  "    const existingConversation = await TutorConversation.findOne({ userId }).sort({ lastMessageAt: -1, createdAt: -1 }).lean();",
+  "    const savedConversation = serializeConversation(existingConversation);",
+  "    const context = await loadLearnerContext(userId);",
+  "    const history = savedConversation",
+  "      ? savedConversation.messages.slice(-MAX_HISTORY_TURNS).map((m) => ({ role: m.role, text: m.text }))",
+  "      : [];",
+  "",
+  "    const contextBlock = buildLearnerPrompt(context);",
+  "",
+  "    // Deterministic guard: actionable attack asks are redirected before any AI call.",
+  "    const unsafe = detectUnsafeRequest(clean);",
+  "",
+  "    // The result shape we persist and return.",
+  "    let result = {",
+  "      reply: '', keyTakeaways: [], followUps: [], topic: 'general',",
+  "      practice: null, generatedBy: 'curated', safety: 'ok', notice: null,",
+  "    };",
+  "",
+  "    if (unsafe) {",
+  "      // Redirect attack requests to a safe, curated answer instead of asking",
+  "      // Gemini for instructions that would harm others.",
+  "      const safe = buildFallbackReply({ message: clean, difficulty, context, unsafe: true });",
+  "      result.reply = safe.reply;",
+  "      result.keyTakeaways = safe.keyTakeaways;",
+  "      result.followUps = safe.followUps;",
+  "      result.topic = safe.topic;",
+  "      result.practice = safe.practice;",
+  "      result.generatedBy = safe.generatedBy;",
+  "      result.safety = safe.safety;",
+  "      result.notice = safe.notice;",
+  "    } else {",
+  "      let aiResult = null;",
+  "      const keyReady = process.env.GEMINI_API_KEY && process.env.GEMINI_API_KEY !== 'YOUR_API_KEY_HERE';",
+  "",
+  "      if (keyReady) {",
+  "        try {",
+  "          const rawAi = await tutorAnswer({ message: clean, difficulty, history, learner: contextBlock });",
+  "          aiResult = normalizeTutorReply(rawAi, { difficulty, context });",
+  "        } catch (tutorErr) {",
+  "          console.warn('[tutor] ai failed, falling back to curated reply:', tutorErr?.message || tutorErr);",
+  "        }",
+  "      }",
+  "",
+  "      if (!aiResult) {",
+  "        const fallback = buildFallbackReply({",
+  "          message: clean, difficulty, context, unsafe: false,",
+  "          reason: keyReady",
+  "            ? 'AI is temporarily unavailable - a short reviewed guide is shown instead.'",
+  "            : 'AI is not configured yet - a short reviewed guide is shown instead.',",
+  "        });",
+  "        result.reply = fallback.reply;",
+  "        result.keyTakeaways = fallback.keyTakeaways;",
+  "        result.followUps = fallback.followUps;",
+  "        result.topic = fallback.topic;",
+  "        result.practice = fallback.practice;",
+  "        result.generatedBy = fallback.generatedBy;",
+  "        result.safety = fallback.safety;",
+  "        result.notice = fallback.notice;",
+  "      } else {",
+  "        result.reply = aiResult.reply;",
+  "        result.keyTakeaways = aiResult.keyTakeaways;",
+  "        result.followUps = aiResult.followUps;",
+  "        result.topic = aiResult.topic;",
+  "        result.practice = aiResult.practice;",
+  "        result.generatedBy = aiResult.generatedBy;",
+  "        result.safety = aiResult.safety;",
+  "        result.notice = aiResult.notice;",
+  "      }",
+  "    }",
+  "",
+  "    // Persist the turn so follow-up questions keep real context.",
+  "    let doc = await TutorConversation.findOne({ userId }).sort({ lastMessageAt: -1, createdAt: -1 }).lean();",
+  "    if (!doc) {",
+  "      doc = await TutorConversation.create({ userId });",
+  "    }",
+  "    doc.difficulty = difficulty;",
+  "    if (!doc.title || doc.title === 'New conversation') {",
+  "      doc.title = clean.slice(0, 80) || 'New conversation';",
+  "    }",
+  "",
+  "    const userMessage = {",
+  "      role: 'user', text: clean, difficulty, safety: 'ok',",
+  "      topic: result.topic, keyTakeaways: [], followUps: [],",
+  "    };",
+  "    doc.messages.push(userMessage);",
+  "",
+  "    const modelMessage = {",
+  "      role: 'model', text: result.reply.slice(0, 8000), difficulty,",
+  "      generatedBy: result.generatedBy, safety: result.safety,",
+  "      topic: result.topic,",
+  "      keyTakeaways: result.keyTakeaways.slice(0, 5),",
+  "      followUps: result.followUps.slice(0, 3),",
+  "    };",
+  "    doc.messages.push(modelMessage);",
+  "",
+  "    if (doc.messages.length > MAX_STORED_MESSAGES + 2) {",
+  "      doc.messages = doc.messages.slice(-MAX_STORED_MESSAGES);",
+  "    }",
+  "    doc.lastMessageAt = new Date();",
+  "    await doc.save();",
+  "",
+  "    const saved = await TutorConversation.findById(doc._id).lean();",
+  "",
+  "    res.json({",
+  "      reply: result.reply,",
+  "      keyTakeaways: result.keyTakeaways,",
+  "      followUps: result.followUps,",
+  "      topic: result.topic,",
+  "      topicLabel: TOPIC_LABELS[result.topic] || 'Cybersecurity',",
+  "      practice: result.practice,",
+  "      generatedBy: result.generatedBy,",
+  "      safety: result.safety,",
+  "      notice: result.notice,",
+  "      difficulty,",
+  "      personalization: {",
+  "        hasHistory: context.hasHistory,",
+  "        attempts: context.attempts,",
+  "        answeredQuestions: context.answeredQuestions,",
+  "        currentDifficulty: context.currentDifficulty,",
+  "        recommendedLevel: context.recommendedLevel,",
+  "        averageScore: context.averageScore,",
+  "        lastScore: context.lastScore,",
+  "        weakTopics: context.weakTopics,",
+  "        strongTopics: context.strongTopics,",
+  "        roadmap: context.roadmap,",
+  "      },",
+  "      suggestedPrompts: context.suggestedPrompts,",
+  "    });",
+  "  } catch (err) {",
+  "    next(err);",
+  "  }",
+  "});",
+  "",
+].join(NL);
+
+// Put the rest (scam block header split, learning, news) back as-is but
+// ensure it has real newlines and no double-backslash residue.
+const afterHeader = broken.indexOf("router.post(");
+const afterTut = broken.indexOf("/**");
+const rest = broken.slice(afterHeader);
+
+// Cut out the tutor lead comment from the rest (we already wrote it above).
+// The broken rest starts with the scam block; find where the learning block
+// begins and insert our tutor section just before it.
+const beforeLearning = rest.indexOf("/* -------------------- 3. Learning path");
+const beforeScamSplit = rest.lastIndexOf("\n", beforeLearning);
+const scamTail = rest.slice(0, beforeScamSplit).trim();
+
+let out = header + scamTail + NL + NL + tutor + NL + rest.slice(beforeLearning).trim();
+if (!out.endsWith(NL)) out += NL;
+
+fs.writeFileSync(FILE, out, "utf8");
+console.log("rewrote", out.length, "bytes; real newlines:", (out.match(/\n/g) || []).length);
+
+const { execSync } = require("child_process");
+try {
+  execSync("node --check server/routes/ai.js", { cwd: root, stdio: "pipe" });
+  console.log("CHECK_OK");
+} catch (e) {
+  console.error("FAIL:", (e.stderr || e.message || "").toString().slice(0, 400));
+  process.exit(1);
+}

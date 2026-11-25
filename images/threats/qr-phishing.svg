@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 420" width="800" height="420" role="img" aria-hidden="true">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0b1220"/><stop offset="1" stop-color="#122036"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="50%" cy="46%" r="58%">
+      <stop offset="0" stop-color="#2dd4bf" stop-opacity="0.30"/>
+      <stop offset="1" stop-color="#2dd4bf" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M40 0H0V40" fill="none" stroke="#233a5c" stroke-opacity="0.35" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <rect width="800" height="420" fill="url(#bg)"/>
+  <rect width="800" height="420" fill="url(#grid)"/>
+  <rect width="800" height="420" fill="url(#glow)"/>
+  
+  <g fill="none" stroke="#2dd4bf" stroke-width="4">
+    <rect x="280" y="80" width="70" height="70" rx="8"/>
+    <rect x="300" y="100" width="30" height="30" rx="3"/>
+    <rect x="400" y="80" width="70" height="70" rx="8"/>
+    <rect x="420" y="100" width="30" height="30" rx="3"/>
+    <rect x="280" y="200" width="70" height="70" rx="8"/>
+    <rect x="300" y="220" width="30" height="30" rx="3"/>
+  </g>
+  <g fill="#2dd4bf" opacity="0.9">
+    <rect x="376" y="80" width="12" height="12"/><rect x="376" y="104" width="12" height="12"/>
+    <rect x="400" y="180" width="12" height="12"/><rect x="424" y="180" width="12" height="12"/>
+    <rect x="448" y="180" width="12" height="12"/><rect x="400" y="204" width="12" height="12"/>
+    <rect x="448" y="204" width="12" height="12"/><rect x="424" y="228" width="12" height="12"/>
+    <rect x="376" y="228" width="12" height="12"/><rect x="300" y="300" width="12" height="12"/>
+    <rect x="324" y="300" width="12" height="12"/><rect x="348" y="300" width="12" height="12"/>
+  </g>
+  <g fill="none" stroke="#f87171" stroke-width="5" stroke-linecap="round">
+    <path d="M540 120c34-26 76-8 76 26 0 30-30 38-30 60"/>
+    <path d="M586 232v6"/>
+  </g>
+  <g fill="none" stroke="#fbbf24" stroke-width="3" stroke-dasharray="6 8">
+    <path d="M500 160h-40M500 200h-24"/>
+  </g>
+  <rect x="24" y="388" width="96" height="4" rx="2" fill="#2dd4bf" opacity="0.85"/>
+</svg>

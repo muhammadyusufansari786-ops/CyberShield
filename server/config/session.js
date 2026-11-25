@@ -50,6 +50,18 @@ export function resolveSessionSecret() {
   return devFallbackSecret();
 }
 
-export const SESSION_COOKIE_NAME = /^[\w-]{1,64}$/.test(process.env.SESSIONNAME?.trim() || '')
-  ? process.env.SESSIONNAME.trim()
-  : 'cybershield.sid';
+// Cookie name resolution.
+//
+// IMPORTANT: do NOT read the generic SESSIONNAME variable. On Windows it is a
+// system variable (usually "Console") describing the terminal session, so it
+// would silently rename this app's cookie and can collide with other localhost
+// apps. Only an explicit, app-scoped variable may override the default.
+export const SESSION_COOKIE_NAME = (() => {
+  const configured = (process.env.SESSION_COOKIE_NAME || '').trim();
+  if (!configured) return 'cybershield.sid';
+  if (!/^[\w-]{1,64}$/.test(configured)) {
+    console.warn('[auth] Ignoring invalid SESSION_COOKIE_NAME (use letters, digits, _ or -).');
+    return 'cybershield.sid';
+  }
+  return configured;
+})();

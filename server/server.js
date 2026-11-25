@@ -29,6 +29,13 @@ import MongoStore from 'connect-mongo';
 import aiRouter from './routes/ai.js';
 import authRouter from './routes/auth.js';
 import dashboardRouter from './routes/dashboard.js';
+import learningRouter from './routes/learning.js';
+import tutorRouter from './routes/tutor.js';
+import quizRouter from './routes/quiz.js';
+import adminRouter from './routes/admin.js';
+import threatsRouter, { threatsLimiter } from './routes/threats.js';
+import { seedQuestionBank, bankStats } from './services/question-bank.js';
+import { initThreatIntel, stopThreatIntel } from './services/threat-intel.js';
 import { connectDatabase, watchDatabase, closeDatabase } from './config/database.js';
 import { resolveSessionSecret, SESSION_COOKIE_NAME } from './config/session.js';
 
@@ -52,6 +59,9 @@ const aiLimiter = rateLimit({
   limit: 40, // 40 AI requests per 15 min per IP - comfortable for a demo, safe for free tier
   standardHeaders: 'draft-7',
   legacyHeaders: false,
+  // The tutor has its own authenticated, per-user limiter inside routes/ai.js
+  // (a classroom demo can legitimately exceed 40 tutor turns per IP).
+  skip: (req) => req.path === '/tutor',
   message: {
     error: 'AI service is temporarily unavailable. Please try again in a minute.',
   },
@@ -94,6 +104,24 @@ async function main() {
     } else {
       console.error('');
       process.exit(1);
+    }
+  }
+
+  /* ---------------------------------------------------------------- */
+  /* 1b. Seed / top-up the human question bank (idempotent).          */
+  /* ---------------------------------------------------------------- */
+  if (dbReady) {
+    try {
+      const seeded = await seedQuestionBank();
+      if (seeded.inserted) {
+        console.log(`[question-bank] seeded ${seeded.inserted} human-authored questions.`);
+      }
+      const stats = await bankStats();
+      console.log(
+        `[question-bank] approved=${stats.approved} pending=${stats.pending} rejected=${stats.rejected} retired=${stats.retiredApproved}`
+      );
+    } catch (err) {
+      console.error('[question-bank] seeding failed (quizzes use the existing bank):', err?.message || err);
     }
   }
 
@@ -145,7 +173,14 @@ async function main() {
 
   app.use('/api/ai', aiLimiter, aiRouter);
   app.use('/api/auth', requireDb, authRouter);
+  app.use('/api/quiz', requireDb, quizRouter);
+  app.use('/api/admin', requireDb, adminRouter);
+  app.use('/api/learning', requireDb, learningRouter);
+  app.use('/api/tutor', requireDb, tutorRouter);
   app.use('/api', requireDb, dashboardRouter);
+  // Threat intel shares the auth/session-friendly policy: database-backed,
+  // read-only, no user data. Register before the /api catch-all as well.
+  app.use('/api/threats', requireDb, threatsLimiter, threatsRouter);
 
   // Friendly JSON for any other /api path
   app.use('/api', (req, res) => {
@@ -191,6 +226,8 @@ async function main() {
     console.log('│                POST /api/ai/tutor                    │');
     console.log('│                POST /api/ai/learning-path            │');
     console.log('│                POST /api/ai/news-explain             │');
+    console.log('│                POST /api/ai/tutor (signed in)        │');
+    console.log('│                GET  /api/tutor/conversation          │');
     console.log('│                POST /api/auth/register | login       │');
     console.log('│                GET  /api/auth/me | /api/dashboard    │');
     console.log('└──────────────────────────────────────────────────────┘');
@@ -199,6 +236,12 @@ async function main() {
       console.log('     add your free key to .env  (https://aistudio.google.com/apikey)\n');
     }
   });
+
+  // Threat intelligence: populate the local cache once on first boot (only
+  // when empty), then keep it current via the lazy scheduler in the service.
+  initThreatIntel().catch((err) =>
+    console.error('[threat-intel] initialization failed (dashboard will show cached/error state):', err?.message || err)
+  );
 
   server.on('error', (err) => {
     if (err.code === 'EADDRINUSE') {
@@ -215,6 +258,7 @@ async function main() {
   for (const signal of ['SIGINT', 'SIGTERM']) {
     process.on(signal, () => {
       console.log(`\n[server] ${signal} received - shutting down.`);
+      stopThreatIntel();
       server.close(async () => {
         await closeDatabase().catch(() => {});
         process.exit(0);

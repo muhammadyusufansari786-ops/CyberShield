@@ -102,6 +102,7 @@
         // short cards (all current ones) stay fully visible with no button.
         const longDesc = (item.description || '').length > 160;
         const descId = `resource-${item.id}-desc`;
+        const thumb = item.thumbnail ? item.thumbnail : '';
         const descriptionHtml = `<p class="resource-description${longDesc ? ' line-clamp-3' : ''}"${longDesc ? ` id="${descId}"` : ''} style="color: var(--color-text-secondary); font-size: 0.9375rem; margin-bottom: 1rem;">${this.escapeHtml(item.description)}</p>
           ${longDesc ? `
           <button type="button" class="viewmore-btn" aria-expanded="false" aria-controls="${descId}">
@@ -111,6 +112,7 @@
 
         return `
         <article class="card resource-card" style="text-align: center;" data-category="${item.category}" role="listitem">
+          ${thumb ? `<img class="resource-card-thumb" src="${thumb.replace(/^images\//, '../images/')}" alt="${this.escapeHtml(item.thumbnailAlt || '')}" loading="lazy" width="400" height="200" onerror="this.style.display='none';">` : ''}
           <div class="resource-icon" style="font-size: 2rem; margin-bottom: 1rem;" aria-hidden="true">${item.icon}</div>
           <h3 class="resource-title" style="margin-bottom: 0.5rem;">${this.escapeHtml(item.name)}</h3>
           ${descriptionHtml}

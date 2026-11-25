@@ -8,7 +8,13 @@
     "sourceUrl": "https://thehackernews.com",
     "date": "2025-09-15",
     "advice": "Ensure all VPN and remote access solutions are patched. Implement network segmentation and maintain offline backups.",
-    "tags": ["ransomware", "enterprise", "lockbit"]
+    "tags": [
+      "ransomware",
+      "enterprise",
+      "lockbit"
+    ],
+    "thumbnail": "/images/photos/malware-threat.webp",
+    "thumbnailAlt": "New Ransomware Variant \"LockBit 4.0\" Targets Enterprise Netw... — cybersecurity news thumbnail"
   },
   {
     "id": "news-2",
@@ -19,7 +25,14 @@
     "sourceUrl": "https://www.cert-in.org.in",
     "date": "2025-09-14",
     "advice": "Verify sender email addresses. Income Tax Dept never sends refund notifications with attachments. Report to reportphishing@cert-in.org.in",
-    "tags": ["phishing", "india", "tax-fraud", "malware"]
+    "tags": [
+      "phishing",
+      "india",
+      "tax-fraud",
+      "malware"
+    ],
+    "thumbnail": "/images/photos/phishing-scam.webp",
+    "thumbnailAlt": "Massive Phishing Campaign Impersonates Indian Income Tax Dep... — cybersecurity news thumbnail"
   },
   {
     "id": "news-3",
@@ -30,7 +43,14 @@
     "sourceUrl": "https://cve.mitre.org",
     "date": "2025-09-13",
     "advice": "Update affected libraries immediately. Apply WAF rules if patching delayed. Monitor for unusual file upload activity.",
-    "tags": ["cve", "zero-day", "rce", "supply-chain"]
+    "tags": [
+      "cve",
+      "zero-day",
+      "rce",
+      "supply-chain"
+    ],
+    "thumbnail": "/images/photos/tech-code.webp",
+    "thumbnailAlt": "Critical Vulnerability in Popular File Sharing Library (CVE-... — cybersecurity news thumbnail"
   },
   {
     "id": "news-4",
@@ -41,7 +61,14 @@
     "sourceUrl": "https://www.bleepingcomputer.com",
     "date": "2025-09-12",
     "advice": "Verify QR code authenticity before scanning. Use official apps for payments. Check URL carefully after scanning.",
-    "tags": ["quishing", "qr-code", "payment-fraud", "physical-security"]
+    "tags": [
+      "quishing",
+      "qr-code",
+      "payment-fraud",
+      "physical-security"
+    ],
+    "thumbnail": "/images/photos/secure-browsing.webp",
+    "thumbnailAlt": "QR Code Phishing (Quishing) Surges at Public Charging Statio... — cybersecurity news thumbnail"
   },
   {
     "id": "news-5",
@@ -52,7 +79,14 @@
     "sourceUrl": "https://www.threatfabric.com",
     "date": "2025-09-11",
     "advice": "Only install apps from Google Play Store. Enable Play Protect. Review app permissions. Use banking apps' built-in security features.",
-    "tags": ["android", "banking-trojan", "mobile-malware", "financial"]
+    "tags": [
+      "android",
+      "banking-trojan",
+      "mobile-malware",
+      "financial"
+    ],
+    "thumbnail": "/images/photos/antivirus-protection.webp",
+    "thumbnailAlt": "New Android Banking Trojan \"Hook\" Targets 300+ Banking Apps... — cybersecurity news thumbnail"
   },
   {
     "id": "news-6",
@@ -63,7 +97,14 @@
     "sourceUrl": "https://www.securityweek.com",
     "date": "2025-09-10",
     "advice": "Monitor for phishing using exposed data. Enable MFA on all accounts. Consider credit monitoring if financial data exposed.",
-    "tags": ["data-breach", "india", "edtech", "pii"]
+    "tags": [
+      "data-breach",
+      "india",
+      "edtech",
+      "pii"
+    ],
+    "thumbnail": "/images/photos/data-breach.webp",
+    "thumbnailAlt": "Data Breach at Major Indian EdTech Platform Exposes 2M Stude... — cybersecurity news thumbnail"
   },
   {
     "id": "news-7",
@@ -74,7 +115,15 @@
     "sourceUrl": "https://www.cisa.gov",
     "date": "2025-09-09",
     "advice": "Prioritize patching these KEV-listed vulnerabilities. Apply emergency patches if available. Scan networks for indicators of compromise.",
-    "tags": ["cisa", "kev", "exchange", "struts", "citrix"]
+    "tags": [
+      "cisa",
+      "kev",
+      "exchange",
+      "struts",
+      "citrix"
+    ],
+    "thumbnail": "/images/photos/network.webp",
+    "thumbnailAlt": "CISA Adds 3 Vulnerabilities to Known Exploited Vulnerabiliti... — cybersecurity news thumbnail"
   },
   {
     "id": "news-8",
@@ -85,7 +134,15 @@
     "sourceUrl": "https://timesofindia.indiatimes.com",
     "date": "2025-09-08",
     "advice": "Implement multi-channel verification for financial transactions. Establish secret passphrases for executive requests. Train finance teams on deepfake risks.",
-    "tags": ["deepfake", "ai-fraud", "ceo-fraud", "india", "wire-transfer"]
+    "tags": [
+      "deepfake",
+      "ai-fraud",
+      "ceo-fraud",
+      "india",
+      "wire-transfer"
+    ],
+    "thumbnail": "/images/photos/deepfake.webp",
+    "thumbnailAlt": "Deepfake Audio Used in ₹2 Crore CEO Fraud at Mumbai Company... — cybersecurity news thumbnail"
   },
   {
     "id": "news-9",
@@ -96,7 +153,15 @@
     "sourceUrl": "https://www.fortiguard.com",
     "date": "2025-09-07",
     "advice": "Update router firmware immediately. Disable remote management. Change default credentials. Monitor network traffic for anomalies.",
-    "tags": ["iot", "botnet", "router", "ddos", "tp-link"]
+    "tags": [
+      "iot",
+      "botnet",
+      "router",
+      "ddos",
+      "tp-link"
+    ],
+    "thumbnail": "/images/photos/datacenter-network-racks.webp",
+    "thumbnailAlt": "Blue-lit data centre racks labelled NETWORK-2 with active network links, the infrastructure targeted by IoT botnets"
   },
   {
     "id": "news-10",
@@ -107,7 +172,15 @@
     "sourceUrl": "https://www.rbi.org.in",
     "date": "2025-09-06",
     "advice": "Businesses: implement tokenization. Consumers: use tokenized cards, enable transaction alerts, report unauthorized transactions within 3 days.",
-    "tags": ["rbi", "regulation", "digital-payments", "tokenization", "india"]
+    "tags": [
+      "rbi",
+      "regulation",
+      "digital-payments",
+      "tokenization",
+      "india"
+    ],
+    "thumbnail": "/images/photos/password-security.webp",
+    "thumbnailAlt": "RBI Issues New Guidelines for Digital Payment Security... — cybersecurity news thumbnail"
   },
   {
     "id": "news-11",
@@ -118,7 +191,15 @@
     "sourceUrl": "https://socket.dev",
     "date": "2025-09-05",
     "advice": "Audit npm dependencies. Use lockfiles. Enable 2FA on npm accounts. Monitor for suspicious package updates.",
-    "tags": ["supply-chain", "npm", "crypto", "typosquatting", "developers"]
+    "tags": [
+      "supply-chain",
+      "npm",
+      "crypto",
+      "typosquatting",
+      "developers"
+    ],
+    "thumbnail": "/images/photos/code-workspace.webp",
+    "thumbnailAlt": "Supply Chain Attack: Malicious NPM Package Steals Crypto Wal... — cybersecurity news thumbnail"
   },
   {
     "id": "news-12",
@@ -129,7 +210,15 @@
     "sourceUrl": "https://cybercrime.gov.in",
     "date": "2025-09-04",
     "advice": "Never install apps from links in messages. WhatsApp updates only through official app stores. Report to cybercrime.gov.in.",
-    "tags": ["whatsapp", "scam", "india", "social-engineering", "malware"]
+    "tags": [
+      "whatsapp",
+      "scam",
+      "india",
+      "social-engineering",
+      "malware"
+    ],
+    "thumbnail": "/images/photos/masked-hacker-credit-card.webp",
+    "thumbnailAlt": "Hooded attacker in an anonymous mask holding a stolen card, illustrating new social engineering scam tactics"
   },
   {
     "id": "news-13",
@@ -140,7 +229,15 @@
     "sourceUrl": "https://www.darkreading.com",
     "date": "2025-09-03",
     "advice": "Apply Progress Software patches immediately. Review all file transfer logs. Notify affected parties per regulatory requirements.",
-    "tags": ["moveit", "cl0p", "zero-day", "file-transfer", "supply-chain"]
+    "tags": [
+      "moveit",
+      "cl0p",
+      "zero-day",
+      "file-transfer",
+      "supply-chain"
+    ],
+    "thumbnail": "/images/photos/threat-intelligence.webp",
+    "thumbnailAlt": "Zero-Day in MOVEit Transfer Exploited by Cl0p Ransomware Gan... — cybersecurity news thumbnail"
   },
   {
     "id": "news-14",
@@ -151,7 +248,15 @@
     "sourceUrl": "https://www.trai.gov.in",
     "date": "2025-09-02",
     "advice": "Set up SIM lock PIN with your carrier. Monitor for unexpected \"SIM swap\" SMS. Use authenticator apps instead of SMS 2FA where possible.",
-    "tags": ["trai", "sim-swap", "regulation", "india", "2fa"]
+    "tags": [
+      "trai",
+      "sim-swap",
+      "regulation",
+      "india",
+      "2fa"
+    ],
+    "thumbnail": "/images/photos/learning-dashboard.webp",
+    "thumbnailAlt": "New SIM Swap Protection Rules Mandated by TRAI for Indian Te... — cybersecurity news thumbnail"
   },
   {
     "id": "news-15",
@@ -162,6 +267,14 @@
     "sourceUrl": "https://krebsonsecurity.com",
     "date": "2025-09-01",
     "advice": "Verify unexpected requests through secondary channels. Implement DMARC/SPF/DKIM. Train employees on AI-generated threats. Use phishing-resistant MFA (FIDO2).",
-    "tags": ["ai", "phishing", "generative-ai", "social-engineering", "research"]
+    "tags": [
+      "ai",
+      "phishing",
+      "generative-ai",
+      "social-engineering",
+      "research"
+    ],
+    "thumbnail": "/images/photos/vulnerability.webp",
+    "thumbnailAlt": "AI-Powered Phishing Emails Now Indistinguishable from Legiti... — cybersecurity news thumbnail"
   }
 ]

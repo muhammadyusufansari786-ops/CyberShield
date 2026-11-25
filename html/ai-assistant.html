@@ -3,12 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="CyberShield AI Tutor - a specialized Gemini-powered cybersecurity tutor. Ask about phishing, MFA, scams and account security at your own level.">
-  <title>AI CyberShield Tutor – CyberShield</title>
+  <meta name="description" content="CyberShield Advanced AI Cybersecurity Tutor - a signed-in, personalized tutor that adapts to your quiz results and learning roadmap.">
+  <title>AI CyberShield Tutor - CyberShield</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/tutor.css">
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%230f766e'/%3E%3Ctext x='50%25' y='55%25' dominant-baseline='middle' text-anchor='middle' fill='white' font-size='60' font-weight='bold'%3E%E2%9A%A1%3C/text%3E%3C/svg%3E">
 </head>
 <body>
@@ -20,10 +21,9 @@
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
       </button>
       <a href="index.html" class="logo" aria-label="CyberShield Home">
-        <span class="logo-icon" aria-hidden="true">🛡️</span>
+        <span class="logo-icon" aria-hidden="true">&#9997;</span>
         <span>CyberShield</span>
       </a>
-
 
       <div class="header-actions">
         <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode" type="button">
@@ -33,14 +33,10 @@
     </div>
   </header>
 
-    <!-- Navigation Drawer (opens from the left) -->
   <div id="nav-overlay" class="nav-overlay" role="dialog" aria-modal="true" aria-label="Navigation menu">
     <nav id="nav-drawer" class="nav-drawer" aria-label="Main navigation">
       <div class="nav-drawer-header">
-        <a href="index.html" class="logo" aria-label="CyberShield Home">
-          <span class="logo-icon" aria-hidden="true">🛡️</span>
-          <span>CyberShield</span>
-        </a>
+        <a href="index.html" class="logo" aria-label="CyberShield Home"><span class="logo-icon" aria-hidden="true">&#9997;</span><span>CyberShield</span></a>
         <button id="nav-close" class="nav-close" aria-label="Close menu" type="button">
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
         </button>
@@ -58,8 +54,7 @@
         <li><a href="about.html" class="nav-drawer-link"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>About</a></li>
       </ul>
       <div class="nav-drawer-footer">
-        <p>In an emergency? Call <strong>1930</strong> or report at
-          <a href="https://cybercrime.gov.in" target="_blank" rel="noopener">cybercrime.gov.in</a></p>
+        <p>In an emergency? Call <strong>1930</strong> or report at <a href="https://cybercrime.gov.in" target="_blank" rel="noopener">cybercrime.gov.in</a></p>
       </div>
     </nav>
   </div>
@@ -75,13 +70,46 @@
               <li aria-current="page">AI CyberShield</li>
             </ol>
           </nav>
-          <header style="text-align: center; margin-bottom: 2rem;">
-            <h1>🤖 CyberShield AI Tutor</h1>
-            <p style="color: var(--color-text-secondary); font-size: 1.125rem; margin-top: 0.75rem;">A specialized cybersecurity tutor powered by Google Gemini. Ask anything about staying safe online - answers adapt to your level.</p>
+
+          <div class="section-photo-banner">
+            <img class="section-photo-banner-photo" src="/images/photos/ai-tutor.webp" alt="Person studying cybersecurity with an AI tutor on a computer, learning about digital safety and threat protection" loading="eager" width="900" height="506" onerror="this.style.display='none';">
+            <div class="section-photo-banner-overlay" aria-hidden="true"></div>
+          </div>
+          <header style="text-align: center; margin-bottom: 1.25rem;">
+            <h1>Advanced AI CyberShield Tutor</h1>
+            <p style="color: var(--color-text-secondary); font-size: 1rem; margin-top: 0.5rem; max-width: 640px; margin-left: auto; margin-right: auto;">A personalized cybersecurity tutor that adapts to what you have already learned and where you need more practice. Sign in to save your conversation and get coaching matched to your quiz results.</p>
           </header>
 
-          <!-- Difficulty selector -->
-          <div class="card" style="margin-bottom: 1.5rem;">
+          <div id="tutor-chat-card" class="card ai-chat-card">
+            <div class="tutor-conversation-header" id="tutor-conversation-header" hidden>
+              <span class="tutor-conversation-title" id="tutor-conversation-title">Conversation</span>
+              <button type="button" class="btn btn-ghost btn-sm" id="tutor-clear-btn">Clear conversation</button>
+            </div>
+
+            <div class="ai-chat-window" id="tutor-chat-window" role="log" aria-live="polite" aria-label="AI tutor conversation"></div>
+
+            <div class="ai-suggestions" id="tutor-suggestions" aria-label="Suggested questions"></div>
+
+            <div class="ai-input-row">
+              <textarea id="tutor-chat-input" rows="2" maxlength="4000" placeholder="Ask a cybersecurity question... (Enter to send, Shift+Enter for newline)" aria-label="Your question for the AI tutor"></textarea>
+              <button type="button" class="btn btn-primary" id="tutor-send-btn">Send</button>
+            </div>
+
+            <div class="ai-chat-footer">
+              <button type="button" class="btn btn-ghost btn-sm" id="tutor-new-chat">Start new conversation</button>
+              <span class="ai-privacy-note">Never share passwords, OTPs or personal info with the tutor.</span>
+            </div>
+          </div>
+
+          <div id="tutor-auth-gate" class="tutor-auth-gate card" hidden>
+            <p style="color: var(--color-text-secondary); margin-bottom: 0.4rem;">Sign in to use the Advanced AI Tutor.</p>
+            <p class="auth-note">Your conversation is saved to your account, and your answers are tailored to your quiz history and learning roadmap.</p>
+            <button type="button" class="btn btn-primary" id="tutor-signin-btn" style="display: none;">Sign in to continue</button>
+          </div>
+
+          <div id="tutor-personalization" class="tutor-personalization" hidden></div>
+
+          <div id="tutor-difficulty-row" class="card" style="margin-bottom: 1.25rem; display: none;">
             <div class="ai-difficulty-row">
               <span class="ai-difficulty-label">Explain at my level:</span>
               <div class="news-filters" role="group" aria-label="Difficulty level">
@@ -92,38 +120,8 @@
             </div>
           </div>
 
-          <!-- Chat -->
-          <div class="card ai-chat-card">
-            <div class="ai-chat-window" id="ai-chat-window" role="log" aria-live="polite" aria-label="AI tutor conversation"></div>
-
-            <div class="ai-suggestions" id="ai-suggestions" aria-label="Suggested questions">
-              <button type="button" class="ai-suggestion">What is phishing?</button>
-              <button type="button" class="ai-suggestion">Explain MFA.</button>
-              <button type="button" class="ai-suggestion">How can I secure my Instagram account?</button>
-              <button type="button" class="ai-suggestion">How can I identify a fake job offer?</button>
-              <button type="button" class="ai-suggestion">What should I do after clicking a suspicious link?</button>
-            </div>
-
-            <div class="ai-input-row">
-              <textarea id="ai-chat-input" rows="2" maxlength="4000" placeholder="Ask a cybersecurity question… (Enter to send, Shift+Enter for a new line)" aria-label="Your question for the AI tutor"></textarea>
-              <button type="button" class="btn btn-primary" id="ai-send-btn">Send ➤</button>
-            </div>
-
-            <div class="ai-chat-footer">
-              <button type="button" class="btn btn-ghost btn-sm" id="ai-new-chat">🔄 New conversation</button>
-              <span class="ai-privacy-note">🔒 Never share passwords, OTPs or personal info with the tutor.</span>
-            </div>
-          </div>
-
-          <!-- Disclaimer -->
-          <div class="card" style="margin-top: 2rem; border-left: 4px solid var(--color-info);">
-            <p style="color: var(--color-text-secondary); font-size: 0.9rem;">
-              <strong>How this works:</strong> your question goes to CyberShield's own backend, which calls
-              Google Gemini and returns the answer - the API key is never exposed to your browser. The tutor
-              only teaches <strong>defensive</strong> security and will refuse anything that could be used to attack
-              others. AI answers can be imperfect - always verify critical steps through official channels.
-              For active incidents, follow the <a href="toolkit.html#emergency-response">Emergency Response Guide</a>.
-            </p>
+          <div class="card" style="margin-top: 1.5rem; border-left: 4px solid var(--color-info);">
+            <p style="color: var(--color-text-secondary); font-size: 0.88rem; line-height: 1.6;"><strong>How this works:</strong> your question goes to CyberShield own backend, which calls Google Gemini and returns the answer. The API key is never exposed to your browser. The tutor only teaches <strong>defensive</strong> security and will refuse anything that could be used to attack others. Gemini adapts the depth of its answer to the difficulty you pick above. AI answers can be imperfect - always verify critical steps through official channels. Your conversation is saved to your account and persists across visits; use <strong>Clear conversation</strong> to start fresh. For active incidents, follow the <a href="toolkit.html#emergency-response">Emergency Response Guide</a>.</p>
           </div>
         </div>
       </div>

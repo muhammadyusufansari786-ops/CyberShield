@@ -306,8 +306,25 @@
       actions.insertBefore(wrap, themeToggle || null);
     },
 
+    /** Site-wide drawer link to the live threat intelligence page. */
+    renderIntelLink() {
+      if (!this.drawerList) return;
+      if (this.drawerList.querySelector('a[href="threat-intel.html"]')) return;
+
+      const li = document.createElement('li');
+      li.innerHTML = '<a href="threat-intel.html" class="nav-drawer-link"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><path d="M2 12h20"></path><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>Threat Intel</a>';
+
+      const threats = Array.from(this.drawerList.querySelectorAll('a.nav-drawer-link'))
+        .find((a) => a.getAttribute('href') === 'threats.html');
+      const anchor = threats ? threats.closest('li') : null;
+      if (anchor && anchor.parentElement === this.drawerList) anchor.after(li);
+      else this.drawerList.appendChild(li);
+    },
+
     renderDrawer(signedIn) {
       if (!this.drawerList) return;
+      this.renderIntelLink();
+      this.renderLearningLink();
 
       const item = document.createElement('li');
       item.className = 'nav-drawer-auth-item';
@@ -319,6 +336,21 @@
       // The .nav-drawer-footer is a sibling of the list, appended after it,
       // so appending here keeps the auth link last among the page links.
       this.drawerList.appendChild(item);
+    },
+
+    /** Site-wide drawer link to the personalized learning roadmap. */
+    renderLearningLink() {
+      if (!this.drawerList) return;
+      if (this.drawerList.querySelector('a[href="learning-path.html"]')) return;
+
+      const li = document.createElement('li');
+      li.innerHTML = '<a href="learning-path.html" class="nav-drawer-link"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18l6-6-6-6"></path><path d="M3 12h12"></path><circle cx="18" cy="12" r="3"></circle></svg>Learning Path</a>';
+
+      const quiz = Array.from(this.drawerList.querySelectorAll('a.nav-drawer-link'))
+        .find((a) => a.getAttribute('href') === 'quiz.html');
+      const anchor = quiz ? quiz.closest('li') : null;
+      if (anchor && anchor.parentElement === this.drawerList) anchor.after(li);
+      else this.drawerList.appendChild(li);
     },
 
     drawerLinkHtml(href, label, paths) {

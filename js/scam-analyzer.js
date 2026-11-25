@@ -22,12 +22,14 @@
   const el = {
     text: document.getElementById('scam-ai-text'),
     counter: document.getElementById('scam-ai-char-count'),
+    url: document.getElementById('scam-ai-url'),
     file: document.getElementById('scam-ai-file'),
     fileLabel: document.getElementById('scam-ai-file-label'),
     previewWrap: document.getElementById('scam-ai-preview-wrap'),
     previewImg: document.getElementById('scam-ai-preview'),
     clearImage: document.getElementById('scam-ai-clear-image'),
     analyzeBtn: document.getElementById('scam-ai-analyze'),
+    clearBtn: document.getElementById('scam-ai-clear'),
     result: document.getElementById('scam-ai-result'),
   };
 
@@ -122,10 +124,47 @@
     );
   }
 
+  /** 0-100 score bar, colored by risk level. */
+  function scoreMeterHtml(score, riskClass) {
+    const value = Math.max(0, Math.min(100, Number(score) || 0));
+    return `
+      <div class="ai-result-block ai-score-block">
+        <h4 class="ai-result-heading">Risk score (AI estimate)</h4>
+        <div class="ai-score-meter ${riskClass}" role="img" aria-label="Risk score ${value} out of 100">
+          <div class="ai-score-fill" style="width:${value}%"></div>
+        </div>
+        <div class="ai-score-labels">
+          <span>0 · probably safe</span>
+          <span class="ai-score-value">${value} / 100</span>
+          <span>100 · very likely a scam</span>
+        </div>
+      </div>`;
+  }
+
+  /** Machine-generated structural URL findings (never fetched by the server). */
+  function urlFindingsHtml(ua) {
+    if (!ua) return '';
+    const host = ua.host ? `<code>${AI.escapeHtml(ua.host)}</code>` : '<span class="ai-input-hint">address</span>';
+    const httpsFact = ua.scheme_given
+      ? (ua.http_warning
+          ? 'Encryption: <strong>none (plain HTTP)</strong> — data sent there would not be encrypted.'
+          : 'Encryption: the address states HTTPS.')
+      : 'The address did not state its scheme (http/https), so encryption could not be judged.';
+    const warnings = ua.warnings && ua.warnings.length
+      ? `<ul class="ai-list">${ua.warnings.map((w) => `<li><strong>${AI.escapeHtml(w.headline)}.</strong> ${AI.escapeHtml(w.detail)}</li>`).join('')}</ul>`
+      : '<p class="ai-verdict">No structural warning signs were found — that alone does NOT prove the link is safe.</p>';
+    return `
+      <div class="ai-result-block ai-url-findings">
+        <h4 class="ai-result-heading">🔗 Structural URL checks</h4>
+        <p class="ai-verdict">${host}<br><span class="ai-input-meta" style="margin:0">${httpsFact} <em>(our server parsed the address; the page was never opened)</em></span></p>
+        ${warnings}
+      </div>`;
+  }
+
   function renderResult(data) {
     const risk = (data.risk_level || 'MEDIUM').toUpperCase();
-    const riskClass = { LOW: 'ai-risk-low', MEDIUM: 'ai-risk-medium', HIGH: 'ai-risk-high' }[risk] || 'ai-risk-medium';
-    const riskLabel = { LOW: 'LOW RISK', MEDIUM: 'MEDIUM RISK', HIGH: 'HIGH RISK' }[risk] || risk;
+    const riskClass = { LOW: 'ai-risk-low', MEDIUM: 'ai-risk-medium', HIGH: 'ai-risk-high', CRITICAL: 'ai-risk-critical' }[risk] || 'ai-risk-medium';
+    const riskLabel = { LOW: 'LOW RISK', MEDIUM: 'MEDIUM RISK', HIGH: 'HIGH RISK', CRITICAL: 'CRITICAL RISK' }[risk] || risk;
 
     el.result.innerHTML = `
       <div class="ai-result-header">
@@ -134,12 +173,16 @@
         <span class="ai-chip ai-chip-gemini">🤖 Gemini AI assessment</span>
       </div>
 
+      ${scoreMeterHtml(data.risk_score, riskClass)}
+      ${urlFindingsHtml(data.url_analysis)}
+
       <div class="ai-result-block">
         <h4 class="ai-result-heading">AI Verdict</h4>
         <p class="ai-verdict">${AI.escapeHtml(data.verdict || '')}</p>
       </div>
 
-      ${listBlock('🚩 Red flags detected', data.red_flags, false)}
+      ${listBlock('🔍 Suspicious phrases spotted', data.suspicious_phrases, false)}
+      ${listBlock('🚩 Warning signs & reasons for this rating', data.red_flags, false)}
       ${data.explanation ? `<div class="ai-result-block"><h4 class="ai-result-heading">💭 Why it is suspicious</h4><p class="ai-verdict">${AI.escapeHtml(data.explanation)}</p></div>` : ''}
       ${listBlock('✅ Recommended actions', data.recommended_actions, true)}
       ${listBlock('🛡️ Safety tips', data.safety_tips, false)}
@@ -189,9 +232,10 @@
 
   async function analyze() {
     const text = (el.text.value || '').trim();
+    const url = (el.url.value || '').trim();
 
-    if (!text && !currentImage) {
-      AI.showError(el.result, 'Paste a suspicious message or attach a screenshot first.');
+    if (!text && !url && !currentImage) {
+      AI.showError(el.result, 'Paste a suspicious message or link first, or attach a screenshot.');
       return;
     }
     if (text.length > MAX_CHARS) {
@@ -205,7 +249,9 @@
     el.analyzeBtn.disabled = true;
 
     try {
-      const payload = { text: text || undefined };
+      const payload = {};
+      if (text) payload.text = text;
+      if (url) payload.url = url;
       if (currentImage && currentImage.data) {
         payload.imageBase64 = currentImage.data;
         payload.imageMime = currentImage.mimeType;
@@ -244,4 +290,20 @@
   });
 
   if (el.clearImage) el.clearImage.addEventListener('click', resetImage);
+
+  el.url.addEventListener('input', () => {
+    if (el.result && el.result.style.display !== 'none') el.result.style.display = 'none';
+  });
+
+  /* Clear/resets every field, the screenshot and the result area. */
+  function resetAll() {
+    el.text.value = '';
+    if (el.counter) el.counter.textContent = `0 / ${MAX_CHARS}`;
+    if (el.url) el.url.value = '';
+    resetImage();
+    el.result.style.display = 'none';
+    el.result.innerHTML = '';
+  }
+
+  if (el.clearBtn) el.clearBtn.addEventListener('click', resetAll);
 })();

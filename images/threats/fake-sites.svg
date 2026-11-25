@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 420" width="800" height="420" role="img" aria-hidden="true">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0b1220"/><stop offset="1" stop-color="#122036"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="50%" cy="46%" r="58%">
+      <stop offset="0" stop-color="#60a5fa" stop-opacity="0.30"/>
+      <stop offset="1" stop-color="#60a5fa" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M40 0H0V40" fill="none" stroke="#233a5c" stroke-opacity="0.35" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <rect width="800" height="420" fill="url(#bg)"/>
+  <rect width="800" height="420" fill="url(#grid)"/>
+  <rect width="800" height="420" fill="url(#glow)"/>
+  
+  <g fill="none" stroke="#60a5fa" stroke-width="4" stroke-linejoin="round" opacity="0.55">
+    <rect x="300" y="88" width="330" height="220" rx="14"/>
+    <path d="M300 130h330"/>
+  </g>
+  <g fill="none" stroke="#2dd4bf" stroke-width="4" stroke-linejoin="round">
+    <rect x="200" y="140" width="330" height="220" rx="14"/>
+    <path d="M200 182h330"/>
+    <circle cx="224" cy="161" r="5"/><circle cx="242" cy="161" r="5"/><circle cx="260" cy="161" r="5"/>
+    <rect x="228" y="206" width="132" height="16" rx="4"/>
+    <rect x="228" y="236" width="132" height="16" rx="4"/>
+    <rect x="228" y="284" width="86" height="30" rx="6"/>
+  </g>
+  <g fill="none" stroke="#f87171" stroke-width="5" stroke-linecap="round">
+    <circle cx="470" cy="280" r="46"/>
+    <path d="M446 256l48 48M494 256l-48 48"/>
+  </g>
+  <g fill="none" stroke="#fbbf24" stroke-width="4" stroke-linecap="round">
+    <path d="M404 206h40M404 236h26"/>
+  </g>
+  <rect x="24" y="388" width="96" height="4" rx="2" fill="#60a5fa" opacity="0.85"/>
+</svg>

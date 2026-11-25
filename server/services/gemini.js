@@ -300,20 +300,29 @@ const SCAM_SCHEMA = {
   properties: {
     risk_level: {
       type: 'STRING',
-      description: 'Overall risk: LOW, MEDIUM or HIGH.',
+      description: 'Overall risk: LOW, MEDIUM, HIGH or CRITICAL.',
+    },
+    risk_score: {
+      type: 'INTEGER',
+      description: 'Numeric estimate of scam likelihood, 0-100, consistent with risk_level (roughly: LOW 1-30, MEDIUM 31-60, HIGH 61-85, CRITICAL 86-100). 0 only for analysis errors.',
     },
     threat_category: {
       type: 'STRING',
-      description: 'Short category, e.g. "Phishing", "Smishing", "Fake job offer", "UPI fraud", "Legitimate (likely)".',
+      description: 'Short category, e.g. "Phishing", "Smishing", "Fake prize offer", "OTP theft attempt", "UPI fraud", "Urgent payment demand", "Impersonation", "Social engineering", "Suspicious personal-info request", "Legitimate (likely)".',
     },
     verdict: {
       type: 'STRING',
       description: '2-3 sentence AI verdict with hedged wording.',
     },
+    suspicious_phrases: {
+      type: 'ARRAY',
+      items: { type: 'STRING' },
+      description: 'Short EXACT phrases copied from the supplied content that raise concern, in quotes (empty if none). Never invent phrases.',
+    },
     red_flags: {
       type: 'ARRAY',
       items: { type: 'STRING' },
-      description: 'Specific red flags found in the content (empty list if none).',
+      description: 'Warning signs / reasons for the risk classification, referencing only what is actually present (empty list only if genuinely questionable-looking content has none).',
     },
     explanation: {
       type: 'STRING',
@@ -330,20 +339,30 @@ const SCAM_SCHEMA = {
       description: 'General tips to avoid this class of scam in future.',
     },
   },
-  required: ['risk_level', 'threat_category', 'verdict', 'red_flags', 'explanation', 'recommended_actions', 'safety_tips'],
+  required: ['risk_level', 'risk_score', 'threat_category', 'verdict', 'suspicious_phrases', 'red_flags', 'explanation', 'recommended_actions', 'safety_tips'],
 };
 
 const SCAM_SYSTEM = `You are CyberShield's scam-analysis assistant, a DEFENSIVE cybersecurity
-educator. You assess user-supplied messages (WhatsApp/SMS/email text, suspicious URLs,
-or screenshots) and explain the warning signs so students learn to spot scams themselves.
+educator. You assess user-supplied messages (SMS/WhatsApp/email text, social-media messages,
+banking or payment messages, suspicious URLs, or screenshots) and explain the warning signs
+so students learn to spot scams themselves. Focus on: phishing, fake offers/prizes, OTP/credential
+theft attempts, urgent payment demands, impersonation, social engineering, and suspicious requests
+for personal information.
 ${HONESTY_RULES}
-If the content looks legitimate, say so honestly and still list anything worth double-checking.
+URL SPECIAL RULES: if analytical findings from an automated structural URL check are supplied,
+treat them as machine-detected facts, mention the relevant ones and add anything they miss.
+NEVER claim a URL is malicious or safe based ONLY on HTTPS availability or general appearance -
+HTTPS/HTTP says nothing by itself, and structural oddities are hints, not proof. If NO URL
+findings were supplied and a URL is present, say clearly that no automated domain check was
+performed. If the content looks legitimate, say so honestly ("AI assessment", never certainty)
+and still list anything worth double-checking. Never state that a message is "definitely safe".
 If an image is unreadable or contains no message, say so in the verdict and set risk_level to LOW
 with threat_category "Unable to analyze image". Keep each list item under 140 characters.
 Answer with JSON only.`;
 
-export async function analyzeScam({ text, image }) {
+export async function analyzeScam({ text, image, urlContext }) {
   const parts = [];
+  if (urlContext) parts.push({ text: `Automated structural URL check (machine-detected, performed WITHOUT visiting the URL):\n${urlContext}\n(Use these findings; do not contradict them; do not treat HTTPS availability as a safety verdict.)` });
   if (text) parts.push({ text: `Message/URL to analyze:\n"""\n${text}\n"""` });
   if (image) {
     parts.push({
@@ -352,16 +371,35 @@ export async function analyzeScam({ text, image }) {
     parts.push({ inlineData: { mimeType: image.mimeType, data: image.data } });
   }
 
-  const data = await callGeminiJson({ parts, systemInstruction: SCAM_SYSTEM, schema: SCAM_SCHEMA }, ['risk_level']);
+  const data = await callGeminiJson({ parts, systemInstruction: SCAM_SYSTEM, schema: SCAM_SCHEMA }, [
+    'risk_level',
+    'threat_category',
+    'verdict',
+    'explanation',
+    'recommended_actions',
+  ]);
 
   const risk = String(data.risk_level || '').toUpperCase();
+  const riskLevel = ['LOW', 'MEDIUM', 'HIGH', 'CRITICAL'].includes(risk) ? risk : 'MEDIUM';
+
+  // Server-side validation of the AI's risk score: clamp to 0-100 and keep it
+  // roughly consistent with the delivered risk level (never trust model output).
+  const LEVEL_MID = { LOW: 20, MEDIUM: 50, HIGH: 75, CRITICAL: 93 };
+  let score = Math.round(Number(data.risk_score));
+  if (!Number.isFinite(score)) score = LEVEL_MID[riskLevel];
+  score = Math.max(0, Math.min(100, score));
+  if (riskLevel === 'CRITICAL' && score < 60) score = 60;
+  if (riskLevel === 'LOW' && score > 40) score = 40;
+
   const norm = (v, fallback) =>
     Array.isArray(v) ? v.slice(0, 8).map((s) => String(s).slice(0, 300)) : fallback;
 
   return {
-    risk_level: ['LOW', 'MEDIUM', 'HIGH'].includes(risk) ? risk : 'MEDIUM',
+    risk_level: riskLevel,
+    risk_score: score,
     threat_category: String(data.threat_category || 'Uncategorized').slice(0, 80),
     verdict: String(data.verdict || '').slice(0, 1200),
+    suspicious_phrases: norm(data.suspicious_phrases, []),
     red_flags: norm(data.red_flags, []),
     explanation: String(data.explanation || '').slice(0, 2000),
     recommended_actions: norm(data.recommended_actions, []),
@@ -370,46 +408,187 @@ export async function analyzeScam({ text, image }) {
 }
 
 /* ------------------------------------------------------------------ */
+/* 1b. Quiz question generation (admin-triggered batches)              */
+/* ------------------------------------------------------------------ */
+
+const QUESTION_BATCH_SCHEMA = {
+  type: 'OBJECT',
+  properties: {
+    questions: {
+      type: 'ARRAY',
+      items: {
+        type: 'OBJECT',
+        properties: {
+          text: { type: 'STRING', description: 'The question, one clear sentence or a short scenario.' },
+          options: {
+            type: 'ARRAY',
+            items: { type: 'STRING' },
+            description: 'Exactly four plausible, distinct answer options.',
+          },
+          correct: {
+            type: 'INTEGER',
+            description: 'Zero-based index (0-3) of the single correct option.',
+          },
+          explanation: {
+            type: 'STRING',
+            description: 'One or two educational sentences explaining why the answer is correct.',
+          },
+          subtopic: {
+            type: 'STRING',
+            description: 'Specific subtopic, e.g. "Cloud Security", "Wi-Fi Security", "Cryptography Basics".',
+          },
+        },
+        required: ['text', 'options', 'correct', 'explanation', 'subtopic'],
+      },
+    },
+  },
+  required: ['questions'],
+};
+
+const QUESTION_GEN_SYSTEM = `You write multiple-choice questions for CyberShield, a defensive
+cybersecurity AWARENESS quiz for college students in India.
+
+Rules for every question:
+- Technically accurate and unambiguous; exactly ONE option is correct.
+- Exactly four options, all plausible, mutually exclusive and distinct.
+- No joke options, no "all of the above", no trick wording.
+- "correct" is the zero-based index (0-3) of the correct option.
+- Explanation: 1-2 sentences teaching WHY the answer is right.
+- Difficulty must genuinely match the requested level.
+- Never ask how to attack, steal credentials, build malware or bypass security.
+- No duplicate or reworded versions of the avoid-list questions.
+- Practical, beginner-friendly language; avoid obscure trivia.
+Answer with JSON only.`;
+
+export async function generateQuizQuestions({ topicLabel, difficulty, count, existingTexts = [] }) {
+  const avoid = existingTexts.length
+    ? `\nDo NOT repeat or lightly reword any of these existing questions:\n${existingTexts
+        .map((text) => `- ${String(text).slice(0, 160)}`)
+        .join('\n')}`
+    : '';
+
+  const prompt =
+    `Write ${count} new ${difficulty.toUpperCase()} difficulty multiple-choice questions about ` +
+    `"${topicLabel}" for a cybersecurity awareness quiz.\n` +
+    'Each question must have exactly four options and one correct answer.\n' +
+    'Also include a specific subtopic (for example: Email Security, Cloud Security, Mobile Security, ' +
+    'Wi-Fi Security, Cryptography Basics, Authentication and Access Control, Cyber Laws, ' +
+    'Digital Forensics and Incident Response).' +
+    avoid;
+
+  const data = await callGeminiJson(
+    { parts: [{ text: prompt }], systemInstruction: QUESTION_GEN_SYSTEM, schema: QUESTION_BATCH_SCHEMA, temperature: 0.7 },
+    ['questions']
+  );
+
+  return Array.isArray(data.questions) ? data.questions : [];
+}
+
+/* ------------------------------------------------------------------ */
 /* 2. AI tutor                                                         */
 /* ------------------------------------------------------------------ */
 
 const DIFFICULTY_GUIDE = {
-  beginner: 'Beginner: plain language, no jargon (explain any term you must use), everyday Indian examples, keep it friendly and short (under ~180 words).',
-  intermediate: 'Intermediate: assume basic security vocabulary (phishing, 2FA, malware), add practical depth and one concrete example (~250 words max).',
-  advanced: 'Advanced: technical depth (protocols, mechanisms, defenses like DMARC/SPF/DKIM, FIDO2), nuance and trade-offs (~350 words max).',
+  beginner: 'Beginner: plain language, no unexplained jargon, everyday Indian examples, short sentences. Aim for 150-250 words.',
+  intermediate: 'Intermediate: assume basic security vocabulary (phishing, 2FA, malware), add practical depth and one concrete example. Aim for 250-400 words.',
+  advanced: 'Advanced: technical depth (protocols, mechanisms, defenses such as DMARC/SPF/DKIM, FIDO2/passkeys), nuance and trade-offs. Aim for 350-550 words.',
 };
 
-const TUTOR_SYSTEM = `You are the CyberShield AI Tutor - a specialized cybersecurity AWARENESS tutor for
-college students. You only teach DEFENSIVE security: understanding threats, recognizing scams,
-and protecting accounts, devices, money and privacy. Follow the difficulty instruction given with
-each question. Format answers with short markdown: bold key terms, bullet lists, and concrete
-safe examples. ${DIFFICULTY_GUIDE.beginner}
+const TUTOR_SCHEMA = {
+  type: 'OBJECT',
+  properties: {
+    answer: {
+      type: 'STRING',
+      description: 'The tutoring answer in markdown. Direct answer first, then short bold sections, with numbered steps where a procedure helps.',
+    },
+    keyTakeaways: {
+      type: 'ARRAY',
+      items: { type: 'STRING' },
+      description: '2-4 short key takeaways the learner should remember.',
+    },
+    followUps: {
+      type: 'ARRAY',
+      items: { type: 'STRING' },
+      description: '2-3 natural follow-up questions the learner could ask next.',
+    },
+    topic: {
+      type: 'STRING',
+      description: 'Closest topic slug from: phishing-social, password-security, malware-ransomware, network-security, identity-theft, financial-fraud, data-privacy, safe-browsing, emerging-threats, or general.',
+    },
+    practicePage: {
+      type: 'STRING',
+      description: 'Optional single CyberShield page id for practice: home, password, quiz, news, threats, toolkit, glossary, resources, ai, about.',
+    },
+    practiceLabel: {
+      type: 'STRING',
+      description: 'Short human label for that page, e.g. "Password Checker".',
+    },
+  },
+  required: ['answer', 'keyTakeaways', 'followUps', 'topic'],
+};
 
-STRICT SAFETY RULES:
-- Refuse anything that facilitates attacks: hacking tutorials, credential theft, malware creation,
-  phishing kit building, bypassing MFA/DRM, doxxing, or "how would a criminal do X".
-  Instead, briefly redirect: explain the defensive side of the topic.
-- If the question is unrelated to cybersecurity/online safety, politely say it is outside
-  CyberShield's scope and offer a cybersecurity topic instead.
-- Never request or repeat passwords, OTPs, card numbers or other secrets.
-- Do not claim advice guarantees safety; encourage verification via official channels.
-- For urgent incidents (hacked account, money stolen) tell the user to call India's 1930 cybercrime helpline and point to CyberShield's emergency response guide on the Toolkit page.`;
+const TUTOR_SYSTEM = `You are the CyberShield AI Cybersecurity Tutor for college students in India.
+You teach DEFENSIVE security only: understanding threats, recognizing scams, and protecting
+accounts, devices, money and privacy.
+
+ANSWER SHAPE
+- Start with a direct answer in 1-2 sentences.
+- Use short markdown sections with bold headings and bullets. Use numbered steps for procedures.
+- Include one concrete defensive example that fits student life in India (UPI/OTP fraud, fake job
+  offers, hostel or public Wi-Fi, WhatsApp and Instagram account theft) when relevant.
+- Include 2-4 key takeaways and 2-3 follow-up questions the learner could ask next.
+- When the learner asks for a step-by-step explanation, put the steps in order and say what to
+  check after each one.
+
+PERSONALIZATION
+- Use ONLY the measured learner facts supplied in the request. Never invent scores, attempts,
+  weak topics or a level.
+- If weak topics are supplied and the question relates to one, mention it once and connect the
+  explanation to it. Do not list the whole profile back at the learner.
+- Match the requested explanation level exactly.
+- Offer at most one CyberShield practice page from the allowed list.
+
+SAFETY (non-negotiable)
+- Refuse actionable attack instructions: hacking, credential theft, malware or keylogger creation,
+  phishing kits or fake login pages, bypassing MFA or security controls, cracking Wi-Fi, doxxing.
+  Briefly redirect to the defensive side of the topic instead.
+- Conceptual questions about how attacks work are allowed at a high level, but never with
+  step-by-step operational detail or code.
+- If the question is unrelated to cybersecurity, say it is outside CyberShield's scope and offer a
+  security topic instead.
+- Never request, repeat or echo passwords, OTPs, card numbers or other secrets.
+- Do not claim advice guarantees safety; recommend verifying through official channels.
+- For active incidents (account taken over, money stolen) tell the user to call India's 1930
+  cybercrime helpline and point to CyberShield's Toolkit emergency guide.
+
+Answer with JSON only.`;
 
 /**
- * Multi-turn tutor reply. History is supplied statelessly by the browser
- * (last N turns), so no conversation is stored server-side.
+ * Multi-turn tutor answer. History comes from the server-stored conversation
+ * (never from the browser), and `learner` is the measured personalization
+ * block built by services/tutor.js. Returns validated-shape JSON that the
+ * route sanitizes before storage.
  */
-export async function tutorReply({ message, difficulty, history = [] }) {
+export async function tutorAnswer({ message, difficulty = 'beginner', history = [], learner = '' }) {
   const guide = DIFFICULTY_GUIDE[difficulty] || DIFFICULTY_GUIDE.beginner;
 
   const contents = [];
   for (const turn of history.slice(-12)) {
     const role = turn.role === 'model' ? 'model' : 'user';
-    contents.push({ role, parts: [{ text: String(turn.text).slice(0, 1500) }] });
+    const text = String(turn.text || '').slice(0, 4000);
+    if (text) contents.push({ role, parts: [{ text }] });
   }
   contents.push({
     role: 'user',
-    parts: [{ text: `[Answer difficulty: ${difficulty.toUpperCase()}] ${guide}\n\nStudent question: ${message}` }],
+    parts: [
+      {
+        text:
+          `[Explanation level: ${difficulty.toUpperCase()}]\n${guide}\n\n` +
+          `${learner || 'Learner profile: no measured quiz data.'}\n\n` +
+          `Student question: ${message}\n\n` +
+          'Answer with JSON only, following the required schema.',
+      },
+    ],
   });
 
   const ai = getClient();
@@ -418,8 +597,10 @@ export async function tutorReply({ message, difficulty, history = [] }) {
       contents,
       config: {
         systemInstruction: TUTOR_SYSTEM,
-        temperature: 0.5,
+        temperature: 0.45,
         safetySettings: SAFETY_SETTINGS,
+        responseMimeType: 'application/json',
+        responseSchema: TUTOR_SCHEMA,
       },
     });
 
@@ -432,9 +613,17 @@ export async function tutorReply({ message, difficulty, history = [] }) {
     if (!text || !String(text).trim()) {
       throw new AiServiceError(AI_UNAVAILABLE_MESSAGE);
     }
-    return { reply: String(text).slice(0, 6000) };
+
+    const data = parseJsonLoose(text);
+    for (const key of ['answer', 'keyTakeaways', 'followUps', 'topic']) {
+      if (!(key in data)) throw new Error(`missing key "${key}"`);
+    }
+    return data;
   } catch (err) {
     if (err instanceof AiServiceError) throw err;
+    if (/^missing key /.test(String(err?.message || ''))) {
+      throw new AiServiceError(AI_UNAVAILABLE_MESSAGE);
+    }
     throw mapError(err);
   }
 }
@@ -507,6 +696,88 @@ export async function learningPath({ performance }) {
     }));
 
   return { summary: String(data.summary || '').slice(0, 500), steps };
+}
+
+/* ------------------------------------------------------------------ */
+/* 3b. Personalized learning ROADMAP (staged, tracked)                 */
+/* ------------------------------------------------------------------ */
+
+const ROADMAP_SCHEMA = {
+  type: 'OBJECT',
+  properties: {
+    title: { type: 'STRING', description: 'Short encouraging title for this roadmap.' },
+    summary: { type: 'STRING', description: '2-3 sentences explaining the focus, based ONLY on the supplied measured performance.' },
+    lessons: {
+      type: 'ARRAY',
+      description: '6 to 10 ordered lessons covering Beginner, Intermediate and Advanced stages.',
+      items: {
+        type: 'OBJECT',
+        properties: {
+          topic: { type: 'STRING', description: 'Exactly one of the supplied topic slugs.' },
+          stage: { type: 'STRING', description: 'One of: Beginner, Intermediate, Advanced.' },
+          difficulty: { type: 'STRING', description: 'One of: easy, medium, hard (match the stage).' },
+          title: { type: 'STRING', description: 'Short lesson title.' },
+          objective: { type: 'STRING', description: 'What the learner will be able to do after this lesson.' },
+          why: { type: 'STRING', description: 'Why this topic is recommended for THIS learner, referencing only the supplied measured accuracy. Never invent scores.' },
+          estimatedMinutes: { type: 'INTEGER', description: 'Study time in minutes, 10-90.' },
+          type: { type: 'STRING', description: 'One of: Learn, Read, Practice, Take.' },
+          description: { type: 'STRING', description: '1-2 sentences describing the activity.' },
+          resource: { type: 'STRING', description: 'CyberShield page id from: home, password, quiz, news, threats, toolkit, glossary, resources, ai, about.' },
+          resourceLabel: { type: 'STRING', description: 'Human label for that page.' },
+          exercise: { type: 'STRING', description: 'One concrete practical exercise the learner can complete.' },
+        },
+        required: ['topic', 'stage', 'difficulty', 'title', 'objective', 'why', 'estimatedMinutes', 'type', 'description', 'resource', 'resourceLabel', 'exercise'],
+      },
+    },
+  },
+  required: ['title', 'summary', 'lessons'],
+};
+
+const ROADMAP_SYSTEM = `You build a personalized, staged cybersecurity learning roadmap for a
+college student in India, using ONLY the measured quiz performance supplied.
+
+Rules:
+- Never invent scores, topics, attempts or weaknesses. If a topic has no measured accuracy, do not
+  claim it is weak; the supplied data says which topics were actually measured.
+- Prioritise the learner's weakest measured topics first, then other measured topics.
+- Produce 6-10 lessons with a sensible progression: Beginner, Intermediate, Advanced. Every stage
+  must appear at least once.
+- topic MUST be one of the supplied topic slugs (copy it exactly).
+- stage is Beginner, Intermediate or Advanced; difficulty is easy, medium or hard and must match:
+  Beginner=easy, Intermediate=medium, Advanced=hard.
+- Every lesson needs one concrete exercise and one CyberShield page resource from the allowed list.
+- Explain in "why" why this learner should study this topic now, quoting only measured accuracy.
+- Defensive, beginner-friendly, no offensive security instructions. Answer with JSON only.`;
+
+export async function personalizedRoadmap({ profile, attempts }) {
+  const topics = [
+    'phishing-social', 'password-security', 'malware-ransomware', 'network-security',
+    'identity-theft', 'financial-fraud', 'data-privacy', 'safe-browsing', 'emerging-threats',
+  ];
+  const measured = (profile.topicPerformance || []).map((t) => ({
+    topic: t.topic,
+    accuracy: t.accuracy,
+    correct: t.correct,
+    total: t.total,
+  }));
+
+  const prompt =
+    'Measured quiz performance (the ONLY performance facts you may use):\n' +
+    `Saved quiz attempts: ${attempts}\n` +
+    `Current difficulty: ${profile.currentDifficulty}\n` +
+    `Average score: ${profile.averageScore == null ? 'not measured yet' : profile.averageScore + '%'}\n` +
+    `Latest score: ${profile.lastScore == null ? 'not measured yet' : profile.lastScore + '%'}\n` +
+    `Topic accuracy (measured): ${JSON.stringify(measured)}\n` +
+    `Weakest topics: ${JSON.stringify((profile.weakTopics || []).map((t) => t.topic))}\n` +
+    `Strongest topics: ${JSON.stringify((profile.strongTopics || []).map((t) => t.topic))}\n` +
+    `All allowed topic slugs: ${topics.join(', ')}\n` +
+    'Build the staged roadmap now.';
+
+  const data = await callGeminiJson(
+    { parts: [{ text: prompt }], systemInstruction: ROADMAP_SYSTEM, schema: ROADMAP_SCHEMA, temperature: 0.5 },
+    ['title', 'summary', 'lessons']
+  );
+  return data;
 }
 
 /* ------------------------------------------------------------------ */

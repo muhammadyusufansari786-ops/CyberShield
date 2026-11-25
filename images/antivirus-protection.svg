@@ -1,0 +1,108 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="600" height="400" role="img" aria-hidden="true">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0b1220"/>
+      <stop offset="1" stop-color="#111d2e"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="50%" cy="50%" r="55%">
+      <stop offset="0" stop-color="#0f766e" stop-opacity="0.3"/>
+      <stop offset="1" stop-color="#0f766e" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="scanGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0" stop-color="#2dd4bf" stop-opacity="0.4"/>
+      <stop offset="1" stop-color="#2dd4bf" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M40 0H0V40" fill="none" stroke="#1e3a5f" stroke-opacity="0.3" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <rect width="600" height="400" fill="url(#bg)"/>
+  <rect width="600" height="400" fill="url(#grid)"/>
+  <rect width="600" height="400" fill="url(#glow)"/>
+
+  <!-- Central shield with scan -->
+  <g transform="translate(300 180)">
+    <circle cx="0" cy="0" r="90" fill="url(#scanGlow)"/>
+    <!-- scanning line -->
+    <rect x="-85" y="-30" width="170" height="4" fill="#2dd4bf" opacity="0.8">
+      <animate attributeName="y" values="-80;80;-80" dur="2s" repeatCount="indefinite"/>
+    </rect>
+    <!-- shield -->
+    <path d="M0 -80 L50 -50 L50 20 C50 55 25 75 0 85 C-25 75 -50 55 -50 20 L-50 -50 Z" fill="#0f1929" stroke="#0f766e" stroke-width="4"/>
+    <!-- checkmark -->
+    <path d="M-25 15 L-8 30 L25 -15" fill="none" stroke="#34d399" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+
+  <!-- Scan progress ring -->
+  <g transform="translate(300 180)">
+    <circle cx="0" cy="0" r="100" fill="none" stroke="#0f766e" stroke-width="2" stroke-dasharray="4 6" opacity="0.4"/>
+    <circle cx="0" cy="0" r="100" fill="none" stroke="#2dd4bf" stroke-width="3" stroke-dasharray="300" stroke-dashoffset="100" opacity="0.7"/>
+  </g>
+
+  <!-- Quarantine zone -->
+  <g transform="translate(50 260)">
+    <rect x="0" y="0" width="160" height="80" rx="8" fill="#0f1929" stroke="#f87171" stroke-width="2" stroke-dasharray="5 3"/>
+    <text x="80" y="20" text-anchor="middle" fill="#f87171" font-family="system-ui" font-size="11" font-weight="600">QUARANTINE</text>
+    <g fill="#f87171" opacity="0.8">
+      <rect x="10" y="30" width="20" height="20" rx="3"/>
+      <rect x="35" y="30" width="20" height="20" rx="3" opacity="0.7"/>
+      <rect x="60" y="30" width="20" height="20" rx="3" opacity="0.5"/>
+      <rect x="85" y="30" width="20" height="20" rx="3" opacity="0.6"/>
+    </g>
+    <g stroke="#f87171" stroke-width="1" stroke-dasharray="2 2" opacity="0.5">
+      <line x1="10" y1="55" x2="30" y2="55"/>
+      <line x1="35" y1="55" x2="55" y2="55"/>
+      <line x1="60" y1="55" x2="80" y2="55"/>
+      <line x1="85" y1="55" x2="105" y2="55"/>
+    </g>
+  </g>
+
+  <!-- Threat blocked indicators -->
+  <g transform="translate(400 60)">
+    <g fill="none" stroke="#34d399" stroke-width="2.5" stroke-linecap="round">
+      <path d="M-15 0 L0 -15 L15 15 L0 8 L-15 0 Z"/>
+    </g>
+    <text x="0" y="35" text-anchor="middle" fill="#34d399" font-family="system-ui" font-size="10" font-weight="600">THREAT BLOCKED</text>
+  </g>
+
+  <!-- Virus files being scanned -->
+  <g transform="translate(430 240)">
+    <g stroke="#c084fc" stroke-width="1.5" fill="#0f1929">
+      <rect x="0" y="0" width="40" height="50" rx="3" stroke-width="2"/>
+      <rect x="5" y="5" width="30" height="4" rx="1"/>
+      <rect x="5" y="12" width="25" height="3" rx="1" opacity="0.7"/>
+      <rect x="5" y="18" width="28" height="3" rx="1" opacity="0.7"/>
+      <rect x="5" y="24" width="20" height="3" rx="1" opacity="0.7"/>
+      <rect x="5" y="30" width="26" height="3" rx="1" opacity="0.7"/>
+      <!-- virus mark -->
+      <g transform="translate(20 25)" fill="#c084fc" opacity="0.6">
+        <circle r="8"/>
+      </g>
+    </g>
+  </g>
+
+  <!-- Real-time protection badge -->
+  <g transform="translate(450 300)">
+    <rect x="0" y="0" width="120" height="40" rx="8" fill="#0f1929" stroke="#34d399" stroke-width="2"/>
+    <g transform="translate(12 12)" fill="#34d399">
+      <circle cx="6" cy="8" r="3"/>
+      <path d="M6 14 L6 17 M6 14 L9 14" stroke="#0f1929" stroke-width="1.5" stroke-linecap="round"/>
+    </g>
+    <text x="38" y="16" fill="#34d399" font-family="system-ui" font-size="10" font-weight="600">Real-time</text>
+    <text x="38" y="28" fill="#34d399" font-family="system-ui" font-size="10" font-weight="600">Protection</text>
+  </g>
+
+  <!-- Scan stats -->
+  <g transform="translate(180 60)">
+    <text x="0" y="0" fill="#60a5fa" font-family="system-ui" font-size="10" font-weight="600">FILES SCANNED</text>
+    <text x="0" y="18" fill="#2dd4bf" font-family="system-ui" font-size="20" font-weight="700">12,847</text>
+    <text x="100" y="0" fill="#60a5fa" font-family="system-ui" font-size="10" font-weight="600">THREATS FOUND</text>
+    <text x="100" y="18" fill="#f87171" font-family="system-ui" font-size="20" font-weight="700">3</text>
+  </g>
+
+  <!-- Scan wave arcs -->
+  <g fill="none" stroke="#2dd4bf" stroke-width="1.5" stroke-dasharray="4 6" opacity="0.4" transform="translate(300 180)">
+    <path d="M-70 -70 A99 99 0 0 1 70 -70"/>
+    <path d="M-70 -70 A99 99 0 0 0 -70 70"/>
+  </g>
+</svg>

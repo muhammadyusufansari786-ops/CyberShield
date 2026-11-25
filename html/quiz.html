@@ -77,13 +77,22 @@
           </nav>
           <header style="text-align: center; margin-bottom: 2rem;">
             <h1>Cybersecurity Knowledge Quiz</h1>
-            <p style="color: var(--color-text-secondary); font-size: 1.125rem; margin-top: 0.75rem;">Test your understanding of key security concepts. Questions are randomized each attempt.</p>
+            <p style="color: var(--color-text-secondary); font-size: 1.125rem; margin-top: 0.75rem;">Test your understanding of key security concepts. Every attempt draws a different mix from the approved question bank.</p>
+            <p id="bank-size-note" class="quiz-bank-note" role="status" aria-live="polite"></p>
           </header>
 
           <!-- Quiz Setup -->
           <div class="card" id="quiz-setup" style="max-width: 600px; margin: 0 auto;">
             <div class="card-header">
               <h2 class="card-title">Quiz Settings</h2>
+            </div>
+            <div class="form-group">
+              <span class="form-label" id="quiz-mode-label">Quiz Mode</span>
+              <div class="quiz-mode" role="radiogroup" aria-labelledby="quiz-mode-label">
+                <button type="button" class="quiz-mode-btn active" data-mode="normal" role="radio" aria-checked="true">Normal Quiz</button>
+                <button type="button" class="quiz-mode-btn" data-mode="adaptive" role="radio" aria-checked="false">Adaptive Quiz</button>
+              </div>
+              <p class="quiz-mode-hint" id="quiz-mode-hint">Standard randomized quiz across the categories you choose.</p>
             </div>
             <div class="form-group">
               <label for="question-count" class="form-label">Number of Questions</label>
@@ -121,6 +130,11 @@
                 <div class="progress-bar-fill" id="quiz-progress-bar" style="width: 0%;"></div>
               </div>
               <span class="progress-text" id="progress-text">Question 1 of 10</span>
+              <div class="adaptive-meta" id="adaptive-meta" hidden>
+                <span class="badge" id="adaptive-difficulty-badge">Easy</span>
+                <span class="badge badge-neutral" id="adaptive-topic-badge"></span>
+                <span class="badge badge-info" id="question-new-badge" hidden>New question</span>
+              </div>
               <div class="quiz-timer" id="quiz-timer" style="display: none;" aria-live="assertive">
                 <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
                 <span id="timer-value">30</span>s
@@ -150,6 +164,7 @@
           <div class="card" id="quiz-results" style="max-width: 800px; margin: 0 auto; display: none;">
             <div class="quiz-results" role="region" aria-label="Quiz Results">
               <h2 style="margin-bottom: 1.5rem;">Quiz Complete!</h2>
+              <p id="quiz-save-status" class="quiz-save-status" role="status" aria-live="polite"></p>
               
               <div class="results-score" id="results-score" role="img" aria-label="Score: 0%">
                 <span class="results-value" id="results-value">0%</span>
@@ -177,8 +192,20 @@
                 </div>
               </div>
               
+              <!-- Adaptive-only summary: difficulty mix, topics, recommendations -->
+              <div id="adaptive-results" class="adaptive-results" hidden>
+                <div class="adaptive-results-head">
+                  <h3>Adaptive run summary</h3>
+                  <p id="adaptive-score-note" class="adaptive-note"></p>
+                </div>
+                <div id="adaptive-difficulty-breakdown" class="adaptive-block"></div>
+                <div id="adaptive-topic-breakdown" class="adaptive-block"></div>
+                <div id="adaptive-recommendations" class="adaptive-block"></div>
+              </div>
+
               <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 1rem; margin-top: 2rem;">
                 <button type="button" class="btn btn-primary" id="retake-btn">Retake Quiz</button>
+                <button type="button" class="btn btn-primary" id="adaptive-retake-btn" style="display: none;">Start Another Adaptive Quiz</button>
                 <button type="button" class="btn btn-secondary" id="review-btn">Review Answers</button>
                 <a href="index.html" class="btn btn-ghost">Back to Home</a>
               </div>
@@ -203,6 +230,10 @@
               <a href="index.html" class="btn btn-ghost">Back to Home</a>
             </div>
           </div>
+          <div class="section-photo-banner" style="margin-bottom: 2rem;">
+            <img class="section-photo-banner-photo" src="/images/photos/learner-quiz.webp" alt="Person taking a cybersecurity knowledge assessment quiz on a computer screen" loading="eager" width="1000" height="562" onerror="this.style.display='none';">
+            <div class="section-photo-banner-overlay" aria-hidden="true"></div>
+          </div>
         </div>
       </div>
     </section>
@@ -213,6 +244,7 @@
   <script src="../js/main.js"></script>
   <script src="../js/footer.js" defer></script>
   <script src="../js/ai-client.js"></script>
+  <script src="../js/adaptive-quiz.js"></script>
   <script src="../js/quiz.js"></script>
 </body>
 </html>

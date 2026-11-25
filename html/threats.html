@@ -75,6 +75,10 @@
               <li aria-current="page">Common Threats</li>
             </ol>
           </nav>
+          <div class="section-photo-banner">
+            <img class="section-photo-banner-photo" src="/images/photos/threat-monitoring-dashboards.webp" alt="Dual monitors displaying live threat analytics, code and intrusion dashboards in a dim operations room" loading="eager" width="1400" height="934" onerror="this.style.display='none';">
+            <div class="section-photo-banner-overlay" aria-hidden="true"></div>
+          </div>
           <header style="text-align: center; margin-bottom: 2rem;">
             <h1>Common Cyber Threats</h1>
             <p style="color: var(--color-text-secondary); font-size: 1.125rem; margin-top: 0.75rem;">Understand the threats you face online. Each card covers real-world examples, warning signs, and prevention steps.</p>
@@ -511,6 +515,52 @@
           'Have incident response plan ready',
           'Monitor for pre-attack reconnaissance'
         ]
+      },
+      {
+        id: 'mitm',
+        name: 'Man-in-the-Middle (MITM)',
+        category: 'malware',
+        icon: '🕳️',
+        iconBg: 'var(--color-danger-bg)',
+        iconColor: 'var(--color-danger)',
+        example: 'A free airport Wi-Fi portal asks for your email password, and the attacker running it reads every login made on that network.',
+        signs: [
+          'Browser certificate warnings or unexpected HTTPS errors',
+          'A captive portal asking for email or bank passwords',
+          'Wi-Fi names that differ slightly from the official one',
+          'Repeated logouts or session errors',
+          'Unexpected redirects to unfamiliar domains'
+        ],
+        prevention: [
+          'Avoid sensitive logins on public Wi-Fi; use mobile data or a trusted VPN',
+          'Check for a valid padlock and certificate before logging in',
+          'Never type account passwords into a Wi-Fi sign-in page',
+          'Turn off auto-connect to open networks',
+          'Disable file sharing on public networks'
+        ]
+      },
+      {
+        id: 'viruses-worms',
+        name: 'Viruses & Worms',
+        category: 'malware',
+        icon: '🦠',
+        iconBg: 'var(--color-warning-bg)',
+        iconColor: 'var(--color-warning)',
+        example: 'A found USB drive spreads a worm across an office network in minutes, encrypting shared folders as it copies itself.',
+        signs: [
+          'Files changing size or appearing with odd extensions',
+          'Sudden network slowdown and heavy internal traffic',
+          'Programs launching by themselves',
+          'New startup entries or scheduled tasks you did not create',
+          'Antivirus disabled or unable to update'
+        ],
+        prevention: [
+          'Install operating system and software updates promptly',
+          'Disable autorun and scan removable media before opening',
+          'Use a reputable, updated antivirus',
+          'Avoid software from unofficial sources',
+          'Back up important data offline and test restores'
+        ]
       }
     ];
 
@@ -531,7 +581,9 @@
       'sim-swap': 'device',
       'social-engineering': 'phishing',
       'deepfake': 'phishing',
-      'insider': 'hacked'
+      'insider': 'hacked',
+      'mitm': 'hacked',
+      'viruses-worms': 'malware'
     };
 
     // Glossary deep links for each threat (glossary.html?term=<Term Name>)
@@ -551,7 +603,9 @@
       'sim-swap': ['SIM Swapping', 'OTP (One-Time Password)'],
       'social-engineering': ['Social Engineering', 'Pretexting', 'Baiting'],
       'deepfake': ['Deepfake', 'Vishing'],
-      'insider': ['Data Breach', 'Least Privilege']
+      'insider': ['Data Breach', 'Least Privilege'],
+      'mitm': ['Man-in-the-Middle (MITM)'],
+      'viruses-worms': ['Virus', 'Worm']
     };
 
     // Threats page logic
@@ -568,8 +622,9 @@
           ? THREATS_DATA 
           : THREATS_DATA.filter(t => t.category === filter);
         
-        grid.innerHTML = filtered.map(threat => `
-          <article class="card threat-card" role="listitem" data-category="${threat.category}">
+                grid.innerHTML = filtered.map(threat => `
+          <article class="card threat-card threat-card--link" role="listitem" data-category="${threat.category}">
+            <a class="threat-card-link" href="threat-details.html?id=${encodeURIComponent(threat.id)}" aria-label="View details for ${threat.name}"></a>
             <div class="threat-header">
               <div class="threat-icon" style="background: ${threat.iconBg}; color: ${threat.iconColor};" aria-hidden="true">${threat.icon}</div>
               <div>
@@ -586,29 +641,6 @@
                 <div class="threat-section-title">Real-World Example</div>
                 <p class="line-clamp-3">${threat.example}</p>
               </div>
-              <div class="viewmore-region threat-more-region" id="threat-${threat.id}-details">
-                <div class="viewmore-inner">
-                  <div class="threat-section">
-                    <div class="threat-section-title">Warning Signs</div>
-                    <ul style="margin-left: 1.25rem; color: var(--color-text-secondary); line-height: 1.8;">
-                      ${threat.signs.map(s => `<li>${s}</li>`).join('')}
-                    </ul>
-                  </div>
-                  <div class="threat-section">
-                    <div class="threat-section-title">Prevention Tips</div>
-                    <ul style="margin-left: 1.25rem; color: var(--color-text-secondary); line-height: 1.8;">
-                      ${threat.prevention.map(p => `<li>${p}</li>`).join('')}
-                    </ul>
-                  </div>
-                  ${(GLOSSARY_LINKS[threat.id] || []).map(t =>
-                    `<a class="glossary-jump" href="glossary.html?term=${encodeURIComponent(t)}">📖 ${t}</a>`
-                  ).join('')}
-                </div>
-              </div>
-              <button type="button" class="viewmore-btn" aria-expanded="false" aria-controls="threat-${threat.id}-details">
-                <span class="viewmore-label">View More</span>
-                <span class="viewmore-arrow" aria-hidden="true">→</span>
-              </button>
             </div>
           </article>
         `).join('');

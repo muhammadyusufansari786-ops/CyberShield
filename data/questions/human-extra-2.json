@@ -1,0 +1,1218 @@
+[
+  {
+    "id": "q1076",
+    "category": "privacy",
+    "topic": "network-security",
+    "subtopic": "Network Security",
+    "difficulty": "easy",
+    "question": "What is the main purpose of a firewall?",
+    "options": [
+      "Filter network traffic according to rules",
+      "Speed up the internet connection",
+      "Back up files automatically",
+      "Encrypt passwords"
+    ],
+    "correct": 0,
+    "explanation": "A firewall allows or blocks traffic based on configured rules, reducing exposure to unwanted connections."
+  },
+  {
+    "id": "q1077",
+    "category": "privacy",
+    "topic": "network-security",
+    "subtopic": "Network Security",
+    "difficulty": "medium",
+    "question": "Why is network segmentation valuable?",
+    "options": [
+      "It limits how far an intruder can move inside the network",
+      "It increases Wi-Fi range",
+      "It removes the need for passwords",
+      "It speeds up DNS lookups"
+    ],
+    "correct": 0,
+    "explanation": "Separating sensitive systems from guest or IoT devices contains a breach instead of letting it spread."
+  },
+  {
+    "id": "q1078",
+    "category": "privacy",
+    "topic": "network-security",
+    "subtopic": "Wi-Fi Security",
+    "difficulty": "easy",
+    "question": "Which Wi-Fi security mode is currently the strongest common choice?",
+    "options": [
+      "WPA3",
+      "WEP",
+      "WPA (original)",
+      "Open network"
+    ],
+    "correct": 0,
+    "explanation": "WEP and original WPA are broken; WPA2 is acceptable but WPA3 is the modern standard."
+  },
+  {
+    "id": "q1079",
+    "category": "privacy",
+    "topic": "network-security",
+    "subtopic": "Wi-Fi Security",
+    "difficulty": "medium",
+    "question": "What is a rogue access point?",
+    "options": [
+      "An unauthorised Wi-Fi hotspot that impersonates a legitimate network",
+      "A router with a weak password",
+      "A firewall rule",
+      "A DNS record"
+    ],
+    "correct": 0,
+    "explanation": "Attackers run fake hotspots with familiar names to capture traffic or serve phishing pages."
+  },
+  {
+    "id": "q1080",
+    "category": "privacy",
+    "topic": "network-security",
+    "subtopic": "Wi-Fi Security",
+    "difficulty": "medium",
+    "question": "Why does hiding your Wi-Fi SSID add little security?",
+    "options": [
+      "The network name is still discoverable in other management frames",
+      "It disables encryption",
+      "It makes the router slower",
+      "It requires WEP"
+    ],
+    "correct": 0,
+    "explanation": "Hidden networks are easily found by scanning tools; strong WPA3 and a strong passphrase matter far more."
+  },
+  {
+    "id": "q1081",
+    "category": "privacy",
+    "topic": "network-security",
+    "subtopic": "Wi-Fi Security",
+    "difficulty": "hard",
+    "question": "What is a deauthentication attack used for?",
+    "options": [
+      "Forcing clients off a network so they reconnect to an attacker's hotspot",
+      "Increasing Wi-Fi bandwidth",
+      "Blocking spam calls",
+      "Encrypting DNS"
+    ],
+    "correct": 0,
+    "explanation": "Forced disconnects push devices toward a rogue AP or capture the handshake for offline cracking."
+  },
+  {
+    "id": "q1082",
+    "category": "privacy",
+    "topic": "network-security",
+    "subtopic": "Wi-Fi Security",
+    "difficulty": "easy",
+    "question": "You need to check your bank balance on public Wi-Fi. What is the safest option?",
+    "options": [
+      "Use your mobile data or a trusted VPN instead",
+      "Disable HTTPS",
+      "Use the café's guest network without a password",
+      "Ask another customer to log in for you"
+    ],
+    "correct": 0,
+    "explanation": "Mobile data avoids the shared network entirely; a reputable VPN protects traffic if you must use Wi-Fi."
+  },
+  {
+    "id": "q1083",
+    "category": "privacy",
+    "topic": "network-security",
+    "subtopic": "Network Security",
+    "difficulty": "medium",
+    "question": "What does NAT do on a home router?",
+    "options": [
+      "Translates private addresses to a public address for internet access",
+      "Encrypts all local traffic",
+      "Blocks all incoming email",
+      "Assigns domain names"
+    ],
+    "correct": 0,
+    "explanation": "NAT lets many private devices share one public IP, indirectly hiding internal addresses."
+  },
+  {
+    "id": "q1084",
+    "category": "privacy",
+    "topic": "network-security",
+    "subtopic": "Network Security",
+    "difficulty": "hard",
+    "question": "What is a man-in-the-middle (MITM) attack?",
+    "options": [
+      "An attacker secretly relays or alters traffic between two parties",
+      "A phishing email with two links",
+      "A brute-force login attempt",
+      "A backup failure"
+    ],
+    "correct": 0,
+    "explanation": "The attacker positions themselves between client and server, reading or modifying traffic."
+  },
+  {
+    "id": "q1085",
+    "category": "privacy",
+    "topic": "network-security",
+    "subtopic": "Network Security",
+    "difficulty": "medium",
+    "question": "What is the difference between an IDS and an IPS?",
+    "options": [
+      "An IDS detects and alerts; an IPS can also block the traffic",
+      "An IDS is hardware and an IPS is software",
+      "An IDS encrypts traffic",
+      "An IPS replaces a firewall"
+    ],
+    "correct": 0,
+    "explanation": "Detection is passive; prevention can drop or reset malicious traffic inline."
+  },
+  {
+    "id": "q1086",
+    "category": "privacy",
+    "topic": "network-security",
+    "subtopic": "Network Security",
+    "difficulty": "easy",
+    "question": "Why should you change the default admin password on a new router?",
+    "options": [
+      "Default credentials are publicly known and easily exploited",
+      "It improves Wi-Fi speed",
+      "It enables WPA3 automatically",
+      "It removes ads"
+    ],
+    "correct": 0,
+    "explanation": "Attackers scan for routers still using factory logins."
+  },
+  {
+    "id": "q1087",
+    "category": "privacy",
+    "topic": "network-security",
+    "subtopic": "Network Security",
+    "difficulty": "medium",
+    "question": "What does a DDoS attack try to achieve?",
+    "options": [
+      "Overwhelm a service with traffic so legitimate users cannot use it",
+      "Steal a database quietly",
+      "Encrypt files for ransom",
+      "Guess passwords"
+    ],
+    "correct": 0,
+    "explanation": "Distributed denial of service exhausts bandwidth or connection capacity rather than stealing data."
+  },
+  {
+    "id": "q1088",
+    "category": "privacy",
+    "topic": "network-security",
+    "subtopic": "Network Security",
+    "difficulty": "hard",
+    "question": "What is DNS cache poisoning?",
+    "options": [
+      "Injecting false DNS records so a domain resolves to an attacker's server",
+      "Clearing your browser history",
+      "Blocking port 443",
+      "Stealing Wi-Fi passwords"
+    ],
+    "correct": 0,
+    "explanation": "A poisoned resolver sends users to the wrong IP even when they typed the correct domain."
+  },
+  {
+    "id": "q1089",
+    "category": "privacy",
+    "topic": "network-security",
+    "subtopic": "Network Security",
+    "difficulty": "medium",
+    "question": "Why is port 23 (Telnet) considered unsafe?",
+    "options": [
+      "It sends credentials and commands in plain text",
+      "It is slower than SSH",
+      "It only works on Linux",
+      "It requires a VPN"
+    ],
+    "correct": 0,
+    "explanation": "Telnet has no encryption, so anyone on the path can read the session; SSH is the safe replacement."
+  },
+  {
+    "id": "q1090",
+    "category": "privacy",
+    "topic": "network-security",
+    "subtopic": "Cloud Security",
+    "difficulty": "easy",
+    "question": "What is the biggest cloud-security risk for most organisations?",
+    "options": [
+      "Misconfigured storage or permissions exposing data",
+      "Cloud providers lacking physical security",
+      "Slow internet connections",
+      "Too many backups"
+    ],
+    "correct": 0,
+    "explanation": "Public buckets, overly broad roles and default settings cause many cloud data exposures."
+  },
+  {
+    "id": "q1091",
+    "category": "privacy",
+    "topic": "network-security",
+    "subtopic": "Cloud Security",
+    "difficulty": "medium",
+    "question": "What does the principle of least privilege mean in cloud IAM?",
+    "options": [
+      "Grant only the permissions a task actually needs",
+      "Give every user admin rights",
+      "Use one shared account",
+      "Disable logging"
+    ],
+    "correct": 0,
+    "explanation": "Minimal permissions reduce the blast radius if an account or key is compromised."
+  },
+  {
+    "id": "q1092",
+    "category": "privacy",
+    "topic": "network-security",
+    "subtopic": "Cloud Security",
+    "difficulty": "hard",
+    "question": "Why are long-lived cloud access keys risky?",
+    "options": [
+      "If leaked they stay valid until rotated or revoked",
+      "They expire every hour",
+      "They cannot be used by scripts",
+      "They only work inside a VPN"
+    ],
+    "correct": 0,
+    "explanation": "Short-lived roles or workload identities limit the damage of a leaked credential."
+  },
+  {
+    "id": "q1093",
+    "category": "privacy",
+    "topic": "network-security",
+    "subtopic": "Cloud Security",
+    "difficulty": "medium",
+    "question": "What does encryption at rest protect?",
+    "options": [
+      "Stored data if the underlying disk or backup is exposed",
+      "Data only while it is in transit",
+      "Passwords typed into a form",
+      "DNS queries"
+    ],
+    "correct": 0,
+    "explanation": "At-rest encryption protects stored volumes and backups; in-transit encryption is a separate control."
+  },
+  {
+    "id": "q1094",
+    "category": "privacy",
+    "topic": "network-security",
+    "subtopic": "Cloud Security",
+    "difficulty": "easy",
+    "question": "Before installing a cloud app that requests access to your drive, what should you check?",
+    "options": [
+      "Which permissions the app requests and whether it needs them",
+      "The app's colour scheme",
+      "How many reviews it has on social media",
+      "Whether it has a mobile version"
+    ],
+    "correct": 0,
+    "explanation": "OAuth scopes define what the app can read or change; unnecessary access should be refused."
+  },
+  {
+    "id": "q1095",
+    "category": "privacy",
+    "topic": "network-security",
+    "subtopic": "Network Security",
+    "difficulty": "medium",
+    "question": "What is a VPN's main privacy benefit on a public network?",
+    "options": [
+      "It encrypts traffic between your device and the VPN server",
+      "It makes you anonymous to every website",
+      "It blocks all malware",
+      "It hides your device's battery level"
+    ],
+    "correct": 0,
+    "explanation": "A VPN tunnels traffic past the local network, though destination sites still see your requests."
+  },
+  {
+    "id": "q1096",
+    "category": "privacy",
+    "topic": "network-security",
+    "subtopic": "Network Security",
+    "difficulty": "hard",
+    "question": "What is certificate pinning?",
+    "options": [
+      "An app only trusts a specific expected certificate for a server",
+      "Pinning a password to a device",
+      "Locking a SIM card",
+      "Blocking port 80"
+    ],
+    "correct": 0,
+    "explanation": "Pinning prevents a MITM with a fraudulently issued certificate from impersonating the server."
+  },
+  {
+    "id": "q1097",
+    "category": "privacy",
+    "topic": "network-security",
+    "subtopic": "Network Security",
+    "difficulty": "easy",
+    "question": "What does HTTPS protect?",
+    "options": [
+      "The connection between browser and server",
+      "The honesty of the website owner",
+      "Your device from malware",
+      "Your account from weak passwords"
+    ],
+    "correct": 0,
+    "explanation": "HTTPS encrypts traffic and authenticates the server certificate, nothing more."
+  },
+  {
+    "id": "q1098",
+    "category": "privacy",
+    "topic": "network-security",
+    "subtopic": "Network Security",
+    "difficulty": "medium",
+    "question": "Why should you update router firmware?",
+    "options": [
+      "Updates patch vulnerabilities attackers actively exploit",
+      "They increase your data cap",
+      "They remove the admin password",
+      "They disable NAT"
+    ],
+    "correct": 0,
+    "explanation": "Unpatched routers are common botnet targets; firmware updates close known flaws."
+  },
+  {
+    "id": "q1099",
+    "category": "privacy",
+    "topic": "network-security",
+    "subtopic": "Network Security",
+    "difficulty": "medium",
+    "question": "What is a captive portal, and why should you be careful with it?",
+    "options": [
+      "A login page on public Wi-Fi; fake ones can harvest credentials",
+      "A firewall rule",
+      "A VPN protocol",
+      "A DNS server"
+    ],
+    "correct": 0,
+    "explanation": "Attackers clone captive portals to collect emails, passwords or payment details."
+  },
+  {
+    "id": "q1100",
+    "category": "privacy",
+    "topic": "network-security",
+    "subtopic": "Network Security",
+    "difficulty": "hard",
+    "question": "What does a zero-trust network model assume?",
+    "options": [
+      "No user or device is trusted by default, even inside the network",
+      "Only external users are threats",
+      "Passwords are unnecessary",
+      "All internal traffic is safe"
+    ],
+    "correct": 0,
+    "explanation": "Every request is authenticated and authorised, which contains lateral movement after a compromise."
+  },
+  {
+    "id": "q1101",
+    "category": "privacy",
+    "topic": "network-security",
+    "subtopic": "Network Security",
+    "difficulty": "medium",
+    "question": "Why is MAC address filtering weak Wi-Fi protection?",
+    "options": [
+      "MAC addresses can be spoofed and are visible over the air",
+      "It encrypts traffic twice",
+      "It disables WPA3",
+      "It blocks DNS"
+    ],
+    "correct": 0,
+    "explanation": "An attacker can clone an allowed MAC address, so this is not a real access control."
+  },
+  {
+    "id": "q1102",
+    "category": "privacy",
+    "topic": "network-security",
+    "subtopic": "Network Security",
+    "difficulty": "easy",
+    "question": "What should you do with an unknown USB drive found in a car park?",
+    "options": [
+      "Hand it to IT/security; never plug it into your computer",
+      "Plug it in to identify the owner",
+      "Take it home and format it",
+      "Share it with colleagues"
+    ],
+    "correct": 0,
+    "explanation": "Planted USB drives are a classic way to deliver malware; unknown media should never be connected."
+  },
+  {
+    "id": "q1103",
+    "category": "privacy",
+    "topic": "identity-theft",
+    "subtopic": "Identity Theft",
+    "difficulty": "easy",
+    "question": "Which piece of information is most sensitive to share online?",
+    "options": [
+      "Your full name combined with date of birth and ID number",
+      "Your favourite food",
+      "Your favourite sport",
+      "Your screen brightness setting"
+    ],
+    "correct": 0,
+    "explanation": "That combination is often enough to pass identity checks or answer security questions."
+  },
+  {
+    "id": "q1104",
+    "category": "privacy",
+    "topic": "identity-theft",
+    "subtopic": "Identity Theft",
+    "difficulty": "medium",
+    "question": "What does a credit freeze (or credit lock) do?",
+    "options": [
+      "Restricts lenders from accessing your credit file to open new accounts",
+      "Deletes your credit history",
+      "Blocks all debit card payments",
+      "Cancels your bank account"
+    ],
+    "correct": 0,
+    "explanation": "A freeze makes it much harder for a fraudster to open credit in your name."
+  },
+  {
+    "id": "q1105",
+    "category": "privacy",
+    "topic": "identity-theft",
+    "subtopic": "Identity Theft",
+    "difficulty": "easy",
+    "question": "What is the first thing to do if your wallet with ID cards is stolen?",
+    "options": [
+      "Report the loss and block the cards, then watch accounts for misuse",
+      "Wait a month to see if it turns up",
+      "Post the details on social media",
+      "Change your email address"
+    ],
+    "correct": 0,
+    "explanation": "Fast reporting and card blocking limit fraudulent use; monitoring catches attempts later."
+  },
+  {
+    "id": "q1106",
+    "category": "privacy",
+    "topic": "identity-theft",
+    "subtopic": "Identity Theft",
+    "difficulty": "medium",
+    "question": "Why is dumpster diving a risk for identity theft?",
+    "options": [
+      "Discarded documents can contain account numbers and personal details",
+      "It damages the environment",
+      "It corrupts hard drives",
+      "It blocks recycling"
+    ],
+    "correct": 0,
+    "explanation": "Shredding sensitive documents removes an easy source of personal data."
+  },
+  {
+    "id": "q1107",
+    "category": "privacy",
+    "topic": "identity-theft",
+    "subtopic": "Identity Theft",
+    "difficulty": "hard",
+    "question": "What is account takeover (ATO)?",
+    "options": [
+      "An attacker gains control of your existing account, often using stolen credentials or session cookies",
+      "Creating a brand-new account with a fake name",
+      "Deleting an old account",
+      "Changing your profile picture"
+    ],
+    "correct": 0,
+    "explanation": "ATO abuses reused passwords, infostealers or weak recovery paths to hijack a real account."
+  },
+  {
+    "id": "q1108",
+    "category": "privacy",
+    "topic": "identity-theft",
+    "subtopic": "Identity Theft",
+    "difficulty": "medium",
+    "question": "A recruiter asks for your Aadhaar and PAN before any interview. What is the risk?",
+    "options": [
+      "Identity documents may be misused to open accounts or apply for loans",
+      "It speeds up hiring",
+      "It is required by law at first contact",
+      "It improves your credit score"
+    ],
+    "correct": 0,
+    "explanation": "Share identity documents only after verifying the employer and understanding why they are needed."
+  },
+  {
+    "id": "q1109",
+    "category": "privacy",
+    "topic": "identity-theft",
+    "subtopic": "Identity Theft",
+    "difficulty": "hard",
+    "question": "Why should you avoid sharing a photo of your ID card in a chat app?",
+    "options": [
+      "It can be copied and reused to impersonate you",
+      "It uses too much mobile data",
+      "It lowers the image quality",
+      "Chat apps automatically delete ID photos"
+    ],
+    "correct": 0,
+    "explanation": "An ID photo often contains enough detail to pass identity checks; share it only through verified, purpose-limited channels."
+  },
+  {
+    "id": "q1110",
+    "category": "privacy",
+    "topic": "identity-theft",
+    "subtopic": "Identity Theft",
+    "difficulty": "easy",
+    "question": "What is a fraud alert on your credit file?",
+    "options": [
+      "A notice asking lenders to verify your identity before opening credit",
+      "A warning that your phone battery is low",
+      "A block on all card payments",
+      "A bank interest rate change"
+    ],
+    "correct": 0,
+    "explanation": "A fraud alert adds a verification step, making it harder to open accounts in your name."
+  },
+  {
+    "id": "q1111",
+    "category": "privacy",
+    "topic": "identity-theft",
+    "subtopic": "Identity Theft",
+    "difficulty": "medium",
+    "question": "Why should you avoid posting your boarding pass photo online?",
+    "options": [
+      "It can contain booking references and personal details useful for impersonation",
+      "It reveals the airline's logo",
+      "It slows the flight",
+      "It is always fake"
+    ],
+    "correct": 0,
+    "explanation": "Barcodes and booking references can expose personal data and be abused for changes or fraud."
+  },
+  {
+    "id": "q1112",
+    "category": "privacy",
+    "topic": "identity-theft",
+    "subtopic": "Identity Theft",
+    "difficulty": "medium",
+    "question": "What does a password manager's 'security audit' help with after a breach?",
+    "options": [
+      "Finding reused or weak passwords that need changing",
+      "Increasing Wi-Fi speed",
+      "Encrypting your whole disk",
+      "Blocking spam calls"
+    ],
+    "correct": 0,
+    "explanation": "An audit highlights reused and weak credentials so you can rotate the risky ones first."
+  },
+  {
+    "id": "q1113",
+    "category": "privacy",
+    "topic": "identity-theft",
+    "subtopic": "Identity Theft",
+    "difficulty": "hard",
+    "question": "Why is child identity theft often discovered late?",
+    "options": [
+      "The child has no credit activity, so misuse can go unnoticed for years",
+      "Children cannot have credit files",
+      "Banks block all child accounts",
+      "It is not a real crime"
+    ],
+    "correct": 0,
+    "explanation": "A clean credit file can be exploited silently until the child applies for credit."
+  },
+  {
+    "id": "q1114",
+    "category": "privacy",
+    "topic": "identity-theft",
+    "subtopic": "Identity Theft",
+    "difficulty": "easy",
+    "question": "Which habit best reduces identity theft from social media?",
+    "options": [
+      "Limiting what personal information you post publicly",
+      "Accepting every friend request",
+      "Sharing your location in real time",
+      "Using the same photo everywhere"
+    ],
+    "correct": 0,
+    "explanation": "Less public personal data means fewer raw materials for impersonation and social engineering."
+  },
+  {
+    "id": "q1115",
+    "category": "privacy",
+    "topic": "identity-theft",
+    "subtopic": "Identity Theft",
+    "difficulty": "medium",
+    "question": "What is impersonation fraud on social media?",
+    "options": [
+      "Creating a fake profile that copies someone to deceive their contacts",
+      "Using a nickname",
+      "Posting a filtered photo",
+      "Sharing a news article"
+    ],
+    "correct": 0,
+    "explanation": "Fake profiles borrow a real person's identity to ask contacts for money or credentials."
+  },
+  {
+    "id": "q1116",
+    "category": "privacy",
+    "topic": "identity-theft",
+    "subtopic": "Identity Theft",
+    "difficulty": "medium",
+    "question": "Why are security questions often weak authentication?",
+    "options": [
+      "Many answers are publicly discoverable or guessable",
+      "They are always encrypted",
+      "They require a hardware key",
+      "They change every minute"
+    ],
+    "correct": 0,
+    "explanation": "Mother's maiden name or first school are often on social media; treat them as public facts."
+  },
+  {
+    "id": "q1117",
+    "category": "privacy",
+    "topic": "identity-theft",
+    "subtopic": "Identity Theft",
+    "difficulty": "hard",
+    "question": "What is medical identity theft?",
+    "options": [
+      "Using someone else's identity to obtain healthcare or prescriptions",
+      "Stealing a hospital's computers",
+      "Faking a doctor's degree",
+      "Hacking a fitness app"
+    ],
+    "correct": 0,
+    "explanation": "It corrupts medical records and can cause wrong treatments or fraudulent bills."
+  },
+  {
+    "id": "q1118",
+    "category": "privacy",
+    "topic": "identity-theft",
+    "subtopic": "Identity Theft",
+    "difficulty": "easy",
+    "question": "What should you do with bank statements you no longer need?",
+    "options": [
+      "Shred them before disposal",
+      "Throw them in the recycling unopened",
+      "Keep them in a public mailbox",
+      "Email them to yourself"
+    ],
+    "correct": 0,
+    "explanation": "Shredding prevents account details from being recovered from waste."
+  },
+  {
+    "id": "q1119",
+    "category": "privacy",
+    "topic": "identity-theft",
+    "subtopic": "Identity Theft",
+    "difficulty": "medium",
+    "question": "Why does reusing your email password increase identity-theft risk?",
+    "options": [
+      "Email resets unlock nearly every other account",
+      "Email passwords are public",
+      "Email providers share passwords",
+      "Email has no encryption"
+    ],
+    "correct": 0,
+    "explanation": "Control of your inbox means control of password-reset links for other services."
+  },
+  {
+    "id": "q1120",
+    "category": "privacy",
+    "topic": "identity-theft",
+    "subtopic": "Identity Theft",
+    "difficulty": "hard",
+    "question": "What is a money mule recruited through identity fraud?",
+    "options": [
+      "Someone who moves stolen funds, sometimes without knowing it is criminal",
+      "A courier who delivers bank cards",
+      "A bank employee who checks IDs",
+      "A cybersecurity auditor"
+    ],
+    "correct": 0,
+    "explanation": "Mule accounts launder proceeds; accepting 'easy money' transfers can make you complicit."
+  },
+  {
+    "id": "q1121",
+    "category": "privacy",
+    "topic": "identity-theft",
+    "subtopic": "Identity Theft",
+    "difficulty": "medium",
+    "question": "What is the safest way to verify a caller claiming to be from your bank?",
+    "options": [
+      "Hang up and call the number on your card or the official app",
+      "Ask them to email you",
+      "Trust the caller ID",
+      "Give them your account number to check"
+    ],
+    "correct": 0,
+    "explanation": "Caller IDs can be spoofed; dialling a known official number verifies the channel."
+  },
+  {
+    "id": "q1122",
+    "category": "privacy",
+    "topic": "identity-theft",
+    "subtopic": "Identity Theft",
+    "difficulty": "easy",
+    "question": "Which account should you secure first after a data breach?",
+    "options": [
+      "Your email account",
+      "Your shopping wishlist",
+      "Your news subscription",
+      "Your fitness tracker"
+    ],
+    "correct": 0,
+    "explanation": "Email is the recovery hub for other accounts, so securing it first protects the rest."
+  },
+  {
+    "id": "q1123",
+    "category": "privacy",
+    "topic": "identity-theft",
+    "subtopic": "Identity Theft",
+    "difficulty": "medium",
+    "question": "What is identity verification (KYC) fraud?",
+    "options": [
+      "Using stolen or fake documents to pass a verification check",
+      "Refusing to complete KYC",
+      "Encrypting KYC documents",
+      "Backing up KYC records"
+    ],
+    "correct": 0,
+    "explanation": "Fraudsters use stolen documents or deepfaked faces to open accounts in someone else's name."
+  },
+  {
+    "id": "q1124",
+    "category": "privacy",
+    "topic": "identity-theft",
+    "subtopic": "Identity Theft",
+    "difficulty": "hard",
+    "question": "Why should you keep evidence when reporting identity theft?",
+    "options": [
+      "It supports disputes and helps authorities trace misuse",
+      "It increases your credit score",
+      "It unlocks your phone",
+      "It removes the need for a police report"
+    ],
+    "correct": 0,
+    "explanation": "Screenshots, dates and reference numbers make recovery and disputes far easier."
+  },
+  {
+    "id": "q1125",
+    "category": "scam",
+    "topic": "financial-fraud",
+    "subtopic": "Financial Fraud",
+    "difficulty": "easy",
+    "question": "A stranger sends you a QR code and says scanning it will send you money. What actually happens?",
+    "options": [
+      "Scanning may authorise a payment FROM your account",
+      "You receive the money instantly",
+      "The bank refunds you",
+      "Nothing happens without a PIN"
+    ],
+    "correct": 0,
+    "explanation": "Payment QR codes initiate transfers; only the payer scans and authorises, so this is a scam."
+  },
+  {
+    "id": "q1126",
+    "category": "scam",
+    "topic": "financial-fraud",
+    "subtopic": "Financial Fraud",
+    "difficulty": "medium",
+    "question": "What is a 'pig butchering' scam?",
+    "options": [
+      "Building a fake relationship over time before pushing a fraudulent investment",
+      "Selling fake meat online",
+      "A phishing email about farming",
+      "A ransomware variant"
+    ],
+    "correct": 0,
+    "explanation": "Long-term trust is used to convince victims to deposit more into a fake investment platform."
+  },
+  {
+    "id": "q1127",
+    "category": "scam",
+    "topic": "financial-fraud",
+    "subtopic": "Financial Fraud",
+    "difficulty": "medium",
+    "question": "An investment app promises guaranteed 3% daily returns. What is the most likely explanation?",
+    "options": [
+      "It is a Ponzi or fake-investment scam",
+      "It uses a unique safe algorithm",
+      "It is a government scheme",
+      "It is a bank savings product"
+    ],
+    "correct": 0,
+    "explanation": "Guaranteed high daily returns are not real; early withdrawals are usually paid from new victims' deposits."
+  },
+  {
+    "id": "q1128",
+    "category": "scam",
+    "topic": "financial-fraud",
+    "subtopic": "Financial Fraud",
+    "difficulty": "easy",
+    "question": "A pop-up says you won a prize but must pay a 'processing fee' first. This is:",
+    "options": [
+      "An advance-fee scam",
+      "A legitimate prize claim",
+      "A bank refund",
+      "A tax rebate"
+    ],
+    "correct": 0,
+    "explanation": "Legitimate prizes never require an upfront payment to release winnings."
+  },
+  {
+    "id": "q1129",
+    "category": "scam",
+    "topic": "financial-fraud",
+    "subtopic": "Financial Fraud",
+    "difficulty": "medium",
+    "question": "Why are fake customer-care numbers dangerous?",
+    "options": [
+      "Scammers answer and persuade you to install remote-access apps or transfer money",
+      "They charge a premium call rate only",
+      "They always disconnect",
+      "They improve your service"
+    ],
+    "correct": 0,
+    "explanation": "Search results and social posts can list fake support numbers that lead straight to fraudsters."
+  },
+  {
+    "id": "q1130",
+    "category": "scam",
+    "topic": "financial-fraud",
+    "subtopic": "Financial Fraud",
+    "difficulty": "hard",
+    "question": "What is card skimming at an ATM?",
+    "options": [
+      "A device that copies card data, often paired with a camera for the PIN",
+      "A software update for the ATM",
+      "A contactless payment feature",
+      "A bank fee"
+    ],
+    "correct": 0,
+    "explanation": "Skimmers clone the magnetic stripe and cameras or overlays capture the PIN."
+  },
+  {
+    "id": "q1131",
+    "category": "scam",
+    "topic": "financial-fraud",
+    "subtopic": "Financial Fraud",
+    "difficulty": "easy",
+    "question": "How can you reduce ATM skimming risk?",
+    "options": [
+      "Cover the keypad and check the card slot for loose parts",
+      "Use the ATM with the brightest screen",
+      "Enter your PIN twice",
+      "Use your date of birth as the PIN"
+    ],
+    "correct": 0,
+    "explanation": "Covering the PIN and inspecting the machine defeats common skimmer and camera setups."
+  },
+  {
+    "id": "q1132",
+    "category": "scam",
+    "topic": "financial-fraud",
+    "subtopic": "Financial Fraud",
+    "difficulty": "medium",
+    "question": "A buyer overpays you and asks for the difference back. What is the scam?",
+    "options": [
+      "The original payment is reversed or fake, so your refund is lost",
+      "The buyer wants a discount",
+      "The bank charges a fee",
+      "It is a normal marketplace practice"
+    ],
+    "correct": 0,
+    "explanation": "Overpayment scams rely on you sending real money before the fraudulent payment is reversed."
+  },
+  {
+    "id": "q1133",
+    "category": "scam",
+    "topic": "financial-fraud",
+    "subtopic": "Financial Fraud",
+    "difficulty": "medium",
+    "question": "What is a loan-app fraud pattern?",
+    "options": [
+      "An app collects contacts and photos, then blackmails borrowers with them",
+      "An app offers lower interest rates",
+      "A bank reduces your EMI",
+      "A government subsidy app"
+    ],
+    "correct": 0,
+    "explanation": "Predatory apps harvest contact lists and images to threaten borrowers into paying."
+  },
+  {
+    "id": "q1134",
+    "category": "scam",
+    "topic": "financial-fraud",
+    "subtopic": "Financial Fraud",
+    "difficulty": "hard",
+    "question": "What is a money-mule account?",
+    "options": [
+      "An account used to receive and forward criminal proceeds",
+      "A savings account with a high interest rate",
+      "A joint account for a family",
+      "An escrow account"
+    ],
+    "correct": 0,
+    "explanation": "Mules move stolen funds; lending your account or ID can make you part of the crime."
+  },
+  {
+    "id": "q1135",
+    "category": "scam",
+    "topic": "financial-fraud",
+    "subtopic": "Financial Fraud",
+    "difficulty": "easy",
+    "question": "Which payment method gives the weakest protection when buying from a stranger?",
+    "options": [
+      "Gift cards or crypto transfers",
+      "Credit card with chargeback rights",
+      "Cash on delivery from a verified store",
+      "An escrow service"
+    ],
+    "correct": 0,
+    "explanation": "Gift cards and crypto are irreversible and untraceable, which is exactly why scammers demand them."
+  },
+  {
+    "id": "q1136",
+    "category": "scam",
+    "topic": "financial-fraud",
+    "subtopic": "Financial Fraud",
+    "difficulty": "medium",
+    "question": "A job offer asks you to pay for 'training materials' before starting. What should you do?",
+    "options": [
+      "Decline; legitimate employers do not charge new hires",
+      "Pay quickly to secure the role",
+      "Send only half the fee",
+      "Share your bank login instead"
+    ],
+    "correct": 0,
+    "explanation": "Upfront fees for a job are a classic employment scam."
+  },
+  {
+    "id": "q1137",
+    "category": "scam",
+    "topic": "financial-fraud",
+    "subtopic": "Financial Fraud",
+    "difficulty": "medium",
+    "question": "Why do scammers ask you to stay on the phone during a bank transfer?",
+    "options": [
+      "To keep pressure on and stop you from verifying or hanging up",
+      "To improve call quality",
+      "To record your voice for security",
+      "To speed up the transfer"
+    ],
+    "correct": 0,
+    "explanation": "Continuous pressure prevents victims from checking with family, bank staff or police."
+  },
+  {
+    "id": "q1138",
+    "category": "scam",
+    "topic": "financial-fraud",
+    "subtopic": "Financial Fraud",
+    "difficulty": "easy",
+    "question": "What is a fake refund scam?",
+    "options": [
+      "A caller claims you were overcharged and 'refunds' you while actually taking money",
+      "A store returning your purchase price",
+      "A bank reversing a fee",
+      "A warranty replacement"
+    ],
+    "correct": 0,
+    "explanation": "The 'refund' is usually a fake transfer or remote-access trick that debits your account."
+  },
+  {
+    "id": "q1139",
+    "category": "scam",
+    "topic": "financial-fraud",
+    "subtopic": "Financial Fraud",
+    "difficulty": "hard",
+    "question": "What is authorised push payment (APP) fraud?",
+    "options": [
+      "You are tricked into authorising a transfer to a scammer yourself",
+      "A hacker bypasses your bank's systems",
+      "A card is cloned at an ATM",
+      "A merchant charges the wrong amount"
+    ],
+    "correct": 0,
+    "explanation": "Because the victim authorises the payment, recovery is difficult; verification before paying is critical."
+  },
+  {
+    "id": "q1140",
+    "category": "scam",
+    "topic": "financial-fraud",
+    "subtopic": "Financial Fraud",
+    "difficulty": "medium",
+    "question": "What is a romance scam's typical escalation?",
+    "options": [
+      "Building trust online, then requesting money for an emergency or travel",
+      "Sending flowers to your home",
+      "Asking for a coffee date",
+      "Sharing movie recommendations"
+    ],
+    "correct": 0,
+    "explanation": "Emotional investment is used to justify urgent money requests that never stop."
+  },
+  {
+    "id": "q1141",
+    "category": "scam",
+    "topic": "financial-fraud",
+    "subtopic": "Financial Fraud",
+    "difficulty": "medium",
+    "question": "You receive a sextortion email claiming it has compromising video of you. What is the best response?",
+    "options": [
+      "Do not pay; report and delete it, since the claim is usually a bluff",
+      "Pay to protect your reputation",
+      "Reply to negotiate",
+      "Forward it to friends"
+    ],
+    "correct": 0,
+    "explanation": "These mass emails rely on fear; paying marks you as a target and does not remove anything."
+  },
+  {
+    "id": "q1142",
+    "category": "scam",
+    "topic": "financial-fraud",
+    "subtopic": "Financial Fraud",
+    "difficulty": "easy",
+    "question": "Before donating to a charity after a disaster, what should you check?",
+    "options": [
+      "That the charity is officially registered and the link is its real site",
+      "That the email uses emotional photos",
+      "That a friend forwarded it",
+      "That it accepts crypto only"
+    ],
+    "correct": 0,
+    "explanation": "Disasters attract fake appeals; verify the organisation and donate through its official site."
+  },
+  {
+    "id": "q1143",
+    "category": "scam",
+    "topic": "financial-fraud",
+    "subtopic": "Financial Fraud",
+    "difficulty": "medium",
+    "question": "What is a 'tech support' payment scam?",
+    "options": [
+      "A fake support agent charges for a nonexistent problem or installs remote access",
+      "A legitimate warranty renewal",
+      "A software licence purchase",
+      "A cloud storage upgrade"
+    ],
+    "correct": 0,
+    "explanation": "Real vendors do not cold-call about viruses or demand gift-card payment for support."
+  },
+  {
+    "id": "q1144",
+    "category": "scam",
+    "topic": "financial-fraud",
+    "subtopic": "Financial Fraud",
+    "difficulty": "hard",
+    "question": "Why are crypto 'recovery' services often a second scam?",
+    "options": [
+      "They charge upfront fees but cannot recover funds",
+      "They are regulated by central banks",
+      "They guarantee returns",
+      "They work only with police"
+    ],
+    "correct": 0,
+    "explanation": "After an initial loss, fraudsters posing as recovery experts target the same victim again."
+  },
+  {
+    "id": "q1145",
+    "category": "scam",
+    "topic": "financial-fraud",
+    "subtopic": "Financial Fraud",
+    "difficulty": "medium",
+    "question": "What is a Ponzi scheme?",
+    "options": [
+      "Paying earlier investors with money from newer investors",
+      "A legitimate mutual fund",
+      "A government bond",
+      "A type of insurance"
+    ],
+    "correct": 0,
+    "explanation": "Returns come from new deposits rather than profit, so the scheme collapses when recruitment slows."
+  },
+  {
+    "id": "q1146",
+    "category": "scam",
+    "topic": "financial-fraud",
+    "subtopic": "Financial Fraud",
+    "difficulty": "easy",
+    "question": "Which detail suggests a payment request is fraudulent?",
+    "options": [
+      "It demands an urgent transfer to a newly provided account",
+      "It arrives through official banking channels",
+      "It references your actual account statement",
+      "It offers a normal receipt"
+    ],
+    "correct": 0,
+    "explanation": "New payee details plus urgency are the signature of invoice and impersonation fraud."
+  },
+  {
+    "id": "q1147",
+    "category": "scam",
+    "topic": "financial-fraud",
+    "subtopic": "Financial Fraud",
+    "difficulty": "medium",
+    "question": "What is buy-now-pay-later (BNPL) fraud?",
+    "options": [
+      "Opening BNPL credit using stolen identities or accounts",
+      "Paying in full at checkout",
+      "Returning an item for a refund",
+      "Using a debit card"
+    ],
+    "correct": 0,
+    "explanation": "Fraudsters use stolen identity data to obtain goods on credit that the victim is chased for."
+  },
+  {
+    "id": "q1148",
+    "category": "scam",
+    "topic": "financial-fraud",
+    "subtopic": "Financial Fraud",
+    "difficulty": "hard",
+    "question": "What does 'smurfing' mean in financial crime?",
+    "options": [
+      "Structuring many small transactions to avoid detection thresholds",
+      "Sending fake SMS messages",
+      "Creating cartoon avatars",
+      "Using a prepaid card once"
+    ],
+    "correct": 0,
+    "explanation": "Splitting amounts below reporting limits is a money-laundering technique."
+  },
+  {
+    "id": "q1149",
+    "category": "scam",
+    "topic": "financial-fraud",
+    "subtopic": "Financial Fraud",
+    "difficulty": "medium",
+    "question": "A caller says your KYC expired and asks you to install a screen-sharing app. What should you do?",
+    "options": [
+      "Refuse and contact your bank through its official app or branch",
+      "Install it so they can verify you",
+      "Share your OTP to speed it up",
+      "Send a photo of your card"
+    ],
+    "correct": 0,
+    "explanation": "Screen-sharing gives the scammer full view and control, enabling silent transfers."
+  },
+  {
+    "id": "q1150",
+    "category": "scam",
+    "topic": "financial-fraud",
+    "subtopic": "Financial Fraud",
+    "difficulty": "easy",
+    "question": "What is the safest way to pay a new online seller?",
+    "options": [
+      "Use a protected method such as a credit card or escrow",
+      "Send crypto to their wallet",
+      "Pay by gift card",
+      "Transfer to a personal account immediately"
+    ],
+    "correct": 0,
+    "explanation": "Protected payments offer dispute and chargeback routes if the goods never arrive."
+  },
+  {
+    "id": "q1151",
+    "category": "scam",
+    "topic": "financial-fraud",
+    "subtopic": "Financial Fraud",
+    "difficulty": "medium",
+    "question": "Why should you be suspicious of a 'part-time job' that only requires receiving and forwarding payments?",
+    "options": [
+      "It is likely money laundering using your account",
+      "It pays too little",
+      "It requires no interview",
+      "It is always remote"
+    ],
+    "correct": 0,
+    "explanation": "Receiving and forwarding others' money can make you a money mule and expose you to legal action."
+  }
+]

@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600" width="1200" height="600" role="img" aria-hidden="true">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0b1220"/>
+      <stop offset="1" stop-color="#0f1929"/>
+    </linearGradient>
+    <radialGradient id="glow1" cx="30%" cy="40%" r="50%">
+      <stop offset="0" stop-color="#0f766e" stop-opacity="0.35"/>
+      <stop offset="1" stop-color="#0f766e" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glow2" cx="75%" cy="60%" r="40%">
+      <stop offset="0" stop-color="#60a5fa" stop-opacity="0.25"/>
+      <stop offset="1" stop-color="#60a5fa" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="grid" width="50" height="50" patternUnits="userSpaceOnUse">
+      <path d="M50 0H0V50" fill="none" stroke="#1e3a5f" stroke-opacity="0.25" stroke-width="1"/>
+    </pattern>
+    <linearGradient id="shieldGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0f766e"/>
+      <stop offset="1" stop-color="#0d9488"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="600" fill="url(#bg)"/>
+  <rect width="1200" height="600" fill="url(#grid)"/>
+  <rect width="1200" height="600" fill="url(#glow1)"/>
+  <rect width="1200" height="600" fill="url(#glow2)"/>
+
+  <!-- Shield shape with connected nodes -->
+  <g fill="none" stroke="url(#shieldGrad)" stroke-width="3" stroke-linejoin="round">
+    <path d="M600 120 L720 180 L720 300 C720 390 660 440 600 460 C540 440 480 390 480 300 L480 180 Z"/>
+    <path d="M600 140 L600 440" stroke-opacity="0.4"/>
+    <path d="M520 220 L680 220" stroke-opacity="0.4"/>
+    <path d="M500 300 L700 300" stroke-opacity="0.4"/>
+  </g>
+
+  <!-- Shield checkmark -->
+  <path d="M545 300 L585 340 L660 255" fill="none" stroke="#34d399" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- Floating security nodes -->
+  <g fill="none" stroke="#60a5fa" stroke-width="2" stroke-dasharray="5 5" opacity="0.8">
+    <circle cx="250" cy="180" r="30"/>
+    <circle cx="950" cy="200" r="25"/>
+    <circle cx="180" cy="420" r="20"/>
+    <circle cx="1020" cy="430" r="22"/>
+  </g>
+
+  <!-- Connection lines -->
+  <g stroke="#2dd4bf" stroke-width="2" stroke-dasharray="4 6" opacity="0.6">
+    <path d="M280 185 L470 230"/>
+    <path d="M920 205 L730 240"/>
+    <path d="M200 420 L400 350"/>
+    <path d="M1000 430 L800 380"/>
+  </g>
+
+  <!-- Small node dots -->
+  <g fill="#2dd4bf">
+    <circle cx="250" cy="180" r="4"/>
+    <circle cx="950" cy="200" r="4"/>
+    <circle cx="180" cy="420" r="3"/>
+    <circle cx="1020" cy="430" r="3"/>
+  </g>
+
+  <!-- Data flow particles -->
+  <g fill="#fbbf24" opacity="0.8">
+    <circle cx="350" cy="200" r="3"/>
+    <circle cx="850" cy="220" r="3"/>
+    <circle cx="280" cy="380" r="2.5"/>
+    <circle cx="920" cy="390" r="2.5"/>
+    <circle cx="450" cy="150" r="2"/>
+    <circle cx="750" cy="160" r="2"/>
+  </g>
+
+  <!-- Bottom label bar -->
+  <rect x="200" y="520" width="800" height="40" rx="8" fill="#0f1929" stroke="#0f766e" stroke-opacity="0.3"/>
+  <text x="600" y="545" text-anchor="middle" fill="#2dd4bf" font-family="system-ui" font-size="16" font-weight="600" letter-spacing="2">DEFENSE IN DEPTH</text>
+</svg>

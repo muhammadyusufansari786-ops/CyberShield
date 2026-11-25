@@ -1,0 +1,1122 @@
+[
+  {
+    "id": "q1152",
+    "category": "privacy",
+    "topic": "data-privacy",
+    "subtopic": "Data Privacy",
+    "difficulty": "easy",
+    "question": "What is informed consent in a privacy context?",
+    "options": [
+      "Agreeing to data use after being told what will be collected and why",
+      "Clicking accept on every cookie banner",
+      "Sharing data without reading anything",
+      "Letting a company decide for you"
+    ],
+    "correct": 0,
+    "explanation": "Valid consent requires clear information about the purpose and scope of processing."
+  },
+  {
+    "id": "q1153",
+    "category": "privacy",
+    "topic": "data-privacy",
+    "subtopic": "Data Privacy",
+    "difficulty": "medium",
+    "question": "Why can 'accept all' cookie banners be a privacy risk?",
+    "options": [
+      "They may allow many tracking partners to profile your browsing",
+      "They install antivirus software",
+      "They delete your account",
+      "They slow down the website"
+    ],
+    "correct": 0,
+    "explanation": "Advertising and analytics cookies can follow you across sites; choosing only necessary cookies limits this."
+  },
+  {
+    "id": "q1154",
+    "category": "privacy",
+    "topic": "data-privacy",
+    "subtopic": "Data Privacy",
+    "difficulty": "easy",
+    "question": "Which of these is personal data?",
+    "options": [
+      "A phone number linked to your name",
+      "A random weather forecast",
+      "A public holiday date",
+      "A generic logo"
+    ],
+    "correct": 0,
+    "explanation": "Data that can identify a person, directly or indirectly, is personal data."
+  },
+  {
+    "id": "q1155",
+    "category": "privacy",
+    "topic": "data-privacy",
+    "subtopic": "Data Privacy",
+    "difficulty": "medium",
+    "question": "What should an organisation do after discovering a personal data breach?",
+    "options": [
+      "Assess the risk and notify affected people and the regulator where required",
+      "Hide it to protect reputation",
+      "Delete all logs",
+      "Post the data publicly"
+    ],
+    "correct": 0,
+    "explanation": "Breach notification rules require timely disclosure when the breach risks people's rights."
+  },
+  {
+    "id": "q1156",
+    "category": "privacy",
+    "topic": "data-privacy",
+    "subtopic": "Data Privacy",
+    "difficulty": "hard",
+    "question": "What is a data subject access request (DSAR)?",
+    "options": [
+      "A request from a person to see the personal data an organisation holds about them",
+      "A request to delete the company website",
+      "A demand for a refund",
+      "A request to install an app"
+    ],
+    "correct": 0,
+    "explanation": "Access rights let people check what is stored and challenge inaccurate records."
+  },
+  {
+    "id": "q1157",
+    "category": "privacy",
+    "topic": "data-privacy",
+    "subtopic": "Data Privacy",
+    "difficulty": "medium",
+    "question": "What is data retention policy about?",
+    "options": [
+      "How long personal data is kept and when it is deleted",
+      "How much disk space a server has",
+      "How often backups run",
+      "How many users can log in"
+    ],
+    "correct": 0,
+    "explanation": "Keeping data longer than necessary increases breach impact without adding value."
+  },
+  {
+    "id": "q1158",
+    "category": "privacy",
+    "topic": "data-privacy",
+    "subtopic": "Data Privacy",
+    "difficulty": "easy",
+    "question": "What does private/incognito browsing hide?",
+    "options": [
+      "Local history on your device after the window closes (not your activity from the network or sites)",
+      "All your activity from your employer",
+      "Your IP address from every website",
+      "Your account from the website"
+    ],
+    "correct": 0,
+    "explanation": "Incognito limits local traces; your ISP, network and visited sites can still see activity."
+  },
+  {
+    "id": "q1159",
+    "category": "privacy",
+    "topic": "data-privacy",
+    "subtopic": "Data Privacy",
+    "difficulty": "medium",
+    "question": "Why is photo metadata (EXIF) a privacy concern?",
+    "options": [
+      "It can include GPS location and device details",
+      "It makes photos larger",
+      "It reduces image quality",
+      "It blocks sharing"
+    ],
+    "correct": 0,
+    "explanation": "Location metadata can reveal where a photo was taken, which is risky when shared publicly."
+  },
+  {
+    "id": "q1160",
+    "category": "privacy",
+    "topic": "data-privacy",
+    "subtopic": "Data Privacy",
+    "difficulty": "medium",
+    "question": "What is a data broker?",
+    "options": [
+      "A company that collects and sells information about people",
+      "A bank that stores your salary",
+      "A courier that moves hard drives",
+      "A software update service"
+    ],
+    "correct": 0,
+    "explanation": "Brokers aggregate public and commercial data, often without the person's direct involvement."
+  },
+  {
+    "id": "q1161",
+    "category": "privacy",
+    "topic": "data-privacy",
+    "subtopic": "Data Privacy",
+    "difficulty": "hard",
+    "question": "Why can aggregate data sometimes still identify people?",
+    "options": [
+      "Combining several attributes can single out an individual",
+      "Aggregates are always encrypted",
+      "Aggregates never leave a company",
+      "Aggregates are illegal"
+    ],
+    "correct": 0,
+    "explanation": "Small groups and combined attributes enable re-identification even after names are removed."
+  },
+  {
+    "id": "q1162",
+    "category": "privacy",
+    "topic": "data-privacy",
+    "subtopic": "Data Privacy",
+    "difficulty": "easy",
+    "question": "What is a reasonable first step to reduce ad tracking?",
+    "options": [
+      "Review your browser and account privacy settings and limit ad personalisation",
+      "Post your preferences publicly",
+      "Disable HTTPS",
+      "Use the same password everywhere"
+    ],
+    "correct": 0,
+    "explanation": "Limiting tracking permissions reduces the profile built about you across sites."
+  },
+  {
+    "id": "q1163",
+    "category": "privacy",
+    "topic": "data-privacy",
+    "subtopic": "Data Privacy",
+    "difficulty": "medium",
+    "question": "What is a shadow profile?",
+    "options": [
+      "A profile built about you from others' contacts and data, even without your account",
+      "A backup of your account",
+      "A fake profile you create",
+      "A profile picture filter"
+    ],
+    "correct": 0,
+    "explanation": "Platforms can infer relationships and details from other users' uploads."
+  },
+  {
+    "id": "q1164",
+    "category": "privacy",
+    "topic": "data-privacy",
+    "subtopic": "Data Privacy",
+    "difficulty": "hard",
+    "question": "What does 'encryption at rest' protect against?",
+    "options": [
+      "Someone reading stored data after gaining disk or backup access",
+      "Phishing emails",
+      "Weak Wi-Fi passwords",
+      "Cookie tracking"
+    ],
+    "correct": 0,
+    "explanation": "At-rest encryption makes stolen disks or backups unreadable without the key."
+  },
+  {
+    "id": "q1165",
+    "category": "privacy",
+    "topic": "data-privacy",
+    "subtopic": "Data Privacy",
+    "difficulty": "medium",
+    "question": "A free app asks for contacts, microphone and location to show a flashlight. What should you do?",
+    "options": [
+      "Deny the unnecessary permissions or pick a different app",
+      "Grant everything to be safe",
+      "Share the app with friends",
+      "Disable your screen lock"
+    ],
+    "correct": 0,
+    "explanation": "Permission requests should match the app's actual function; excessive access is a red flag."
+  },
+  {
+    "id": "q1166",
+    "category": "privacy",
+    "topic": "data-privacy",
+    "subtopic": "Data Privacy",
+    "difficulty": "easy",
+    "question": "Why should you avoid posting your live location while travelling?",
+    "options": [
+      "It tells strangers your home is empty or where you are vulnerable",
+      "It drains the battery faster",
+      "It uses mobile data",
+      "It breaks GPS"
+    ],
+    "correct": 0,
+    "explanation": "Real-time location posts create physical safety and burglary risks."
+  },
+  {
+    "id": "q1167",
+    "category": "privacy",
+    "topic": "data-privacy",
+    "subtopic": "Data Privacy",
+    "difficulty": "medium",
+    "question": "What does 'privacy by design' mean?",
+    "options": [
+      "Building privacy protections into a system from the start",
+      "Adding a privacy policy at the end",
+      "Hiding the privacy settings",
+      "Selling data only to partners"
+    ],
+    "correct": 0,
+    "explanation": "Privacy is designed into architecture and defaults rather than bolted on afterwards."
+  },
+  {
+    "id": "q1168",
+    "category": "privacy",
+    "topic": "data-privacy",
+    "subtopic": "Data Privacy",
+    "difficulty": "hard",
+    "question": "Why is cross-border data transfer regulated?",
+    "options": [
+      "Data may lose legal protection when sent to another jurisdiction",
+      "It slows down websites",
+      "It requires a VPN",
+      "It increases storage costs"
+    ],
+    "correct": 0,
+    "explanation": "Transfer rules aim to keep protection equivalent wherever the data is processed."
+  },
+  {
+    "id": "q1169",
+    "category": "privacy",
+    "topic": "data-privacy",
+    "subtopic": "Data Privacy",
+    "difficulty": "medium",
+    "question": "What is the purpose of a privacy impact assessment?",
+    "options": [
+      "To identify and reduce privacy risks before a project launches",
+      "To calculate marketing revenue",
+      "To test Wi-Fi speed",
+      "To design a logo"
+    ],
+    "correct": 0,
+    "explanation": "A DPIA forces teams to consider data flows, risks and mitigations early."
+  },
+  {
+    "id": "q1170",
+    "category": "privacy",
+    "topic": "data-privacy",
+    "subtopic": "Data Privacy",
+    "difficulty": "easy",
+    "question": "Which setting best protects a lost phone's data?",
+    "options": [
+      "A strong screen lock plus device encryption",
+      "A short PIN only",
+      "Disabling updates",
+      "Sharing the passcode with a friend"
+    ],
+    "correct": 0,
+    "explanation": "Encryption plus a strong lock keeps data unreadable if the device is stolen."
+  },
+  {
+    "id": "q1171",
+    "category": "privacy",
+    "topic": "data-privacy",
+    "subtopic": "Data Privacy",
+    "difficulty": "medium",
+    "question": "What should you check before granting a third-party app access to your cloud drive?",
+    "options": [
+      "Exactly which files and permissions it can access",
+      "The app's icon",
+      "The app's download count only",
+      "Whether it has a dark mode"
+    ],
+    "correct": 0,
+    "explanation": "OAuth scopes can allow reading or editing all files, so least privilege matters."
+  },
+  {
+    "id": "q1172",
+    "category": "privacy",
+    "topic": "data-privacy",
+    "subtopic": "Data Privacy",
+    "difficulty": "hard",
+    "question": "Why does 'we may share data with trusted partners' deserve scrutiny?",
+    "options": [
+      "It is vague and may permit broad sharing for advertising or resale",
+      "It guarantees encryption",
+      "It is required by law",
+      "It limits sharing"
+    ],
+    "correct": 0,
+    "explanation": "Broad partner clauses obscure who receives data and for what purpose."
+  },
+  {
+    "id": "q1173",
+    "category": "privacy",
+    "topic": "data-privacy",
+    "subtopic": "Data Privacy",
+    "difficulty": "medium",
+    "question": "What is the safest way to dispose of an old laptop?",
+    "options": [
+      "Back up, sign out, then wipe the drive and reset the device",
+      "Delete a few files and hand it over",
+      "Remove the desktop wallpaper",
+      "Leave the account logged in"
+    ],
+    "correct": 0,
+    "explanation": "A proper wipe removes personal data and account sessions before the device leaves your control."
+  },
+  {
+    "id": "q1174",
+    "category": "privacy",
+    "topic": "data-privacy",
+    "subtopic": "Data Privacy",
+    "difficulty": "easy",
+    "question": "Why should you review app permissions after an update?",
+    "options": [
+      "Updates can introduce new access to data you did not previously allow",
+      "Updates always remove permissions",
+      "Permissions never change",
+      "It improves battery life"
+    ],
+    "correct": 0,
+    "explanation": "New features sometimes request broader access that you can decline."
+  },
+  {
+    "id": "q1175",
+    "category": "mobile",
+    "topic": "safe-browsing",
+    "subtopic": "Safe Browsing",
+    "difficulty": "medium",
+    "question": "You land on a page with a fake 'Download update' button and several pop-ups. What is the safest action?",
+    "options": [
+      "Close the tab and install updates only from the official source",
+      "Click the biggest download button",
+      "Disable your ad blocker",
+      "Enter your email to continue"
+    ],
+    "correct": 0,
+    "explanation": "Deceptive download buttons are a common malware and adware delivery trick."
+  },
+  {
+    "id": "q1176",
+    "category": "mobile",
+    "topic": "safe-browsing",
+    "subtopic": "Safe Browsing",
+    "difficulty": "easy",
+    "question": "What does a URL shortener hide?",
+    "options": [
+      "The real destination address",
+      "The website's language",
+      "Your browser version",
+      "The page's images"
+    ],
+    "correct": 0,
+    "explanation": "Short links conceal where they lead; preview or expand them before clicking."
+  },
+  {
+    "id": "q1177",
+    "category": "mobile",
+    "topic": "safe-browsing",
+    "subtopic": "Safe Browsing",
+    "difficulty": "medium",
+    "question": "What is malvertising?",
+    "options": [
+      "Malicious ads that redirect to scams or exploit pages",
+      "Advertising for antivirus software",
+      "A legitimate ad network",
+      "A browser notification"
+    ],
+    "correct": 0,
+    "explanation": "Even reputable sites can serve compromised ad creatives that redirect or drop malware."
+  },
+  {
+    "id": "q1178",
+    "category": "mobile",
+    "topic": "safe-browsing",
+    "subtopic": "Safe Browsing",
+    "difficulty": "easy",
+    "question": "Why should you keep your browser updated?",
+    "options": [
+      "Updates patch security flaws that malicious sites exploit",
+      "They change the homepage",
+      "They increase data usage",
+      "They remove bookmarks"
+    ],
+    "correct": 0,
+    "explanation": "Browser exploits are a major infection route; patching closes known holes."
+  },
+  {
+    "id": "q1179",
+    "category": "mobile",
+    "topic": "safe-browsing",
+    "subtopic": "Safe Browsing",
+    "difficulty": "medium",
+    "question": "What is a browser sandbox?",
+    "options": [
+      "An isolation layer that limits what a web page can do to your system",
+      "A download folder",
+      "A private tab",
+      "An ad blocker"
+    ],
+    "correct": 0,
+    "explanation": "Sandboxing contains rendering processes so a compromised page cannot freely access the OS."
+  },
+  {
+    "id": "q1180",
+    "category": "mobile",
+    "topic": "safe-browsing",
+    "subtopic": "Safe Browsing",
+    "difficulty": "hard",
+    "question": "What is mixed content on an HTTPS page?",
+    "options": [
+      "The page loads some resources over insecure HTTP, weakening protection",
+      "A page with several fonts",
+      "A page with two languages",
+      "An encrypted download"
+    ],
+    "correct": 0,
+    "explanation": "Insecure subresources can be tampered with, undermining the page's HTTPS guarantee."
+  },
+  {
+    "id": "q1181",
+    "category": "mobile",
+    "topic": "safe-browsing",
+    "subtopic": "Safe Browsing",
+    "difficulty": "easy",
+    "question": "What is the risk of installing browser extensions from random websites?",
+    "options": [
+      "They can read or alter everything you do in the browser",
+      "They only change the theme",
+      "They cannot be removed",
+      "They improve privacy"
+    ],
+    "correct": 0,
+    "explanation": "Extensions run with broad page access, so a malicious one can steal data or inject content."
+  },
+  {
+    "id": "q1182",
+    "category": "mobile",
+    "topic": "safe-browsing",
+    "subtopic": "Safe Browsing",
+    "difficulty": "medium",
+    "question": "Why should you be careful with 'allow notifications' prompts on unfamiliar sites?",
+    "options": [
+      "They can be used to send persistent scam or malware alerts",
+      "They improve page loading",
+      "They encrypt your traffic",
+      "They block trackers"
+    ],
+    "correct": 0,
+    "explanation": "Push notifications bypass normal browsing and can repeatedly deliver fraudulent messages."
+  },
+  {
+    "id": "q1183",
+    "category": "mobile",
+    "topic": "safe-browsing",
+    "subtopic": "Safe Browsing",
+    "difficulty": "medium",
+    "question": "Which URL is most likely a phishing site?",
+    "options": [
+      "https://secure-login.example-bank.xyz",
+      "https://www.example-bank.com/login",
+      "https://example-bank.com/help",
+      "https://support.example-bank.com"
+    ],
+    "correct": 0,
+    "explanation": "The real brand appears only in the subdomain of an unrelated .xyz domain, which is a classic lure."
+  },
+  {
+    "id": "q1184",
+    "category": "mobile",
+    "topic": "safe-browsing",
+    "subtopic": "Safe Browsing",
+    "difficulty": "easy",
+    "question": "What should you do if a site asks you to disable your ad blocker to continue?",
+    "options": [
+      "Leave if you do not trust the site; blockers also block malicious ads",
+      "Always disable it",
+      "Enter your password first",
+      "Download their browser extension"
+    ],
+    "correct": 0,
+    "explanation": "Ad blockers reduce exposure to malvertising; a site demanding you remove protection deserves caution."
+  },
+  {
+    "id": "q1185",
+    "category": "mobile",
+    "topic": "safe-browsing",
+    "subtopic": "Safe Browsing",
+    "difficulty": "hard",
+    "question": "What is clickjacking?",
+    "options": [
+      "Tricking you into clicking an invisible or disguised element that performs another action",
+      "Stealing a mouse",
+      "Blocking all clicks",
+      "Recording keystrokes"
+    ],
+    "correct": 0,
+    "explanation": "Overlaid frames make a dangerous action look like a harmless button, such as a like or payment."
+  },
+  {
+    "id": "q1186",
+    "category": "mobile",
+    "topic": "safe-browsing",
+    "subtopic": "Safe Browsing",
+    "difficulty": "medium",
+    "question": "Why save passwords in a reputable browser or password manager rather than in a text file?",
+    "options": [
+      "They are encrypted and tied to your device profile",
+      "Text files are illegal",
+      "Browsers share them publicly",
+      "Managers never sync"
+    ],
+    "correct": 0,
+    "explanation": "Built-in managers encrypt the vault and can warn about breached credentials."
+  },
+  {
+    "id": "q1187",
+    "category": "mobile",
+    "topic": "safe-browsing",
+    "subtopic": "Safe Browsing",
+    "difficulty": "easy",
+    "question": "What is a safe way to check whether a website is legitimate?",
+    "options": [
+      "Search for the organisation independently and open its official link",
+      "Trust the first sponsored ad",
+      "Use the link in an unsolicited email",
+      "Check the page's colours"
+    ],
+    "correct": 0,
+    "explanation": "Independent navigation avoids lookalike domains and malicious ads."
+  },
+  {
+    "id": "q1188",
+    "category": "mobile",
+    "topic": "safe-browsing",
+    "subtopic": "Safe Browsing",
+    "difficulty": "medium",
+    "question": "What does a site permission for 'camera' and 'microphone' allow?",
+    "options": [
+      "The site can access those devices while the permission is granted",
+      "The site can read your files",
+      "The site can control your router",
+      "The site can change your password"
+    ],
+    "correct": 0,
+    "explanation": "Media permissions should be granted only when needed and revoked afterwards."
+  },
+  {
+    "id": "q1189",
+    "category": "mobile",
+    "topic": "safe-browsing",
+    "subtopic": "Safe Browsing",
+    "difficulty": "hard",
+    "question": "Why is opening a PDF in the browser generally safer than running a downloaded executable?",
+    "options": [
+      "The browser sandbox limits what a PDF can do; executables can run with your rights",
+      "PDFs cannot contain scripts",
+      "Executables are always scanned",
+      "Browsers block all attacks"
+    ],
+    "correct": 0,
+    "explanation": "Sandboxed rendering constrains exploitation, while an EXE runs directly on the system."
+  },
+  {
+    "id": "q1190",
+    "category": "mobile",
+    "topic": "safe-browsing",
+    "subtopic": "Safe Browsing",
+    "difficulty": "medium",
+    "question": "Why should you sign out of accounts on a shared or public computer?",
+    "options": [
+      "An open session lets the next person use your account without a password",
+      "It frees disk space",
+      "It speeds up the computer",
+      "It updates the browser"
+    ],
+    "correct": 0,
+    "explanation": "Session cookies keep you logged in; signing out and clearing data removes that access."
+  },
+  {
+    "id": "q1191",
+    "category": "mobile",
+    "topic": "safe-browsing",
+    "subtopic": "Safe Browsing",
+    "difficulty": "easy",
+    "question": "Which download link is safest for a popular app?",
+    "options": [
+      "The link on the developer's official website or official app store",
+      "A link in a comment section",
+      "A shortened link from a message",
+      "A pop-up claiming a speed boost"
+    ],
+    "correct": 0,
+    "explanation": "Official distribution channels are far less likely to bundle malware."
+  },
+  {
+    "id": "q1192",
+    "category": "mobile",
+    "topic": "safe-browsing",
+    "subtopic": "Safe Browsing",
+    "difficulty": "medium",
+    "question": "What is a deceptive 'your device is infected' pop-up?",
+    "options": [
+      "A scareware tactic to make you call a fake support line or install malware",
+      "A genuine system alert from your OS",
+      "A browser update notice",
+      "A firewall warning"
+    ],
+    "correct": 0,
+    "explanation": "Real security warnings come from your OS or antivirus, not from random web pages."
+  },
+  {
+    "id": "q1193",
+    "category": "mobile",
+    "topic": "safe-browsing",
+    "subtopic": "Safe Browsing",
+    "difficulty": "hard",
+    "question": "What is a homoglyph in a URL?",
+    "options": [
+      "A character from another alphabet that looks like a Latin letter",
+      "A double slash",
+      "A very long path",
+      "A percent-encoded space"
+    ],
+    "correct": 0,
+    "explanation": "Homoglyphs enable convincing lookalike domains in the address bar."
+  },
+  {
+    "id": "q1194",
+    "category": "mobile",
+    "topic": "safe-browsing",
+    "subtopic": "Safe Browsing",
+    "difficulty": "easy",
+    "question": "What should you do before entering card details on a shopping site you have never used?",
+    "options": [
+      "Verify the site's reputation and domain, and prefer a protected payment method",
+      "Enter the details quickly",
+      "Disable HTTPS",
+      "Use a public computer"
+    ],
+    "correct": 0,
+    "explanation": "Checking the domain and using chargeback-capable payment limits loss from fake stores."
+  },
+  {
+    "id": "q1195",
+    "category": "mobile",
+    "topic": "safe-browsing",
+    "subtopic": "Safe Browsing",
+    "difficulty": "medium",
+    "question": "Why can syncing your browser profile across devices be a risk?",
+    "options": [
+      "Saved passwords and sessions sync too, so one compromised account exposes all devices",
+      "It deletes your bookmarks",
+      "It disables updates",
+      "It slows down Wi-Fi"
+    ],
+    "correct": 0,
+    "explanation": "Protect the sync account with MFA, because it holds credentials for every synced site."
+  },
+  {
+    "id": "q1196",
+    "category": "mobile",
+    "topic": "safe-browsing",
+    "subtopic": "Safe Browsing",
+    "difficulty": "medium",
+    "question": "What is the safest response to an unexpected browser extension update requesting new permissions?",
+    "options": [
+      "Review the permission and remove the extension if it is excessive",
+      "Accept immediately",
+      "Disable your antivirus",
+      "Share the extension with friends"
+    ],
+    "correct": 0,
+    "explanation": "Extensions can be sold or compromised and then request broader access; permission changes deserve review."
+  },
+  {
+    "id": "q1197",
+    "category": "scam",
+    "topic": "emerging-threats",
+    "subtopic": "Artificial Intelligence Security",
+    "difficulty": "medium",
+    "question": "Why is AI-generated phishing harder to recognise than older templates?",
+    "options": [
+      "It is fluent, personalised and free of the grammar mistakes people were taught to spot",
+      "It bypasses HTTPS",
+      "It only arrives by post",
+      "It cannot be filtered"
+    ],
+    "correct": 0,
+    "explanation": "Polished language removes the classic warning sign, so verify senders and requests instead."
+  },
+  {
+    "id": "q1198",
+    "category": "scam",
+    "topic": "emerging-threats",
+    "subtopic": "Artificial Intelligence Security",
+    "difficulty": "hard",
+    "question": "Why is it safer to start a new chat when you switch topics with an AI assistant?",
+    "options": [
+      "Earlier context can carry sensitive details into unrelated answers",
+      "New chats always answer faster",
+      "Old chats cannot be deleted",
+      "The model forgets your language"
+    ],
+    "correct": 0,
+    "explanation": "Conversation context is reused in later answers, so a fresh chat limits accidental exposure of earlier personal data."
+  },
+  {
+    "id": "q1199",
+    "category": "scam",
+    "topic": "emerging-threats",
+    "subtopic": "Artificial Intelligence Security",
+    "difficulty": "medium",
+    "question": "Why should you avoid pasting confidential work data into a public AI chatbot?",
+    "options": [
+      "The data may be stored, logged or used by the provider",
+      "The answer will be slower",
+      "It drains the battery",
+      "It breaks the chat window"
+    ],
+    "correct": 0,
+    "explanation": "Public chatbots are not a confidential channel; treat anything pasted as potentially retained."
+  },
+  {
+    "id": "q1200",
+    "category": "scam",
+    "topic": "emerging-threats",
+    "subtopic": "Artificial Intelligence Security",
+    "difficulty": "hard",
+    "question": "What is model poisoning?",
+    "options": [
+      "Manipulating training data so an AI model learns incorrect or malicious behaviour",
+      "Stealing a laptop with a model file",
+      "Encrypting a model for ransom",
+      "Compressing a model"
+    ],
+    "correct": 0,
+    "explanation": "Corrupted training data can embed backdoors or biases that persist in the deployed model."
+  },
+  {
+    "id": "q1201",
+    "category": "scam",
+    "topic": "emerging-threats",
+    "subtopic": "Artificial Intelligence Security",
+    "difficulty": "medium",
+    "question": "What are adversarial examples?",
+    "options": [
+      "Inputs crafted to make an AI model misclassify or behave unexpectedly",
+      "Very long prompts",
+      "Images with low resolution",
+      "Encrypted model files"
+    ],
+    "correct": 0,
+    "explanation": "Small, deliberate perturbations can fool models, which matters for security-sensitive classifiers."
+  },
+  {
+    "id": "q1202",
+    "category": "scam",
+    "topic": "emerging-threats",
+    "subtopic": "Artificial Intelligence Security",
+    "difficulty": "hard",
+    "question": "Why is 'shadow AI' use a governance risk in organisations?",
+    "options": [
+      "Employees use unsanctioned AI tools that may leak data or produce unverified output",
+      "It reduces electricity use",
+      "It blocks email",
+      "It improves compliance"
+    ],
+    "correct": 0,
+    "explanation": "Unapproved tools bypass data-handling controls and create unknown exposure."
+  },
+  {
+    "id": "q1203",
+    "category": "scam",
+    "topic": "emerging-threats",
+    "subtopic": "Artificial Intelligence Security",
+    "difficulty": "medium",
+    "question": "An AI browser agent asks for permission to read all pages and act on your behalf. What is the key risk?",
+    "options": [
+      "It may be tricked by malicious page content into performing harmful actions",
+      "It will use too much RAM",
+      "It cannot open tabs",
+      "It disables cookies"
+    ],
+    "correct": 0,
+    "explanation": "Agentic tools combine broad access with untrusted input, so limit permissions and confirm actions."
+  },
+  {
+    "id": "q1204",
+    "category": "scam",
+    "topic": "emerging-threats",
+    "subtopic": "Artificial Intelligence Security",
+    "difficulty": "hard",
+    "question": "What is retrieval-augmented generation (RAG) data leakage?",
+    "options": [
+      "An assistant reveals sensitive documents it retrieved from an internal knowledge base",
+      "A model is compressed for mobile",
+      "A chatbot answers too slowly",
+      "A browser blocks a script"
+    ],
+    "correct": 0,
+    "explanation": "If access controls are weak, retrieved internal content can surface in answers to the wrong user."
+  },
+  {
+    "id": "q1205",
+    "category": "scam",
+    "topic": "emerging-threats",
+    "subtopic": "Artificial Intelligence Security",
+    "difficulty": "medium",
+    "question": "How are deepfakes used to defeat identity verification?",
+    "options": [
+      "A synthetic face or voice imitates the account holder during KYC checks",
+      "They replace CAPTCHAs",
+      "They encrypt documents",
+      "They speed up onboarding"
+    ],
+    "correct": 0,
+    "explanation": "Liveness checks must detect synthetic media, because video alone is no longer proof of identity."
+  },
+  {
+    "id": "q1206",
+    "category": "scam",
+    "topic": "emerging-threats",
+    "subtopic": "Cryptography Basics",
+    "difficulty": "hard",
+    "question": "Why is quantum computing a threat to RSA and ECC?",
+    "options": [
+      "Shor's algorithm could solve the hard problems those schemes rely on",
+      "Quantum computers break symmetric keys instantly",
+      "It makes certificates illegal",
+      "It disables TLS 1.3"
+    ],
+    "correct": 0,
+    "explanation": "Large quantum computers could derive private keys, which is why post-quantum migration is underway."
+  },
+  {
+    "id": "q1207",
+    "category": "scam",
+    "topic": "emerging-threats",
+    "subtopic": "Cryptography Basics",
+    "difficulty": "medium",
+    "question": "What is 'harvest now, decrypt later'?",
+    "options": [
+      "Collecting encrypted traffic today to decrypt it once quantum computers are available",
+      "Backing up data before deleting it",
+      "Stealing passwords now and using them later",
+      "Recording calls for training"
+    ],
+    "correct": 0,
+    "explanation": "Long-lived secrets need post-quantum protection because captured ciphertext may become readable."
+  },
+  {
+    "id": "q1208",
+    "category": "scam",
+    "topic": "emerging-threats",
+    "subtopic": "Emerging Cyber Threats",
+    "difficulty": "medium",
+    "question": "Why do IoT devices often become part of botnets?",
+    "options": [
+      "They ship with weak defaults and are rarely patched",
+      "They have no network access",
+      "They cannot run code",
+      "They use only wired connections"
+    ],
+    "correct": 0,
+    "explanation": "Default passwords and missing updates let attackers recruit large numbers of devices."
+  },
+  {
+    "id": "q1209",
+    "category": "scam",
+    "topic": "emerging-threats",
+    "subtopic": "Emerging Cyber Threats",
+    "difficulty": "hard",
+    "question": "What is GPS spoofing?",
+    "options": [
+      "Broadcasting false positioning signals so a device reports the wrong location",
+      "Stealing a phone's GPS chip",
+      "Disabling mobile data",
+      "Blocking satellite TV"
+    ],
+    "correct": 0,
+    "explanation": "Spoofed signals can misdirect navigation or defeat location-based authentication."
+  },
+  {
+    "id": "q1210",
+    "category": "scam",
+    "topic": "emerging-threats",
+    "subtopic": "Emerging Cyber Threats",
+    "difficulty": "medium",
+    "question": "What is a software supply-chain attack?",
+    "options": [
+      "Compromising a trusted dependency or update channel so victims install malicious code",
+      "Attacking a delivery truck",
+      "Stealing office stationery",
+      "Sending spam to suppliers"
+    ],
+    "correct": 0,
+    "explanation": "Trust in vendors and packages is abused, which spreads the compromise to many downstream users."
+  },
+  {
+    "id": "q1211",
+    "category": "scam",
+    "topic": "emerging-threats",
+    "subtopic": "Web Application Security",
+    "difficulty": "hard",
+    "question": "Why are APIs a growing attack surface?",
+    "options": [
+      "They expose data and actions directly, often with weak authentication or excessive permissions",
+      "They cannot use HTTPS",
+      "They only run on mainframes",
+      "They are invisible to browsers"
+    ],
+    "correct": 0,
+    "explanation": "APIs bypass UI controls, so object-level authorisation and rate limits are essential."
+  },
+  {
+    "id": "q1212",
+    "category": "scam",
+    "topic": "emerging-threats",
+    "subtopic": "Artificial Intelligence Security",
+    "difficulty": "medium",
+    "question": "What is an LLM jailbreak?",
+    "options": [
+      "Crafting prompts that bypass a model's safety rules",
+      "Stealing a model's weights",
+      "Compressing a prompt",
+      "Blocking a chatbot"
+    ],
+    "correct": 0,
+    "explanation": "Jailbreaks try to make the model produce content its safeguards should refuse."
+  },
+  {
+    "id": "q1213",
+    "category": "scam",
+    "topic": "emerging-threats",
+    "subtopic": "Emerging Cyber Threats",
+    "difficulty": "hard",
+    "question": "Why should you verify a video of a public figure before sharing it?",
+    "options": [
+      "Synthetic media can convincingly fabricate statements",
+      "Videos are always altered",
+      "Sharing is illegal",
+      "Videos cannot be downloaded"
+    ],
+    "correct": 0,
+    "explanation": "Deepfakes spread misinformation quickly; check the original source and corroborating reports."
+  },
+  {
+    "id": "q1214",
+    "category": "scam",
+    "topic": "emerging-threats",
+    "subtopic": "Cyber Laws and Cybercrime Awareness",
+    "difficulty": "medium",
+    "question": "What is the usual first step after falling victim to online financial fraud in India?",
+    "options": [
+      "Report immediately on the national cybercrime portal and call the 1930 helpline",
+      "Wait for the bank to notice",
+      "Post the details on social media",
+      "Contact the scammer again"
+    ],
+    "correct": 0,
+    "explanation": "Fast reporting improves the chance of freezing the transfer; keep transaction evidence."
+  },
+  {
+    "id": "q1215",
+    "category": "scam",
+    "topic": "emerging-threats",
+    "subtopic": "Artificial Intelligence Security",
+    "difficulty": "medium",
+    "question": "Why are AI voice-cloning scams effective on family members?",
+    "options": [
+      "A short sample of public audio can imitate a relative in distress",
+      "They require a video call",
+      "They always use email",
+      "They need the victim's password"
+    ],
+    "correct": 0,
+    "explanation": "Emotional urgency plus a familiar voice bypasses scepticism; verify with a callback on a known number."
+  },
+  {
+    "id": "q1216",
+    "category": "scam",
+    "topic": "emerging-threats",
+    "subtopic": "Emerging Cyber Threats",
+    "difficulty": "hard",
+    "question": "What is a firmware attack on a device?",
+    "options": [
+      "Malicious code embedded below the operating system, making it hard to detect or remove",
+      "An attack on a browser tab",
+      "A phishing email",
+      "A weak Wi-Fi password"
+    ],
+    "correct": 0,
+    "explanation": "Firmware persistence survives OS reinstalls and can hide from normal security tools."
+  },
+  {
+    "id": "q1217",
+    "category": "scam",
+    "topic": "emerging-threats",
+    "subtopic": "Emerging Cyber Threats",
+    "difficulty": "medium",
+    "question": "Why is a compromised home router especially dangerous?",
+    "options": [
+      "All your internet traffic passes through it and DNS can be redirected",
+      "It only affects the printer",
+      "It cannot be updated",
+      "It stores your photos"
+    ],
+    "correct": 0,
+    "explanation": "A malicious router can redirect domains or inject content into every device on the network."
+  },
+  {
+    "id": "q1218",
+    "category": "scam",
+    "topic": "emerging-threats",
+    "subtopic": "Artificial Intelligence Security",
+    "difficulty": "hard",
+    "question": "What is data leakage through AI browser extensions?",
+    "options": [
+      "The extension reads page content and sends sensitive data to a third party",
+      "The extension increases screen brightness",
+      "The extension blocks cookies",
+      "The extension changes the language"
+    ],
+    "correct": 0,
+    "explanation": "Extensions with broad host permissions can capture forms, tokens and page text."
+  },
+  {
+    "id": "q1219",
+    "category": "scam",
+    "topic": "emerging-threats",
+    "subtopic": "Emerging Cyber Threats",
+    "difficulty": "medium",
+    "question": "What is a 'zero-day' vulnerability, and why patch quickly when one is announced?",
+    "options": [
+      "A flaw unknown to the vendor until disclosure; patches close it once available",
+      "A flaw that affects zero users",
+      "A flaw that needs zero clicks",
+      "A flaw in zero-day-old software"
+    ],
+    "correct": 0,
+    "explanation": "Between disclosure and patching, exploitation risk is high, so apply fixes promptly."
+  },
+  {
+    "id": "q1220",
+    "category": "scam",
+    "topic": "emerging-threats",
+    "subtopic": "Artificial Intelligence Security",
+    "difficulty": "medium",
+    "question": "Why should AI-generated answers about security be verified?",
+    "options": [
+      "Models can sound confident while being factually wrong",
+      "They are always outdated",
+      "They cannot cite sources",
+      "They refuse to answer"
+    ],
+    "correct": 0,
+    "explanation": "Fluency is not accuracy; confirm critical advice against authoritative sources."
+  },
+  {
+    "id": "q1221",
+    "category": "scam",
+    "topic": "emerging-threats",
+    "subtopic": "Emerging Cyber Threats",
+    "difficulty": "hard",
+    "question": "What is an 'agentic AI' permission risk in enterprise tools?",
+    "options": [
+      "An agent with broad access can be manipulated into exfiltrating or altering data",
+      "The agent uses too much storage",
+      "The agent cannot authenticate",
+      "The agent only reads public pages"
+    ],
+    "correct": 0,
+    "explanation": "Autonomous actions amplify the impact of a prompt injection or misconfiguration, so scope permissions tightly."
+  }
+]

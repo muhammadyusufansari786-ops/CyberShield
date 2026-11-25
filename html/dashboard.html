@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Your personal CyberShield dashboard - quiz performance, scam analyses and learning progress.">
+  <meta name="description" content="Your personal CyberShield dashboard - quiz performance, safety tool usage and learning progress.">
   <title>My Dashboard – CyberShield</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -58,28 +58,20 @@
               <header class="card-header">
                 <div>
                   <h2 class="card-title">Quiz Performance</h2>
-                  <p class="card-subtitle">Your cybersecurity quiz history.</p>
+                  <p class="card-subtitle">Every quiz you finish while signed in is recorded here.</p>
                 </div>
                 <a href="quiz.html" class="btn btn-secondary btn-sm">Take a Quiz</a>
               </header>
-              <div id="quiz-card-body" class="dash-empty">
-                <span class="dash-empty-icon" aria-hidden="true">📊</span>
-                <p>No quiz attempts yet. Take your first quiz to start tracking progress.</p>
-              </div>
-            </div>
-
-            <!-- Scam analysis history -->
-            <div class="card">
-              <header class="card-header">
-                <div>
-                  <h2 class="card-title">Scam Analysis History</h2>
-                  <p class="card-subtitle">Messages and screenshots you have checked with the AI Scam Analyzer.</p>
+              <p class="dash-meta" id="quiz-bank-info"></p>
+              <div id="quiz-card-body">
+                <div id="quiz-empty" class="dash-empty">
+                  <span class="dash-empty-icon" aria-hidden="true">📊</span>
+                  <p>No quiz attempts yet. Take your first quiz to start tracking progress.</p>
                 </div>
-                <a href="toolkit.html" class="btn btn-secondary btn-sm">Open Analyzer</a>
-              </header>
-              <div id="scam-card-body" class="dash-empty">
-                <span class="dash-empty-icon" aria-hidden="true">🔎</span>
-                <p>Nothing analyzed yet. Use the AI Scam Analyzer to check suspicious messages.</p>
+                <div id="quiz-stats" class="dash-stats" hidden></div>
+                <div id="quiz-adaptive-stats" class="dash-adaptive" hidden></div>
+                <div id="quiz-topic-performance" class="dash-topics" hidden></div>
+                <div id="quiz-history" class="dash-history" hidden></div>
               </div>
             </div>
 
@@ -88,13 +80,17 @@
               <header class="card-header">
                 <div>
                   <h2 class="card-title">Learning Progress</h2>
-                  <p class="card-subtitle">Your personalized learning paths.</p>
+                  <p class="card-subtitle">Personalized learning paths generated from your quiz results.</p>
                 </div>
-                <a href="ai-assistant.html" class="btn btn-secondary btn-sm">AI Tutor</a>
+                <a href="quiz.html" class="btn btn-secondary btn-sm">Generate a Path</a>
+                <a href="learning-path.html" class="btn btn-primary btn-sm">Open Roadmap</a>
               </header>
-              <div id="progress-card-body" class="dash-empty">
-                <span class="dash-empty-icon" aria-hidden="true">🚀</span>
-                <p>No learning paths yet. Generate one after completing a quiz.</p>
+              <div id="progress-card-body">
+                <div id="progress-empty" class="dash-empty">
+                  <span class="dash-empty-icon" aria-hidden="true">🚀</span>
+                  <p>No learning paths yet. Finish a quiz, then choose “Generate My AI Learning Path” to save one here.</p>
+                </div>
+                <div id="learning-paths" class="dash-paths" hidden></div>
               </div>
             </div>
           </div>

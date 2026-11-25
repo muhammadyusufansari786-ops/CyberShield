@@ -5,7 +5,9 @@
     "url": "https://www.cert-in.org.in",
     "category": "government",
     "description": "India's national agency for responding to cyber security incidents. Issues advisories, vulnerability notes, and incident reporting.",
-    "icon": "🏛️"
+    "icon": "🏛️",
+    "thumbnail": "/images/photos/threat-intelligence.webp",
+    "thumbnailAlt": "CERT-In (Indian Computer Emergency Response Team) — government category"
   },
   {
     "id": "res-2",
@@ -13,7 +15,9 @@
     "url": "https://cybercrime.gov.in",
     "category": "government",
     "description": "Official Government of India portal for reporting cybercrimes. Categories: financial fraud, social media, ransomware, hacking, etc.",
-    "icon": "🚨"
+    "icon": "🚨",
+    "thumbnail": "/images/photos/social-engineering.webp",
+    "thumbnailAlt": "Indian Cyber Crime Coordination Centre (I4C) — government category"
   },
   {
     "id": "res-3",
@@ -21,7 +25,9 @@
     "url": "https://www.cisa.gov",
     "category": "government",
     "description": "U.S. federal agency with extensive guides, alerts, and resources for individuals and organizations.",
-    "icon": "🛡️"
+    "icon": "🛡️",
+    "thumbnail": "/images/photos/phishing-scam.webp",
+    "thumbnailAlt": "CISA (Cybersecurity & Infrastructure Security Agency) — government category"
   },
   {
     "id": "res-4",
@@ -29,7 +35,9 @@
     "url": "https://www.nist.gov",
     "category": "standards",
     "description": "Develops cybersecurity standards and guidelines (NIST CSF, SP 800 series). Gold standard for security frameworks.",
-    "icon": "📐"
+    "icon": "📐",
+    "thumbnail": "/images/photos/code-workspace.webp",
+    "thumbnailAlt": "NIST (National Institute of Standards and Technology) — standards category"
   },
   {
     "id": "res-5",
@@ -37,7 +45,9 @@
     "url": "https://owasp.org",
     "category": "standards",
     "description": "Nonprofit foundation improving software security. Famous for OWASP Top 10 web application security risks.",
-    "icon": "🌐"
+    "icon": "🌐",
+    "thumbnail": "/images/photos/malware-threat.webp",
+    "thumbnailAlt": "OWASP (Open Web Application Security Project) — standards category"
   },
   {
     "id": "res-6",
@@ -45,7 +55,9 @@
     "url": "https://www.iso.org/standard/27001",
     "category": "standards",
     "description": "International standard for Information Security Management Systems (ISMS). Certification standard.",
-    "icon": "📋"
+    "icon": "📋",
+    "thumbnail": "/images/photos/tech-code.webp",
+    "thumbnailAlt": "ISO/IEC 27001 — standards category"
   },
   {
     "id": "res-7",
@@ -53,7 +65,9 @@
     "url": "https://www.pcisecuritystandards.org",
     "category": "standards",
     "description": "Security standards for organizations that handle credit card information.",
-    "icon": "💳"
+    "icon": "💳",
+    "thumbnail": "/images/photos/learning-dashboard.webp",
+    "thumbnailAlt": "PCI DSS (Payment Card Industry Data Security Standard) — standards category"
   },
   {
     "id": "res-8",
@@ -61,7 +75,9 @@
     "url": "https://thehackernews.com",
     "category": "news",
     "description": "Leading cybersecurity news platform covering breaches, vulnerabilities, and threat intelligence.",
-    "icon": "📰"
+    "icon": "📰",
+    "thumbnail": "/images/photos/news-tech.webp",
+    "thumbnailAlt": "The Hacker News — news category"
   },
   {
     "id": "res-9",
@@ -69,7 +85,9 @@
     "url": "https://krebsonsecurity.com",
     "category": "news",
     "description": "Investigative security journalism by Brian Krebs. Deep dives into cybercrime operations.",
-    "icon": "🔍"
+    "icon": "🔍",
+    "thumbnail": "/images/photos/network.webp",
+    "thumbnailAlt": "Krebs on Security — news category"
   },
   {
     "id": "res-10",
@@ -77,7 +95,9 @@
     "url": "https://www.bleepingcomputer.com",
     "category": "news",
     "description": "Technical news, tutorials, and support forums for computer security and technology.",
-    "icon": "💻"
+    "icon": "💻",
+    "thumbnail": "/images/photos/mitm.webp",
+    "thumbnailAlt": "BleepingComputer — news category"
   },
   {
     "id": "res-11",
@@ -85,7 +105,9 @@
     "url": "https://www.darkreading.com",
     "category": "news",
     "description": "Enterprise-focused cybersecurity news, analysis, and research from industry experts.",
-    "icon": "🌙"
+    "icon": "🌙",
+    "thumbnail": "/images/photos/vulnerability.webp",
+    "thumbnailAlt": "Dark Reading — news category"
   },
   {
     "id": "res-12",
@@ -93,7 +115,9 @@
     "url": "https://haveibeenpwned.com",
     "category": "tools",
     "description": "Check if your email/phone has been compromised in known data breaches. By Troy Hunt.",
-    "icon": "🔍"
+    "icon": "🔍",
+    "thumbnail": "/images/photos/antivirus-protection.webp",
+    "thumbnailAlt": "Have I Been Pwned? — tools category"
   },
   {
     "id": "res-13",
@@ -101,7 +125,9 @@
     "url": "https://www.nomoreransom.org",
     "category": "tools",
     "description": "Free decryption tools for various ransomware variants. Initiative by Europol, Kaspersky, McAfee.",
-    "icon": "🔓"
+    "icon": "🔓",
+    "thumbnail": "/images/photos/password-attacks.webp",
+    "thumbnailAlt": "No More Ransom — tools category"
   },
   {
     "id": "res-14",
@@ -109,7 +135,9 @@
     "url": "https://www.virustotal.com",
     "category": "tools",
     "description": "Free online service analyzing files/URLs for malware using 70+ antivirus engines.",
-    "icon": "🦠"
+    "icon": "🦠",
+    "thumbnail": "/images/photos/security-operations.webp",
+    "thumbnailAlt": "VirusTotal — tools category"
   },
   {
     "id": "res-15",
@@ -117,7 +145,9 @@
     "url": "https://urlhaus.abuse.ch",
     "category": "tools",
     "description": "Malware URL exchange platform. Check if a URL is distributing malware.",
-    "icon": "🔗"
+    "icon": "🔗",
+    "thumbnail": "/images/photos/ai-tutor.webp",
+    "thumbnailAlt": "URLhaus — tools category"
   },
   {
     "id": "res-16",
@@ -125,7 +155,9 @@
     "url": "https://attack.mitre.org",
     "category": "frameworks",
     "description": "Globally-accessible knowledge base of adversary tactics and techniques based on real-world observations.",
-    "icon": "🗺️"
+    "icon": "🗺️",
+    "thumbnail": "/images/photos/data-breach.webp",
+    "thumbnailAlt": "MITRE ATT&CK — frameworks category"
   },
   {
     "id": "res-17",
@@ -133,7 +165,9 @@
     "url": "https://www.nist.gov/cyberframework",
     "category": "frameworks",
     "description": "Voluntary framework helping organizations manage and reduce cybersecurity risk.",
-    "icon": "🏗️"
+    "icon": "🏗️",
+    "thumbnail": "/images/photos/secure-browsing.webp",
+    "thumbnailAlt": "NIST Cybersecurity Framework (CSF) — frameworks category"
   },
   {
     "id": "res-17b",
@@ -141,7 +175,9 @@
     "url": "https://www.cisecurity.org/controls",
     "category": "frameworks",
     "description": "Prioritized set of actions to protect organizations from known cyber attack vectors.",
-    "icon": "✅"
+    "icon": "✅",
+    "thumbnail": "/images/photos/cybersecurity-hero.webp",
+    "thumbnailAlt": "CIS Controls — frameworks category"
   },
   {
     "id": "res-18",
@@ -149,7 +185,9 @@
     "url": "https://www.rbi.org.in",
     "category": "government",
     "description": "Cybersecurity framework for banks and financial institutions in India.",
-    "icon": "🏦"
+    "icon": "🏦",
+    "thumbnail": "/images/photos/password-security.webp",
+    "thumbnailAlt": "RBI (Reserve Bank of India) Cybersecurity Guidelines — government category"
   },
   {
     "id": "res-19",
@@ -157,7 +195,9 @@
     "url": "https://www.trai.gov.in",
     "category": "government",
     "description": "Regulations for telecom security, SIM swap protection, and consumer protection.",
-    "icon": "📱"
+    "icon": "📱",
+    "thumbnail": "/images/photos/deepfake.webp",
+    "thumbnailAlt": "TRAI (Telecom Regulatory Authority of India) — government category"
   },
   {
     "id": "res-20",
@@ -165,7 +205,9 @@
     "url": "https://nciipc.gov.in",
     "category": "government",
     "description": "Nodal agency for protecting Critical Information Infrastructure in India.",
-    "icon": "🏭"
+    "icon": "🏭",
+    "thumbnail": "/images/photos/malware-threat.webp",
+    "thumbnailAlt": "NCIIPC (National Critical Information Infrastructure Protection Centre) — government category"
   },
   {
     "id": "res-21",
@@ -173,7 +215,9 @@
     "url": "https://www.cyberswachhtakendra.gov.in",
     "category": "government",
     "description": "Botnet cleaning and malware analysis center by CERT-In. Free tools for citizens.",
-    "icon": "🧹"
+    "icon": "🧹",
+    "thumbnail": "/images/photos/malware-threat.webp",
+    "thumbnailAlt": "Cyber Swachhta Kendra — government category"
   },
   {
     "id": "res-22",
@@ -181,7 +225,9 @@
     "url": "https://safety.google",
     "category": "guides",
     "description": "Google's resources for online safety, privacy controls, and family safety.",
-    "icon": "🔐"
+    "icon": "🔐",
+    "thumbnail": "/images/photos/social-engineering.webp",
+    "thumbnailAlt": "Google Safety Center — guides category"
   },
   {
     "id": "res-23",
@@ -189,7 +235,9 @@
     "url": "https://www.microsoft.com/security",
     "category": "guides",
     "description": "Microsoft's security resources, best practices, and threat intelligence reports.",
-    "icon": "🪟"
+    "icon": "🪟",
+    "thumbnail": "/images/photos/news-tech.webp",
+    "thumbnailAlt": "Microsoft Security — guides category"
   },
   {
     "id": "res-24",
@@ -197,7 +245,9 @@
     "url": "https://staysafeonline.org",
     "category": "guides",
     "description": "National Cyber Security Alliance resources for individuals, families, and businesses.",
-    "icon": "🏠"
+    "icon": "🏠",
+    "thumbnail": "/images/photos/antivirus-protection.webp",
+    "thumbnailAlt": "Stay Safe Online (NCSA) — guides category"
   },
   {
     "id": "res-25",
@@ -205,6 +255,8 @@
     "url": "https://www.enisa.europa.eu",
     "category": "government",
     "description": "European Union agency dedicated to achieving a high common level of cybersecurity across Europe.",
-    "icon": "🇪🇺"
+    "icon": "🇪🇺",
+    "thumbnail": "/images/photos/tech-code.webp",
+    "thumbnailAlt": "ENISA (EU Agency for Cybersecurity) — government category"
   }
 ]

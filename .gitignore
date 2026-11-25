@@ -1,16 +1,20 @@
-# Never commit secrets
+# Temporary audit artifacts — do not commit
+audit/
+preview_thumbs/
+build_contact_sheet.py
+image-metadata-report.json
+
+# Environment secrets
 .env
-.env.local
-.env.*.local
-server/config/.session-secret
+.env.*
+!.env.example
 
 # Dependencies
 node_modules/
 
-# Local logs
-server.log
-*.log
+# Session secrets
+server/config/.session-secret
 
-# OS junk
-Thumbs.db
-.DS_Store
+# Logs and temporary files
+*.log
+tmp/

@@ -186,9 +186,11 @@
       const formattedDate = this.formatDate(item.date);
       const categoryLabel = this.getCategoryLabel(item.category);
       const categoryClass = this.getCategoryClass(item.category);
+      const thumb = item.thumbnail ? item.thumbnail : '';
 
       return `
         <article class="card news-card" data-id="${item.id}" style="display: flex; flex-direction: column; height: 100%;">
+          ${thumb ? `<img class="news-card-thumb" src="${thumb}" alt="${this.escapeHtml(item.thumbnailAlt || '')}" loading="lazy" width="400" height="200" onerror="this.style.display='none';">` : ''}
           <div class="news-meta">
             <span class="news-category ${categoryClass}">${categoryLabel}</span>
             <span class="news-source">${this.escapeHtml(item.source)}</span>

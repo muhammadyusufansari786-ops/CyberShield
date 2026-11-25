@@ -1,0 +1,100 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="600" height="400" role="img" aria-hidden="true">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0b1220"/>
+      <stop offset="1" stop-color="#111d2e"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="35%" cy="50%" r="55%">
+      <stop offset="0" stop-color="#60a5fa" stop-opacity="0.3"/>
+      <stop offset="1" stop-color="#60a5fa" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M40 0H0V40" fill="none" stroke="#1e3a5f" stroke-opacity="0.3" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <rect width="600" height="400" fill="url(#bg)"/>
+  <rect width="600" height="400" fill="url(#grid)"/>
+  <rect width="600" height="400" fill="url(#glow)"/>
+
+  <!-- Email card -->
+  <g transform="translate(150 80)">
+    <rect x="0" y="0" width="280" height="220" rx="10" fill="#0f1929" stroke="#60a5fa" stroke-width="2.5"/>
+    <rect x="10" y="10" width="260" height="30" rx="4" fill="#0b1220" stroke="#60a5fa" stroke-width="1.5"/>
+    <!-- sender -->
+    <text x="20" y="28" fill="#2dd4bf" font-family="monospace" font-size="11" font-weight="600">from: security@bank-secure.co</text>
+    <!-- subject -->
+    <text x="20" y="55" fill="#f87171" font-family="system-ui" font-size="13" font-weight="700">URGENT: Account Suspension Notice</text>
+    <!-- body lines -->
+    <g stroke="#60a5fa" stroke-width="2" opacity="0.5">
+      <line x1="20" y1="75" x2="180" y2="75"/>
+      <line x1="20" y1="85" x2="240" y2="85"/>
+      <line x1="20" y1="95" x2="200" y2="95"/>
+      <line x1="20" y1="105" x2="220" y2="105" stroke-opacity="0.7"/>
+      <line x1="20" y1="115" x2="160" y2="115"/>
+    </g>
+    <!-- suspicious link -->
+    <rect x="20" y="130" width="180" height="24" rx="4" fill="#1e3a5f"/>
+    <text x="28" y="146" fill="#f87171" font-family="monospace" font-size="12" font-weight="600">www.bank-secure-login.xyz/verify</text>
+    <!-- warning highlight -->
+    <rect x="16" y="126" width="188" height="32" rx="5" fill="none" stroke="#f87171" stroke-width="2" stroke-dasharray="4 3"/>
+    <!-- call to action -->
+    <rect x="20" y="170" width="100" height="32" rx="6" fill="#0f766e"/>
+    <text x="70" y="191" text-anchor="middle" fill="#0f1929" font-family="system-ui" font-size="12" font-weight="700">Verify Now</text>
+    <!-- footer -->
+    <text x="20" y="205" fill="#60a5fa" font-family="system-ui" font-size="9" opacity="0.7">This is an automated message. Do not reply.</text>
+  </g>
+
+  <!-- Hook -->
+  <g transform="translate(380 120)" fill="none" stroke="#fbbf24" stroke-width="3" stroke-linecap="round">
+    <path d="M80 100 C40 100 30 40 70 20 C100 5 60 40 20 60" stroke-width="2.5"/>
+    <path d="M20 60 C10 70 20 80 30 75" stroke-width="3"/>
+    <!-- bait (fake login button) -->
+    <rect x="60" y="90" width="40" height="22" rx="4" fill="#0f1929" stroke="#fbbf24" stroke-width="2"/>
+    <text x="80" y="105" text-anchor="middle" fill="#fbbf24" font-family="system-ui" font-size="9" font-weight="600">LOGIN</text>
+  </g>
+
+  <!-- Phishing warning signs floating -->
+  <g>
+    <g transform="translate(480 180)" fill="none" stroke="#f87171" stroke-width="2.5">
+      <circle cx="0" cy="0" r="20"/>
+      <path d="M0 -8 L0 8 M0 8 L-5 2 M0 8 L5 2" stroke="#f87171" stroke-width="3" stroke-linecap="round"/>
+    </g>
+    <g transform="translate(520 260)" fill="none" stroke="#fbbf24" stroke-width="2.5">
+      <circle cx="0" cy="0" r="16"/>
+      <path d="M-6 -2 L6 -2 M-6 2 L6 2" stroke="#fbbf24" stroke-width="2" stroke-linecap="round"/>
+    </g>
+  </g>
+
+  <!-- Victim cursor/click -->
+  <g transform="translate(260 240)">
+    <rect x="0" y="0" width="50" height="40" rx="4" fill="#0f1929" stroke="#60a5fa" stroke-width="1.5" opacity="0.7"/>
+    <text x="25" y="24" text-anchor="middle" fill="#60a5fa" font-family="system-ui" font-size="9">Clicking link...</text>
+    <circle cx="10" cy="10" r="4" fill="#60a5fa" opacity="0.6"/>
+  </g>
+
+  <!-- Data being extracted -->
+  <g transform="translate(100 290)" fill="#f87171" opacity="0.8">
+    <rect x="0" y="0" width="20" height="14" rx="2"/>
+    <rect x="25" y="2" width="20" height="14" rx="2"/>
+    <rect x="50" y="0" width="20" height="14" rx="2"/>
+  </g>
+  <g transform="translate(100 310)" fill="none" stroke="#f87171" stroke-width="1.5" stroke-dasharray="3 3">
+    <path d="M50 7 L100 7 L130 30"/>
+  </g>
+
+  <!-- Red flags list -->
+  <g transform="translate(20 320)">
+    <g fill="none" stroke="#fbbf24" stroke-width="2" stroke-linecap="round">
+      <path d="M0 0 L6 6 L14 1"/>
+    </g>
+    <text x="22" y="5" fill="#fbbf24" font-family="system-ui" font-size="10">Urgent language</text>
+    <g fill="none" stroke="#fbbf24" stroke-width="2" stroke-linecap="round" transform="translate(0 16)">
+      <path d="M0 0 L6 6 L14 1"/>
+    </g>
+    <text x="22" y="21" fill="#fbbf24" font-family="system-ui" font-size="10">Strange URL domain</text>
+    <g fill="none" stroke="#fbbf24" stroke-width="2" stroke-linecap="round" transform="translate(0 32)">
+      <path d="M0 0 L6 6 L14 1"/>
+    </g>
+    <text x="22" y="37" fill="#fbbf24" font-family="system-ui" font-size="10">Generic greeting</text>
+  </g>
+</svg>

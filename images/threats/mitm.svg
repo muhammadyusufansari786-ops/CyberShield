@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 420" width="800" height="420" role="img" aria-hidden="true">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0b1220"/><stop offset="1" stop-color="#122036"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="50%" cy="46%" r="58%">
+      <stop offset="0" stop-color="#fbbf24" stop-opacity="0.30"/>
+      <stop offset="1" stop-color="#fbbf24" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M40 0H0V40" fill="none" stroke="#233a5c" stroke-opacity="0.35" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <rect width="800" height="420" fill="url(#bg)"/>
+  <rect width="800" height="420" fill="url(#grid)"/>
+  <rect width="800" height="420" fill="url(#glow)"/>
+  
+  <g fill="none" stroke="#60a5fa" stroke-width="4" stroke-linejoin="round">
+    <rect x="120" y="150" width="120" height="130" rx="12"/>
+    <path d="M120 186h120"/>
+    <rect x="560" y="150" width="120" height="130" rx="12"/>
+    <path d="M560 186h120"/>
+  </g>
+  <g fill="none" stroke="#fbbf24" stroke-width="4" stroke-linecap="round">
+    <path d="M252 214h70M478 214h70"/>
+    <path d="M296 190l-14 24 14 24M452 190l14 24-14 24"/>
+  </g>
+  <g fill="none" stroke="#f87171" stroke-width="5" stroke-linejoin="round">
+    <path d="M400 120l62 34v62l-62 34-62-34v-62z"/>
+    <path d="M376 186c10-14 38-14 48 0"/>
+  </g>
+  <g fill="#f87171"><circle cx="386" cy="196" r="5"/><circle cx="414" cy="196" r="5"/></g>
+  <g fill="none" stroke="#2dd4bf" stroke-width="3" stroke-dasharray="5 8">
+    <path d="M400 78v22M400 304v22"/>
+  </g>
+  <rect x="24" y="388" width="96" height="4" rx="2" fill="#fbbf24" opacity="0.85"/>
+</svg>
